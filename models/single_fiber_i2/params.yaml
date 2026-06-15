@@ -1,0 +1,98 @@
+# Single-fiber iodine coverage / precipitation / film-resistance model parameters.
+# SI units unless explicitly stated.
+
+geometry:
+  R_f_m: 3.5e-6          # Carbon fiber radius [m]
+  R_out_m: 7.5e-5        # External diffusion-layer radius [m]
+  n_cells: 48            # Radial finite-volume cells [-]
+
+transport:
+  D_I_m2_s: 1.5e-9       # Effective iodide diffusivity [m2/s]
+  D_I2_tot_m2_s: 8.0e-10 # Effective total iodine diffusivity [m2/s]
+  cI_bulk_mol_m3: 1000.0 # Outer-boundary iodide concentration [mol/m3]
+  cI2_tot_bulk_mol_m3: 20.0 # Outer-boundary total iodine concentration [mol/m3]
+  cBr_support_mol_m3: 0.0   # Constant supporting bromide concentration [mol/m3]
+
+complexation:
+  K_I2_I_m3_mol: 1.2e-3  # I2 + I- complexation factor coefficient [m3/mol]
+  K_I2_Br_m3_mol: 0.0    # I2 + Br- complexation factor coefficient [m3/mol]
+  cI2_sat_mol_m3: 18.0   # Free-I2 saturation concentration [mol/m3]
+
+electrochemistry:
+  F_C_mol: 96485.33212   # Faraday constant [C/mol e-]
+  R_J_mol_K: 8.314462618 # Gas constant [J/mol/K]
+  T_K: 298.15            # Temperature [K]
+  alpha_a: 0.5           # Anodic transfer coefficient [-]
+  alpha_c: 0.5           # Cathodic transfer coefficient [-]
+  j0_bare_A_m2: 15.0     # Bare-surface exchange current density scale [A/m2]
+  j0_cov_A_m2: 2.0       # Covered-surface exchange current density scale [A/m2]
+  covered_mode: linearized # linearized or implicit
+  g_I_S_m2: 40.0         # Linearized covered-path conductance factor [S/m2]
+  eta_bracket_V: 1.5     # Initial eta bracket half-width for current root [V]
+
+film:
+  sigma_I2_S_m: 1.0e-4   # Effective electronic/ionic film conductivity [S/m]
+  Vm_I2_m3_mol: 5.0e-5   # Solid iodine molar volume [m3/mol]
+  h_initial_m: 0.0       # Initial I2 film thickness [m]
+  h_max_m: 5.0e-5        # Numerical safety cap for film thickness [m]
+
+precipitation:
+  k_precip_sf_m_s: 1.0e-6 # Surface precipitation coefficient [m/s]
+  k_diss_sf_m_s: 2.0e-6   # Surface dissolution coefficient [m/s]
+  smoothplus_eps_mol_m3: 1.0e-6 # Smoothplus regularization [mol/m3]
+
+coverage:
+  theta_initial: 0.0       # Initial covered fraction [-]
+  k_theta_grow_m3_mol_s: 2.0e-4 # Coverage growth coefficient [m3/mol/s]
+  k_theta_diss_m3_mol_s: 4.0e-4 # Coverage dissolution coefficient [m3/mol/s]
+  k_geo: 1.0              # Diagnostic geometric coverage prefactor [-]
+  eps_s_equiv: 0.1        # Diagnostic equivalent solid/precipitate fraction [-]
+
+time:
+  charge_time_s: 7200.0   # Demo charge duration [s]
+  discharge_time_s: 7200.0 # Demo discharge duration [s]
+  dt_output_s: 60.0       # Demo output spacing [s]
+  max_step_s: 20.0        # solve_ivp maximum step [s]
+
+current:
+  i_charge_A_m2: 2.0      # Positive means charge oxidation: 2I- -> I2 + 2e- [A/m2]
+  i_discharge_A_m2: -2.0  # Negative means discharge reduction [A/m2]
+
+molecular_prior:
+  enabled: false          # Disabled by default; sensitivity/diagnostic use only.
+  mapping: conservative   # conservative, moderate, or aggressive_diagnostic
+  basal_E_ads_eV: -0.514252797 # Basal graphite reference adsorption energy [eV/I2]
+  site_preference_factors:
+    basal: 1.0
+    OH_functionalized_basal: 1.5
+    carbonyl_edge: 1.0
+    carboxyl_edge: 1.0
+    epoxide_basal: 0.5
+    edge_armchair: 0.5
+    defect: 1.0
+  site_fractions:
+    OH_functionalized_basal: 0.02
+    carbonyl_edge: 0.01
+    carboxyl_edge: 0.005
+    epoxide_basal: 0.0
+    edge_armchair: 0.0
+    defect: 0.005
+  use_for:
+    nucleation_site_density: true
+    k_precip: false
+    k_diss: false
+    film_kin_factor: false
+    theta_direct: false
+
+scan:
+  theta_init: [0.0, 0.5]       # Initial coverage values for closure scans [-]
+  h_I2_init: [0.0, 5.0e-8, 2.0e-7] # Initial I2 film thickness values [m]
+  cI2_tot_bulk: [20.0, 50.0, 90.0] # Bulk total iodine values [mol/m3]
+  cI_bulk: [700.0, 1000.0] # Bulk iodide values [mol/m3]
+  cBr_support: [0.0]       # Supporting bromide values [mol/m3]
+  i_app_fiber: [1.0, 2.0]  # Magnitudes; sign is set by mode [A/m2]
+  mode: [charge, discharge]    # charge => positive current, discharge => negative current
+  duration_s: 1200.0           # Duration per scan case [s]
+  dt_output_s: 300.0           # Output spacing per scan case [s]
+  max_step_s: 20.0             # Maximum solver step during scans [s]
+  n_cells: 32                  # Radial cells during scans [-]

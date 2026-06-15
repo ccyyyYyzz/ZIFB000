@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SingleFiberI2MacroClosure",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "av0_i2",
+    "k_geo",
+    "k_precip_i2",
+    "k_diss_surf",
+    "sigma_I2",
+    "theta_model",
+    "film_model",
+    "notes"
+  ],
+  "properties": {
+    "av0_i2": {
+      "type": "object",
+      "description": "Reference iodine-active fiber area per macroscopic volume.",
+      "required": ["value", "unit"],
+      "properties": {
+        "value": {"type": ["number", "null"]},
+        "unit": {"const": "1/m"}
+      },
+      "additionalProperties": false
+    },
+    "k_geo": {
+      "type": "object",
+      "description": "Geometric coverage prefactor for theta_geo diagnostics.",
+      "required": ["value", "unit"],
+      "properties": {
+        "value": {"type": "number"},
+        "unit": {"const": "1"}
+      },
+      "additionalProperties": false
+    },
+    "k_precip_i2": {
+      "type": "object",
+      "description": "Effective I2 precipitation coefficient in r_precip = k_precip_i2*cI2_supersat.",
+      "required": ["value", "unit"],
+      "properties": {
+        "value": {"type": "number"},
+        "unit": {"const": "m/s"}
+      },
+      "additionalProperties": false
+    },
+    "k_diss_surf": {
+      "type": "object",
+      "description": "Effective surface dissolution coefficient in r_diss = k_diss_surf*theta*cI2_undersat.",
+      "required": ["value", "unit"],
+      "properties": {
+        "value": {"type": "number"},
+        "unit": {"const": "m/s"}
+      },
+      "additionalProperties": false
+    },
+    "sigma_I2": {
+      "type": "object",
+      "description": "Effective I2-film conductivity for Rfilm_local = h_I2/sigma_I2.",
+      "required": ["value", "unit"],
+      "properties": {
+        "value": {"type": "number"},
+        "unit": {"const": "S/m"}
+      },
+      "additionalProperties": false
+    },
+    "theta_model": {
+      "type": "object",
+      "description": "Coverage closure model exported from the microscale scan.",
+      "required": ["name", "expression", "parameters"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "enum": ["theta_h_power_exp", "theta_geo", "history_table", "diagnostic_only"]
+        },
+        "expression": {"type": "string"},
+        "parameters": {"type": "object"},
+        "fit_quality": {"type": "object"}
+      },
+      "additionalProperties": false
+    },
+    "film_model": {
+      "type": "object",
+      "description": "Covered-film kinetic closure model.",
+      "required": ["name", "expression", "parameters"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "enum": ["linear_resistance_factor", "implicit_film_bv", "none"]
+        },
+        "expression": {"type": "string"},
+        "parameters": {"type": "object"},
+        "fit_quality": {"type": "object"}
+      },
+      "additionalProperties": false
+    },
+    "notes": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  }
+}

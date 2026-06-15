@@ -1,0 +1,207 @@
+name,files,MB,last_write_time,classification,final_status_head
+SCTS_R93_sample_article_format_alignment,73,84.621,1781532724.447358,CURRENT_MANUSCRIPT_OR_SAMPLE,SCTS R93 sample-article format alignment: PASS
+SCTS_R93_sample_article_format_benchmark,22,10.943,1781532422.006213,CURRENT_MANUSCRIPT_OR_SAMPLE,
+SCTS_R92_scts_format_compliance,71,77.728,1781531354.9544115,SUPERSEDED_MANUSCRIPT_HISTORY,SCTS R92 SCTS-format compliance packet: PASS
+SCTS_R91_submission_polish_final,80,80.163,1781530835.7797108,SUPERSEDED_MANUSCRIPT_HISTORY,SCTS R91 submission-polish final packet: PASS
+SCTS_R90_reference_verified_submission_packet,80,79.371,1781530299.2832503,SUPERSEDED_MANUSCRIPT_HISTORY,SCTS R90 reference-verified submission packet: PASS
+SCTS_R89_submission_ready_editor_packet,77,79.354,1781529660.400853,SUPERSEDED_MANUSCRIPT_HISTORY,SCTS R89 submission-ready editor packet: PASS
+SCTS_R88_editorial_polished_submission,73,79.393,1781529307.442721,SUPERSEDED_MANUSCRIPT_HISTORY,SCTS R88 editorial-polished submission package: PASS
+SCTS_R87_native_figure_submission_package,78,79.55,1781528979.2218213,SUPERSEDED_MANUSCRIPT_HISTORY,SCTS R87 native-figure submission package: PASS
+SCTS_R86_figure_compliant_submission_package,77,107.113,1781528300.0974174,SUPERSEDED_MANUSCRIPT_HISTORY,SCTS R86 figure-compliant submission package: PASS
+SCTS_R85_submission_ordered_revision,62,32.811,1781528020.027578,SUPERSEDED_MANUSCRIPT_HISTORY,SCTS R85 submission ordered revision: PASS
+SCTS_R84_publication_deep_revision,65,33.036,1781527802.9563558,SUPERSEDED_MANUSCRIPT_HISTORY,SCTS R84 publication deep revision: PASS
+SCTS_R83_final_review_packet,35,24.357,1781527029.110748,SUPERSEDED_MANUSCRIPT_HISTORY,SCTS R83 final review packet: PASS
+SCTS_submission_ready_R82_visual_fixed,74,31.235,1781526854.9575179,SUPERSEDED_MANUSCRIPT_HISTORY,SCTS R82 visual-fixed submission package: PASS
+SCTS_R81_word_pdf_visual_QA,33,7.706,1781526720.0856256,SUPERSEDED_MANUSCRIPT_HISTORY,
+SCTS_submission_ready_R80,39,16.005,1781526565.344139,SUPERSEDED_MANUSCRIPT_HISTORY,SCTS R80 submission-ready polish package: PASS_PARTIAL
+SCTS_senior_author_revision_R79,38,15.999,1781526413.3334367,SUPERSEDED_MANUSCRIPT_HISTORY,SCTS R79 senior-author revision package: PASS_PARTIAL
+SCTS_publishable_manuscript_R78,37,15.993,1781526145.909594,SUPERSEDED_MANUSCRIPT_HISTORY,SCTS R78 publishable manuscript package: PASS_PARTIAL
+SCTS_editorial_submission_R77,39,16.725,1781525773.9771717,SUPERSEDED_MANUSCRIPT_HISTORY,SCTS R77 editorial submission manuscript: PASS_PARTIAL
+SCTS_submission_candidate_R76,36,11.521,1781525521.3096945,SUPERSEDED_MANUSCRIPT_HISTORY,SCTS R76 lean submission-candidate manuscript: PASS_PARTIAL
+SCTS_submission_candidate_R75,36,11.643,1781525356.997723,SUPERSEDED_MANUSCRIPT_HISTORY,SCTS R75 submission-candidate manuscript: PASS_PARTIAL
+SCTS_literature_positioned_manuscript_R74,38,11.649,1781525113.5197332,SUPERSEDED_MANUSCRIPT_HISTORY,SCTS R74 literature-positioned invited manuscript: PASS_PARTIAL
+SCTS_evidence_enriched_manuscript_R73,33,10.794,1781524686.9123874,SUPERSEDED_MANUSCRIPT_HISTORY,SCTS_R73_evidence_enriched_manuscript: PASS_PARTIAL
+SCTS_direct_submission_manuscript_R72,33,10.794,1781524415.598615,SUPERSEDED_MANUSCRIPT_HISTORY,SCTS_R72_direct_submission_manuscript: PASS_PARTIAL
+SCTS_submission_polished_R71,35,10.803,1781523967.855178,SUPERSEDED_MANUSCRIPT_HISTORY,SCTS_R71_submission_polished_manuscript: PASS_PARTIAL
+SCTS_final_manuscript_R70,30,10.786,1781523625.2907703,SUPERSEDED_MANUSCRIPT_HISTORY,SCTS_R70_final_manuscript: PASS_PARTIAL
+SCTS_publication_manuscript_R69,28,10.774,1781523322.0693357,SUPERSEDED_MANUSCRIPT_HISTORY,SCTS_R69_publication_manuscript: PASS_PARTIAL
+SCTS_submission_ready_pack_R68,34,7.312,1781522699.3350644,SUPERSEDED_MANUSCRIPT_HISTORY,SCTS_R68_submission_ready_pack: PASS_PARTIAL
+SCTS_invited_manuscript_R67,24,7.3,1781522293.3505983,SUPERSEDED_MANUSCRIPT_HISTORY,SCTS_R67_invited_manuscript: PASS_PARTIAL
+SCTS_invited_manuscript_R66,24,8.218,1781521971.634777,SUPERSEDED_MANUSCRIPT_HISTORY,SCTS_R66_invited_manuscript: PASS_PARTIAL
+SCTS_submission_manuscript_package_R65,28,8.222,1781521662.5722935,SUPERSEDED_MANUSCRIPT_HISTORY,SCTS_R65_submission_package: PASS_PARTIAL
+SCTS_publication_ready_manuscript_R64,26,15.615,1781520922.2381723,SUPERSEDED_MANUSCRIPT_HISTORY,SCTS_R64_publication_ready_package: PASS_PARTIAL
+COMSOL_spatial_axis_profile_repair_R63,33,20.288,1781519576.5421326,COMSOL_EVIDENCE,COMSOL spatial axis/profile repair R63: PASS
+SCTS_invited_manuscript_final_package,22,8.239,1781518995.1143534,SUPERSEDED_MANUSCRIPT_HISTORY,SCTS invited manuscript final package: PASS
+SCTS_invited_manuscript_physics_first_ZIFB,19,10.844,1781518057.4320104,SUPERSEDED_MANUSCRIPT_HISTORY,SCTS invited manuscript package: PASS
+ZIFB_R61_parameter_visual_data_explanation,23,6.568,1781517394.9217017,USEFUL_MECHANISM_SYNTHESIS,ZIFB R61 parameter visual data explanation: PASS
+ZIFB_R60_parameter_by_parameter_mechanistic_argument,5,0.039,1781517150.634255,USEFUL_MECHANISM_SYNTHESIS,ZIFB R60 parameter-by-parameter mechanistic argument: PASS
+ZIFB_R59_professor_level_interpretive_synthesis,17,4.927,1781516184.0113742,USEFUL_MECHANISM_SYNTHESIS,ZIFB R59 professor-level interpretive synthesis: PASS
+ZIFB_R58_top_journal_claim_evidence_package,13,0.446,1781515515.8646123,USEFUL_MECHANISM_SYNTHESIS,# R58 Top-journal Claim-evidence Package: PASS
+ZIFB_R57_integrated_top_journal_analysis_synthesis,11,0.615,1781515255.5785997,USEFUL_MECHANISM_SYNTHESIS,# R57 Integrated Top-journal Analysis Synthesis: PASS
+ZIFB_R56_top_journal_evidence_chain_and_axis_repair,20,3.344,1781515036.6589072,USEFUL_MECHANISM_SYNTHESIS,# R56 Top-journal Evidence Chain and Axis Repair: PASS
+ZIFB_R55_publication_spatial_timelapse,56,3.243,1781513357.2280796,USEFUL_MECHANISM_SYNTHESIS,ZIFB R55 publication spatial timelapse figures: PASS
+ZIFB_R54_top_journal_positive_side_mechanism_figures,28,3.061,1781511649.1004558,USEFUL_MECHANISM_SYNTHESIS,# R54 Final Status
+ZIFB_R53_R52_positive_side_failure_mechanism,19,1.572,1781510049.9838073,USEFUL_MECHANISM_SYNTHESIS,ZIFB R53 R52-positive-side failure mechanism figures: PASS
+ZIFB_paper_figure_lock_local_iodine_failure,37,2.362,1781509193.5567467,USEFUL_MECHANISM_SYNTHESIS,ZIFB paper figure lock local iodine failure: PASS
+ZIFB_R52_goal_completion_audit,5,0.328,1781506653.8659506,USEFUL_MECHANISM_SYNTHESIS,ZIFB R52 goal completion audit: PASS
+GPT_analysis_package_R26_R52_physics_fit,259,15.399,1781484968.2422116,GPT_REVIEW_HISTORY,
+GPT_analysis_package_R26_R51_physics_fit,256,15.379,1781484720.7022126,GPT_REVIEW_HISTORY,
+ZIFB_R51_terminal_boundary_model_selection,4,0.003,1781484624.8612752,USEFUL_MECHANISM_SYNTHESIS,ZIFB R51 terminal boundary model selection: PASS
+ZIFB_R50_protocol_cutoff_collapse_boundary,11,1.06,1781484460.368543,USEFUL_MECHANISM_SYNTHESIS,ZIFB R50 protocol cutoff collapse boundary: PARTIAL
+GPT_analysis_package_R26_R49_physics_fit,242,14.311,1781484305.7293625,GPT_REVIEW_HISTORY,
+ZIFB_R49_cross_dataset_physics_fit_acceptance,9,0.129,1781484249.1313741,INDEX_ONLY,ZIFB R49 cross-dataset physics fit acceptance: PASS
+GPT_analysis_package_R26_R48_physics_fit,233,14.179,1781484103.1775906,GPT_REVIEW_HISTORY,
+ZIFB_R48_www1_Q40_cutoff_platform_split,11,0.308,1781484057.26214,INDEX_ONLY,ZIFB R48 www1 Q40 cutoff/platform split: PASS
+GPT_analysis_package_R26_R47_physics_fit,222,13.87,1781483933.1404135,GPT_REVIEW_HISTORY,
+ZIFB_R47_cutoff_sampling_boundary_audit,9,0.14,1781483883.4701788,INDEX_ONLY,ZIFB R47 cutoff sampling boundary audit: PASS
+ZIFB_R46_cutoff_aware_terminal_depletion,13,0.826,1781483763.370279,INDEX_ONLY,ZIFB R46 cutoff-aware terminal depletion: PARTIAL
+GPT_analysis_package_R26_R45_physics_fit,200,12.904,1781483578.8859131,GPT_REVIEW_HISTORY,
+ZIFB_R45_discharge_cutoff_boundary_detection,11,0.327,1781483487.2879598,INDEX_ONLY,ZIFB R45 discharge cutoff boundary detection: PASS
+GPT_analysis_package_R26_R44_physics_fit,158,8.157,1781483292.1837394,GPT_REVIEW_HISTORY,
+ZIFB_R44_eee_Q60_terminal_capacity_warp,13,0.937,1781483237.1955562,INDEX_ONLY,ZIFB R44 eee Q60 terminal capacity warp: PARTIAL
+ZIFB_R43_discharge_terminal_cutoff_sensitivity,12,0.803,1781483059.8093705,INDEX_ONLY,ZIFB R43 discharge terminal cutoff sensitivity: PASS
+GPT_analysis_package_R26_R42_physics_fit,136,6.862,1781482947.2109895,GPT_REVIEW_HISTORY,
+ZIFB_R42_eee_Q60_state_dependent_BV_NafionASR,16,1.324,1781482897.5236104,INDEX_ONLY,ZIFB R42 eee Q60 state-dependent BV / Nafion ASR diagnostic: PARTIAL
+GPT_analysis_package_R26_R41b_physics_fit,122,6.096,1781482609.0650868,GPT_REVIEW_HISTORY,
+ZIFB_R41b_eee_Q60_quick_relaxation_transport,13,0.95,1781482550.4852352,INDEX_ONLY,ZIFB R41b eee Q60 quick relaxation/transport fit: PARTIAL
+ZIFB_R41_eee_Q60_current_relaxation_terminal_transport,0,0.0,1781482212.7790663,INDEX_ONLY,
+GPT_analysis_package_R26_R40b_physics_fit,111,5.569,1781481927.2701123,GPT_REVIEW_HISTORY,
+ZIFB_R40b_eee_Q60_two_electrode_SOC_transport_quick,12,1.042,1781481790.3856623,INDEX_ONLY,ZIFB R40b quick two-electrode SOC/transport: PARTIAL
+ZIFB_R40_eee_Q60_two_electrode_SOC_transport,0,0.0,1781481288.9542158,INDEX_ONLY,
+GPT_analysis_package_R26_R39_physics_fit,80,5.01,1781481122.8981528,GPT_REVIEW_HISTORY,
+ZIFB_R39_eee_Q60_shared_local_accessibility,14,1.165,1781481072.491578,INDEX_ONLY,ZIFB R39 eee Q60 shared local accessibility: PARTIAL
+ZIFB_R38_eee_Q60_state_dependent_ASR_concentration,15,1.19,1781480756.8651447,INDEX_ONLY,ZIFB R38 eee Q60 state-dependent ASR/concentration: PARTIAL
+GPT_analysis_package_R26_R37_physics_fit,57,3.507,1781480398.0404282,GPT_REVIEW_HISTORY,
+ZIFB_R37_eee_Q60_current_conditioned_discharge_transport,14,0.988,1781480284.368208,INDEX_ONLY,ZIFB R37 eee Q60 current-conditioned discharge transport: PARTIAL
+ZIFB_R36_eee_Q60_CE_conditioned_discharge_health,18,1.17,1781480096.1209605,INDEX_ONLY,ZIFB R36 eee Q60 CE-conditioned discharge health: PARTIAL
+GPT_analysis_package_R25_simulation_led_mechanism,32,0.851,1781479848.5112028,GPT_REVIEW_HISTORY,ZIFB R25 simulation-led mechanism evidence lock: PASS
+GPT_analysis_package_R26_R35b_physics_fit,18,1.107,1781479599.1753228,GPT_REVIEW_HISTORY,ZIFB R35b eee Q60 charge transport quick fit: PARTIAL
+ZIFB_R35b_eee_Q60_charge_transport_quick,14,0.991,1781479567.1431952,INDEX_ONLY,ZIFB R35b eee Q60 charge transport quick fit: PARTIAL
+ZIFB_R35_eee_Q60_charge_transport_state,0,0.0,1781479138.0740857,INDEX_ONLY,
+GPT_analysis_package_R26_R34_physics_fit,21,1.055,1781478958.2922952,GPT_REVIEW_HISTORY,ZIFB R34 eee Q60 pre-failure rate-series fit: PARTIAL
+ZIFB_R34_eee_Q60_prefailure_rate_series,13,0.581,1781478876.6871078,INDEX_ONLY,ZIFB R34 eee Q60 pre-failure rate-series fit: PARTIAL
+ZIFB_R33_www1_history_terminal_health,14,0.844,1781478590.8027308,INDEX_ONLY,ZIFB R33 history-dependent terminal health: PARTIAL
+ZIFB_R32_www1_weak_domain_terminal_depletion,13,0.799,1781478447.436286,INDEX_ONLY,ZIFB R32 weak-domain terminal depletion: PARTIAL
+GPT_analysis_package_R26_R31b_physics_fit,18,0.806,1781478160.7563982,GPT_REVIEW_HISTORY,ZIFB R31b www1 discharge accessibility-state quick fit: PARTIAL
+ZIFB_R31b_www1_discharge_accessibility_quick,15,0.933,1781477833.996881,INDEX_ONLY,ZIFB R31b www1 discharge accessibility-state quick fit: PARTIAL
+ZIFB_R31_www1_discharge_accessibility_state,0,0.0,1781477286.00405,INDEX_ONLY,
+ZIFB_R30c_www1_canonical_rate_points,12,0.487,1781477031.700524,INDEX_ONLY,ZIFB R30c www1 canonical Q40 rate-point fit: PARTIAL
+ZIFB_R30b_www1_rate_series_global_physics,12,0.754,1781476823.1348667,INDEX_ONLY,ZIFB R30b www1 Q40 rate-series global physics fit: PARTIAL
+ZIFB_R30_additional_rate_fit_candidates,6,0.348,1781476495.944765,INDEX_ONLY,
+GPT_analysis_package_R26_R29b_physics_fit,14,0.369,1781476308.6021783,GPT_REVIEW_HISTORY,
+ZIFB_R29b_rate_linear_terminal_margin,10,0.237,1781476190.0840542,FOUNDATIONAL_MECHANISM_HISTORY,ZIFB R29b linear terminal-margin RATE fit: PASS
+ZIFB_R29_rate_shared_terminal_margin,11,0.293,1781476124.6525772,FOUNDATIONAL_MECHANISM_HISTORY,ZIFB R29 shared terminal-margin RATE fit: PARTIAL
+GPT_analysis_package_R26_R28_protocol_scaled_physics_fit,13,0.283,1781475875.551311,GPT_REVIEW_HISTORY,
+ZIFB_R28c_rate_replicate_state_only,6,0.232,1781475798.1646466,FOUNDATIONAL_MECHANISM_HISTORY,ZIFB R28c RATE replicate state-only fit: PARTIAL
+ZIFB_R28b_rate_protocol_scaled_quick,14,0.411,1781475699.8994336,FOUNDATIONAL_MECHANISM_HISTORY,ZIFB R28b RATE protocol-scaled quick fit: PASS
+ZIFB_R28_protocol_scaled_physics_fullcell_fit,8,0.456,1781475044.564736,FOUNDATIONAL_MECHANISM_HISTORY,
+GPT_analysis_package_R26_R27_physics_constrained_fit,12,0.273,1781474307.8880136,GPT_REVIEW_HISTORY,
+ZIFB_R27_rate_trial_after_CAP_baseline,6,0.093,1781474200.981866,FOUNDATIONAL_MECHANISM_HISTORY,ZIFB R27 RATE240_Q40 physical fit trial: PARTIAL
+ZIFB_R26_physics_constrained_fullcell_fit,16,0.495,1781472814.3916142,FOUNDATIONAL_MECHANISM_HISTORY,ZIFB R26 physics-constrained full-cell fit: PASS
+ZIFB_R25_simulation_led_mechanism_evidence_lock,42,0.865,1781226879.7726462,FOUNDATIONAL_MECHANISM_HISTORY,ZIFB R25 simulation-led mechanism evidence lock: PASS
+R1_true_spatial_mechanism_evidence_package,318,1.14,1781226396.732587,INDEX_ONLY,
+GPT_analysis_package_R24_full_history_hydraulic,27,0.658,1781225075.174052,GPT_REVIEW_HISTORY,ZIFB R24 full-history hydraulic-clogging refit: PARTIAL
+ZIFB_R24_full_history_hydraulic_clogging_refit,65,3.415,1781225001.2582614,FOUNDATIONAL_MECHANISM_HISTORY,ZIFB R24 full-history hydraulic-clogging refit: PARTIAL
+GPT_analysis_package_R23_mechanistic_rescue,22,0.702,1781223660.978472,GPT_REVIEW_HISTORY,ZIFB R23 overnight mechanistic full-cell rescue matrix: PASS
+ZIFB_R23_overnight_mechanistic_fullcell_rescue_matrix,96,2.912,1781223625.6091437,FOUNDATIONAL_MECHANISM_HISTORY,ZIFB R23 overnight mechanistic full-cell rescue matrix: PASS
+GPT_analysis_package_R22M_pure_mechanism,20,0.55,1781221101.5324657,GPT_REVIEW_HISTORY,﻿ZIFB R22M pure-mechanism state-space full-cell fit: FAIL
+ZIFB_R22M_pure_mechanism_state_space_fullcell_fit,56,2.215,1781220929.7043266,FOUNDATIONAL_MECHANISM_HISTORY,﻿ZIFB R22M pure-mechanism state-space full-cell fit: FAIL
+GPT_analysis_package_R21_component_fullcell,26,1.058,1781217831.8156545,GPT_REVIEW_HISTORY,ZIFB R21 component-library full-cell refit: PASS
+ZIFB_R21_component_library_fullcell_refit,80,6.086,1781212212.133485,FOUNDATIONAL_MECHANISM_HISTORY,ZIFB R21 component-library full-cell refit: PASS
+GPT_analysis_package_R20_observable_layer,38,2.355,1781207837.9495642,GPT_REVIEW_HISTORY,ZIFB R20 full-cell observable-layer repair: PASS
+ZIFB_R20_fullcell_observable_layer_repair,56,3.015,1781207699.3739448,FOUNDATIONAL_MECHANISM_HISTORY,ZIFB R20 full-cell observable-layer repair: PASS
+GPT_analysis_package_R19c_protocol_locked_fullcell,28,1.812,1781206219.8212907,GPT_REVIEW_HISTORY,ZIFB R19c protocol-locked full-cell refit: PASS
+ZIFB_R19c_protocol_locked_fullcell_refit,43,2.386,1781206183.2689025,FOUNDATIONAL_MECHANISM_HISTORY,ZIFB R19c protocol-locked full-cell refit: PASS
+GPT_analysis_package_R18b_fullcell,25,0.858,1781204601.0619667,GPT_REVIEW_HISTORY,ZIFB R18b constrained full-cell fit and validation layer: PASS
+ZIFB_R18b_constrained_fullcell_fit_validation,45,19.469,1781204171.0579307,FOUNDATIONAL_MECHANISM_HISTORY,ZIFB R18b constrained full-cell fit and validation layer: PASS
+GPT_analysis_package_R17_manuscript,40,1.629,1781202530.1251218,GPT_REVIEW_HISTORY,ZIFB R17 full physics-first manuscript draft: PASS
+ZIFB_R17_full_physics_first_manuscript_draft,55,1.635,1781199459.1187425,FOUNDATIONAL_MECHANISM_HISTORY,ZIFB R17 full physics-first manuscript draft: PASS
+GPT_analysis_package_R16_manuscript,49,1.583,1781197937.7818027,GPT_REVIEW_HISTORY,ZIFB R16 physics-first manuscript Results draft: PASS
+ZIFB_R16_physics_first_manuscript_results_draft,52,2.811,1781197500.528542,FOUNDATIONAL_MECHANISM_HISTORY,ZIFB R16 physics-first manuscript Results draft: PASS
+GPT_analysis_package_R15_physics_first,60,1.289,1781196414.47422,GPT_REVIEW_HISTORY,
+ZIFB_R15_physics_first_iodine_failure_mechanism_lock,65,3.697,1781195872.3068821,FOUNDATIONAL_MECHANISM_HISTORY,ZIFB R15 physics-first iodine failure mechanism lock: PASS
+ZIFB_R14_local_handling_evidence_hardening,136,6.728,1781193993.1797013,FOUNDATIONAL_MECHANISM_HISTORY,ZIFB R14 local iodine-handling evidence hardening: PASS
+ZIFB_R13_local_iodine_handling_mechanism_reset,59,6.405,1781191907.8013625,FOUNDATIONAL_MECHANISM_HISTORY,ZIFB R13 local iodine-handling mechanism reset: PASS
+ZIFB_R12_first_pilot_QC_GO_NOGO,62,0.24,1781188325.2740507,FOUNDATIONAL_MECHANISM_HISTORY,ZIFB R12 first-pilot QC GO/NO-GO: WAITING
+ZIFB_R11_E5E6_power_repair_and_pilot_QC,66,1.766,1781187045.1070323,FOUNDATIONAL_MECHANISM_HISTORY,ZIFB R11 E5E6 power repair and pilot QC: PASS
+ZIFB_R10_decisive_experiment_preregistration,74,1.826,1781185037.3112411,FOUNDATIONAL_MECHANISM_HISTORY,ZIFB R10 decisive experiment preregistration: PASS
+EC_Lab_protocol_conflict_and_experiment_bridge_R9,80,1.237,1781183707.0260205,INDEX_ONLY,EC-Lab protocol conflict and experiment bridge R9: PASS
+EC_Lab_metadata_conditioned_evidence_R8b,68,1.716,1781182425.296967,INDEX_ONLY,EC-Lab metadata-conditioned evidence R8b: PASS
+EC_Lab_real_MPR_evidence_hardening_R7,63,1.603,1781179995.9769258,INDEX_ONLY,EC-Lab real-MPR evidence hardening R7: PASS
+EC_Lab_parsed_MPR_evidence_R6,111,41.569,1781178564.8567247,INDEX_ONLY,EC-Lab parsed-MPR evidence extraction R6: PASS
+EC_Lab_full_archive_cyz001_or_cyz000_R5,23,1.91,1781177515.2842033,INDEX_ONLY,EC-Lab full archive curation R5: PASS
+EC_Lab_clipboard_capture_R3,98,2.711,1781173402.2330031,INDEX_ONLY,EC-Lab Copy-Data clipboard capture R3: PASS
+EC_Lab_MPR_auto_export_feasibility_R2,50,0.175,1781167840.9110289,INDEX_ONLY,EC-Lab MPR auto-export feasibility R2: PARTIAL
+EC_Lab_archive_organization_R1_protocol_export_assistant,84,8.346,1781165724.4502494,INDEX_ONLY,EC-Lab archive organization R1 protocol/export assistant: PASS
+EC_Lab_archive_organization_R0,83,3.435,1781164315.7561169,INDEX_ONLY,EC-Lab archive organization R0: PASS
+reduced_iodine_failure_predictor_v2_overnight,154,91.025,1781141748.845909,INDEX_ONLY,Reduced iodine-failure predictor v2 overnight validation: PASS
+reduced_iodine_failure_predictor_v0,87,37.537,1781138941.8605714,INDEX_ONLY,Reduced iodine-failure predictor v0: PASS
+COMSOL_native_mechanism_review_R2,45,3.14,1781026778.5455506,COMSOL_EVIDENCE,COMSOL-native mechanism review R2: PASS
+simulation_experiment_mechanism_explanation_v3,40,1.708,1781026424.9278815,INDEX_ONLY,Simulation experiment mechanism explanation v3: PASS
+COMSOL_native_iodine_mechanism_visualization,174,3.193,1781007512.158103,COMSOL_EVIDENCE,COMSOL-native iodine mechanism visualization: PASS
+manuscript_mechanism_figure_pack,69,6.672,1781000107.4383905,INDEX_ONLY,Manuscript mechanism figure package: PASS
+mechanism_robustness_under_bounded_calibration,265,143.892,1780998799.1046572,INDEX_ONLY,﻿Mechanism robustness under bounded calibration envelope: PASS
+c_drive_cleanup_archives,4,0.135,1780986406.3556094,INDEX_ONLY,
+bounded_calibration_under_semantic_guardrails,150,21.972,1780968055.5996065,INDEX_ONLY,Bounded calibration under semantic guardrails: PASS
+code_side_iodine_parameter_semantics_audit,48,18.965,1780961804.938493,INDEX_ONLY,Code-side iodine parameter semantics audit: PASS
+literature_parameter_sanity_guard,88,5.074,1780959921.18937,INDEX_ONLY,Literature-grounded parameter sanity guard: PASS
+core_iodine_mechanism_scan_R1,144,14.919,1780929287.323659,INDEX_ONLY,Core iodine mechanism scan R1: PARTIAL
+core_iodine_physics_model_consolidation,159,35.743,1780920770.1237485,INDEX_ONLY,Core iodine-physics model consolidation: PARTIAL
+unified_active_iodine_physics_anchor_validation_R2,49,0.699,1780881141.951924,INDEX_ONLY,Unified active iodine-physics anchor validation R2: PARTIAL
+cleanup_moved_to_E_20260608_021908,3,0.395,1780878833.55555,INDEX_ONLY,
+active_composition_speciation_refactor,85,9.893,1780867401.0407522,INDEX_ONLY,Active composition/speciation refactor: PASS
+minimal_active_COMSOL_anchor_validation,85,10.911,1780862835.5413506,COMSOL_EVIDENCE,Minimal active COMSOL anchor validation: PARTIAL
+model_physics_correction_anchor_validation,42,6.001,1780854131.6443245,INDEX_ONLY,Model physics correction and anchor validation: PARTIAL
+censored_capacity_and_550C_literature_grounded_gap_analysis,59,10.855,1780845994.942015,INDEX_ONLY,Censored capacity + 550C literature grounded gap analysis: PASS
+experiment_anchored_design_gap_with_NH4Br_tradeoff,47,1.284,1780840262.0140646,INDEX_ONLY,Experiment-anchored design-effect gap with NH4Br tradeoff: PASS
+line_overlap_forensic_audit,22,0.92,1780837820.0609303,INDEX_ONLY,Line-overlap forensic audit: PASS
+deBLK_physical_indicator_mechanism_package,22,2.379,1780836214.6899014,INDEX_ONLY,De-BLK physical-indicator mechanism package: PASS
+paper_ready_COMSOL_mechanism_figures_cleaned,2871,81.839,1780834717.6371877,COMSOL_EVIDENCE,Paper-ready COMSOL mechanism figure cleanup: PASS
+matched_design_mechanism_comparison,386,18.086,1780830776.5036364,INDEX_ONLY,Matched-condition design mechanism comparison: PASS
+COMSOL_multiphysics_state_atlas,407,11.838,1780823678.317423,COMSOL_EVIDENCE,COMSOL multiphysics state atlas: PASS
+multiphysics_coupling_evidence_package,106,10.647,1780788405.1927223,INDEX_ONLY,Multiphysics coupling evidence package: PASS
+ZIFB_focused_design_optimization_after_screening,71,5.342,1780781302.581519,INDEX_ONLY,ZIFB focused design optimization after screening: PASS
+ZIFB_design_parameter_sweep_overnight,226,80.652,1780778479.1847594,INDEX_ONLY,ZIFB design parameter sweep: PASS
+iodine_blockage_phase_map_grid_overnight,180,228.308,1780778475.23,INDEX_ONLY,Iodine blockage phase-map grid overnight: PASS
+TRUE_COMSOL_CLOUDMAP_AND_MOLECULAR_FIGURE_PACKAGE,81,4.421,1780778470.78,MOLECULAR_EVIDENCE,True COMSOL cloud-map and molecular figure package: PASS
+BLK3A_failure_mechanism_ablation_audit,35,46.968,1780765552.6104753,INDEX_ONLY,BLK3A failure-mechanism ablation audit: PASS
+CRITICAL_FIGURE_TRIAGE_AND_FINAL_REDRAW,32,2.44,1780758225.8196537,INDEX_ONLY,Critical figure triage and final redraw: PASS
+MANUSCRIPT_FIGURE_REVIEW_AND_REDRAW_PACKAGE,58,5.463,1780754276.611413,INDEX_ONLY,Manuscript figure redesign with explanations: PASS
+PHYSICS_VARIABLE_manuscript_refactor,30,3.814,1780752215.249293,INDEX_ONLY,Physics-variable manuscript refactor: PASS
+PAPER_GRADE_mechanism_figures_and_visualization,76,10.41,1780747074.9990308,INDEX_ONLY,Paper-grade mechanism figures package: PASS
+FINAL_manuscript_integration_clean_validation_package,98,6.279,1780745637.8891664,INDEX_ONLY,Final manuscript integration clean-validation package: PASS
+project_reorganization,9,0.13,1780742206.639739,INDEX_ONLY,project_reorganization: PASS
+CE_gated_serration_validation,34,2.999,1780741474.0849264,INDEX_ONLY,CE-gated serration validation: PASS
+manual_serration_labeling_and_heldout_validation_design,74,10.829,1780733989.581304,INDEX_ONLY,Manual serration labeling and held-out validation design: PASS
+experimental_trace_curation_exact_BLK3A_R3_validation,42,3.785,1780731319.645251,INDEX_ONLY,Experimental trace curation + exact BLK3A-R3 validation: PASS
+experimental_validation_iodine_blockage_model,69,34.194,1780729094.5423994,INDEX_ONLY,Experimental validation package: PASS
+BLK3A_R3_combined_branch_refinement_overnight,235,89.81,1780725043.757086,INDEX_ONLY,BLK3A-R3 combined branch refinement: PASS
+BLK3A_R2_validation_and_phase_map_overnight,69,59.45,1780699510.667845,INDEX_ONLY,BLK3A-R2 validation and conditional phase map: PARTIAL
+BLK3A_gate_refinement_before_phase_map,38,32.977,1780695905.3101401,INDEX_ONLY,BLK3A gate refinement before full phase map: PASS
+BLK3A_experimental_alignment_before_phase_map,76,5.408,1780694653.3213425,INDEX_ONLY,BLK3A experimental alignment before full phase map: PASS
+BLK3A_R3_experiment_first_calibration,55,37.887,1780690848.1971326,INDEX_ONLY,BLK3A-R3 experiment-first calibration: PASS
+BLK3A_R2_experimental_boundary_recalibration,46,26.235,1780685590.1695604,INDEX_ONLY,BLK3A-R2 experimental boundary recalibration: PASS
+BLK3A_smooth_active_COMSOL_shadow,76,61.239,1780657575.5551698,COMSOL_EVIDENCE,﻿BLK3A smooth active-COMSOL shadow: PASS
+BLK2_experimental_onset_recalibration,52,9.439,1780651765.1740181,INDEX_ONLY,BLK2 experimental-onset recalibration: PASS
+BLK2_real_serration_validation_user_files,27,10.108,1780649471.1340952,INDEX_ONLY,BLK2 real-data serration validation from user files: PASS
+BLK2_no_experimental_data_preparation_package,64,3.683,1780609132.2827778,INDEX_ONLY,BLK2 no-experimental-data preparation package: PASS
+digitized_serration_data,0,0.0,1780608308.3437226,INDEX_ONLY,
+experimental_serration_data,0,0.0,1780608308.3437226,INDEX_ONLY,
+BLK2_dynamic_blockage_release_postprocess,37,4.573,1780607389.3547843,INDEX_ONLY,﻿BLK2 dynamic blockage/release postprocess: PASS
+cp2k_molecular,641,4.463,1780606313.4887743,MOLECULAR_EVIDENCE,﻿CP2K installation: PASS
+iodine_blockage_instability_regime_diagnostic_v2_branchaware,71,5.95,1780606299.7104397,INDEX_ONLY,Iodine blockage instability regime diagnostic v2: PASS
+macro_FRB_parallel_positive_reaction_overnight,49,31.828,1780606292.442363,INDEX_ONLY,Case FR-B overnight parallel reaction refinement: PASS
+standard_2h_branch_aware_calibration_overnight,91,34.227,1780606291.352071,INDEX_ONLY,Standard 2h branch-aware endpoint/hysteresis calibration diagnostic: PASS
+true_standard_2h_charge_benchmark_overnight,52,2.523,1780606288.1389534,INDEX_ONLY,True standard 2h charge benchmark overnight: PASS
+macro_polarization_decomposition_overnight,47,7.149,1780606286.9932683,INDEX_ONLY,Macro polarization decomposition overnight: PASS
+true_standard_late_charge_endpoint_rescue,53,7.368,1780606286.3741517,INDEX_ONLY,Late-charge endpoint rescue under true standard: PASS
+macro_overnight_voltage_and_film_triage,41,23.086,1780606285.6611443,INDEX_ONLY,Macro overnight voltage and film triage: PASS
+standard_2h_endpoint_rescue_overnight,77,25.559,1780606280.643423,INDEX_ONLY,Standard 2h endpoint rescue overnight: PASS
+standard_2h_benchmark_ZnFix_overnight,44,2.635,1780606278.2761118,INDEX_ONLY,Standard 2h benchmark ZnFix overnight: PASS
+BLK1_smooth_blockage_ASR_shadow_model,29,13.316,1780605486.807978,INDEX_ONLY,﻿BLK1 smooth blockage ASR shadow model: PASS
+molecular_to_mesoscale_v2b_aggregation_integration,24,0.059,1780588096.1195638,MOLECULAR_EVIDENCE,v2b aggregation integration: PASS
+mesoscale_i2_fiber,138,16.959,1780528675.8832505,INDEX_ONLY,﻿Mesoscale I2 fiber model: PASS
+comsol_environment,2,0.002,1780516638.5804303,COMSOL_EVIDENCE,
+molecular_to_macro_bridge,48,0.11,1780475136.2133482,MOLECULAR_EVIDENCE,Molecular-to-macro bridge: PASS
+single_fiber_bridge_preflight,4,0.011,1780403293.2738237,INDEX_ONLY,
+single_fiber_i2,6,0.518,1780401682.3313737,INDEX_ONLY,
