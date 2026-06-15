@@ -1,0 +1,12 @@
+{
+  "github_repo": "https://github.com/ccyyyYyzz/ZIFB000",
+  "branch": "main",
+  "commits": [
+    "7fb858f Curate ZIFB000 manuscript and model archive",
+    "175ccbb Record ZIFB000 upload status"
+  ],
+  "local_archive": "ZIFB000",
+  "local_archive_zip": "ZIFB000_curated_archive.zip",
+  "github_light_zip": "ZIFB000/ZIFB000_github_release_light.zip",
+  "note": "pytest/smoke test not run because bundled Python lacks pytest/scipy and system python is C:\\Python34\\python.exe without numpy/scipy/pandas/yaml/pytest; source files and remote upload were verified."
+}
