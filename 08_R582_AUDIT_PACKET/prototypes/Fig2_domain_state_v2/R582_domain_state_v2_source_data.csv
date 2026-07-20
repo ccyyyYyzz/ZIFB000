@@ -1,0 +1,12 @@
+panel,element,symbol,value,unit,evidence_class,source
+a,domain x minimum,x_min,3,mm,registered geometry,manuscript/source_data/Fig_R573_model_geometry/R573_model_geometry_values.csv
+a,domain x maximum,x_max,5,mm,registered geometry,manuscript/source_data/Fig_R573_model_geometry/R573_model_geometry_values.csv
+a,domain y minimum,y_min,0,mm,registered geometry,manuscript/source_data/Fig_R573_model_geometry/R573_model_geometry_values.csv
+a,domain y maximum,y_max,20,mm,registered geometry,manuscript/source_data/Fig_R573_model_geometry/R573_model_geometry_values.csv
+a,felt thickness,L_x,2,mm,registered geometry,manuscript/source_data/Fig_R573_model_geometry/R573_model_geometry_values.csv
+b,free-I2 supersaturation,S,,dimensionless,modeled state,manuscript/source_data/Fig_R581_concept_state_progression/R581_concept_state_progression_source_data.csv
+b,retained solid,eps_s,,volume fraction,modeled state,manuscript/source_data/Fig_R581_concept_state_progression/R581_concept_state_progression_source_data.csv
+b,remaining accessible area,A_bare/A0,1-theta_cal,fraction,voltage-calibrated relation,manuscript/source_data/Fig_R581_concept_state_progression/R581_concept_state_progression_source_data.csv
+b,voltage response,V,,V,model output,manuscript/source_data/Fig_R581_concept_state_progression/R581_concept_state_progression_source_data.csv
+c,average saturation marker,Q_s,83.0,mAh cm^-2,baseline-simulation marker,manuscript/source_data/Fig_R581_concept_state_progression/R581_CONCEPT_STATE_PROGRESSION_BUILD.json
+c,calibrated half-accessibility marker,"Q_f,cal",99.6,mAh cm^-2,voltage-calibrated marker,manuscript/source_data/Fig_R581_concept_state_progression/R581_CONCEPT_STATE_PROGRESSION_BUILD.json

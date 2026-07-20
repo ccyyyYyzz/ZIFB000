@@ -1,0 +1,121 @@
+{
+  "figure": "Fig_R582_domain_state_v2",
+  "core_conclusion": "The model separates a 2D ZIFB positive-electrode domain into supersaturation, retained solid, remaining accessible area, and voltage response.",
+  "backend": "Python/matplotlib",
+  "dimensions_mm": [
+    180.0,
+    90.0
+  ],
+  "raster_dpi": 600,
+  "font_family": "TeX Gyre Termes",
+  "state_annotation_count": 3,
+  "causal_node_count": 4,
+  "rounded_state_cards": 0,
+  "calibration_target": "A_bare/A0 = 1 - theta_cal only",
+  "morphology_claim": false,
+  "qa_pass": true,
+  "script": {
+    "path": "manuscript/source_data/R582_Fig2_domain_state/R582_domain_state_v2.py",
+    "bytes": 24189,
+    "sha256": "89453BC97761E636C525F6266CB405D5E90BC7AA88E126C3F89F22F4C8409A07"
+  },
+  "inputs": [
+    {
+      "path": "manuscript/source_data/Fig_R573_model_geometry/R573_model_geometry_values.csv",
+      "bytes": 549,
+      "sha256": "15682880B2E55A6E07783C3E9FD9C7D18D8E0A9EE2A84BF19B8255CA2A99E4D6"
+    },
+    {
+      "path": "manuscript/source_data/Fig_R581_concept_state_progression/R581_concept_state_progression_source_data.csv",
+      "bytes": 1578,
+      "sha256": "0236E5D941D9F145CF6849BC54A0951E739A91981AF4EDC63A12ED971F5FC8A7"
+    },
+    {
+      "path": "manuscript/source_data/Fig_R581_concept_state_progression/R581_CONCEPT_STATE_PROGRESSION_BUILD.json",
+      "bytes": 1842,
+      "sha256": "C315FD7739717B2B78996B313AD6C7629600E92E50BAEC3ADDC2B16357874AD5"
+    },
+    {
+      "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-regular.otf",
+      "bytes": 140932,
+      "sha256": "CC3FE7C707B81428D23D54DF3EADD9228A2BF6A4D43125D94DF56F5F63134659"
+    },
+    {
+      "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-bold.otf",
+      "bytes": 139480,
+      "sha256": "2FB3E952065FA153C7E4E64E04B98B9D79225739B6025AA3F0F0782D299FF61E"
+    },
+    {
+      "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-italic.otf",
+      "bytes": 141324,
+      "sha256": "6DD103A1672E50568CD2F8A706CCD48443D44D7D073A59D2286F4E6F746575D6"
+    },
+    {
+      "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-bolditalic.otf",
+      "bytes": 144180,
+      "sha256": "1BF6AF99CB0E26C12951317032D79B96AE009551E59CCF02A5B24F325ECFEC87"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "manuscript/figures_R582/Fig_R582_domain_state_v2.svg",
+      "bytes": 23582,
+      "sha256": "C96C728CC923D9BD8B5D6A57B2B52053D28980799F70AEE66419B1E4DA7186A3"
+    },
+    {
+      "path": "manuscript/figures_R582/Fig_R582_domain_state_v2.pdf",
+      "bytes": 26284,
+      "sha256": "93D810F98AEE03E725E8993E5E7E6E61351D54BD68B1084F34DA51EA3B9AF909"
+    },
+    {
+      "path": "manuscript/figures_R582/Fig_R582_domain_state_v2.png",
+      "bytes": 340194,
+      "sha256": "49B655408940EE083BCF81C51CB42D0D363119DD3297F9921FF90474B5D37333"
+    },
+    {
+      "path": "manuscript/figures_R582/Fig_R582_domain_state_v2.tiff",
+      "bytes": 735742,
+      "sha256": "DC5CE2D2004AF51711DC8C104D4AF8571705560F09884477988A07EC115316AE"
+    },
+    {
+      "path": "manuscript/figures_R582/Fig_R582_domain_state_v2_180mm_preview.png",
+      "bytes": 141127,
+      "sha256": "E4EE9307CDA455340172A5DBCF157CE71C49E1C14D956F67D0DB0DB6FA3B1801"
+    },
+    {
+      "path": "manuscript/figures_R582/Fig_R582_domain_state_v2_grayscale_QA.png",
+      "bytes": 148743,
+      "sha256": "F7515AC51D9563A50A6CF7E30333880BCA3778EDCDDEFD8CCD6D66B4881E6311"
+    },
+    {
+      "path": "manuscript/source_data/R582_Fig2_domain_state/R582_domain_state_v2_source_data.csv",
+      "bytes": 1710,
+      "sha256": "E110EFE4F008FE52280B8A86C6B976393D881C88F33397431F2AEA3328A003C9"
+    },
+    {
+      "path": "manuscript/source_data/R582_Fig2_domain_state/R582_domain_state_v2_QA.json",
+      "bytes": 1921,
+      "sha256": "C94287B7D9F2DCCD5C4DD31C9C3087FD934F13A4647E30FF893DAFB508B9EEC4"
+    },
+    {
+      "path": "manuscript/source_data/R582_Fig2_domain_state/R582_domain_state_v2_QA.md",
+      "bytes": 868,
+      "sha256": "C25D1D9FB58C80D0CD0C2FD82093F979AC1ABCB40414D2EA5FA97F0AB08BA6A9"
+    },
+    {
+      "path": "manuscript/source_data/R582_Fig2_domain_state/R582_FIGURE_CONTRACT_v2.md",
+      "bytes": 1405,
+      "sha256": "5B53C76F9DDBE67DC852C06C815CC806BE540165D4DEB67CDB64F1C52B49FBC5"
+    },
+    {
+      "path": "manuscript/source_data/R582_Fig2_domain_state/CAPTION_DRAFT_v2.md",
+      "bytes": 704,
+      "sha256": "0F3469B8CAFADACD1A8452D2681323EC0760DBDC9FA426223CD416CE11CE79CF"
+    },
+    {
+      "path": "manuscript/source_data/R582_Fig2_domain_state/README_v2.md",
+      "bytes": 576,
+      "sha256": "BBD6FF6D250122CEDC778E88B7DB8D5E597B59471CC07179135C7CB57B8A3CBF"
+    }
+  ]
+}

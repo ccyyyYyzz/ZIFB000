@@ -20,6 +20,9 @@ scientific, visual, citation, compilation and cold-build checks.
   are not included here.
 - Continuum fields are model outputs. They are not microscopy, reconstructed
   deposit morphology or evidence of a physical blocking front.
+- Manuscript body and figure text use one family: TeX Gyre Termes with
+  NewTX/Termes-compatible mathematics. Arial, Helvetica, DejaVu Sans and other
+  figure-font substitutions fail the R582 release gate.
 
 ## Start here
 
@@ -30,6 +33,24 @@ scientific, visual, citation, compilation and cold-build checks.
 4. Read `audits/LANGUAGE_ARCHITECTURE_AUDIT.md` for the reverse outline,
    terminology ledger and direct rewrite examples.
 5. Record decisions in GitHub issue #1.
+
+## Accepted R582 figure candidates
+
+These are live, source-backed candidates rather than frozen publication files.
+Review their 180 mm PNG/PDF renders, captions, contracts and QA records together:
+
+1. [`prototypes/Fig1_experimental_problem/`](prototypes/Fig1_experimental_problem/)
+   — full-cell observations with an explicit positive-electrode focus.
+2. [`prototypes/Fig2_domain_state_v2/`](prototypes/Fig2_domain_state_v2/)
+   — domain and state relation without a decorative morphology cartoon.
+3. [`prototypes/Fig3_spatial_v2/`](prototypes/Fig3_spatial_v2/)
+   — the 80/100/120 mAh cm$^{-2}$ spatial hero with shared row scales.
+4. [`prototypes/Fig4_closure_identifiability/`](prototypes/Fig4_closure_identifiability/)
+   — matched model-form sensitivity and accessibility non-identifiability.
+
+The remaining cross-scale-bounds and operating-lever figures are under active
+construction and will not be promoted until they pass the same font, evidence,
+grayscale, source-data and deterministic-build checks.
 
 ## Current visual diagnosis
 
@@ -59,4 +80,3 @@ will move to SI.
   the reader to decode internal audit vocabulary?
 - Are necessary model boundaries stated once in the correct location rather
   than repeated as defensive disclaimers?
-

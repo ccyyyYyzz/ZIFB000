@@ -1,0 +1,4 @@
+reference_id,value,unit,meaning,source_marker_id
+baseline_half_area_capacity,99.463708428,mAh cm^-2,first baseline accessibility-loss crossing at theta=0.5,Q_f_cal
+baseline_half_area_solid_fraction,0.000118976482998,dimensionless,baseline solid-I2 fraction read at the baseline half-area capacity,eps_s_cal_traj
+island_model_half_area_solid_fraction,0.00179728189316,dimensionless,half-area reference of the registered dense island relation,eps_s_island_half

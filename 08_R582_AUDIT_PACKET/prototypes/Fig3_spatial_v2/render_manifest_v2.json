@@ -59,19 +59,19 @@
   "outputs": {
     "svg": {
       "path": "E:\\zifb_final_9129_luck\\manuscript\\figures_R582\\Fig_R582_spatial_progression_v2.svg",
-      "sha256": "A7403D981FE0D3C4C626E1AD08C46F8595151E270970B3DBDF1E1D058D18CFAE",
-      "bytes": 60480,
+      "sha256": "32CF717AF5C1A1099C4E0D8FA02042FE70BE7ED819D1E4C4718D079E3296622E",
+      "bytes": 58587,
       "editable_text_nodes": 63
     },
     "pdf": {
       "path": "E:\\zifb_final_9129_luck\\manuscript\\figures_R582\\Fig_R582_spatial_progression_v2.pdf",
-      "sha256": "0BD5C588BC20952D5BD692563D8006C466ABB3D0EDE6F4EBE6C9B7A5069BF047",
-      "bytes": 75540
+      "sha256": "E4C1D256B86A449D853282660D23CFA452936CBF9D16ADFC7F64DCCD3DCDCCB6",
+      "bytes": 41559
     },
     "png": {
       "path": "E:\\zifb_final_9129_luck\\manuscript\\figures_R582\\Fig_R582_spatial_progression_v2.png",
-      "sha256": "2204D2DF45BF5D91EECE1BB4964B7842FA01F2A305E3F88C150C4169C27175E4",
-      "bytes": 156359,
+      "sha256": "34833083BDF8ACF336FD26856A1F2F936606DD9AD5A8BBB6324A32CC1E66374E",
+      "bytes": 150755,
       "pixels": [
         2125,
         1712
@@ -84,8 +84,8 @@
     },
     "tiff": {
       "path": "E:\\zifb_final_9129_luck\\manuscript\\figures_R582\\Fig_R582_spatial_progression_v2.tiff",
-      "sha256": "456F3D66F7E3B34FDFEC1F9ABF93A03CB2F202968B8E98DE0FA98EC5F5D09A06",
-      "bytes": 2601380,
+      "sha256": "79765DE3584AFB557F12A5FB69838896337D1AA326D57F1AAA633CB1EC465352",
+      "bytes": 2590474,
       "pixels": [
         4251,
         3425
@@ -98,8 +98,8 @@
     },
     "columnwidth_preview": {
       "path": "E:\\zifb_final_9129_luck\\manuscript\\figures_R582\\Fig_R582_spatial_progression_v2_columnwidth_180mm.png",
-      "sha256": "F5DCC238C21DE269E602544195D8673426C2298F463610C325F18C3C2E384FF5",
-      "bytes": 67813,
+      "sha256": "5B4CCE6F9EC8BA61514C0A6375C42E69919FC2679FCB327A8A52F6655EBB5336",
+      "bytes": 64047,
       "pixels": [
         1062,
         856
@@ -112,8 +112,8 @@
     },
     "grayscale_qa": {
       "path": "E:\\zifb_final_9129_luck\\manuscript\\figures_R582\\Fig_R582_spatial_progression_v2_grayscale_QA.png",
-      "sha256": "CA1A8D63FD83A88BD555BF41591FE414959F43498CD47CAD24E2CE783982C97C",
-      "bytes": 65610,
+      "sha256": "482659D8E8DA56870E7DDCD93A6D38815C75CED27148AB1C3FDCBA7C6D9F87C8",
+      "bytes": 62172,
       "pixels": [
         1062,
         856

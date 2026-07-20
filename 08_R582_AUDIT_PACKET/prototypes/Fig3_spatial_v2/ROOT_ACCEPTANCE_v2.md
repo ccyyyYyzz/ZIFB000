@@ -18,5 +18,5 @@ not the current main-figure choice. Acceptance is conditional on final manuscrip
 placement, caption synchronization, and whole-PDF visual QA; it does not convert
 the modeled fields into microscopy, morphology, or a pore-blocking front.
 
-Accepted PDF SHA-256:
-`0BD5C588BC20952D5BD692563D8006C466ABB3D0EDE6F4EBE6C9B7A5069BF047`.
+Accepted PDF SHA-256 after manuscript-font harmonization:
+`E4C1D256B86A449D853282660D23CFA452936CBF9D16ADFC7F64DCCD3DCDCCB6`.

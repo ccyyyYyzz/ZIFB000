@@ -16,14 +16,36 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from matplotlib.colors import LinearSegmentedColormap, LogNorm, Normalize, SymLogNorm
+from matplotlib import font_manager
 from matplotlib.patches import Rectangle
 from PIL import Image
 
 
-plt.rcParams["font.family"] = "sans-serif"
-plt.rcParams["font.sans-serif"] = ["Arial", "Helvetica", "DejaVu Sans", "Liberation Sans"]
+TERMES_DIR = Path(
+    r"D:\Program Files\texlive\2024\texmf-dist\fonts\opentype\public\tex-gyre"
+)
+TERMES_FILES = (
+    "texgyretermes-regular.otf",
+    "texgyretermes-bold.otf",
+    "texgyretermes-italic.otf",
+    "texgyretermes-bolditalic.otf",
+)
+for font_name in TERMES_FILES:
+    font_path = TERMES_DIR / font_name
+    if not font_path.is_file():
+        raise FileNotFoundError(
+            f"Required manuscript-matched font is missing: {font_path}"
+        )
+    font_manager.fontManager.addfont(font_path)
+
+plt.rcParams["font.family"] = "TeX Gyre Termes"
+plt.rcParams["mathtext.fontset"] = "custom"
+plt.rcParams["mathtext.rm"] = "TeX Gyre Termes"
+plt.rcParams["mathtext.it"] = "TeX Gyre Termes:italic"
+plt.rcParams["mathtext.bf"] = "TeX Gyre Termes:bold"
+plt.rcParams["mathtext.sf"] = "TeX Gyre Termes"
 plt.rcParams["svg.fonttype"] = "none"
-plt.rcParams["svg.hashsalt"] = "R582-Fig3-spatial-progression-v2"
+plt.rcParams["svg.hashsalt"] = "R582-Fig3-spatial-progression-v2-termes"
 plt.rcParams["pdf.fonttype"] = 42
 plt.rcParams["ps.fonttype"] = 42
 plt.rcParams["font.size"] = 7.4

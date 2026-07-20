@@ -26,6 +26,30 @@ of positive-electrode state variables. Lower-scale calculations bound priors and
 physical comparator families; they do not determine the calibrated production
 closure.
 
+### Default submission target
+
+The production target is a **Journal of Power Sources Research Paper**, chosen
+because it matches the ZIFB/ZBFB venue and argument style represented in
+`ZIFB_W`. The live Elsevier guide checked on 2026-07-20 permits up to 8,000 words
+excluding abstract, figures, tables, and references, and up to eight main figures;
+R582 will target at most 6,500 words and six main figures. The abstract must not
+exceed 200 words; keywords are limited to 1--7. A separate highlights file will
+contain 3--5 bullets of at most 85 characters each. Editable LaTeX and individual
+figure files are required, and the final data statement must cite/link a deposited
+dataset or explain why sharing is impossible.
+
+The journal explicitly prioritizes experimentally validated computational work.
+R582 must therefore present the existing full-cell records honestly as
+experimental anchors and stress tests, never disguise them as an independent
+measurement of the modeled positive-electrode states, and make the remaining
+validation gap visible to the editor. This is the main venue-fit risk. The figure
+pipeline is programmatic and source-driven; no generative-image tool may be used
+for manuscript artwork or the graphical abstract. A graphical abstract, if made,
+will be constructed from the accepted vector figure grammar and registered data.
+
+Official guide checked:
+`https://www.sciencedirect.com/journal/journal-of-power-sources/publish/guide-for-authors`.
+
 ## 2. Immutable scientific and data boundaries
 
 1. The porous ZIFB positive electrode is the scientific and grammatical subject.
@@ -260,8 +284,11 @@ the abstract, once at the first closure result, and once in Discussion.
 
 - 180 mm double-column width; 95–145 mm usual height, at most about 155 mm for the
   spatial plate.
-- Arial/Helvetica/DejaVu Sans; 7.2 pt base, 6.5 pt minimum ticks, 8 pt bold
-  lowercase panel labels.
+- One manuscript-matched family everywhere: TeX Gyre Termes for body text and
+  figure text, with NewTX/Termes-compatible mathematics. Plot scripts register
+  the exact TeX Live OTF files and may not fall back to Arial, Helvetica,
+  DejaVu Sans, or a platform default. Use a 7.2 pt base, 6.5 pt minimum ticks,
+  and 8 pt bold lowercase panel labels.
 - White background; left/bottom spines only; no default grid; editable SVG/PDF
   text; PDF Type 42/TrueType fonts; 600 dpi opaque RGB TIFF.
 - Semantic palette: graphite control `#4D4D4D`, vermilion main relation `#D65345`,
@@ -281,6 +308,8 @@ R582 is not frozen or described as submission-ready until all gates pass:
 1. Every main figure passes a 15-second claim/comparison/encoding test at final
    placed size, in colour and grayscale.
 2. No main-art text is below 6.5 pt; all vector text is editable; no Type 3 fonts.
+   PDF/SVG font inspection confirms the same TeX Gyre Termes family as the
+   manuscript body and reports no silent fallback.
 3. Each quantitative panel has deterministic script, clean source table, input and
    output hashes, and a rendered-source manifest.
 4. Main and SI captions match every plotted series, scale, capacity, unit, and

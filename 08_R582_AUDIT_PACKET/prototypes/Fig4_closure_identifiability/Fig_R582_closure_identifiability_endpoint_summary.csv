@@ -1,0 +1,4 @@
+series,feedback_solve,inventory_source,Q_s_mAh_cm2,Q_half_area_mAh_cm2,endpoint_A_bare_over_A0,endpoint_eps_s,endpoint_voltage_V
+baseline simulation,True,own solved eps_s(Q),82.8902943158,99.463708428,0.0100178505069,0.00315235665964,1.72836440104
+one-way island shadow,False,baseline eps_s(Q),82.8902943158,118.692725092,0.374134882787,0.00315235665964,
+coupled island-model variant,True,own solved eps_s(Q),82.892359092,,0.690980792745,0.000658584284203,1.44020814388
