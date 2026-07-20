@@ -1,0 +1,128 @@
+{
+  "figure": "R582 Figure 3 spatial progression v2",
+  "backend": "Python/matplotlib",
+  "final_size_mm": [
+    180.0,
+    145.0
+  ],
+  "source": "E:\\zifb_final_9129_luck\\manuscript\\source_data\\Fig_R545_fields\\Fig3_baseline_spatial_long.csv",
+  "checks": {
+    "input_sha256": "E322D0D0C4B0D5C8CB84BD5CB18D1A43CBA183EB8A5F112577686993BC8FC007",
+    "selected_rows": 17985,
+    "nodes_per_capacity": {
+      "80": 5995,
+      "100": 5995,
+      "120": 5995
+    },
+    "grid": {
+      "x_count": 55,
+      "y_count": 109
+    },
+    "coordinate_bounds_mm": {
+      "x": [
+        3.0,
+        5.0
+      ],
+      "y": [
+        0.0,
+        20.0
+      ]
+    },
+    "capacity_markers_mAh_cm2": {
+      "Q_s": 83.0202,
+      "Q_f_cal": 99.5901
+    },
+    "current_nonpositive_nodes": {
+      "80": 0,
+      "100": 6,
+      "120": 0
+    },
+    "current_negative_nodes": {
+      "80": 0,
+      "100": 6,
+      "120": 0
+    },
+    "positive_current_range_A_m2": [
+      8.34224959244e-05,
+      21674.7619951
+    ],
+    "max_abs_native_A_bare_minus_1_minus_theta": 0.000647152904999948,
+    "no_missing_or_nonfinite": true,
+    "no_duplicate_capacity_coordinates": true
+  },
+  "generated_source_data": {
+    "subset_csv": {
+      "path": "E:\\zifb_final_9129_luck\\manuscript\\source_data\\R582_Fig3_spatial_progression\\Fig_R582_spatial_progression_v2_source.csv",
+      "sha256": "A34B9F03A6A2CBCC6ACDB60AE8F2E4D6E008E61FAED14AFA8CD2B01C3E272F6C"
+    }
+  },
+  "outputs": {
+    "svg": {
+      "path": "E:\\zifb_final_9129_luck\\manuscript\\figures_R582\\Fig_R582_spatial_progression_v2.svg",
+      "sha256": "A7403D981FE0D3C4C626E1AD08C46F8595151E270970B3DBDF1E1D058D18CFAE",
+      "bytes": 60480,
+      "editable_text_nodes": 63
+    },
+    "pdf": {
+      "path": "E:\\zifb_final_9129_luck\\manuscript\\figures_R582\\Fig_R582_spatial_progression_v2.pdf",
+      "sha256": "0BD5C588BC20952D5BD692563D8006C466ABB3D0EDE6F4EBE6C9B7A5069BF047",
+      "bytes": 75540
+    },
+    "png": {
+      "path": "E:\\zifb_final_9129_luck\\manuscript\\figures_R582\\Fig_R582_spatial_progression_v2.png",
+      "sha256": "2204D2DF45BF5D91EECE1BB4964B7842FA01F2A305E3F88C150C4169C27175E4",
+      "bytes": 156359,
+      "pixels": [
+        2125,
+        1712
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "mode": "RGBA"
+    },
+    "tiff": {
+      "path": "E:\\zifb_final_9129_luck\\manuscript\\figures_R582\\Fig_R582_spatial_progression_v2.tiff",
+      "sha256": "456F3D66F7E3B34FDFEC1F9ABF93A03CB2F202968B8E98DE0FA98EC5F5D09A06",
+      "bytes": 2601380,
+      "pixels": [
+        4251,
+        3425
+      ],
+      "dpi": [
+        600.0,
+        600.0
+      ],
+      "mode": "RGB"
+    },
+    "columnwidth_preview": {
+      "path": "E:\\zifb_final_9129_luck\\manuscript\\figures_R582\\Fig_R582_spatial_progression_v2_columnwidth_180mm.png",
+      "sha256": "F5DCC238C21DE269E602544195D8673426C2298F463610C325F18C3C2E384FF5",
+      "bytes": 67813,
+      "pixels": [
+        1062,
+        856
+      ],
+      "dpi": [
+        150.01239999999999,
+        150.01239999999999
+      ],
+      "mode": "RGBA"
+    },
+    "grayscale_qa": {
+      "path": "E:\\zifb_final_9129_luck\\manuscript\\figures_R582\\Fig_R582_spatial_progression_v2_grayscale_QA.png",
+      "sha256": "CA1A8D63FD83A88BD555BF41591FE414959F43498CD47CAD24E2CE783982C97C",
+      "bytes": 65610,
+      "pixels": [
+        1062,
+        856
+      ],
+      "dpi": [
+        150.01239999999999,
+        150.01239999999999
+      ],
+      "mode": "RGB"
+    }
+  }
+}
