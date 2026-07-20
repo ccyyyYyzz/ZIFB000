@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="510.23622pt" height="192.755906pt" viewBox="0 0 510.23622 192.755906" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title>Conditional flow dependence of the analytical boundary-layer scenario</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Conditional flow dependence of the analytical boundary-layer scenario</dc:title>
+    <dc:date>2026-07-20</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>make_sifig_r582_s12_flow_postprocess.py</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 192.755906 
+L 510.23622 192.755906 
+L 510.23622 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 43.370079 153.240945 
+L 497.480315 153.240945 
+L 497.480315 26.022047 
+L 43.370079 26.022047 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 75.806524 153.240945 
+L 75.806524 26.022047 
+L 237.988751 26.022047 
+L 237.988751 153.240945 
+z
+" clip-path="url(#p896607632d)" style="fill: #f0f1f2; stroke: #f0f1f2; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m4fdcb33324" d="M 0 0 
+L 0 2.7 
+" style="stroke: #20252a; stroke-width: 0.7"/>
+      </defs>
+      <g>
+       <use xlink:href="#m4fdcb33324" x="75.806524" y="153.240945" style="fill: #20252a; stroke: #20252a; stroke-width: 0.7"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #20252a; font: 6.5px 'TeX Gyre Termes', serif; text-anchor: middle" x="75.806524" y="162.380242" transform="rotate(-0 75.806524 162.380242)">25</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m4fdcb33324" x="129.867267" y="153.240945" style="fill: #20252a; stroke: #20252a; stroke-width: 0.7"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #20252a; font: 6.5px 'TeX Gyre Termes', serif; text-anchor: middle" x="129.867267" y="162.380242" transform="rotate(-0 129.867267 162.380242)">50</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m4fdcb33324" x="237.988751" y="153.240945" style="fill: #20252a; stroke: #20252a; stroke-width: 0.7"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="fill: #20252a; font: 6.5px 'TeX Gyre Termes', serif; text-anchor: middle" x="237.988751" y="162.380242" transform="rotate(-0 237.988751 162.380242)">100</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m4fdcb33324" x="346.110236" y="153.240945" style="fill: #20252a; stroke: #20252a; stroke-width: 0.7"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="fill: #20252a; font: 6.5px 'TeX Gyre Termes', serif; text-anchor: middle" x="346.110236" y="162.380242" transform="rotate(-0 346.110236 162.380242)">150</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m4fdcb33324" x="454.231721" y="153.240945" style="fill: #20252a; stroke: #20252a; stroke-width: 0.7"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="fill: #20252a; font: 6.5px 'TeX Gyre Termes', serif; text-anchor: middle" x="454.231721" y="162.380242" transform="rotate(-0 454.231721 162.380242)">200</text>
+     </g>
+    </g>
+    <g id="text_6">
+     <!-- Recirculation flow rate (mL min$^{-1}$) -->
+     <g transform="translate(219.629197 173.21232)">
+      <text>
+       <tspan style="font: 7.2px 'TeX Gyre Termes'" x="0 4.794052 7.985291 11.176529 13.174637 15.568069 18.759308 22.353043 24.351151 27.542389 29.540497 31.538605 35.132339 38.726074 40.522934 42.916367 44.914474 48.508209 53.697571 55.494431 57.887863 61.079102 63.077209 66.268448 68.065308 70.45874 76.050598 80.442139 82.238998 87.830856 89.828964 98.990034" y="-0.3781250000000007">Recirculation flow rate (mL min)</tspan>
+       <tspan style="font: 5.04px 'TeX Gyre Termes'" x="93.478207 96.315826" y="-2.5984375000000006">−1</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_6">
+      <defs>
+       <path id="m383c0980cc" d="M 0 0 
+L -2.7 0 
+" style="stroke: #20252a; stroke-width: 0.7"/>
+      </defs>
+      <g>
+       <use xlink:href="#m383c0980cc" x="43.370079" y="150.590551" style="fill: #20252a; stroke: #20252a; stroke-width: 0.7"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="fill: #20252a; font: 6.5px 'TeX Gyre Termes', serif; text-anchor: end" x="38.670079" y="152.8102" transform="rotate(-0 38.670079 152.8102)">50</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#m383c0980cc" x="43.370079" y="124.086614" style="fill: #20252a; stroke: #20252a; stroke-width: 0.7"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="fill: #20252a; font: 6.5px 'TeX Gyre Termes', serif; text-anchor: end" x="38.670079" y="126.306263" transform="rotate(-0 38.670079 126.306263)">60</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m383c0980cc" x="43.370079" y="97.582677" style="fill: #20252a; stroke: #20252a; stroke-width: 0.7"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="fill: #20252a; font: 6.5px 'TeX Gyre Termes', serif; text-anchor: end" x="38.670079" y="99.802326" transform="rotate(-0 38.670079 99.802326)">70</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m383c0980cc" x="43.370079" y="71.07874" style="fill: #20252a; stroke: #20252a; stroke-width: 0.7"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="fill: #20252a; font: 6.5px 'TeX Gyre Termes', serif; text-anchor: end" x="38.670079" y="73.298389" transform="rotate(-0 38.670079 73.298389)">80</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m383c0980cc" x="43.370079" y="44.574803" style="fill: #20252a; stroke: #20252a; stroke-width: 0.7"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="fill: #20252a; font: 6.5px 'TeX Gyre Termes', serif; text-anchor: end" x="38.670079" y="46.794452" transform="rotate(-0 38.670079 46.794452)">90</text>
+     </g>
+    </g>
+    <g id="text_12">
+     <!-- Average-saturation point, $Q_s$ (mAh cm$^{-2}$) -->
+     <g transform="translate(26.586079 149.571496) rotate(-90)">
+      <text>
+       <tspan style="font: 7.2px 'TeX Gyre Termes'" x="0 5.189362 8.783096 11.974335 14.367767 17.559006 21.15274 24.343979 26.737411 29.53334 32.724579 34.722687 38.316422 40.709854 43.901093 45.8992 47.897308 51.491043 55.084778 56.881638 60.475372 64.069107 66.067215 69.66095 71.659058 73.455917 82.557883 84.354742 86.748175 92.340033 97.529395 101.123129 102.919989 106.111227 117.27042" y="-0.3781250000000007">Average-saturation point,  (mAh cm)</tspan>
+       <tspan style="font: italic 7.2px 'TeX Gyre Termes'" x="75.252777" y="-0.3781250000000007">Q</tspan>
+       <tspan style="font: italic 5.04px 'TeX Gyre Termes'" x="80.442139" y="0.5734374999999989">s</tspan>
+       <tspan style="font: 5.04px 'TeX Gyre Termes'" x="111.758593 114.596212" y="-2.5984375000000006">−2</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_11">
+    <path d="M 454.231721 41.041131 
+L 460.286524 48.020315 
+" style="fill: none; stroke: #8cafc7; stroke-width: 0.65; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_12">
+    <path d="M 454.231721 37.172634 
+L 460.286524 39.274016 
+" style="fill: none; stroke: #3b719b; stroke-width: 0.65; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_13">
+    <path d="M 454.231721 33.800357 
+L 460.286524 30.527717 
+" style="fill: none; stroke: #254f73; stroke-width: 0.65; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 43.370079 153.240945 
+L 43.370079 26.022047 
+" style="fill: none; stroke: #20252a; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 43.370079 153.240945 
+L 497.480315 153.240945 
+" style="fill: none; stroke: #20252a; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_14">
+    <path d="M 43.370079 109.358742 
+L 53.904993 95.100012 
+L 64.439907 86.194999 
+L 74.97482 79.918288 
+L 85.509734 75.169018 
+L 96.044648 71.403187 
+L 106.579562 68.31625 
+L 117.114476 65.721774 
+L 127.64939 63.498646 
+L 138.184304 61.564115 
+L 148.719218 59.859264 
+L 159.254132 58.340714 
+L 169.789046 56.97597 
+L 180.32396 55.740245 
+L 190.858873 54.613944 
+L 201.393787 53.581474 
+L 211.928701 52.630121 
+L 222.463615 51.749333 
+L 232.998529 50.930632 
+L 243.533443 50.166865 
+L 254.068357 49.452322 
+L 264.603271 48.7815 
+L 275.138185 48.149998 
+L 285.673099 47.553949 
+L 296.208012 46.990059 
+L 306.742926 46.455701 
+L 317.27784 45.948339 
+L 327.812754 45.465594 
+L 338.347668 45.005554 
+L 348.882582 44.566281 
+L 359.417496 44.146376 
+L 369.95241 43.744241 
+L 380.487324 43.358715 
+L 391.022238 42.988654 
+L 401.557152 42.632955 
+L 412.092065 42.290708 
+L 422.626979 41.961122 
+L 433.161893 41.643487 
+L 443.696807 41.337044 
+L 454.231721 41.041131 
+" clip-path="url(#p896607632d)" style="fill: none; stroke-dasharray: 6.75,2.835; stroke-dashoffset: 0; stroke: #8cafc7; stroke-width: 1.35"/>
+   </g>
+   <g id="line2d_15">
+    <path d="M 43.370079 126.252074 
+L 53.904993 105.78839 
+L 64.439907 93.421218 
+L 74.97482 84.917062 
+L 85.509734 78.607686 
+L 96.044648 73.686122 
+L 106.579562 69.707998 
+L 117.114476 66.405525 
+L 127.64939 63.606452 
+L 138.184304 61.194556 
+L 148.719218 59.087845 
+L 159.254132 57.226476 
+L 169.789046 55.566487 
+L 180.32396 54.073926 
+L 190.858873 52.722518 
+L 201.393787 51.490934 
+L 211.928701 50.362475 
+L 222.463615 49.323814 
+L 232.998529 48.363462 
+L 243.533443 47.471836 
+L 254.068357 46.641055 
+L 264.603271 45.865152 
+L 275.138185 45.137913 
+L 285.673099 44.454529 
+L 296.208012 43.810587 
+L 306.742926 43.202454 
+L 317.27784 42.62688 
+L 327.812754 42.081091 
+L 338.347668 41.56278 
+L 348.882582 41.069713 
+L 359.417496 40.599886 
+L 369.95241 40.151343 
+L 380.487324 39.722736 
+L 391.022238 39.312372 
+L 401.557152 38.919117 
+L 412.092065 38.541809 
+L 422.626979 38.179406 
+L 433.161893 37.830964 
+L 443.696807 37.495626 
+L 454.231721 37.172634 
+" clip-path="url(#p896607632d)" style="fill: none; stroke-dasharray: 3.41,2.325; stroke-dashoffset: 0; stroke: #3b719b; stroke-width: 1.55"/>
+   </g>
+   <g id="line2d_16">
+    <path d="M 43.370079 146.024622 
+L 53.904993 117.820387 
+L 64.439907 101.337049 
+L 74.97482 90.275976 
+L 85.509734 82.229638 
+L 96.044648 76.054895 
+L 106.579562 71.133387 
+L 117.114476 67.09781 
+L 127.64939 63.714413 
+L 138.184304 60.827656 
+L 148.719218 58.328445 
+L 159.254132 56.138342 
+L 169.789046 54.199918 
+L 180.32396 52.469319 
+L 190.858873 50.912124 
+L 201.393787 49.502011 
+L 211.928701 48.217739 
+L 222.463615 47.041459 
+L 232.998529 45.959745 
+L 243.533443 44.960902 
+L 254.068357 44.034762 
+L 264.603271 43.17303 
+L 275.138185 42.368619 
+L 285.673099 41.615755 
+L 296.208012 40.909616 
+L 306.742926 40.245307 
+L 317.27784 39.618967 
+L 327.812754 39.027076 
+L 338.347668 38.466707 
+L 348.882582 37.935329 
+L 359.417496 37.430528 
+L 369.95241 36.950283 
+L 380.487324 36.492798 
+L 391.022238 36.056191 
+L 401.557152 35.639014 
+L 412.092065 35.239823 
+L 422.626979 34.857383 
+L 433.161893 34.490718 
+L 443.696807 34.138683 
+L 454.231721 33.800357 
+" clip-path="url(#p896607632d)" style="fill: none; stroke: #254f73; stroke-width: 1.75; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 157.123423 82.899057 
+Q 144.30551 73.575821 131.487597 64.252586 
+" style="fill: none; stroke: #a94c45; stroke-width: 0.65; stroke-linecap: round"/>
+   </g>
+   <g id="text_13">
+    <text style="fill: #a94c45; font: 6.5px 'TeX Gyre Termes', serif" transform="translate(145.867267 90.513319)">registered baseline</text>
+    <!-- $Q_s$ = 83.02 -->
+    <g style="fill: #a94c45" transform="translate(145.867267 97.257273)">
+     <text>
+      <tspan style="font: italic 6.5px 'TeX Gyre Termes'" x="0" y="-0.609375">Q</tspan>
+      <tspan style="font: italic 4.55px 'TeX Gyre Termes'" x="4.692993" y="0.24843749999999964">s</tspan>
+      <tspan style="font: 6.5px 'TeX Gyre Termes'" x="6.605904 8.230904 11.896904 13.521904 16.771904 20.021904 21.646904 24.896904" y="-0.609375"> = 83.02</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_14">
+    <!-- $m$ = 0.4 -->
+    <g style="fill: #8cafc7" transform="translate(462.88144 49.651096)">
+     <text>
+      <tspan style="font: italic 7px 'TeX Gyre Termes'" x="0" y="-0.265625">m</tspan>
+      <tspan style="font: 7px 'TeX Gyre Termes'" x="5.053986 6.803986 10.751984 12.501984 16.001984 17.751984" y="-0.265625"> = 0.4</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_15">
+    <!-- $m$ = 0.5 -->
+    <g style="fill: #3b719b" transform="translate(462.88144 40.904797)">
+     <text>
+      <tspan style="font: italic 7px 'TeX Gyre Termes'" x="0" y="-0.1875">m</tspan>
+      <tspan style="font: 7px 'TeX Gyre Termes'" x="5.053986 6.803986 10.751984 12.501984 16.001984 17.751984" y="-0.1875"> = 0.5</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_16">
+    <!-- $m$ = 0.6 -->
+    <g style="fill: #254f73" transform="translate(462.88144 32.175998)">
+     <text>
+      <tspan style="font: italic 7px 'TeX Gyre Termes'" x="0" y="-0.1875">m</tspan>
+      <tspan style="font: 700 7px 'TeX Gyre Termes'" x="5.053986 6.803986 10.793976 12.543976 16.043976 17.793976" y="-0.1875"> = 0.6</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_17">
+    <text style="fill: #6d7378; font: 6.5px 'TeX Gyre Termes', serif" transform="translate(137.858224 141.110698)">declared range</text>
+    <!-- 25–100 mL min$^{-1}$ -->
+    <g style="fill: #6d7378" transform="translate(133.432638 147.854651)">
+     <text>
+      <tspan style="font: 6.5px 'TeX Gyre Termes'" x="0 3.25 6.5 9.75 13 16.25 19.5 21.125 26.181992 30.153488 31.778488 36.83548 38.642471" y="-0.9250000000000007">25–100 mL min</tspan>
+      <tspan style="font: 4.55px 'TeX Gyre Termes'" x="41.94251 44.508711" y="-2.9265625000000006">−1</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_18">
+    <!-- $\delta/\delta_0=(v/v_0)^{-m}$;  $\delta_0=25\ \mu$m at 50 mL min$^{-1}$ -->
+    <g style="fill: #6d7378" transform="translate(383.214764 22.488764)">
+     <text>
+      <tspan style="font: italic 6.5px 'TeX Gyre Termes'" x="0 5.128494 18.575653 23.268646 41.838401 61.185386" y="-0.9250000000000007">δδvvδμ</tspan>
+      <tspan style="font: 6.5px 'TeX Gyre Termes'" x="3.321503 11.806564 16.411163 21.461655 28.572617 36.78141 38.588401 40.213401 48.516471 53.12107 56.37107 65.033378 70.090369 71.715369 74.601371 76.408362 78.033362 81.283362 84.533362 86.158362 91.215354 95.186851 96.811851 101.868842 103.675834" y="-0.9250000000000007">/=(/);  =25m at 50 mL min</tspan>
+      <tspan style="font: 4.55px 'TeX Gyre Termes'" x="8.449997 26.154648 30.787145 45.159904 106.975873 109.542073" y="-0.06718750000000107 -0.06718750000000107 -2.9265625000000006 -0.06718750000000107 -2.9265625000000006 -2.9265625000000006">00−0−1</tspan>
+      <tspan style="font: italic 4.55px 'TeX Gyre Termes'" x="33.353346" y="-2.9265625000000006">m</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_19">
+    <text style="font: 700 7.5px 'TeX Gyre Termes', serif; text-anchor: start" x="43.370079" y="21.522047" transform="rotate(-0 43.370079 21.522047)">Analytical postprocess</text>
+   </g>
+   <g id="line2d_17">
+    <defs>
+     <path id="me75ca913e3" d="M 0 2.3 
+C 0.609967 2.3 1.195034 2.057657 1.626346 1.626346 
+C 2.057657 1.195034 2.3 0.609967 2.3 0 
+C 2.3 -0.609967 2.057657 -1.195034 1.626346 -1.626346 
+C 1.195034 -2.057657 0.609967 -2.3 0 -2.3 
+C -0.609967 -2.3 -1.195034 -2.057657 -1.626346 -1.626346 
+C -2.057657 -1.195034 -2.3 -0.609967 -2.3 0 
+C -2.3 0.609967 -2.057657 1.195034 -1.626346 1.626346 
+C -1.195034 2.057657 -0.609967 2.3 0 2.3 
+z
+" style="stroke: #ffffff; stroke-width: 0.6"/>
+    </defs>
+    <g clip-path="url(#p896607632d)">
+     <use xlink:href="#me75ca913e3" x="129.867267" y="63.074023" style="fill: #a94c45; stroke: #ffffff; stroke-width: 0.6"/>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p896607632d">
+   <rect x="43.370079" y="26.022047" width="454.110236" height="127.218898"/>
+  </clipPath>
+ </defs>
+</svg>

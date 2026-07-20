@@ -1,0 +1,5 @@
+site_id,E_ads_D3_plus_PBE_BSSE_eV,delta_vs_basal_eV,confidence,paper_use,source,site,evidence_role,display_order
+OH_functionalized_basal_periodic_slab,-0.997723869305554,-0.595121894141881,high,Use as molecular strong-site/halogen-bond trap.,prior EC2 result plus local parse,C-OH,relative BSSE-corrected adsorption-energy ordering prior,0
+carbonyl_edge_periodic_ribbon,-0.848237011813389,-0.445635036649715,high,Use revised value; old +0.005 eV should be retired as poor initial geometry.,sanity EC2 rerun,C=O,relative BSSE-corrected adsorption-energy ordering prior,1
+basal_pristine_periodic_slab,-0.402601975163673,0,high,Use as baseline.,prior EC2 ingest,basal,relative BSSE-corrected adsorption-energy ordering prior,2
+single_vacancy_periodic_slab,-0.318467918400119,0.0841340567635545,high,Use as robust weak/moderate vacancy result; still weaker than basal by 0.084 eV.,sanity EC2 rerun,vacancy,relative BSSE-corrected adsorption-energy ordering prior,3

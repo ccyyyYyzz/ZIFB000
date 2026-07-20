@@ -1,0 +1,68 @@
+Setting the LD random seed to -25743913
+
+Generated 70500 of the 70500 non-bonded parameter combinations
+
+Generated 70500 of the 70500 1-4 parameter combinations
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'ZN'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'I'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'BR'
+
+turning H bonds into constraints...
+
+Excluding 3 bonded neighbours molecule type 'NH4'
+
+turning H bonds into constraints...
+
+Excluding 2 bonded neighbours molecule type 'I2'
+
+turning H bonds into constraints...
+
+Excluding 2 bonded neighbours molecule type 'I3'
+
+turning H bonds into constraints...
+
+Excluding 2 bonded neighbours molecule type 'I2B'
+
+turning H bonds into constraints...
+
+Taking velocities from 'npt.gro'
+Analysing residue names:
+There are:  1112      Water residues
+There are:   151        Ion residues
+There are:   112      Other residues
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+The largest distance between excluded atoms is 0.589 nm between atom 3995 and 3997
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 298.15 K
+
+Calculated rlist for 1x1 atom pair-list as 1.092 nm, buffer size 0.092 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 1.021 nm, buffer size 0.021 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+
+Reading Coordinates, Velocities and Box size from old trajectory
+
+Will read whole trajectory
+
+Using frame at t = 500 ps
+
+Starting time for run is 0 ps
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 32x32x32, spacing 0.114 0.114 0.114
+
+Estimate for the relative computational load of the PME mesh part: 0.28
+
+This run will generate roughly 323 Mb of data

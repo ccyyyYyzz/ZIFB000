@@ -1,0 +1,346 @@
+{
+  "manuscript_layout": "main_R582.tex + SI_R582.tex + figures_R582/",
+  "pdffonts_tool": "Poppler pdffonts",
+  "expected_records": 21,
+  "record_count": 21,
+  "records": [
+    {
+      "path": "main_R582.pdf",
+      "fonts": [
+        "CCVYUO+TeXGyreTermes-Bold",
+        "CCVYUO+TeXGyreTermes-Italic",
+        "CCVYUO+TeXGyreTermes-Regular",
+        "CXXCRL+txmiaX",
+        "FVQHGH+NewTXMI",
+        "GTNPLC+TeXGyreTermesX-Regular",
+        "LZJZGU+TeXGyreTermes-Regular",
+        "MRVWFL+SFTT1095",
+        "QOBHRA+TeXGyreTermes-Italic",
+        "SKPKSK+txexs",
+        "SXRCBK+TeXGyreTermes-Bold",
+        "WGJHQJ+txsys",
+        "WOJLVF+NewTXMI7"
+      ],
+      "required_termes_present": true,
+      "forbidden_families": [],
+      "unexpected_figure_families": [],
+      "unembedded_fonts": [],
+      "unsubset_fonts": [],
+      "type3_present": false,
+      "pass": true
+    },
+    {
+      "path": "SI_R582.pdf",
+      "fonts": [
+        "AKZQEY+NewTXMI7",
+        "BBSLKU+txmiaX",
+        "BGRCHY+TeXGyreTermes-Italic",
+        "CCVYUO+TeXGyreTermes-Bold",
+        "CCVYUO+TeXGyreTermes-Italic",
+        "CCVYUO+TeXGyreTermes-Regular",
+        "CGQOTM+TeXGyreTermes-Bold",
+        "EXDHRT+TeXGyreTermesX-Regular",
+        "HXTNRN+txexs",
+        "JVXDIB+SFTT0800",
+        "OZLPYX+SFTT0900",
+        "PFPRBO+TeXGyreTermes-BoldItalic",
+        "TXRKQH+TeXGyreTermes-Regular",
+        "UFKEPX+NewTXMI5",
+        "UNEXAB+NewTXMI",
+        "WEOMOF+SFTT1095",
+        "WIBQZQ+TeXGyreTermesX-Bold",
+        "WVYULW+txsys",
+        "YASUTL+SFTT1000"
+      ],
+      "required_termes_present": true,
+      "forbidden_families": [],
+      "unexpected_figure_families": [],
+      "unembedded_fonts": [],
+      "unsubset_fonts": [],
+      "type3_present": false,
+      "pass": true
+    },
+    {
+      "path": "figures_R582/Fig_R582_closure_identifiability.pdf",
+      "fonts": [
+        "CCVYUO+TeXGyreTermes-Bold",
+        "CCVYUO+TeXGyreTermes-Italic",
+        "CCVYUO+TeXGyreTermes-Regular"
+      ],
+      "required_termes_present": true,
+      "forbidden_families": [],
+      "unexpected_figure_families": [],
+      "unembedded_fonts": [],
+      "unsubset_fonts": [],
+      "type3_present": false,
+      "pass": true
+    },
+    {
+      "path": "figures_R582/Fig_R582_domain_state_v2.pdf",
+      "fonts": [
+        "CCVYUO+TeXGyreTermes-Bold",
+        "CCVYUO+TeXGyreTermes-Italic",
+        "CCVYUO+TeXGyreTermes-Regular"
+      ],
+      "required_termes_present": true,
+      "forbidden_families": [],
+      "unexpected_figure_families": [],
+      "unembedded_fonts": [],
+      "unsubset_fonts": [],
+      "type3_present": false,
+      "pass": true
+    },
+    {
+      "path": "figures_R582/Fig_R582_experimental_problem.pdf",
+      "fonts": [
+        "CCVYUO+TeXGyreTermes-Bold",
+        "CCVYUO+TeXGyreTermes-Italic",
+        "CCVYUO+TeXGyreTermes-Regular"
+      ],
+      "required_termes_present": true,
+      "forbidden_families": [],
+      "unexpected_figure_families": [],
+      "unembedded_fonts": [],
+      "unsubset_fonts": [],
+      "type3_present": false,
+      "pass": true
+    },
+    {
+      "path": "figures_R582/Fig_R582_multiscale_bounds_v2.pdf",
+      "fonts": [
+        "CCVYUO+TeXGyreTermes-Bold",
+        "CCVYUO+TeXGyreTermes-Italic",
+        "CCVYUO+TeXGyreTermes-Regular"
+      ],
+      "required_termes_present": true,
+      "forbidden_families": [],
+      "unexpected_figure_families": [],
+      "unembedded_fonts": [],
+      "unsubset_fonts": [],
+      "type3_present": false,
+      "pass": true
+    },
+    {
+      "path": "figures_R582/Fig_R582_operating_levers_v2.pdf",
+      "fonts": [
+        "CCVYUO+TeXGyreTermes-Bold",
+        "CCVYUO+TeXGyreTermes-Italic",
+        "CCVYUO+TeXGyreTermes-Regular"
+      ],
+      "required_termes_present": true,
+      "forbidden_families": [],
+      "unexpected_figure_families": [],
+      "unembedded_fonts": [],
+      "unsubset_fonts": [],
+      "type3_present": false,
+      "pass": true
+    },
+    {
+      "path": "figures_R582/Fig_R582_SI07_single_I2_ordering.pdf",
+      "fonts": [
+        "CCVYUO+TeXGyreTermes-Bold",
+        "CCVYUO+TeXGyreTermes-Italic",
+        "CCVYUO+TeXGyreTermes-Regular"
+      ],
+      "required_termes_present": true,
+      "forbidden_families": [],
+      "unexpected_figure_families": [],
+      "unembedded_fonts": [],
+      "unsubset_fonts": [],
+      "type3_present": false,
+      "pass": true
+    },
+    {
+      "path": "figures_R582/Fig_R582_SI08_two_I2_diagnostic.pdf",
+      "fonts": [
+        "CCVYUO+TeXGyreTermes-Bold",
+        "CCVYUO+TeXGyreTermes-Regular"
+      ],
+      "required_termes_present": true,
+      "forbidden_families": [],
+      "unexpected_figure_families": [],
+      "unembedded_fonts": [],
+      "unsubset_fonts": [],
+      "type3_present": false,
+      "pass": true
+    },
+    {
+      "path": "figures_R582/Fig_R582_SI09_md_carrier_ladder.pdf",
+      "fonts": [
+        "CCVYUO+TeXGyreTermes-Bold",
+        "CCVYUO+TeXGyreTermes-Italic",
+        "CCVYUO+TeXGyreTermes-Regular"
+      ],
+      "required_termes_present": true,
+      "forbidden_families": [],
+      "unexpected_figure_families": [],
+      "unembedded_fonts": [],
+      "unsubset_fonts": [],
+      "type3_present": false,
+      "pass": true
+    },
+    {
+      "path": "figures_R582/Fig_R582_spatial_progression_v3.pdf",
+      "fonts": [
+        "CCVYUO+TeXGyreTermes-Bold",
+        "CCVYUO+TeXGyreTermes-Italic",
+        "CCVYUO+TeXGyreTermes-Regular"
+      ],
+      "required_termes_present": true,
+      "forbidden_families": [],
+      "unexpected_figure_families": [],
+      "unembedded_fonts": [],
+      "unsubset_fonts": [],
+      "type3_present": false,
+      "pass": true
+    },
+    {
+      "path": "figures_R582/Fig_SI_R582_S4_state_function_fields.pdf",
+      "fonts": [
+        "CCVYUO+TeXGyreTermes-Bold",
+        "CCVYUO+TeXGyreTermes-Italic",
+        "CCVYUO+TeXGyreTermes-Regular"
+      ],
+      "required_termes_present": true,
+      "forbidden_families": [],
+      "unexpected_figure_families": [],
+      "unembedded_fonts": [],
+      "unsubset_fonts": [],
+      "type3_present": false,
+      "pass": true
+    },
+    {
+      "path": "figures_R582/Fig_SI_R582_S5_hydraulic_fields.pdf",
+      "fonts": [
+        "CCVYUO+TeXGyreTermes-Bold",
+        "CCVYUO+TeXGyreTermes-Italic",
+        "CCVYUO+TeXGyreTermes-Regular"
+      ],
+      "required_termes_present": true,
+      "forbidden_families": [],
+      "unexpected_figure_families": [],
+      "unembedded_fonts": [],
+      "unsubset_fonts": [],
+      "type3_present": false,
+      "pass": true
+    },
+    {
+      "path": "figures_R582/SIFig_R582_S10_comparator_definitions.pdf",
+      "fonts": [
+        "CCVYUO+TeXGyreTermes-Bold",
+        "CCVYUO+TeXGyreTermes-Italic",
+        "CCVYUO+TeXGyreTermes-Regular"
+      ],
+      "required_termes_present": true,
+      "forbidden_families": [],
+      "unexpected_figure_families": [],
+      "unembedded_fonts": [],
+      "unsubset_fonts": [],
+      "type3_present": false,
+      "pass": true
+    },
+    {
+      "path": "figures_R582/SIFig_R582_S11_accessibility_families.pdf",
+      "fonts": [
+        "CCVYUO+TeXGyreTermes-Bold",
+        "CCVYUO+TeXGyreTermes-Regular"
+      ],
+      "required_termes_present": true,
+      "forbidden_families": [],
+      "unexpected_figure_families": [],
+      "unembedded_fonts": [],
+      "unsubset_fonts": [],
+      "type3_present": false,
+      "pass": true
+    },
+    {
+      "path": "figures_R582/SIFig_R582_S12_flow_postprocess.pdf",
+      "fonts": [
+        "CCVYUO+TeXGyreTermes-Bold",
+        "CCVYUO+TeXGyreTermes-Italic",
+        "CCVYUO+TeXGyreTermes-Regular"
+      ],
+      "required_termes_present": true,
+      "forbidden_families": [],
+      "unexpected_figure_families": [],
+      "unembedded_fonts": [],
+      "unsubset_fonts": [],
+      "type3_present": false,
+      "pass": true
+    },
+    {
+      "path": "figures_R582/SIFig_R582_S13_smooth_permeability.pdf",
+      "fonts": [
+        "CCVYUO+TeXGyreTermes-Bold",
+        "CCVYUO+TeXGyreTermes-Italic",
+        "CCVYUO+TeXGyreTermes-Regular"
+      ],
+      "required_termes_present": true,
+      "forbidden_families": [],
+      "unexpected_figure_families": [],
+      "unembedded_fonts": [],
+      "unsubset_fonts": [],
+      "type3_present": false,
+      "pass": true
+    },
+    {
+      "path": "figures_R582/SIFig_R582_S1_derivative.pdf",
+      "fonts": [
+        "CCVYUO+TeXGyreTermes-Bold",
+        "CCVYUO+TeXGyreTermes-Regular"
+      ],
+      "required_termes_present": true,
+      "forbidden_families": [],
+      "unexpected_figure_families": [],
+      "unembedded_fonts": [],
+      "unsubset_fonts": [],
+      "type3_present": false,
+      "pass": true
+    },
+    {
+      "path": "figures_R582/SIFig_R582_S2_composition.pdf",
+      "fonts": [
+        "CCVYUO+TeXGyreTermes-Bold",
+        "CCVYUO+TeXGyreTermes-Regular"
+      ],
+      "required_termes_present": true,
+      "forbidden_families": [],
+      "unexpected_figure_families": [],
+      "unembedded_fonts": [],
+      "unsubset_fonts": [],
+      "type3_present": false,
+      "pass": true
+    },
+    {
+      "path": "figures_R582/SIFig_R582_S3_compression.pdf",
+      "fonts": [
+        "CCVYUO+TeXGyreTermes-Bold",
+        "CCVYUO+TeXGyreTermes-Regular"
+      ],
+      "required_termes_present": true,
+      "forbidden_families": [],
+      "unexpected_figure_families": [],
+      "unembedded_fonts": [],
+      "unsubset_fonts": [],
+      "type3_present": false,
+      "pass": true
+    },
+    {
+      "path": "figures_R582/SIFig_R582_S6_voltage_degeneracy.pdf",
+      "fonts": [
+        "CCVYUO+TeXGyreTermes-Bold",
+        "CCVYUO+TeXGyreTermes-Italic",
+        "CCVYUO+TeXGyreTermes-Regular"
+      ],
+      "required_termes_present": true,
+      "forbidden_families": [],
+      "unexpected_figure_families": [],
+      "unembedded_fonts": [],
+      "unsubset_fonts": [],
+      "type3_present": false,
+      "pass": true
+    }
+  ],
+  "layout_errors": [],
+  "failures": []
+}

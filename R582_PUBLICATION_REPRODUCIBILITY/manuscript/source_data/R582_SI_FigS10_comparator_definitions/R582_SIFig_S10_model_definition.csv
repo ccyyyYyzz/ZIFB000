@@ -1,0 +1,16 @@
+model,quantity,value,unit,definition_source
+single_fibre,fibre radius,7.5,um,r_f from registered NPZ
+single_fibre,unit-cell outer radius,19.364916731,um,r_f/sqrt(1-epsilon)
+single_fibre,segment length,150,um,L_z from registered NPZ
+single_fibre,porosity,0.85,1,EPS in registered model script
+single_fibre,specific area,40000,m^-1,A_S in registered model script
+pore_network,nodes x,15,count,nx from registered NPZ
+pore_network,nodes y,15,count,ny from registered NPZ
+pore_network,nodes z,15,count,nz from registered NPZ
+pore_network,total throats,9450,count,e0/e1 from registered NPZ
+pore_network,lattice spacing,60,um,L_THROAT in registered model script
+pore_network,porosity,0.85,1,EPS in registered model script
+pore_network,minimum throat radius,0.5,um,R_MIN in registered model script
+display_slice,z index,7,index,exact central slice
+display_slice,nodes,225,count,exact central-slice nodes
+display_slice,throats,420,count,exact in-slice throats

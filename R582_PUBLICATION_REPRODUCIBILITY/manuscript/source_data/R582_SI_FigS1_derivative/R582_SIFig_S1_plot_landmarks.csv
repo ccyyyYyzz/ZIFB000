@@ -1,0 +1,13 @@
+cell_id,supporting_electrolyte,pair_index,window_mAh_cm2,primary_estimator,rise_onset_Q_mAh_cm2,peak_Q_mAh_cm2,peak_dVdQ_V_per_mAh_cm2,peak_right_censored,peak_dVdQ_mV_per_mAh_cm2
+G4_pristine_cell,NH4Br,20,5.25,False,60.5,105.25,0.0107911743316,False,10.7911743316
+G4_pristine_cell,NH4Br,20,10.25,True,52,95,0.00606664343148,False,6.06664343148
+G4_pristine_cell,NH4Br,20,15.25,False,50.25,92.75,0.00635818826488,False,6.35818826488
+G4_pristine_cell,NH4Br,21,5.25,False,57,103.5,0.010441649731,False,10.441649731
+G4_pristine_cell,NH4Br,21,10.25,True,50.75,92,0.0058164844659,False,5.8164844659
+G4_pristine_cell,NH4Br,21,15.25,False,58,108,0.00264181267685,False,2.64181267685
+G4_pristine_cell,NH4Br,22,5.25,False,51.5,106.25,0.0126441841164,False,12.6441841164
+G4_pristine_cell,NH4Br,22,10.25,True,51.75,106.75,0.0047638003354,False,4.7638003354
+G4_pristine_cell,NH4Br,22,15.25,False,52.25,110.25,0.0033811112884,False,3.3811112884
+G4_pristine_cell,NH4Br,23,5.25,False,62.5,115.25,0.0120338453748,False,12.0338453748
+G4_pristine_cell,NH4Br,23,10.25,True,89.25,114,0.00747004516667,False,7.47004516667
+G4_pristine_cell,NH4Br,23,15.25,False,70.25,105.75,0.00260679303575,False,2.60679303575

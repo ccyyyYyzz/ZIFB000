@@ -1,0 +1,18 @@
+lever,setting,setting_unit,Q_s_mAh_cm2,output_name,output_value,output_unit,evidence_class,case_id,source_id,scope_note
+solved flow,25,mL min^-1,82.82397369489257,Q_s,82.82397369489257,mAh cm^-2,full_solve,flow_25_Q120,R525_all_timeseries,full continuum solve
+solved flow,50,mL min^-1,83.0201994718443,Q_s,83.0201994718443,mAh cm^-2,full_solve,baseline_J40_Q120,R525_all_timeseries,registered baseline
+solved flow,100,mL min^-1,83.1073395044607,Q_s,83.1073395044607,mAh cm^-2,full_solve,flow_100_Q120,R525_all_timeseries,full continuum solve
+analytical flow m=0.4,25,mL min^-1,76.82368991873854,Q_s,76.82368991873854,mAh cm^-2,analytical_postprocess,delta_v_m04_25,R577_baseline_input,declared Sherwood boundary-layer scenario
+analytical flow m=0.4,50,mL min^-1,83.02184976755008,Q_s,83.02184976755008,mAh cm^-2,analytical_postprocess,delta_v_m04_50,R577_baseline_input,declared Sherwood boundary-layer scenario
+analytical flow m=0.4,100,mL min^-1,87.74086923966787,Q_s,87.74086923966787,mAh cm^-2,analytical_postprocess,delta_v_m04_100,R577_baseline_input,declared Sherwood boundary-layer scenario
+analytical flow m=0.5,25,mL min^-1,74.99152250287874,Q_s,74.99152250287874,mAh cm^-2,analytical_postprocess,delta_v_m05_25,R577_baseline_input,central declared Sherwood boundary-layer scenario
+analytical flow m=0.5,50,mL min^-1,83.02184976755008,Q_s,83.02184976755008,mAh cm^-2,analytical_postprocess,delta_v_m05_50,R577_baseline_input,central declared Sherwood boundary-layer scenario
+analytical flow m=0.5,100,mL min^-1,88.73290265682242,Q_s,88.73290265682242,mAh cm^-2,analytical_postprocess,delta_v_m05_100,R577_baseline_input,central declared Sherwood boundary-layer scenario
+analytical flow m=0.6,25,mL min^-1,73.03034277417945,Q_s,73.03034277417945,mAh cm^-2,analytical_postprocess,delta_v_m06_25,R577_baseline_input,declared Sherwood boundary-layer scenario
+analytical flow m=0.6,50,mL min^-1,83.02184976755008,Q_s,83.02184976755008,mAh cm^-2,analytical_postprocess,delta_v_m06_50,R577_baseline_input,declared Sherwood boundary-layer scenario
+analytical flow m=0.6,100,mL min^-1,89.65962439845347,Q_s,89.65962439845347,mAh cm^-2,analytical_postprocess,delta_v_m06_100,R577_baseline_input,declared Sherwood boundary-layer scenario
+linked felt geometry,1.5,mm,82.3854009930445,Q_s,82.3854009930445,mAh cm^-2,full_solve,comp_L15_Q120,R525_all_timeseries,thickness and porosity change together
+linked felt geometry,2.0,mm,83.0201994718443,Q_s,83.0201994718443,mAh cm^-2,full_solve,baseline_J40_Q120,R525_all_timeseries,registered baseline
+linked felt geometry,2.5,mm,83.65728383331087,Q_s,83.65728383331087,mAh cm^-2,full_solve,comp_L25_Q120,R525_all_timeseries,thickness and porosity change together
+linked felt geometry,3.0,mm,84.29680289403282,Q_s,84.29680289403282,mAh cm^-2,full_solve,comp_L30_Q120,R525_all_timeseries,thickness and porosity change together
+smooth permeability replacement,120,mAh cm^-2,,endpoint voltage difference,1.271000000000022,mV,registered_postprocess,network_cpath_minus_baseline,R537_kperm_injection,not converted into a saturation-marker shift

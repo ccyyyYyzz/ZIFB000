@@ -1,0 +1,9 @@
+quantity,value,unit,definition
+fit_Q_min_observed,2.67233333333,mAh cm^-2,first selected point satisfying Q >= 2
+fit_Q_max,97.5400520833,mAh cm^-2,selected trace maximum
+c0,1.33554119052,V,reduced observation-layer intercept
+c1,0.000981900828598,V per (mAh cm^-2),reduced observation-layer linear coefficient
+b_eff,0.136224487797,V,reduced observation-layer accessibility coefficient
+RMSE,7.24314404935,mV,fit residual root-mean-square
+DeltaV_access_selected,70.8125282268,mV,fixed contribution used for degeneracy curve
+DeltaV_linear_selected,93.1506916479,mV,linear contribution over fitted points

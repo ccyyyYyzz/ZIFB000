@@ -1,0 +1,3 @@
+role,upstream_workspace_path,frozen_workspace_path,bytes,sha256,status
+registered single-fibre geometric remaining-area nodes,fiber/data/R531_fiber3d_accessibility_closure.csv,manuscript/source_data/R582_SI_FigS11_accessibility_families/inputs/R531_fiber3d_accessibility_closure.csv,2551,77C9242308B9BEBC5E6EAF2519964D511229D49A4F245BE82CC1DB2ADE32AB45,read-only frozen copy; byte-identical to registered upstream
+registered family parameter definitions and matching nodes,fiber/data/R531_fiber3d_clock.csv,manuscript/source_data/R582_SI_FigS11_accessibility_families/inputs/R531_fiber3d_clock.csv,3507,91D6B8DC78E2E4C7629311B7E776B6F549A56670FFDC50306C8CD092015F21DE,read-only frozen copy; byte-identical to registered upstream

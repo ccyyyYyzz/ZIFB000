@@ -1,0 +1,5 @@
+source_label,phi_ppt,n_n_m2,display_label,evidence_class
+washable,0.001,1e+13,0.001; 1e13 per m²,E-COMP
+baseline_lowNn,0.005,100000000000,0.005; 1e11 per m²,E-COMP
+baseline_comsol,0.005,1e+13,0.005; 1e13 per m²,E-COMP
+retained_highNn,0.02,1e+14,0.020; 1e14 per m²,E-COMP

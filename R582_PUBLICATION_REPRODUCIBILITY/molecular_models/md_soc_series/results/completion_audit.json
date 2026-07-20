@@ -1,0 +1,322 @@
+{
+  "checked_at": "2026-06-28T17:49:22",
+  "status": "ready",
+  "expected_cases": [
+    "soc010_q1p0",
+    "soc010_q0p8_ecc",
+    "soc030_q1p0",
+    "soc030_q0p8_ecc",
+    "soc050_q1p0",
+    "soc050_q0p8_ecc",
+    "soc070_q1p0",
+    "soc070_q0p8_ecc",
+    "soc100_q1p0",
+    "soc100_q0p8_ecc"
+  ],
+  "case_rows": [
+    {
+      "case": "soc010_q1p0",
+      "prod_complete": true,
+      "prod_ps": 20000.0,
+      "target_ps": 20000.0,
+      "diffusion_csv": true,
+      "diffusion_rows": 8,
+      "diffusion_species_ok": true,
+      "diffusion_positive": true,
+      "diffusion_sem_ok": true,
+      "diffusion_blocks_ok": true,
+      "viscosity_json": true,
+      "density_json": true,
+      "phase_diagnostic_json": true
+    },
+    {
+      "case": "soc010_q0p8_ecc",
+      "prod_complete": true,
+      "prod_ps": 20000.0,
+      "target_ps": 20000.0,
+      "diffusion_csv": true,
+      "diffusion_rows": 8,
+      "diffusion_species_ok": true,
+      "diffusion_positive": true,
+      "diffusion_sem_ok": true,
+      "diffusion_blocks_ok": true,
+      "viscosity_json": true,
+      "density_json": true,
+      "phase_diagnostic_json": true
+    },
+    {
+      "case": "soc030_q1p0",
+      "prod_complete": true,
+      "prod_ps": 20000.0,
+      "target_ps": 20000.0,
+      "diffusion_csv": true,
+      "diffusion_rows": 8,
+      "diffusion_species_ok": true,
+      "diffusion_positive": true,
+      "diffusion_sem_ok": true,
+      "diffusion_blocks_ok": true,
+      "viscosity_json": true,
+      "density_json": true,
+      "phase_diagnostic_json": true
+    },
+    {
+      "case": "soc030_q0p8_ecc",
+      "prod_complete": true,
+      "prod_ps": 20000.0,
+      "target_ps": 20000.0,
+      "diffusion_csv": true,
+      "diffusion_rows": 8,
+      "diffusion_species_ok": true,
+      "diffusion_positive": true,
+      "diffusion_sem_ok": true,
+      "diffusion_blocks_ok": true,
+      "viscosity_json": true,
+      "density_json": true,
+      "phase_diagnostic_json": true
+    },
+    {
+      "case": "soc050_q1p0",
+      "prod_complete": true,
+      "prod_ps": 20000.0,
+      "target_ps": 20000.0,
+      "diffusion_csv": true,
+      "diffusion_rows": 8,
+      "diffusion_species_ok": true,
+      "diffusion_positive": true,
+      "diffusion_sem_ok": true,
+      "diffusion_blocks_ok": true,
+      "viscosity_json": true,
+      "density_json": true,
+      "phase_diagnostic_json": true
+    },
+    {
+      "case": "soc050_q0p8_ecc",
+      "prod_complete": true,
+      "prod_ps": 20000.0,
+      "target_ps": 20000.0,
+      "diffusion_csv": true,
+      "diffusion_rows": 8,
+      "diffusion_species_ok": true,
+      "diffusion_positive": true,
+      "diffusion_sem_ok": true,
+      "diffusion_blocks_ok": true,
+      "viscosity_json": true,
+      "density_json": true,
+      "phase_diagnostic_json": true
+    },
+    {
+      "case": "soc070_q1p0",
+      "prod_complete": true,
+      "prod_ps": 20000.0,
+      "target_ps": 20000.0,
+      "diffusion_csv": true,
+      "diffusion_rows": 8,
+      "diffusion_species_ok": true,
+      "diffusion_positive": true,
+      "diffusion_sem_ok": true,
+      "diffusion_blocks_ok": true,
+      "viscosity_json": true,
+      "density_json": true,
+      "phase_diagnostic_json": true
+    },
+    {
+      "case": "soc070_q0p8_ecc",
+      "prod_complete": true,
+      "prod_ps": 20000.0,
+      "target_ps": 20000.0,
+      "diffusion_csv": true,
+      "diffusion_rows": 8,
+      "diffusion_species_ok": true,
+      "diffusion_positive": true,
+      "diffusion_sem_ok": true,
+      "diffusion_blocks_ok": true,
+      "viscosity_json": true,
+      "density_json": true,
+      "phase_diagnostic_json": true
+    },
+    {
+      "case": "soc100_q1p0",
+      "prod_complete": true,
+      "prod_ps": 20000.0,
+      "target_ps": 20000.0,
+      "diffusion_csv": true,
+      "diffusion_rows": 8,
+      "diffusion_species_ok": true,
+      "diffusion_positive": true,
+      "diffusion_sem_ok": true,
+      "diffusion_blocks_ok": true,
+      "viscosity_json": true,
+      "density_json": true,
+      "phase_diagnostic_json": true
+    },
+    {
+      "case": "soc100_q0p8_ecc",
+      "prod_complete": true,
+      "prod_ps": 20000.0,
+      "target_ps": 20000.0,
+      "diffusion_csv": true,
+      "diffusion_rows": 8,
+      "diffusion_species_ok": true,
+      "diffusion_positive": true,
+      "diffusion_sem_ok": true,
+      "diffusion_blocks_ok": true,
+      "viscosity_json": true,
+      "density_json": true,
+      "phase_diagnostic_json": true
+    }
+  ],
+  "artifact_checks": {
+    "report_html": true,
+    "summary_csv": true,
+    "closure_fit_csv": true,
+    "chart_map_csv": true,
+    "source_notes_md": true,
+    "readme_md": true,
+    "tool_versions_txt": true,
+    "tool_versions_json": true,
+    "requirements_traceability_csv": true,
+    "requirements_traceability_md": true,
+    "viscosity_replicate_plan_csv": true,
+    "viscosity_replicate_plan_json": true,
+    "viscosity_replicate_results_csv": true,
+    "viscosity_replicate_summary_csv": true,
+    "artifact_manifest_json": true,
+    "artifact_manifest_csv": true,
+    "baseline_package": true,
+    "current_deff_evidence": true
+  },
+  "package_checks": {
+    "tool_versions_recorded": true,
+    "artifact_manifest_file_count": 711,
+    "viscosity_replicate_plan_rows": 18,
+    "viscosity_replicate_plan_expected_rows": 18,
+    "viscosity_replicate_plan_missing_entries": [],
+    "viscosity_replicate_prepared_rows": 18,
+    "viscosity_replicate_prepared_missing_files": [],
+    "long_run_health_status": "ok",
+    "projected_free_gb_after_prod_and_nojump": 39.546,
+    "trajectory_disk_projection_present": true,
+    "green_kubo_mdp_rows": [
+      {
+        "case": "soc010_q1p0",
+        "exists": true,
+        "pcoupl": "no",
+        "nstenergy": "50",
+        "nstxout_compressed": "2500"
+      },
+      {
+        "case": "soc010_q0p8_ecc",
+        "exists": true,
+        "pcoupl": "no",
+        "nstenergy": "50",
+        "nstxout_compressed": "2500"
+      },
+      {
+        "case": "soc030_q1p0",
+        "exists": true,
+        "pcoupl": "no",
+        "nstenergy": "50",
+        "nstxout_compressed": "2500"
+      },
+      {
+        "case": "soc030_q0p8_ecc",
+        "exists": true,
+        "pcoupl": "no",
+        "nstenergy": "50",
+        "nstxout_compressed": "2500"
+      },
+      {
+        "case": "soc050_q1p0",
+        "exists": true,
+        "pcoupl": "no",
+        "nstenergy": "50",
+        "nstxout_compressed": "2500"
+      },
+      {
+        "case": "soc050_q0p8_ecc",
+        "exists": true,
+        "pcoupl": "no",
+        "nstenergy": "50",
+        "nstxout_compressed": "2500"
+      },
+      {
+        "case": "soc070_q1p0",
+        "exists": true,
+        "pcoupl": "no",
+        "nstenergy": "50",
+        "nstxout_compressed": "2500"
+      },
+      {
+        "case": "soc070_q0p8_ecc",
+        "exists": true,
+        "pcoupl": "no",
+        "nstenergy": "50",
+        "nstxout_compressed": "2500"
+      },
+      {
+        "case": "soc100_q1p0",
+        "exists": true,
+        "pcoupl": "no",
+        "nstenergy": "50",
+        "nstxout_compressed": "2500"
+      },
+      {
+        "case": "soc100_q0p8_ecc",
+        "exists": true,
+        "pcoupl": "no",
+        "nstenergy": "50",
+        "nstxout_compressed": "2500"
+      }
+    ],
+    "summary_rows": 10,
+    "summary_cases": [
+      "soc010_q0p8_ecc",
+      "soc010_q1p0",
+      "soc030_q0p8_ecc",
+      "soc030_q1p0",
+      "soc050_q0p8_ecc",
+      "soc050_q1p0",
+      "soc070_q0p8_ecc",
+      "soc070_q1p0",
+      "soc100_q0p8_ecc",
+      "soc100_q1p0"
+    ],
+    "usable_long_viscosity_crosscheck_rows": 10,
+    "usable_long_viscosity_crosscheck_variants": [
+      "q0p8_ecc",
+      "q1p0"
+    ],
+    "viscosity_priority_socs_configured": [
+      0.1,
+      0.5,
+      1.0
+    ],
+    "usable_long_viscosity_priority_socs": [
+      0.1,
+      0.5,
+      1.0
+    ],
+    "closure_fit_rows": 2,
+    "chart_map_rows": 5,
+    "report_sections_missing": [],
+    "requirements_traceability_rows": 14,
+    "requirements_traceability_blocking_bad_rows": []
+  },
+  "comsol_process_check": {
+    "checked": true,
+    "running_processes": [],
+    "ok": true
+  },
+  "mph_artifact_check": {
+    "checked": true,
+    "ok": true,
+    "mph_files": []
+  },
+  "comsol_launch_log_check": {
+    "checked": true,
+    "ok": true,
+    "matches": []
+  },
+  "claim_boundary": "Use ratios/trends plus literature anchoring; do not replace COMSOL constants or edit .mph.",
+  "issues": []
+}

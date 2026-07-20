@@ -1,0 +1,4 @@
+trajectory,is_solved_feedback_branch,inventory_source,endpoint_q_mAh_cm2,endpoint_theta,theta_half_crossing_q_mAh_cm2,theta_half_status,endpoint_eps_s,endpoint_voltage_V
+production control,True,own solved eps_s(Q),120,0.9899822096,99.463708428,reached,0.00315235665964,1.72836440104
+dense shadow; no feedback,False,production-control eps_s(Q); one-way diagnostic only,120,0.625898399422,118.692725092,reached,0.00315235665964,
+coupled dense,True,own solved eps_s(Q),120,0.309080675373,,not reached by 120 mAh cm^-2,0.000658584284203,1.44020814388

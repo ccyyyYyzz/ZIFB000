@@ -1,0 +1,58 @@
+{
+  "backend": "Python/matplotlib only",
+  "archetype": "editorial schematic-led composite",
+  "final_dimensions_mm": [
+    180.0,
+    90.0
+  ],
+  "figure_dimensions_mm_from_canvas": [
+    180.0,
+    90.0
+  ],
+  "png_pixels_600dpi": [
+    4251,
+    2125
+  ],
+  "expected_png_pixels_600dpi": [
+    4251,
+    2125
+  ],
+  "preview_180mm_pixels_300dpi": [
+    2125,
+    1062
+  ],
+  "expected_preview_180mm_pixels_300dpi": [
+    2125,
+    1062
+  ],
+  "minimum_font_size_pt": 6.5,
+  "declared_font_family": "TeX Gyre Termes",
+  "registered_font_files": [
+    "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-regular.otf",
+    "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-bold.otf",
+    "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-italic.otf",
+    "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-bolditalic.otf"
+  ],
+  "resolved_artist_font_files": [
+    "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-bold.otf",
+    "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-regular.otf"
+  ],
+  "all_artist_fonts_resolve_to_tex_gyre_termes": true,
+  "embedded_pdf_font_names": [
+    "CCVYUO+TeXGyreTermes-Bold",
+    "CCVYUO+TeXGyreTermes-Italic",
+    "CCVYUO+TeXGyreTermes-Regular"
+  ],
+  "all_embedded_pdf_fonts_are_tex_gyre_termes": true,
+  "svg_tex_gyre_termes_occurrences": 81,
+  "prohibited_svg_font_names": [],
+  "editable_svg_text_nodes": 50,
+  "svg_embedded_raster_images": 0,
+  "causal_node_count": 5,
+  "state_annotation_count": 3,
+  "rounded_state_cards": 0,
+  "nh4br_in_artwork": false,
+  "morphology_depicted": false,
+  "grayscale_preview_written": true,
+  "pass": true
+}

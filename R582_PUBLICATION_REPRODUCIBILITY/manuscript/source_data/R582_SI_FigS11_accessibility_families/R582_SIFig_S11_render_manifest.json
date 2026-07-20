@@ -1,0 +1,243 @@
+{
+  "figure": "SIFig_R582_S11_accessibility_families",
+  "single_dominant_claim": "At fixed retained-solid fraction, the prescribed placement-density assumption can change the computed geometric remaining area A/A0 substantially.",
+  "archetype": "quantitative grid with exact-node companion",
+  "evidence_class": "E-COMP",
+  "backend": "Python/matplotlib only",
+  "frozen_date": "2026-07-20",
+  "final_size_mm": {
+    "width": 180.0,
+    "height": 96.0
+  },
+  "font": {
+    "family": "TeX Gyre Termes",
+    "minimum_pt": 6.5,
+    "registered_faces": [
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-regular.otf",
+        "sha256": "CC3FE7C707B81428D23D54DF3EADD9228A2BF6A4D43125D94DF56F5F63134659"
+      },
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-bold.otf",
+        "sha256": "2FB3E952065FA153C7E4E64E04B98B9D79225739B6025AA3F0F0782D299FF61E"
+      },
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-italic.otf",
+        "sha256": "6DD103A1672E50568CD2F8A706CCD48443D44D7D073A59D2286F4E6F746575D6"
+      },
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-bolditalic.otf",
+        "sha256": "1BF6AF99CB0E26C12951317032D79B96AE009551E59CCF02A5B24F325ECFEC87"
+      }
+    ]
+  },
+  "claim_boundary": "These are deterministic single-fibre comparator families under prescribed placement and retention parameters. The plotted families are geometric A/A0 curves; the dashed R_theta = 1 - theta trace is a comparator only. Neither is native COMSOL A_bare/A0, which equals R_theta * T_pore. The figure is not measured coverage or reconstructed felt morphology.",
+  "data_audit": {
+    "families": 4,
+    "nodes_per_family": {
+      "washable": 5,
+      "baseline_lowNn": 5,
+      "baseline_comsol": 5,
+      "retained_highNn": 5
+    },
+    "total_computed_nodes": 20,
+    "shared_inventory_pairs": 5,
+    "shared_eps_s_range": [
+      0.00033909568387649404,
+      0.0033909568387649404
+    ],
+    "max_exact_shared_node_difference_geometric_A_over_A0": 0.30940237640178037,
+    "line_policy": "connect registered nodes only; no interpolation or fitted family curve",
+    "geometric_curve_definition": "registered single-fibre geometry remaining-area fraction A/A0",
+    "reference_comparator_definition": "R_theta = 1 - theta, computed from comsol_theta_ref and displayed dashed; not a geometric A/A0 family and not native COMSOL A_bare/A0",
+    "native_comsol_definition": "A_bare/A0 = R_theta * T_pore; not plotted because T_pore is not part of the S11 nodes",
+    "numeric_node_values_changed": false,
+    "morphology_inference": false,
+    "input_rows": {
+      "closure": 20,
+      "clock": 20
+    }
+  },
+  "qa": {
+    "build": {
+      "width_mm": 180.0,
+      "height_mm": 96.0,
+      "font_audit": {
+        "minimum_text_pt": 6.5,
+        "resolved_font_families": [
+          "TeX Gyre Termes"
+        ],
+        "missing_glyphs": [],
+        "text_items": 48
+      },
+      "computed_family_nodes": 20,
+      "shared_exact_pairs": 5,
+      "fitted_family_curves": 0,
+      "interpolated_family_points": 0
+    },
+    "deterministic_second_render": {
+      "pass": true,
+      "sha256": {
+        "svg": "4393E2207C3C2B2CEC64522FA93BD45E9EB5FB250A0CCB48BC04B64F83389F31",
+        "pdf": "13BE70194D8CB1BED6E3E8DE40CD49B671ED69C4AC7B2F42BBD7009C518F6716",
+        "png": "33278BA55519AEABF1AE7E37749F0CFB60F05BC3926CEAAA77A3B397DD617CE4",
+        "tiff": "12AB2C22BD96CAD97FF390AF68B8D0F7499BFFFE5E3BE13FFD15D0AF20444190",
+        "preview": "3EE1522FEAC7C5BA32D956A4E85404B471CC5B0C0177B33059B7D4F2D9941E8F",
+        "grayscale": "12309199752FBC4CB181B39B08C0435F52FD3E5C5B54A1B81AFBE8EC6007E649"
+      }
+    },
+    "pdf_fonts": {
+      "font_names": [
+        "CCVYUO+TeXGyreTermes-Bold",
+        "CCVYUO+TeXGyreTermes-Regular"
+      ],
+      "required_family": "TeX Gyre Termes",
+      "forbidden_families": [],
+      "type3_present": false,
+      "pass": true
+    },
+    "pdf_size": {
+      "expected_mm": [
+        180.0,
+        96.0
+      ],
+      "observed_mm": [
+        179.9999222222222,
+        96.00000555555555
+      ],
+      "pass": true
+    },
+    "raster": {
+      "expected_600dpi_pixels": [
+        4252,
+        2268
+      ],
+      "png_pixels": [
+        4252,
+        2268
+      ],
+      "tiff_pixels": [
+        4252,
+        2268
+      ],
+      "expected_300dpi_preview_pixels": [
+        2126,
+        1134
+      ],
+      "preview_pixels": [
+        2126,
+        1134
+      ],
+      "grayscale_pixels": [
+        2126,
+        1134
+      ],
+      "grayscale_mode": "L",
+      "grayscale_extrema": [
+        0,
+        255
+      ],
+      "pass": true
+    },
+    "svg": {
+      "editable_text": true,
+      "required_family_present": true,
+      "minimum_rendered_text_pt": 6.5,
+      "forbidden": [],
+      "pass": true
+    }
+  },
+  "inputs": [
+    {
+      "role": "registered single-fibre geometric remaining-area nodes",
+      "upstream_workspace_path": "fiber/data/R531_fiber3d_accessibility_closure.csv",
+      "frozen_workspace_path": "manuscript/source_data/R582_SI_FigS11_accessibility_families/inputs/R531_fiber3d_accessibility_closure.csv",
+      "bytes": 2551,
+      "sha256": "77C9242308B9BEBC5E6EAF2519964D511229D49A4F245BE82CC1DB2ADE32AB45",
+      "status": "read-only frozen copy; byte-identical to registered upstream"
+    },
+    {
+      "role": "registered family parameter definitions and matching nodes",
+      "upstream_workspace_path": "fiber/data/R531_fiber3d_clock.csv",
+      "frozen_workspace_path": "manuscript/source_data/R582_SI_FigS11_accessibility_families/inputs/R531_fiber3d_clock.csv",
+      "bytes": 3507,
+      "sha256": "91D6B8DC78E2E4C7629311B7E776B6F549A56670FFDC50306C8CD092015F21DE",
+      "status": "read-only frozen copy; byte-identical to registered upstream"
+    }
+  ],
+  "figure_outputs": [
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S11_accessibility_families.svg",
+      "bytes": 34254,
+      "sha256": "4393E2207C3C2B2CEC64522FA93BD45E9EB5FB250A0CCB48BC04B64F83389F31"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S11_accessibility_families.pdf",
+      "bytes": 23932,
+      "sha256": "13BE70194D8CB1BED6E3E8DE40CD49B671ED69C4AC7B2F42BBD7009C518F6716"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S11_accessibility_families.png",
+      "bytes": 482726,
+      "sha256": "33278BA55519AEABF1AE7E37749F0CFB60F05BC3926CEAAA77A3B397DD617CE4"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S11_accessibility_families.tiff",
+      "bytes": 613496,
+      "sha256": "12AB2C22BD96CAD97FF390AF68B8D0F7499BFFFE5E3BE13FFD15D0AF20444190"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S11_accessibility_families_180mm_preview.png",
+      "bytes": 332068,
+      "sha256": "3EE1522FEAC7C5BA32D956A4E85404B471CC5B0C0177B33059B7D4F2D9941E8F"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S11_accessibility_families_180mm_preview_grayscale.png",
+      "bytes": 142513,
+      "sha256": "12309199752FBC4CB181B39B08C0435F52FD3E5C5B54A1B81AFBE8EC6007E649"
+    }
+  ],
+  "source_bundle_files": [
+    {
+      "path": "manuscript/source_data/R582_SI_FigS11_accessibility_families/R582_SIFig_S11_input_manifest.csv",
+      "bytes": 729,
+      "sha256": "4EEA5E43ED6112417AFA87929081373CF9EDD4530E013307EDF069A74A65CDE9"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS11_accessibility_families/R582_SIFig_S11_accessibility_nodes.csv",
+      "bytes": 4982,
+      "sha256": "A3AEE4FA10943A2D7931576C0E928ACDF9CA4B8033F22BA3318B3E314B0DE7A9"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS11_accessibility_families/R582_SIFig_S11_calibrated_reference_nodes.csv",
+      "bytes": 2174,
+      "sha256": "D139ABECE6367E9042AD253D268DCD0CAEBC9EB5E2038DE1319C3B367A09CB8B"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS11_accessibility_families/R582_SIFig_S11_shared_inventory_pairs.csv",
+      "bytes": 876,
+      "sha256": "8F7DC7317F4D9EEAD8A5BFC5F650B47D50F9BC0DF663675B55A96864BF2C9D5F"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS11_accessibility_families/R582_SIFig_S11_family_definitions.csv",
+      "bytes": 275,
+      "sha256": "DC67A95FB2171FCB7EEAE59C7E6C5D6F639A9AF652E6C4CEDD15EB1E03D085CA"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS11_accessibility_families/r582_si_figure_tools.py",
+      "bytes": 12791,
+      "sha256": "14EA89106AFF8228A9163E1706D8E72F6C5E3ED5FD5C7340E05FE87DEA54AD0F"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS11_accessibility_families/make_sifig_r582_s11_accessibility_families.py",
+      "bytes": 20583,
+      "sha256": "695A4067909B79BA788C096B71BD7971B3F5AFA69BE1E1B2B6C58B0614407ED0"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS11_accessibility_families/pdffonts_report.txt",
+      "bytes": 376,
+      "sha256": "5DE0FF9A73B752FF4198AAAC81D24C273CD4DE612626B38C9BB756AA55A12714"
+    }
+  ],
+  "original_data_mutated": false
+}

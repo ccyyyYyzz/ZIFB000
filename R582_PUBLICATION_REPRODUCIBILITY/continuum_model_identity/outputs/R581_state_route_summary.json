@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "source_model_use": "read_only_sol5_dset5; no solve; no save",
+  "rows": 1081,
+  "output_csv": "E:\\zifb_final_9129_luck\\battery_comsol\\02_outputs_core\\R581_CANONICAL_CLOSURE_REBUILD\\outputs\\R581_state_route_probe.csv",
+  "output_csv_sha256": "708D6DCDC3C4A229B056380513AB6DEF6C79723CD2DB4AED9340AB8ED93208EB",
+  "endpoint": {
+    "Q_mAh_cm2": 120.0,
+    "voltage_V": 1.72887516175,
+    "S_direct_avg": 1.75902930702,
+    "eps_s_feedback_avg": 0.00321926062394,
+    "eps_s_tcd_native_raw_avg": 0.00321926062393,
+    "eps_s_ode_avg": 1.08328242626e-06,
+    "N_i2_ode_avg": 820991.809798,
+    "R_precip_fraction_per_s_avg": 6.91248668671e-10,
+    "R_diss_fraction_per_s_avg": 3.0267506269300003e-12,
+    "i0_i2s_phase_A_m2_avg": 0.0379514653512,
+    "j_bare_geom_A_m2": 286.864283009,
+    "j_i2s_geom_A_m2": 111.526497082,
+    "j_positive_geom_A_m2": 398.390780091,
+    "cI2_total_avg_mol_m3": 328.343322658,
+    "cI2_tank_mol_m3": 328.226873582
+  },
+  "phase_current_fraction_endpoint": 0.27994246517583876,
+  "phase_current_fraction_max": 0.27994246517583876,
+  "phase_charge_fraction_trapezoidal_over_Q": 0.005516264613101165,
+  "feedback_to_parallel_ode_solid_ratio_endpoint": 2971.7648379604943,
+  "stdout_sha256": "0D98FE6B651B263BEFCE61117F10E8150DF6957D31014082683A2EBBE8A41B64"
+}

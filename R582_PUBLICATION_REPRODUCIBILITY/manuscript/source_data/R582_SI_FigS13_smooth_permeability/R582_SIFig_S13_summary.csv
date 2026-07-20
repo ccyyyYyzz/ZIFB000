@@ -1,0 +1,8 @@
+quantity,value,unit,Q_mAh_cm2
+maximum_absolute_DeltaV,5.2144,mV,117.44444
+signed_DeltaV_at_max_abs,5.2144,mV,117.44444
+endpoint_DeltaV,1.271,mV,120
+endpoint_K_over_K0_baseline_KC,0.95628703,1,120
+endpoint_K_over_K0_network_smooth_path,0.98249573,1,120
+endpoint_eps_s_baseline_KC,0.0032192606,1,120
+endpoint_eps_s_network_smooth_path,0.0035173187,1,120

@@ -1,0 +1,6 @@
+display_order,component,figure_role,highlighted,geometry_status
+1,positive current collector,context,False,schematic; not to scale
+2,positive carbon felt,model focus,True,schematic; not to scale
+3,separator,context,False,schematic; not to scale
+4,negative side,full-cell context,False,schematic; not to scale
+5,negative current collector,context,False,schematic; not to scale

@@ -1,0 +1,14 @@
+{
+  "analysis_id": "R581_TRUE_MESH_CLOSURE_RELEASE",
+  "comparison": "passing 7776-element control/physical pair at rtol=3e-4",
+  "crossings": "first upward crossing with piecewise-linear interpolation",
+  "dense_shadow": "1-exp(-35.4*eps_s_reg_avg^0.6222) evaluated one-way on true-mesh control",
+  "raw_or_original_mph_modified": false,
+  "scientific_inputs": [
+    "E:\\zifb_final_9129_luck\\battery_comsol\\02_outputs_core\\R581_CANONICAL_CLOSURE_REBUILD\\outputs\\R581_true_mesh_control_timeseries.csv",
+    "E:\\zifb_final_9129_luck\\battery_comsol\\02_outputs_core\\R581_CANONICAL_CLOSURE_REBUILD\\outputs\\R581_true_mesh_physical_timeseries.csv",
+    "E:\\zifb_final_9129_luck\\battery_comsol\\02_outputs_core\\R581_CANONICAL_CLOSURE_REBUILD\\outputs\\R581_CONVERGENCE_SUMMARY.json",
+    "E:\\zifb_final_9129_luck\\battery_comsol\\02_outputs_core\\R581_CANONICAL_CLOSURE_REBUILD\\outputs\\R581_matched_closure_summary.json"
+  ],
+  "smoothing": false
+}

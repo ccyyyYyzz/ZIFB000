@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "source_sha256": {
+    "main_R582.tex": "8AE9FF4F244E9D5AB2308D88E3B1E98BC5C9E946931F2CD7EF6A9CAA7D3E606D",
+    "SI_R582.tex": "8BDC18C71088398E0E9B1A55359FA3FDF688DE536B49C2C6C497EA34C47F6C1C"
+  },
+  "counts": {
+    "main": 6,
+    "si": 13,
+    "total": 19
+  },
+  "main_label_order": [
+    "fig:experimental-problem",
+    "fig:domain-state",
+    "fig:spatial-progression",
+    "fig:closure-identifiability",
+    "fig:multiscale-bounds",
+    "fig:operating-levers"
+  ],
+  "si_label_order": [
+    "fig:si-derivative",
+    "fig:si-composition",
+    "fig:si-compression",
+    "fig:si-state-fields",
+    "fig:si-hydraulic-fields",
+    "fig:si-voltage-degeneracy",
+    "fig:si-single-i2",
+    "fig:si-two-i2",
+    "fig:si-md-ladder",
+    "fig:si-comparator-definitions",
+    "fig:si-accessibility-families",
+    "fig:si-flow-postprocess",
+    "fig:si-permeability"
+  ],
+  "verbatim_comparison": {
+    "markdown_vs_sources": true,
+    "tex_vs_sources": true,
+    "comparison_rule": "exact Unicode text after LF newline normalization; outer caption braces excluded"
+  },
+  "exp_meta_001_retained": true,
+  "output_sha256": {
+    "submission\\FIGURE_CAPTIONS_DRAFT.md": "3D2BB38BE6F4C20FD293281DD4817D20FD2A19772B435A0A35C461372D7E07B2",
+    "submission\\FIGURE_CAPTIONS_DRAFT.tex": "E97CCF55A3F1D60E443E805867CA20B3E4EB20DD2D6AC1D074F7C82E2EC85D7B"
+  }
+}

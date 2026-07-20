@@ -1,0 +1,60 @@
+{
+  "checks": {
+    "S_identity_le_1e-6": true,
+    "delta_Qs_le_0p5": true,
+    "delta_Qtheta_le_0p5": true,
+    "endpoint_eps_rel_le_1pct": true,
+    "endpoint_theta_abs_le_0p005": true,
+    "max_abs_voltage_le_1mV": true
+  },
+  "fresh": {
+    "Q_s_mAh_cm2": 83.02019740060638,
+    "Q_theta_0p5_mAh_cm2": 99.5895751239597,
+    "Q_theta_0p9_mAh_cm2": 111.19726398792058,
+    "S_identity_max_abs": 0.0,
+    "endpoint": {
+      "A_bare_avg": 0.0104280473275,
+      "K_perm_rel_avg": 0.95622894131,
+      "S_direct": 1.75898600768,
+      "S_reconstructed": 1.75898600768,
+      "eps_s_avg": 0.00322420776207,
+      "q_mAh_cm2": 120.0,
+      "theta_avg": 0.98951331201,
+      "voltage_V": 1.72894038699
+    },
+    "rows": 1081
+  },
+  "historical": {
+    "Q_s_mAh_cm2": 83.0201994718443,
+    "Q_theta_0p5_mAh_cm2": 99.59005532064884,
+    "endpoint": {
+      "eps_s_avg": 0.00321926062394,
+      "theta_avg": 0.989509871859,
+      "voltage_V": 1.72887516175
+    }
+  },
+  "input_files": {
+    "historical_csv": {
+      "path": "E:\\zifb_final_9129_luck\\battery_comsol\\02_outputs_core\\R526_COMSOL_NATIVE_KNOB_EXPORT\\R526_GPT_REVIEW_BUNDLE_STAGE\\data\\R525_all_timeseries.csv",
+      "sha256": "744A36AC0EB8E785E61FEAB24F2CA699484134D30F8D77E532E03DB90917E90F"
+    },
+    "solved_mph": {
+      "path": "E:\\zifb_final_9129_luck\\battery_comsol\\02_outputs_core\\R581_CANONICAL_CLOSURE_REBUILD\\outputs\\R581_matched_control_SOLVED.mph",
+      "sha256": "B26D8FA00159C7EF90B5932886C54F285BBBD8EBA899A0F7C62AAD7D8FBC6FED"
+    },
+    "stdout": {
+      "path": "E:\\zifb_final_9129_luck\\battery_comsol\\02_outputs_core\\R581_CANONICAL_CLOSURE_REBUILD\\logs\\R581_matched_control_run5_stdout.txt",
+      "sha256": "AD5DD07AEA79F4494D923DC7CD2040161D8B22667FB607067DC9217541F1C1BE"
+    }
+  },
+  "max_abs_trace_difference": {
+    "A_bare_avg": 2.2745915999933253e-05,
+    "D_rel_avg": 8.63027300002095e-06,
+    "K_perm_rel_avg": 6.737109199994595e-05,
+    "S_direct": 4.9803360000044705e-05,
+    "eps_s_avg": 4.947138129999997e-06,
+    "theta_avg": 2.2745687000003123e-05,
+    "voltage_V": 0.000285065969999998
+  },
+  "pass": true
+}

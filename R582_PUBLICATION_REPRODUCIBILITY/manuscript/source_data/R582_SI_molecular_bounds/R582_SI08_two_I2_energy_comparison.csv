@@ -1,0 +1,3 @@
+configuration,relative_to_separated_eV,source_column,status,interpretation,claim_boundary
+compact,-0.689290936333,DeltaE_coalesce_preferred_eV,PASS,qualitative support for iodine-on-iodine coalescence near strong site,R514 coalescence sanity only; DeltaE_add is context only; do not replace production constants or claim nucleation rates.
+separated reference,0,reference definition,PASS,reference configuration,R514 coalescence sanity only; DeltaE_add is context only; do not replace production constants or claim nucleation rates.

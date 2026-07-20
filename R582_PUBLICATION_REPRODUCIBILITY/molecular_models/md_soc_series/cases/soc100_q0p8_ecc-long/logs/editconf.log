@@ -1,0 +1,13 @@
+Note that major changes are planned in future for editconf, to improve usability and utility.
+Read 4026 atoms
+No velocities found
+    system size :  3.413  3.407  3.406 (nm)
+    center      :  1.650  1.733  1.688 (nm)
+    box vectors :  0.000  0.000  0.000 (nm)
+    box angles  :   0.00   0.00   0.00 (degrees)
+    box volume  :   0.00               (nm^3)
+    shift       :  0.050 -0.033  0.012 (nm)
+new center      :  1.700  1.700  1.700 (nm)
+new box vectors :  3.400  3.400  3.400 (nm)
+new box angles  :  90.00  90.00  90.00 (degrees)
+new box volume  :  39.30               (nm^3)

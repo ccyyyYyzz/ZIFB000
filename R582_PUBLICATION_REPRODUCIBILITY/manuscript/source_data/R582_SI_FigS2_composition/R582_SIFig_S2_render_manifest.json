@@ -1,0 +1,149 @@
+{
+  "figure": "SIFig_R582_S2_composition",
+  "single_dominant_claim": "The existing physical-cell records define a descriptive composition-associated capacity envelope, not a fitted NH4Br concentration law.",
+  "evidence_class": "E-EXP",
+  "frozen_date": "2026-07-20",
+  "final_size_mm": {
+    "width": 180.0,
+    "height": 82.0
+  },
+  "font": {
+    "family": "TeX Gyre Termes",
+    "base_pt": 7.2,
+    "minimum_pt": 6.5,
+    "registered_faces": [
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-regular.otf",
+        "sha256": "CC3FE7C707B81428D23D54DF3EADD9228A2BF6A4D43125D94DF56F5F63134659"
+      },
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-bold.otf",
+        "sha256": "2FB3E952065FA153C7E4E64E04B98B9D79225739B6025AA3F0F0782D299FF61E"
+      },
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-italic.otf",
+        "sha256": "6DD103A1672E50568CD2F8A706CCD48443D44D7D073A59D2286F4E6F746575D6"
+      },
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-bolditalic.otf",
+        "sha256": "1BF6AF99CB0E26C12951317032D79B96AE009551E59CCF02A5B24F325ECFEC87"
+      }
+    ],
+    "minimum_text_pt": 6.5,
+    "resolved_font_families": [
+      "TeX Gyre Termes"
+    ],
+    "text_items": 32
+  },
+  "statistical_boundary": "Physical cells are the independent units; sequential cycles produce within-cell ranges only. No population interval, significance test, optimum or concentration-response fit is supported.",
+  "metadata_normalization": "Derived labels use NH4Br under EXP-META-001; immutable raw bytes are untouched.",
+  "data_audit": {
+    "physical_cells": 6,
+    "n_cell_by_concentration_M": {
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1
+    },
+    "n_pairs_by_cell": {
+      "C0_A": 4,
+      "C1_A": 4,
+      "C2_A": 3,
+      "C3_A": 4,
+      "C3_B": 1,
+      "C4_A": 4
+    },
+    "right_censored_cells_by_condition": {
+      "3 M": 1
+    },
+    "sequential_cycles_used_as_independent_replicates": false,
+    "concentration_fit_drawn": false
+  },
+  "inputs": [
+    {
+      "path": "manuscript/source_data/Fig_R581_experimental_evidence/R581_experimental_evidence_panel_a_composition.csv",
+      "size_bytes": 2198,
+      "sha256": "2C02F4571A5D5B584A8F9B654783DD5A07380E37198A571583D046877BE46389"
+    },
+    {
+      "path": "manuscript/source_data/Fig_R581_experimental_evidence/R581_experimental_evidence_input_manifest.csv",
+      "size_bytes": 2462,
+      "sha256": "0279B9AE6298707464B79661170A59B4F1B33CD3390C23CA6C63AEC47DA6096C"
+    }
+  ],
+  "figure_outputs": [
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S2_composition.svg",
+      "size_bytes": 16304,
+      "sha256": "3899F16B5EAAD62CE468325187AD0ED90E673E5B272109ECD1278DA217616AC8"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S2_composition.pdf",
+      "size_bytes": 20505,
+      "sha256": "667E8AED4C9DA8717A058BBC8104265DFB78F735DB882537873F9D6999F18B5F"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S2_composition.png",
+      "size_bytes": 223882,
+      "sha256": "727A0BB2085E0010BC148CC47DC73437B79559033697DB7B7219758CBEB6E6DD"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S2_composition.tiff",
+      "size_bytes": 344612,
+      "sha256": "17313F717BC6238490047286C1DD92771F6B6284281E98B6B5A78FDE4FC360E2"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S2_composition_180mm_preview.png",
+      "size_bytes": 159576,
+      "sha256": "75ACE1125CDA90291AC0360B6E04E068F8B34D1B14ADC1F331E55EE5E4863026"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S2_composition_180mm_preview_grayscale.png",
+      "size_bytes": 67626,
+      "sha256": "E79D75AE163103B6959D35DBE62898201199092685F48880A1EA4429479D5260"
+    }
+  ],
+  "source_bundle_files": [
+    {
+      "path": "manuscript/source_data/R582_SI_FigS2_composition/CAPTION_DRAFT.md",
+      "size_bytes": 1182,
+      "sha256": "7A2B2AAF2BBA8FADFC28D3FDC31084A3FA9C12738AE2418ABDB7F80BAB5A4BAE"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS2_composition/DETERMINISM_QA.json",
+      "size_bytes": 987,
+      "sha256": "84D3771D506FD62E62511C82BB9C02EEBC74F11DE2AFCFD006E072A70507D074"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS2_composition/FIGURE_CONTRACT.md",
+      "size_bytes": 1453,
+      "sha256": "DE79D5451915A5AB8410556CD7443AC29B419C240C22A0DB06233A5730008E82"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS2_composition/make_sifig_r582_s2_composition.py",
+      "size_bytes": 14446,
+      "sha256": "10C1FF7BAA1854EBEF667C1FB6D684B572EA659FBBEBD784CA42C2CE41F29638"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS2_composition/QA_NOTES.md",
+      "size_bytes": 1437,
+      "sha256": "26A3465107CB0EDC96386A9B826F3E641875A2B1A90D82FD266281F0AD4C97D7"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS2_composition/R582_SIFig_S2_input_manifest.csv",
+      "size_bytes": 647,
+      "sha256": "D7DC69D6DE614B4C195D91B218694ED9C4E4C736A6B5CC3BF57542687C5F69E2"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS2_composition/R582_SIFig_S2_plot_cells.csv",
+      "size_bytes": 2308,
+      "sha256": "0DFC530BAF3A6881E38229BC5CB21236E253010931E7D586472004609498A5E8"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS2_composition/README.md",
+      "size_bytes": 609,
+      "sha256": "5AA259C114756553B43F4CC3F65EA88C337854BF7707E2035B22552FAFEF0FA6"
+    }
+  ]
+}

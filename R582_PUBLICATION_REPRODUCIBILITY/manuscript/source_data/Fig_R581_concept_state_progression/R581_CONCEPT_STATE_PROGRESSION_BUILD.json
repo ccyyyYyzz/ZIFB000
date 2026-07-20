@@ -1,0 +1,42 @@
+{
+  "figure": "Fig_R581_concept_state_progression",
+  "conclusion": "The production model separates saturation, retained inventory, and a calibrated accessibility marker without identifying deposit morphology.",
+  "registered_markers": {
+    "Q_s_mAh_cm2": 83.0,
+    "Q_f_cal_mAh_cm2": 99.6
+  },
+  "bar_lengths": "schematic_not_to_scale",
+  "morphology_claim": false,
+  "files": [
+    {
+      "path": "manuscript\\source_data\\Fig_R581_concept_state_progression\\R581_concept_state_progression.py",
+      "bytes": 9101,
+      "sha256": "E0E8A226E8A6EA222156B87CD8204EEB112167D5DDFC247A8D65D9561110F86E"
+    },
+    {
+      "path": "manuscript\\source_data\\Fig_R581_concept_state_progression\\R581_concept_state_progression_source_data.csv",
+      "bytes": 1578,
+      "sha256": "0236E5D941D9F145CF6849BC54A0951E739A91981AF4EDC63A12ED971F5FC8A7"
+    },
+    {
+      "path": "manuscript\\source_data\\Fig_R581_concept_state_progression\\Fig_R581_concept_state_progression.svg",
+      "bytes": 38855,
+      "sha256": "A7AAD6732E66410A6009CFF13ABEAA8F52F799DBEE7141AF6E891E766DFEDC70"
+    },
+    {
+      "path": "manuscript\\source_data\\Fig_R581_concept_state_progression\\Fig_R581_concept_state_progression.pdf",
+      "bytes": 58448,
+      "sha256": "A22E6574AF9F31825EB6E1FDA63612561822831B2F476F896430D96929593822"
+    },
+    {
+      "path": "manuscript\\source_data\\Fig_R581_concept_state_progression\\Fig_R581_concept_state_progression.png",
+      "bytes": 372348,
+      "sha256": "68EE9F2D76E1F5F13DCC6615A46023B5DA94E29805F75FD0EA92ED8831A29D1B"
+    },
+    {
+      "path": "manuscript\\source_data\\Fig_R581_concept_state_progression\\Fig_R581_concept_state_progression.tiff",
+      "bytes": 968876,
+      "sha256": "41C950887E924AC1F8641E676A1D49399DA3D42965C388D310C603B8AD10E838"
+    }
+  ]
+}

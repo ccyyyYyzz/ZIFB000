@@ -1,0 +1,2 @@
+threshold_abs_e_A-3,raw_grid_shape,raw_accumulation_voxels,raw_depletion_voxels,display_accumulation_points,display_depletion_points,display_radial_crop_A,display_z_range_A,value_interpolation,periodic_mapping
+0.002,60x96x90,428,78,428,78,7,9.5-18.5,none,nearest x/y image only; values and atom coordinates unchanged

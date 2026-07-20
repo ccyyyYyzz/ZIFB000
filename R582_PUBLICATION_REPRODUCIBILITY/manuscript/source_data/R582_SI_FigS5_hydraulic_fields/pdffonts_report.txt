@@ -1,0 +1,5 @@
+name                                 type              encoding         emb sub uni object ID
+------------------------------------ ----------------- ---------------- --- --- --- ---------
+CCVYUO+TeXGyreTermes-Bold            CID Type 0C (OT)  Identity-H       yes yes yes     36  0
+CCVYUO+TeXGyreTermes-Italic          CID Type 0C (OT)  Identity-H       yes yes yes     43  0
+CCVYUO+TeXGyreTermes-Regular         CID Type 0C (OT)  Identity-H       yes yes yes     50  0

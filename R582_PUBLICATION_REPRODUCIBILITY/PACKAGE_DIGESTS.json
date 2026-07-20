@@ -1,0 +1,11 @@
+{
+  "algorithm": "SHA-256",
+  "canonical_record": "relative_path\\0bytes\\0sha256\\n sorted by UTF-8 path",
+  "excludes": [
+    "FILE_SHA256_MANIFEST.csv",
+    "PACKAGE_DIGESTS.json"
+  ],
+  "content_root_sha256": "B5F66F28B3AA36B4FE8BD047458A2BD65AE4CEAC92D97FF78FD345CFF9193657",
+  "content_root_file_count": 723,
+  "content_root_bytes": 119166896
+}

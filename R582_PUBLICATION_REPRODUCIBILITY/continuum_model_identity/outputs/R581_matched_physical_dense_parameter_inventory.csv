@@ -1,0 +1,144 @@
+name,value,description
+A_cell,2*2[cm^2],电池面积
+Aa_i2s_native,118[mV],Tafel slope for native I2(s) branch
+Av_cf,4e4[1/m],Compressed felt surface area per electrode volume
+D_Br2,(D_I2_free+K_I2_I*cI_m*D_I3_m+K_I2_Br*cBr_support*D_I2Br_m)/beta_I2,Internal legacy diffusivity name retained by the COMSOL cBr2 transport field; physically this is D_I2_tot
+D_Br_m,1.0e-9[m^2/s],
+D_I2Br_m,0.5e-9[m^2/s],I2Br- diffusion coefficient placeholder
+D_I2_free,0.6e-9[m^2/s],Free I2 diffusion coefficient
+D_I2_tot,(D_I2_free+K_I2_I*cI_m*D_I3_m+K_I2_Br*cBr_support*D_I2Br_m)/beta_I2,Effective diffusivity of transported total oxidized iodine; cI2_tot
+D_I3_m,0.5e-9[m^2/s],I3- diffusion coefficient placeholder
+D_I_m,1.0e-9[m^2/s],
+D_Zn_2p,0.3e-9[m^2/s],
+D_cell,2[cm],电池深度（面外）
+D_eps_exp,1.0,Mild diffusivity correction because this condition is coverage-polarization dominated
+D_eps_exp_R520,1.5,R520 bounded Bruggeman-like exponent for D_eff vs eps_l_eff
+E0_I2_I,0.548[V],Formal positive-electrode potential at the reference free-I2 activity in concentrated ZnI2/NH4Br
+E_cell_init,Eeq_ref_I-Eeq_ref_Zn,Initial Zn-I2 cell voltage with complexed iodine
+Eeq_ref_Br,Eeq_ref_I,Internal legacy alias retained for solver compatibility; this is not a bromine redox potential
+Eeq_ref_I,E0_I2_I+R_const*T/(2*F_const)*log((c0_I2_free/1[M])*(1[M]/cI_m)^2),Positive electrode reference equilibrium potential for the I2/I- chemistry using free I2 activity
+Eeq_ref_Zn,-0.762[V]+R_const*T/(2*F_const)*log(c0_Zn_2p/1[M]),Negative electrode reference equilibrium potential for Zn2+/Zn
+H_cell,A_cell/D_cell,电池高度
+K0_perm_R520,1e-10[m^2],R520 nominal carbon-felt permeability scale for frozen Darcy estimate; not a fitted pressure threshold
+K_I2_Br,0.0115[m^3/mol],Apparent association/solubilization constant for I2 + Br- = I2Br- placeholder
+K_I2_I,0.72[m^3/mol],Association constant for I2 + I- = I3-; replace with measured/formal value if available
+K_eq_diss,700[1/M],Apparent dissolution/complexation equilibrium constant
+M_I2,253.80894[g/mol],R500 iodine solid molar mass
+M_Zn,65.39[g/mol],锌的摩尔质量
+N_ref_nd,1,Dimensionless reference nucleation density
+N_sup_scale_i2,500,Progressive nucleation-site growth scale under anodic iodine supersaturation
+N_target_max_nd,2e7,Upper bound for dimensionless nucleation-site density
+Q_flow,50[ml/min],Flow rate for compression sweep
+R520_area_perm_exp,0.5,R520 exponent mapping permeability loss to accessible-area transmissibility
+R520_film_on,0,R520 switch: optional dense-I2 contact/film resistance sensitivity; default 0 so film is not the main mechanism
+R520_porethroat_on,1,R520 switch: 1 multiplies accessible area by a pore-throat transmissibility factor; 0 keeps R500 theta-only area
+R520_porosity_on,1,R520 switch: 1 couples native I2(s) volume to positive-electrode liquid porosity; 0 reproduces R500 porosity baseline
+R520_theta_area_on,1,R520 switch: 1 applies native-I2(s)-derived surface coverage to soluble iodine reaction area; 0 keeps the full bare area for no-feedback ablation
+R520_transport_on,1,R520 switch: 1 couples D and kappa_l to eps_l_eff; 0 keeps transport coefficients at R500 baseline
+R522_native_flow_on,1,R522 switch: use native Free and Porous Media Flow velocity in positive pce2.
+Rfilm_floor_i2,1e-6[ohm*m^2],Numerical floor for covered-surface film resistance when coverage is vanishingly small
+S_OH_i2_meso,1.5,MESO0 shadow-only mesoscale diagnostic; not active in physics
+S_armchair_edge_i2_meso,1.0,MESO0 shadow-only mesoscale diagnostic; not active in physics
+S_carbonyl_i2_meso,1.0,MESO0 shadow-only mesoscale diagnostic; not active in physics
+S_carboxyl_i2_meso,1.0,MESO0 shadow-only mesoscale diagnostic; not active in physics
+S_defect_i2_meso,1.0,MESO0 shadow-only mesoscale diagnostic; not active in physics
+S_edge_i2_meso,1.0,MESO0 shadow-only mesoscale diagnostic; not active in physics
+S_epoxide_i2_meso,1.0,MESO0 shadow-only mesoscale diagnostic; not active in physics
+T,293.15[K],温度
+U,Q_flow/(D_cell*W_cf),Superficial velocity updated by compressed frame thickness
+U_flow_R522,U,R522 inlet normal flow speed inherited from existing model velocity scale U.
+V_res,25[cm^3],R520 actual wetted reservoir/tank inventory volume used for positive iodine bookkeeping
+V_res_R500_old,29.25[cm^3],R500 old reservoir volume retained for branch audit
+Vfit_a0,1.222473141[V],Fitted lumped formal/contact voltage offset
+Vfit_charge_slope,0.03072233219[V],Fitted charge-side film/coverage slope per hour
+Vfit_discharge_slope,-0.04505211146[V],Fitted discharge-side film/coverage slope per hour
+Vfit_raw_gain,0.07425643717,Gain applied to solved COMSOL terminal voltage
+Vfit_switch_drop,-0.07989123046[V],Fitted current-reversal film/contact jump
+Vfit_tail2,8.709900741[V],Terminal depletion polynomial coefficient
+Vfit_tail3,-112.2628361[V],Terminal depletion polynomial coefficient
+Vfit_tail4,349.9753897[V],Terminal depletion polynomial coefficient
+Vfit_tail6,-882.2792011[V],Terminal depletion polynomial coefficient
+Vm_I2,51.5[cm^3/mol],Molar volume of solid iodine
+W_cell,W_cf*2+W_sep,电池宽度
+W_cf,2[mm],Compressed graphite felt/electrode frame thickness
+W_sep,W_sep_num,Numerical separator width; membrane resistance is thickness-equivalent
+W_sep_num,1[mm],Numerical separator width retained for mesh stability
+alpha_a_Br,1.0,Anodic transfer coefficient for iodine oxidation
+alpha_a_Zn,0.5,传递系数，锌反应
+alpha_c_Br,1.0,Cathodic transfer coefficient for iodine reduction on wetted carbon/iodine-covered surface
+av0_i2,Av_cf,Iodine coverage model uses compressed felt area
+beta_I2,1+K_I2_I*cI_m+K_I2_Br*cBr_support,I2 complexation factor
+c0_Br2,c0_I2_tot,Internal legacy initial value for transported total oxidized iodine; use c0_I2_tot
+c0_Br_m,cI_m,Original Br- parameter now represents I- for the I2/I- electrode reaction
+c0_I2_free,c0_I2_tot/beta_I2,Initial free I2 concentration implied by complexation
+c0_I2_tot,1e-6[M],Small dissolved oxidized iodine initial value
+c0_NH4Br,4[M],NH4Br supporting electrolyte concentration
+c0_Zn_2p,1[M],Zn2+ concentration from 1 M ZnI2
+cBr_support,4[M],Br- concentration from 4 M NH4Br supporting electrolyte
+cI2_sat,cI2_sat0/gamma_I2_saltout,R500 transparent closure: effective free-I2 saturation; c_sat0 remains the reference value
+cI2_sat0,1.33[mol/m^3],
+cI_m,2[M],I- concentration from 1 M ZnI2
+cI_ref,1[M],Reference iodide concentration for dissolution
+c_i2_floor_nernst,0.02[mol/m^3],Lower concentration floor for local iodine Nernst term
+c_i2_ref_nernst,120[mol/m^3],Reference total oxidized iodine concentration for local positive-electrode formal potential
+c_ox_nuc_width,20[mol/m^3],Sharper late-SOC transition for stable iodine surface coverage
+c_tank_depl_floor,1e-6[mol/m^3],Small positive activity floor for terminal oxidized-iodine depletion
+c_tank_depl_scale,0.5[mol/m^3],Reservoir oxidized-iodine scale for terminal activity loss
+c_tank_depl_smooth,0.05[mol/m^3],Smooth positive-part scale for reservoir oxidized iodine
+chi_throat_R520,1,R520 throat-film shape factor h = chi_throat*delta_eff
+d_Nafion212,50.8[um],Nafion NR212 typical thickness from NR211/NR212 datasheet
+delta_mt_i2,25[um],Effective positive-electrode mass-transfer length for soluble oxidized iodine depletion
+eps_s_floor,1e-9,Regularization floor for Avrami fractional powers
+eps_s_smooth,1e-8,Small smoothing scale for solid iodine dissolution switch
+epsl_cf,0.85,Compressed felt porosity from solid-volume conservation
+epsl_min,0.82,Lower bound for dynamic liquid porosity tied to compression case
+epsl_sep,1,Dense ion-exchange membrane effective conducting phase fraction
+eta_N,0.05[V],Overpotential scale for nucleation target growth
+eta_nuc_i2,3[mV],Thermal-scale anodic overpotential factor for progressive iodine nucleation
+f_OH_i2_meso,0.02,MESO0 shadow-only mesoscale diagnostic; not active in physics
+f_armchair_edge_i2_meso,0,MESO0 shadow-only mesoscale diagnostic; not active in physics
+f_carbonyl_i2_meso,0.01,MESO0 shadow-only mesoscale diagnostic; not active in physics
+f_carboxyl_i2_meso,0.005,MESO0 shadow-only mesoscale diagnostic; not active in physics
+f_defect_i2_meso,0.005,MESO0 shadow-only mesoscale diagnostic; not active in physics
+f_edge_i2_meso,0.02,MESO0 shadow-only mesoscale diagnostic; not active in physics
+f_epoxide_i2_meso,0,MESO0 shadow-only mesoscale diagnostic; not active in physics
+film_tau_i2,1.0,Geometric tortuosity factor for through-film electron transport
+gamma_I2_saltout,3,R500 transparent closure: bounded high-salt activity/salting factor from R205/R209; affects precipitation saturation only
+gamma_i2_activity,1,Apparent activity amplification for concentrated iodine/polyiodide Nernst response
+gamma_tank_depl,8,Apparent activity exponent for terminal reservoir oxidized-iodine depletion
+i0_bei_i2,1e-12[A/m^2],Legacy internal-electrode I2 reaction exchange current; near zero to avoid bypassing the porous felt
+i0_i2s_phase_base,0.05[A/m^2],R500 phase-activated native I2(s) base scale; diagnostic candidate; not independently fitted
+i0_ref_Br,i0_ref_I,Internal legacy alias retained by inherited reaction settings; this is the I2/I- exchange current density
+i0_ref_I,5e4[A/m^2],Intrinsic I2/I- exchange current density on carbon felt
+i0_ref_Zn,1e5[A/m^2],Faster apparent zinc kinetics to reduce constant charge/discharge hysteresis
+i2_growth_factor,1.0,Solid-iodine inventory growth factor
+i_app,400.000000000[A/m^2],R500 J40 charge current density
+k_diss,1E7[1/s],覆盖溶解/络合速率
+k_diss_new,0.01[1/s],Phenomenological iodine dissolution rate
+k_diss_surf,5e-9[m/s],Slower surface dissolution/complexation of solid iodine during discharge
+k_form,1[m/mol],I₂ 覆盖形成速率常数
+k_geo,6,Avrami geometric factor; hemisphere-like iodine island-to-film mapping
+k_precip_i2,1e-9[m/s],Nucleation-limited iodine precipitation rate
+kappa_I2_eff_R520,1e-7[S/m],R520 bounded effective conductivity of iodine-rich covered contact path; sensitivity only
+kappa_N,1e-2[1/s],Progressive nucleation site relaxation rate
+kappa_eps_exp_R520,1.5,R520 bounded Bruggeman-like exponent for ionic conductivity vs eps_l_eff
+mu_electrolyte_R520,2.2e-3[Pa*s],R520 electrolyte viscosity for frozen Darcy pressure estimate
+nuc_seed_i2,0.03,Small early seed fraction before connected iodine nucleation begins
+r_f,8e-6[m],
+rho_I2_density,4930[kg/m^3],
+rho_I2_resistivity,1e3[ohm*m],
+rho_I2s,4930[kg/m^3],R500 solid iodine density
+rho_Zn,7133[kg/m^3],锌的密度
+rho_electrolyte_R522,1300[kg/m^3],R522 electrolyte density for native flow.
+sigma_I2,1e-7[S/m],Electronic conductivity of solid iodine used for the local covered-surface film path
+sigma_mem_N212,350[S/m],Hydrated Nafion 212 apparent ionic conductivity
+sigma_mem_N212_equiv,sigma_mem_N212*W_sep_num/d_Nafion212,Keep numerical separator width but preserve area resistance
+sigmal,20[S/m],R520 measured 1 M ZnI2 + 4 M NH4Br conductivity: 0.20 S/cm = 20 S/m
+sigmal_R500_old,60[S/m],R500 old liquid conductivity parameter retained for branch audit
+sigmal_eps_exp,1.0,Mild conductivity correction because this condition is coverage-polarization dominated
+sigmas_cf,160[S/m],电导率，碳毡
+t_charge,11800[s],R500 internal reversal switch after the solved 0-10800 s charge-only window
+t_charge_fit,3562.7[s],Zeroed experimental charge/discharge switch time
+t_tail_fit,6800[s],Onset time for fitted terminal mass-transfer/film blocking collapse
+tau_switch_i2,2[s],Smooth current-reversal time for iodine-film overpotential sign
+theta_area_i2,0.02,Coverage scale for area-weighting the electrode-level iodine-film resistance

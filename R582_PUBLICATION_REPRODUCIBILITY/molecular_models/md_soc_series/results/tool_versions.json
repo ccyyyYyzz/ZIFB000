@@ -1,0 +1,26 @@
+{
+  "recorded_at": "2026-06-20T06:47:05",
+  "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python_executable": "/home/cyzcomputer/micromamba/envs/zifb_md/bin/python",
+  "python_version": "3.11.15 | packaged by conda-forge | (main, Jun 11 2026, 03:34:02) [GCC 14.3.0]",
+  "conda_prefix": "/home/cyzcomputer/micromamba/envs/zifb_md",
+  "gromacs": {
+    "executable": "/home/cyzcomputer/micromamba/envs/zifb_md/bin.AVX2_256/gmx",
+    "returncode": 0,
+    "version": "2026.0-conda_forge",
+    "output": "                   :-) GROMACS - gmx, 2026.0-conda_forge (-:\n\nExecutable:   /home/cyzcomputer/micromamba/envs/zifb_md/bin.AVX2_256/gmx\nData prefix:  /home/cyzcomputer/micromamba/envs/zifb_md\nWorking dir:  /mnt/c/Users/CYZ\u7684computer/Documents/Codex/2026-06-18/goal-md-d-eff-zifb-comsol\nCommand line:\n  gmx --version\n\nGROMACS version:     2026.0-conda_forge\nPrecision:           mixed\nMemory model:        64 bit\nMPI library:         thread_mpi\nMPI version:         built in\nOpenMP support:      enabled (GMX_OPENMP_MAX_THREADS = 128)\nGPU support:         OpenCL\nNBNxM GPU setup:     super-cluster 2x2x2 / cluster 8 (cluster-pair splitting on)\nSIMD instructions:   AVX2_256\nCPU FFT library:     fftw-3.3.11-sse2-avx\nGPU FFT library:     clFFT\nMulti-GPU FFT:       none\nRDTSCP:              disabled\nTNG support:         enabled\nHwloc support:       disabled\nTracing support:     disabled\nColvars support:     enabled (version 2025-10-13)\nCP2K support:        disabled\nTorch support:       disabled\nPlumed support:      enabled\nC compiler:          /home/conda/feedstock_root/build_artifacts/gromacs_1770909732141/_build_env/bin/x86_64-conda-linux-gnu-cc GNU 14.3.0\nC compiler flags:    -fexcess-precision=fast -funroll-all-loops -mavx2 -mfma -Wno-missing-field-initializers -O3 -DNDEBUG\nC++ compiler:        /home/conda/feedstock_root/build_artifacts/gromacs_1770909732141/_build_env/bin/x86_64-conda-linux-gnu-c++ GNU 14.3.0\nC++ compiler flags:  -fexcess-precision=fast -funroll-all-loops -mavx2 -mfma -Wno-missing-field-initializers -Wno-stringop-truncation -Wno-cast-function-type-strict SHELL:-fopenmp -O3 -DNDEBUG\nBLAS library:        Internal\nLAPACK library:      Internal\nOpenCL include dir:  /home/cyzcomputer/micromamba/envs/zifb_md/include\nOpenCL library:      /home/cyzcomputer/micromamba/envs/zifb_md/lib/libOpenCL.so\nOpenCL version:      3.0\n\n"
+  },
+  "packmol": {
+    "executable": "/home/cyzcomputer/micromamba/envs/zifb_md/bin/packmol",
+    "returncode": 2,
+    "version": "21.2.1",
+    "output": "\n################################################################################\n\n PACKMOL - Packing optimization for the automated generation of\n starting configurations for molecular dynamics simulations.\n \n                                                             Version 21.2.1 \n\n################################################################################\n\n  Packmol must be run with: packmol < inputfile.inp \n\n  Userguide at: http://m3g.iqm.unicamp.br/packmol \n\n  Reading input file... (Control-C aborts)\nAt line 103 of file /home/conda/feedstock_root/build_artifacts/bld/rattler-build_packmol_1770939051/work/src/setsizes.f90 (unit = 5, file = 'stdin')\nFortran runtime error: Illegal seek\n\nError termination. Backtrace:\n#0  0x6060560bed70 in ???\n#1  0x6060560db679 in ???\n#2  0x6060560a90a0 in ???\n#3  0x76394462a1c9 in ???\n#4  0x76394462a28a in ???\n#5  0x6060560a90c9 in ???\n#6  0xffffffffffffffff in ???\n"
+  },
+  "python_modules": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "MDAnalysis": "2.10.0",
+    "pandas": "3.0.3",
+    "yaml": "6.0.3"
+  }
+}

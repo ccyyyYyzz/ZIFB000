@@ -1,0 +1,22 @@
+#include "amber19sb.ff/forcefield.itp"
+#include "local_spce_atomtypes.itp"
+#include "amber19sb.ff/spce.itp"
+#include "ions_scaled.itp"
+#include "nh4.itp"
+#include "i2.itp"
+#include "i3.itp"
+#include "i2br.itp"
+
+[ system ]
+ZIFB SOC-series posolyte with explicit polyhalide carriers
+
+[ molecules ]
+; molecule count
+SOL  1112
+ZN   24
+I    32
+BR   88
+NH4  95
+I2   1
+I3   16
+I2B  7

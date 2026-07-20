@@ -1,0 +1,15 @@
+requirement,status,evidence,detail
+Build neutral SOC/ECC input decks,PASS,outputs/md_transport_soc_series/inputs/soc_series/*,"expected_cases=10, variants=['q1p0', 'q0p8_ecc']"
+Run all 10 long production trajectories,PASS,"work/md_transport_soc_series/runs/*-long/prod.gro, prod.xtc, prod.log","requires prod.gro, prod.xtc, and prod.log progress >= 20000 ps for every case"
+"Compute long self-diffusion, density, viscosity, and phase diagnostics",PASS,outputs/md_transport_soc_series/results/diffusion_*_long.csv and JSON diagnostics,requires all species finite and positive with block SEM plus density/viscosity/phase JSON per case
+"Deliver D_eff(SOC) closure, D ratio, mu ratio, and Stokes-Einstein proxy",PASS,outputs/md_transport_soc_series/results/soc_transport_summary.csv; closure_fit.csv,"summary, D ratios, viscosity priority SOCs [0.1, 0.5, 1.0], phase diagnostics, and closure fits ready"
+Include ECC sensitivity,PASS,outputs/md_transport_soc_series/inputs/soc_series_config.yaml,"variants=['q1p0', 'q0p8_ecc']"
+Include literature anchoring and force-field claim boundary,PASS,outputs/md_transport_soc_series/report.html; source_notes.md; inputs/literature_anchors.yaml,"anchors, primary-source verification, and force-field limits must be visible in report/source notes"
+Warn when high-SOC single-phase MD may be out of scope,PASS,figures/carrier_contact_phase_warning.png; report.html; README.md,"phase warning is diagnostic only, not a phase-equilibrium classifier"
+Record reproducible environment and runnable package instructions,PASS,outputs/md_transport_soc_series/tool_versions.txt; README.md,"GROMACS, Packmol, Python module versions and commands recorded"
+Record artifact manifest with checksums,PASS,outputs/md_transport_soc_series/results/artifact_manifest.json; artifact_manifest.csv,"file_count=692, missing_required=[]"
+Retain production pressure sampling for viscosity cross-check,PASS,outputs/md_transport_soc_series/inputs/soc_series/*/mdp/prod_long.mdp,prod_long.mdp pcoupl=no and nstenergy<=50 for all cases
+Provide optional Green-Kubo priority-SOC replica fallback plan,PASS,outputs/md_transport_soc_series/results/viscosity_replicate_plan.csv,"priority_socs=[0.1, 0.5, 1.0], variants=['q1p0', 'q0p8_ecc'], replicas=3, statuses=['prepared'], prepared=18"
+Maintain run health and disk headroom for final nojump analysis,PASS,outputs/md_transport_soc_series/results/long_run_health.json,"health_status=ok, projected_free_gb_after_prod_and_nojump=39.546, min_free_gb=5.0, projection_present=True"
+"Do not launch COMSOL, edit .mph, or replace production constants",PASS,outputs/md_transport_soc_series/results/completion_audit.json; logs scan,".mph=0, comsol_log_hits=0"
+Pass final completion audit,PASS,outputs/md_transport_soc_series/results/completion_audit.json,current_status=ready

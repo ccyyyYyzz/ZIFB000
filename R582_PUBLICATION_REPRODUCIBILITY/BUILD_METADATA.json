@@ -1,0 +1,19 @@
+{
+  "build_version": "1.0.0-rc",
+  "built_utc": "2026-07-20T13:39:28+00:00",
+  "package_name": "R582_PUBLICATION_REPRODUCIBILITY",
+  "status": "local_release_candidate_not_published",
+  "proposed_tag": "r582-zifb-positive-electrode-reproducibility-v1",
+  "proposed_release_title": "R582 ZIFB positive-electrode reproducibility package v1",
+  "proposed_tag_tree_url": "https://github.com/ccyyyYyzz/ZIFB000/tree/r582-zifb-positive-electrode-reproducibility-v1/R582_PUBLICATION_REPRODUCIBILITY",
+  "proposed_release_url": "https://github.com/ccyyyYyzz/ZIFB000/releases/tag/r582-zifb-positive-electrode-reproducibility-v1",
+  "main_figure_count": 6,
+  "si_figure_count": 13,
+  "figure_format_count": 76,
+  "source_bundle_count": 17,
+  "md_case_count": 10,
+  "cp2k_identity_record_count": 34,
+  "raw_experimental_files_embedded": 0,
+  "mph_files_embedded": 0,
+  "doi": null
+}

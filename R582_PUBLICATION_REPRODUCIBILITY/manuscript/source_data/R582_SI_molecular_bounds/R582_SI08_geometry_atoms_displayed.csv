@@ -1,0 +1,117 @@
+figure,geometry,display_index,xyz_atom_index,element,x_A,y_A,z_A,display_crop_only,coordinate_modified
+S8,compact,0,58,C,6.64878,11.15,12,True,False
+S8,compact,1,61,C,6.64878,13.99,12,True,False
+S8,compact,2,62,C,6.64878,15.41,12,True,False
+S8,compact,3,80,C,7.878536,9.02,12,True,False
+S8,compact,4,81,C,9.108293,9.73,12,True,False
+S8,compact,5,82,C,9.108293,11.15,12,True,False
+S8,compact,6,83,C,7.878536,11.86,12,True,False
+S8,compact,7,84,C,7.878536,13.28,12,True,False
+S8,compact,8,85,C,9.108293,13.99,12,True,False
+S8,compact,9,86,C,9.108293,15.41,12,True,False
+S8,compact,10,87,C,7.878536,16.12,12,True,False
+S8,compact,11,88,C,7.878536,17.54,12,True,False
+S8,compact,12,89,C,9.108293,18.25,12,True,False
+S8,compact,13,102,C,11.567805,6.89,12,True,False
+S8,compact,14,103,C,10.338049,7.6,12,True,False
+S8,compact,15,104,C,10.338049,9.02,12,True,False
+S8,compact,16,105,C,11.567805,9.73,12,True,False
+S8,compact,17,106,C,11.567805,11.15,12,True,False
+S8,compact,18,107,C,10.338049,11.86,12,True,False
+S8,compact,19,108,C,10.338049,13.28,12,True,False
+S8,compact,20,109,C,11.567805,13.99,12,True,False
+S8,compact,21,110,C,11.567805,15.41,12,True,False
+S8,compact,22,111,C,10.338049,16.12,12,True,False
+S8,compact,23,112,C,10.338049,17.54,12,True,False
+S8,compact,24,113,C,11.567805,18.25,12,True,False
+S8,compact,25,114,C,11.567805,19.67,12,True,False
+S8,compact,26,126,C,14.027317,6.89,12,True,False
+S8,compact,27,127,C,12.797561,7.6,12,True,False
+S8,compact,28,128,C,12.797561,9.02,12,True,False
+S8,compact,29,129,C,14.027317,9.73,12,True,False
+S8,compact,30,130,C,14.027317,11.15,12,True,False
+S8,compact,31,131,C,12.797561,11.86,12,True,False
+S8,compact,32,132,C,12.797561,13.28,12,True,False
+S8,compact,33,133,C,14.027317,13.99,12,True,False
+S8,compact,34,134,C,14.027317,15.41,12,True,False
+S8,compact,35,135,C,12.797561,16.12,12,True,False
+S8,compact,36,136,C,12.797561,17.54,12,True,False
+S8,compact,37,137,C,14.027317,18.25,12,True,False
+S8,compact,38,138,C,14.027317,19.67,12,True,False
+S8,compact,39,139,C,12.797561,20.38,12,True,False
+S8,compact,40,144,O,7.878536,13.28,13.43,True,False
+S8,compact,41,145,H,7.878536,13.28,14.39,True,False
+S8,compact,42,146,H,7.82282684,13.24761537,10.47602823,True,False
+S8,compact,43,147,I,9.14379605,10.9607914,15.79755542,True,False
+S8,compact,44,148,I,11.22531871,13.04775454,15.61156446,True,False
+S8,compact,45,149,I,16.0677693,16.24984539,15.56296498,True,False
+S8,compact,46,150,I,14.05689809,14.1197495,15.73203196,True,False
+S8,separated reference,0,29,C,4.189268,5.47,12,True,False
+S8,separated reference,1,30,C,4.189268,6.89,12,True,False
+S8,separated reference,2,31,C,2.959512,7.6,12,True,False
+S8,separated reference,3,32,C,2.959512,9.02,12,True,False
+S8,separated reference,4,33,C,4.189268,9.73,12,True,False
+S8,separated reference,5,34,C,4.189268,11.15,12,True,False
+S8,separated reference,6,50,C,6.64878,2.63,12,True,False
+S8,separated reference,7,51,C,5.419024,3.34,12,True,False
+S8,separated reference,8,52,C,5.419024,4.76,12,True,False
+S8,separated reference,9,53,C,6.64878,5.47,12,True,False
+S8,separated reference,10,54,C,6.64878,6.89,12,True,False
+S8,separated reference,11,55,C,5.419024,7.6,12,True,False
+S8,separated reference,12,56,C,5.419024,9.02,12,True,False
+S8,separated reference,13,57,C,6.64878,9.73,12,True,False
+S8,separated reference,14,58,C,6.64878,11.15,12,True,False
+S8,separated reference,15,59,C,5.419024,11.86,12,True,False
+S8,separated reference,16,60,C,5.419024,13.28,12,True,False
+S8,separated reference,17,61,C,6.64878,13.99,12,True,False
+S8,separated reference,18,62,C,6.64878,15.41,12,True,False
+S8,separated reference,19,73,C,9.108293,1.21,12,True,False
+S8,separated reference,20,74,C,9.108293,2.63,12,True,False
+S8,separated reference,21,75,C,7.878536,3.34,12,True,False
+S8,separated reference,22,76,C,7.878536,4.76,12,True,False
+S8,separated reference,23,77,C,9.108293,5.47,12,True,False
+S8,separated reference,24,78,C,9.108293,6.89,12,True,False
+S8,separated reference,25,79,C,7.878536,7.6,12,True,False
+S8,separated reference,26,80,C,7.878536,9.02,12,True,False
+S8,separated reference,27,81,C,9.108293,9.73,12,True,False
+S8,separated reference,28,82,C,9.108293,11.15,12,True,False
+S8,separated reference,29,83,C,7.878536,11.86,12,True,False
+S8,separated reference,30,84,C,7.878536,13.28,12,True,False
+S8,separated reference,31,85,C,9.108293,13.99,12,True,False
+S8,separated reference,32,86,C,9.108293,15.41,12,True,False
+S8,separated reference,33,87,C,7.878536,16.12,12,True,False
+S8,separated reference,34,97,C,11.567805,1.21,12,True,False
+S8,separated reference,35,98,C,11.567805,2.63,12,True,False
+S8,separated reference,36,99,C,10.338049,3.34,12,True,False
+S8,separated reference,37,100,C,10.338049,4.76,12,True,False
+S8,separated reference,38,101,C,11.567805,5.47,12,True,False
+S8,separated reference,39,102,C,11.567805,6.89,12,True,False
+S8,separated reference,40,103,C,10.338049,7.6,12,True,False
+S8,separated reference,41,104,C,10.338049,9.02,12,True,False
+S8,separated reference,42,105,C,11.567805,9.73,12,True,False
+S8,separated reference,43,106,C,11.567805,11.15,12,True,False
+S8,separated reference,44,107,C,10.338049,11.86,12,True,False
+S8,separated reference,45,108,C,10.338049,13.28,12,True,False
+S8,separated reference,46,109,C,11.567805,13.99,12,True,False
+S8,separated reference,47,110,C,11.567805,15.41,12,True,False
+S8,separated reference,48,111,C,10.338049,16.12,12,True,False
+S8,separated reference,49,122,C,14.027317,2.63,12,True,False
+S8,separated reference,50,123,C,12.797561,3.34,12,True,False
+S8,separated reference,51,124,C,12.797561,4.76,12,True,False
+S8,separated reference,52,125,C,14.027317,5.47,12,True,False
+S8,separated reference,53,126,C,14.027317,6.89,12,True,False
+S8,separated reference,54,127,C,12.797561,7.6,12,True,False
+S8,separated reference,55,128,C,12.797561,9.02,12,True,False
+S8,separated reference,56,129,C,14.027317,9.73,12,True,False
+S8,separated reference,57,130,C,14.027317,11.15,12,True,False
+S8,separated reference,58,131,C,12.797561,11.86,12,True,False
+S8,separated reference,59,132,C,12.797561,13.28,12,True,False
+S8,separated reference,60,133,C,14.027317,13.99,12,True,False
+S8,separated reference,61,134,C,14.027317,15.41,12,True,False
+S8,separated reference,62,144,O,7.878536,13.28,13.43,True,False
+S8,separated reference,63,145,H,7.878536,13.28,14.39,True,False
+S8,separated reference,64,146,H,7.82282684,13.24761537,10.47602823,True,False
+S8,separated reference,65,147,I,8.86568438,12.94502781,16.87273924,True,False
+S8,separated reference,66,148,I,11.28349716,13.50866955,15.50445255,True,False
+S8,separated reference,67,149,I,8.82120364,3.91584897,15.88591021,True,False
+S8,separated reference,68,150,I,11.75165635,4.35094804,15.418491,True,False

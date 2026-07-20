@@ -1,0 +1,294 @@
+{
+  "figure": "SIFig_R582_S10_comparator_definitions",
+  "single_dominant_claim": "The single-fibre and pore-network calculations use explicit idealized model domains, not reconstructed experimental-felt morphology.",
+  "archetype": "schematic-led composite",
+  "evidence_class": "E-COMP",
+  "backend": "Python/matplotlib only",
+  "frozen_date": "2026-07-20",
+  "final_size_mm": {
+    "width": 180.0,
+    "height": 104.0
+  },
+  "font": {
+    "family": "TeX Gyre Termes",
+    "minimum_pt": 6.5,
+    "registered_faces": [
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-regular.otf",
+        "sha256": "CC3FE7C707B81428D23D54DF3EADD9228A2BF6A4D43125D94DF56F5F63134659"
+      },
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-bold.otf",
+        "sha256": "2FB3E952065FA153C7E4E64E04B98B9D79225739B6025AA3F0F0782D299FF61E"
+      },
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-italic.otf",
+        "sha256": "6DD103A1672E50568CD2F8A706CCD48443D44D7D073A59D2286F4E6F746575D6"
+      },
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-bolditalic.otf",
+        "sha256": "1BF6AF99CB0E26C12951317032D79B96AE009551E59CCF02A5B24F325ECFEC87"
+      }
+    ]
+  },
+  "claim_boundary": "No deposit height, coverage mask, solved pressure/potential field, updated throat radius, flux field, blockage front, or reconstructed felt image is displayed.",
+  "data_audit": {
+    "fibre": {
+      "r_f_um": 7.500000000000001,
+      "r_out_um": 19.364916731037088,
+      "L_z_um": 150.0,
+      "porosity": 0.85,
+      "ignored_npz_fields": [
+        "height",
+        "covered",
+        "a_um",
+        "theta_geo",
+        "label"
+      ]
+    },
+    "network": {
+      "shape": [
+        15,
+        15,
+        15
+      ],
+      "total_nodes": 3375,
+      "total_throats": 9450,
+      "central_slice_z_index": 7,
+      "slice_nodes": 225,
+      "slice_throats": 420,
+      "r0_um_range_in_slice": [
+        4.216589504558202,
+        41.34855934034695
+      ],
+      "ignored_npz_fields": [
+        "phi",
+        "r_new",
+        "flux"
+      ]
+    },
+    "visual_boundary": "No deposit height, coverage mask, solved pressure/potential field, updated throat radius, flux field, blockage front, or reconstructed felt image is displayed."
+  },
+  "qa": {
+    "build": {
+      "width_mm": 180.0,
+      "height_mm": 104.0,
+      "font_audit": {
+        "minimum_text_pt": 6.5,
+        "resolved_font_families": [
+          "TeX Gyre Termes"
+        ],
+        "text_items": 35
+      },
+      "slice_nodes": 225,
+      "slice_throats": 420,
+      "rendered_fibre_fields": [
+        "r_f",
+        "r_out",
+        "L_z"
+      ],
+      "rendered_network_fields": [
+        "e0",
+        "e1",
+        "r0",
+        "nx",
+        "ny",
+        "nz"
+      ],
+      "excluded_fields": {
+        "fibre": [
+          "height",
+          "covered",
+          "a_um",
+          "theta_geo",
+          "label"
+        ],
+        "network": [
+          "phi",
+          "r_new",
+          "flux"
+        ]
+      }
+    },
+    "deterministic_second_render": {
+      "pass": true,
+      "sha256": {
+        "svg": "2ACE764008A1B3B2BAE9DD0654B31593580A68F6F2CD78CBCAF985A467C5549B",
+        "pdf": "1FE265E8E602ACE61792EA4F44979945DBECDA1B02B9A6F01A84C775990723A5",
+        "png": "8B5B12616C391A4122603B88F0FB27319CFA94C8E7CCBF241352010E16D9FF63",
+        "tiff": "21628FF6A156CA89491C1CF8EEA07B23448E3D136C7E07D625D62B1C06D54C91",
+        "preview": "6BF20F28E4E44789065278165A1D7058DA0BE8408B7D5FA65407CA1C195B7E9D",
+        "grayscale": "93D607732D0D031AC879A7822FF0DF5ADA48385057F24EFE3EB9DFA1E165C109"
+      }
+    },
+    "pdf_fonts": {
+      "font_names": [
+        "CCVYUO+TeXGyreTermes-Bold",
+        "CCVYUO+TeXGyreTermes-Italic",
+        "CCVYUO+TeXGyreTermes-Regular"
+      ],
+      "required_family": "TeX Gyre Termes",
+      "forbidden_families": [],
+      "type3_present": false,
+      "pass": true
+    },
+    "pdf_size": {
+      "expected_mm": [
+        180.0,
+        104.0
+      ],
+      "observed_mm": [
+        179.9999222222222,
+        103.99994722222222
+      ],
+      "pass": true
+    },
+    "raster": {
+      "expected_600dpi_pixels": [
+        4252,
+        2457
+      ],
+      "png_pixels": [
+        4252,
+        2457
+      ],
+      "tiff_pixels": [
+        4252,
+        2457
+      ],
+      "expected_300dpi_preview_pixels": [
+        2126,
+        1228
+      ],
+      "preview_pixels": [
+        2126,
+        1228
+      ],
+      "grayscale_pixels": [
+        2126,
+        1228
+      ],
+      "grayscale_mode": "L",
+      "grayscale_extrema": [
+        0,
+        255
+      ],
+      "pass": true
+    },
+    "svg": {
+      "editable_text": true,
+      "required_family_present": true,
+      "forbidden": [],
+      "pass": true
+    }
+  },
+  "inputs": [
+    {
+      "role": "registered single-fibre geometry field",
+      "upstream_workspace_path": "manuscript/source_data/Fig_R556_mesoscale_renders/R531_fiber3d_morphology.npz",
+      "frozen_workspace_path": "manuscript/source_data/R582_SI_FigS10_comparator_definitions/inputs/R531_fiber3d_morphology.npz",
+      "bytes": 84756,
+      "sha256": "072AB9F898149FABDABFF757BA7A831E2252B295D044B78214343A6AABE5864E",
+      "status": "read-only frozen copy; byte-identical to registered upstream"
+    },
+    {
+      "role": "registered pore-network geometry/connectivity field",
+      "upstream_workspace_path": "manuscript/source_data/Fig_R556_mesoscale_renders/R531_network3d_field.npz",
+      "frozen_workspace_path": "manuscript/source_data/R582_SI_FigS10_comparator_definitions/inputs/R531_network3d_field.npz",
+      "bytes": 331570,
+      "sha256": "5FE65C09B47C0481F37AFA62435D91AA61064736B741258764ECDC3DF8AC7AF3",
+      "status": "read-only frozen copy; byte-identical to registered upstream"
+    },
+    {
+      "role": "registered single-fibre model definition",
+      "upstream_workspace_path": "fiber/scripts/R531_fiber3d.py",
+      "frozen_workspace_path": "manuscript/source_data/R582_SI_FigS10_comparator_definitions/inputs/R531_fiber3d.py",
+      "bytes": 12613,
+      "sha256": "9037F64EA515B1A9BA5DE68EF91FAB231A4E0840AD8ACCBF12F57E793F4791B4",
+      "status": "read-only frozen copy; byte-identical to registered upstream"
+    },
+    {
+      "role": "registered pore-network model definition",
+      "upstream_workspace_path": "pore_system/scripts/R531_network3d.py",
+      "frozen_workspace_path": "manuscript/source_data/R582_SI_FigS10_comparator_definitions/inputs/R531_network3d.py",
+      "bytes": 9954,
+      "sha256": "6A2B51CE5E19E6A96A4B2B6ECED71CFB24B10FA447B819B9F49BBD3199EA7787",
+      "status": "read-only frozen copy; byte-identical to registered upstream"
+    }
+  ],
+  "figure_outputs": [
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S10_comparator_definitions.svg",
+      "bytes": 123357,
+      "sha256": "2ACE764008A1B3B2BAE9DD0654B31593580A68F6F2CD78CBCAF985A467C5549B"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S10_comparator_definitions.pdf",
+      "bytes": 38602,
+      "sha256": "1FE265E8E602ACE61792EA4F44979945DBECDA1B02B9A6F01A84C775990723A5"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S10_comparator_definitions.png",
+      "bytes": 543075,
+      "sha256": "8B5B12616C391A4122603B88F0FB27319CFA94C8E7CCBF241352010E16D9FF63"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S10_comparator_definitions.tiff",
+      "bytes": 927404,
+      "sha256": "21628FF6A156CA89491C1CF8EEA07B23448E3D136C7E07D625D62B1C06D54C91"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S10_comparator_definitions_180mm_preview.png",
+      "bytes": 417676,
+      "sha256": "6BF20F28E4E44789065278165A1D7058DA0BE8408B7D5FA65407CA1C195B7E9D"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S10_comparator_definitions_180mm_preview_grayscale.png",
+      "bytes": 178554,
+      "sha256": "93D607732D0D031AC879A7822FF0DF5ADA48385057F24EFE3EB9DFA1E165C109"
+    }
+  ],
+  "source_bundle_files": [
+    {
+      "path": "manuscript/source_data/R582_SI_FigS10_comparator_definitions/R582_SIFig_S10_input_manifest.csv",
+      "bytes": 1352,
+      "sha256": "AF65F5A505CE01F890EF7084E50AEF4364AD45BC3FDAD5E0776DF84EA6C98154"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS10_comparator_definitions/R582_SIFig_S10_model_definition.csv",
+      "bytes": 951,
+      "sha256": "613D21E6A19EF539E0C6DA435A14F72058027AED6EBB36DE9B2870789CC70C6D"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS10_comparator_definitions/R582_SIFig_S10_network_slice_nodes.csv",
+      "bytes": 5026,
+      "sha256": "E81D3A01D88CA15158C1FD0DAF906D3AF9E68EF592B1251BEEF31A3D35C90508"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS10_comparator_definitions/R582_SIFig_S10_network_slice_edges.csv",
+      "bytes": 17463,
+      "sha256": "06E8907DECADD20C7E1A0940ED983C084DC8A2FCD3FF1CE82C8C1B69588ACA82"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS10_comparator_definitions/R582_SIFig_S10_model_rules.csv",
+      "bytes": 773,
+      "sha256": "5C2AF22814CBD0830B0DA61E050BF50B934DBF3BCB7FD423F3EDE07CD40E4B67"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS10_comparator_definitions/r582_si_figure_tools.py",
+      "bytes": 11725,
+      "sha256": "83BF5D051CBC5CE86C4515D3AA29DD11DB9C9067ECD5331106CF48FCE176A0EB"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS10_comparator_definitions/make_sifig_r582_s10_comparator_definitions.py",
+      "bytes": 24190,
+      "sha256": "5DBA7F4038670C3068DECE64F390AC5FF82DD64A3FDB795F60045CAA8CC2B4C1"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS10_comparator_definitions/pdffonts_report.txt",
+      "bytes": 470,
+      "sha256": "29397E3577AA2986871DB8F4147C8E100FE6801AA4E8E69D99B3CCCB9F724D0B"
+    }
+  ],
+  "original_data_mutated": false
+}

@@ -1,0 +1,8 @@
+record_type,item_id,display_quantity,role,feeds,calibration_status,value,unit
+supplier,DFT_periodic,placement prior N,physical prior,theta_island comparator,not a cell-level calibration,,
+supplier,MD,D_eff,bounded transport prior,S_base via Pi_gen,not a cell-level calibration,,
+supplier,single_fiber,"theta_island(eps_s,N)",physical isolated-island comparator,comparison only,not substituted for theta_cal,,
+supplier,pore_network,K(eps_s),physical smooth-permeability comparator,comparison only,not substituted for theta_cal,,
+production_node,theta_cal,theta_cal(eps_s),production accessibility relation,"V(Q), Q_f,cal",voltage-calibrated to cell-level V(Q),,
+anchor,Q_s,model averaged-saturation marker,registered production output,operating map,interpolated S_base=1 crossing,83.0202,mAh cm^-2
+anchor,Q_f_cal,production half-accessibility marker,registered production output,operating map,voltage-calibrated theta_cal trajectory crossing,99.5901,mAh cm^-2

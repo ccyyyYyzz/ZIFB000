@@ -1,0 +1,7 @@
+row_order,lever,range_label,low_setting,reference_setting,high_setting,setting_unit,low_Q_s_mAh_cm2,reference_Q_s_mAh_cm2,high_Q_s_mAh_cm2,low_delta_Qs_pct,high_delta_Qs_pct,evidence_class,render_style,scope_note
+1,oxidized-carrier diffusivity,0.5-2.0 D0,0.5,1,2,D_eff/D0,45.034336757836,83.0201994718443,106.204860777606,-45.754964401032,27.926530474821,full_solve,solid circles,seven solved points in panel b
+2,applied current,20-40 mA cm^-2,20,40,40,mA cm^-2,106.31983154928193,83.0201994718443,83.0201994718443,28.065015774070,0,full_solve,solid circles,range restricted to connected full-capacity anchors
+3,MD-bounded diffusivity prior,0.8-1.4 D0,0.8,1,1.4,D_eff/D0,73.1314713891251,83.0201994718443,94.98395635541873,-11.911231417931,14.410657839520,bounded_prior_mapped,open triangles,1.4 obtained by linear interpolation strictly between solved 1.2 and 1.5 anchors
+4,analytical flow scenario,25-100 mL min^-1; m=0.5,25,50,100,mL min^-1,74.99152250287874,83.0201994718443,88.73290265682242,-9.670751238906,6.881100288028,analytical_postprocess,dashed diamonds,only sub-grid boundary-layer generation term changes
+5,linked felt geometry,1.5-3.0 mm,1.5,2,3,mm,82.3854009930445,83.0201994718443,84.29680289403282,-0.764631358197,1.537702186107,full_solve,solid circles,thickness and porosity change together
+6,solved flow,25-100 mL min^-1,25,50,100,mL min^-1,82.82397369489257,83.0201994718443,83.1073395044607,-0.236359076707,0.104962446695,full_solve,solid circles,full continuum solves

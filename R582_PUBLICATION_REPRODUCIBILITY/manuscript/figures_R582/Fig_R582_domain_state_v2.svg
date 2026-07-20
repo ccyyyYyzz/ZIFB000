@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="510.23622pt" height="255.11811pt" viewBox="0 0 510.23622 255.11811" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-20</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>R582 v2 deterministic Python build</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 255.11811 
+L 510.23622 255.11811 
+L 510.23622 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 35.014382 106.877439 
+L 47.733512 106.877439 
+L 47.733512 43.311819 
+L 35.014382 43.311819 
+z
+" clip-path="url(#p1e37829e96)" style="fill: #4d4d4d; stroke: #26272a; stroke-width: 0.85; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 47.733512 106.877439 
+L 135.177527 106.877439 
+L 135.177527 43.311819 
+L 47.733512 43.311819 
+z
+" clip-path="url(#p1e37829e96)" style="fill: #f7f0e5; stroke: #26272a; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 135.177527 106.877439 
+L 147.896657 106.877439 
+L 147.896657 43.311819 
+L 135.177527 43.311819 
+z
+" clip-path="url(#p1e37829e96)" style="fill: url(#ha3c6cd4887); stroke: #26272a; stroke-width: 0.85; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 49.732278 124.093128 
+Q 91.454895 124.093128 132.171281 124.093128 
+" clip-path="url(#p1e37829e96)" style="fill: none; stroke: #26272a; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 128.971281 122.493128 
+L 132.171281 124.093128 
+L 128.971281 125.693128 
+z
+" clip-path="url(#p1e37829e96)" style="fill: #26272a; stroke: #26272a; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 23.090198 104.879375 
+Q 23.090198 75.097046 23.090198 46.320949 
+" clip-path="url(#p1e37829e96)" style="fill: none; stroke: #26272a; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 21.490198 49.520949 
+L 23.090198 46.320949 
+L 24.690198 49.520949 
+z
+" clip-path="url(#p1e37829e96)" style="fill: #26272a; stroke: #26272a; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 58.86275 94.281386 
+Q 58.86275 77.082208 58.86275 61.280572 
+" clip-path="url(#p1e37829e96)" style="fill: none; stroke: #3b6fb6; stroke-width: 1.25; stroke-linecap: round"/>
+    <path d="M 57.26275 64.480572 
+L 58.86275 61.280572 
+L 60.46275 64.480572 
+z
+" clip-path="url(#p1e37829e96)" style="fill: #3b6fb6; stroke: #3b6fb6; stroke-width: 1.25; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="fill: #26272a; font: 700 8.5px 'TeX Gyre Termes'; text-anchor: start" x="12.755906" y="15.950193" transform="rotate(-0 12.755906 15.950193)">a</text>
+   </g>
+   <g id="text_2">
+    <text style="fill: #26272a; font: 700 7.7px 'TeX Gyre Termes'; text-anchor: start" x="23.090198" y="15.806728" transform="rotate(-0 23.090198 15.806728)">Positive-electrode domain</text>
+   </g>
+   <g id="text_3">
+    <text style="fill: #ffffff; font: 6.5px 'TeX Gyre Termes'" transform="translate(40.185209 84.298731) rotate(-90)">current</text>
+    <text style="fill: #ffffff; font: 6.5px 'TeX Gyre Termes'" transform="translate(45.591279 86.466582) rotate(-90)">collector</text>
+   </g>
+   <g id="text_4">
+    <text style="fill: #26272a; font: 700 7.2px 'TeX Gyre Termes'; text-anchor: middle" x="95.430247" y="70.222585" transform="rotate(-0 95.430247 70.222585)">positive carbon felt</text>
+   </g>
+   <g id="text_5">
+    <text style="fill: #6a6d72; font: 6.5px 'TeX Gyre Termes'; text-anchor: middle" x="95.430247" y="83.230345" transform="rotate(-0 95.430247 83.230345)">2D model domain</text>
+   </g>
+   <g id="text_6">
+    <text style="fill: #26272a; font: 6.5px 'TeX Gyre Termes'" transform="translate(143.051389 87.006387) rotate(-90)">separator</text>
+   </g>
+   <g id="text_7">
+    <!-- $x$: 3- -5 mm (through-plane) -->
+    <g style="fill: #26272a" transform="translate(55.80302 135.155472)">
+     <text>
+      <tspan style="font: italic 6.5px 'TeX Gyre Termes'" x="0" y="-0.53125">x</tspan>
+      <tspan style="font: 6.5px 'TeX Gyre Termes'" x="2.886002 4.692993 6.317993 9.567993 11.732483 13.896973 17.146973 18.771973 23.828964 28.885956 30.510956 32.675446 34.482437 37.732437 39.896927 43.146927 46.396927 49.646927 52.896927 55.061417 58.311417 60.118408 63.00441 66.25441 69.140411" y="-0.53125">: 3--5 mm (through-plane)</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_8">
+    <!-- $y$: 0- -20 mm -->
+    <g style="fill: #26272a" transform="translate(18.721898 91.182129) rotate(-90)">
+     <text>
+      <tspan style="font: italic 6.5px 'TeX Gyre Termes'" x="0" y="-0.609375">y</tspan>
+      <tspan style="font: 6.5px 'TeX Gyre Termes'" x="2.886002 4.692993 6.317993 9.567993 11.732483 13.896973 17.146973 20.396973 22.021973 27.078964" y="-0.609375">: 0--20 mm</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_9">
+    <text style="fill: #3b6fb6; font: 700 6.5px 'TeX Gyre Termes'; text-anchor: start" x="62.837478" y="96.489432" transform="rotate(-0 62.837478 96.489432)">flow</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_8">
+    <path d="M 217.558788 98.269595 
+Q 240.250574 98.269595 261.99203 98.269595 
+" clip-path="url(#pe84875e15c)" style="fill: none; stroke: #26272a; stroke-width: 0.85; stroke-linecap: round"/>
+    <path d="M 258.99203 96.769595 
+L 261.99203 98.269595 
+L 258.99203 99.769595 
+z
+" clip-path="url(#pe84875e15c)" style="fill: #26272a; stroke: #26272a; stroke-width: 0.85; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 279.287178 98.269595 
+Q 303.52016 98.269595 326.802814 98.269595 
+" clip-path="url(#pe84875e15c)" style="fill: none; stroke: #26272a; stroke-width: 0.85; stroke-linecap: round"/>
+    <path d="M 323.802814 96.769595 
+L 326.802814 98.269595 
+L 323.802814 99.769595 
+z
+" clip-path="url(#pe84875e15c)" style="fill: #26272a; stroke: #26272a; stroke-width: 0.85; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 344.097683 98.269595 
+Q 372.959393 98.269595 400.870775 98.269595 
+" clip-path="url(#pe84875e15c)" style="fill: none; stroke: #26272a; stroke-width: 0.85; stroke-linecap: round"/>
+    <path d="M 397.870775 96.769595 
+L 400.870775 98.269595 
+L 397.870775 99.769595 
+z
+" clip-path="url(#pe84875e15c)" style="fill: #26272a; stroke: #26272a; stroke-width: 0.85; stroke-linecap: round"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 418.168096 98.269595 
+Q 445.48644 98.269595 471.854455 98.269595 
+" clip-path="url(#pe84875e15c)" style="fill: none; stroke: #26272a; stroke-width: 0.85; stroke-linecap: round"/>
+    <path d="M 468.854455 96.769595 
+L 471.854455 98.269595 
+L 468.854455 99.769595 
+z
+" clip-path="url(#pe84875e15c)" style="fill: #26272a; stroke: #26272a; stroke-width: 0.85; stroke-linecap: round"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 371.575794 30.851323 
+Q 351.486659 52.253174 348.570999 80.337856 
+" clip-path="url(#pe84875e15c)" style="fill: none; stroke-dasharray: 3,2; stroke-dashoffset: 0; stroke: #d65345; stroke-linecap: round"/>
+    <path d="M 350.492883 77.320181 
+L 348.570999 80.337856 
+L 347.30999 76.989743 
+z
+" clip-path="url(#pe84875e15c)" style="fill: #d65345; stroke-dasharray: 3,2; stroke-dashoffset: 0; stroke: #d65345; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 193.95674 85.026757 
+L 224.819334 85.026757 
+" clip-path="url(#pe84875e15c)" style="fill: none; stroke: #3b6fb6; stroke-width: 1.65"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 209.388037 85.026757 
+L 209.388037 98.269595 
+" clip-path="url(#pe84875e15c)" style="fill: none; stroke: #3b6fb6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 257.225057 85.026757 
+L 285.001391 85.026757 
+" clip-path="url(#pe84875e15c)" style="fill: none; stroke: #d8912b; stroke-width: 1.65"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 271.113224 85.026757 
+L 271.113224 98.269595 
+" clip-path="url(#pe84875e15c)" style="fill: none; stroke: #d8912b; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 312.777726 85.026757 
+L 359.071616 85.026757 
+" clip-path="url(#pe84875e15c)" style="fill: none; stroke: #2a9d8f; stroke-width: 1.65"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 335.924671 85.026757 
+L 335.924671 98.269595 
+" clip-path="url(#pe84875e15c)" style="fill: none; stroke: #2a9d8f; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_7">
+    <path d="M 382.218562 85.026757 
+L 437.77123 85.026757 
+" clip-path="url(#pe84875e15c)" style="fill: none; stroke: #2a9d8f; stroke-width: 1.65"/>
+   </g>
+   <g id="line2d_8">
+    <path d="M 409.994896 85.026757 
+L 409.994896 98.269595 
+" clip-path="url(#pe84875e15c)" style="fill: none; stroke: #2a9d8f; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_9">
+    <path d="M 468.633824 85.026757 
+L 493.323899 85.026757 
+" clip-path="url(#pe84875e15c)" style="fill: none; stroke: #4d4d4d; stroke-width: 1.65"/>
+   </g>
+   <g id="line2d_10">
+    <path d="M 480.978862 85.026757 
+L 480.978862 98.269595 
+" clip-path="url(#pe84875e15c)" style="fill: none; stroke: #4d4d4d; stroke-linecap: square"/>
+   </g>
+   <g id="text_10">
+    <text style="fill: #26272a; font: 700 8.5px 'TeX Gyre Termes'; text-anchor: start" x="193.95674" y="15.950193" transform="rotate(-0 193.95674 15.950193)">b</text>
+   </g>
+   <g id="text_11">
+    <text style="fill: #26272a; font: 700 7.7px 'TeX Gyre Termes'; text-anchor: start" x="214.017426" y="15.806728" transform="rotate(-0 214.017426 15.806728)">Positive-electrode state relation</text>
+   </g>
+   <g id="text_12">
+    <!-- Free-I$_2$ -->
+    <g style="fill: #26272a" transform="translate(198.713037 49.952016)">
+     <text>
+      <tspan style="font: 700 7px 'TeX Gyre Termes'" x="0 4.276993 7.384979 10.492966 13.600952 15.931946" y="-0.265625">Free-I</tspan>
+      <tspan style="font: 4.9px 'TeX Gyre Termes'" x="18.709078" y="0.6624999999999996">2</tspan>
+     </text>
+    </g>
+    <text style="fill: #26272a; font: 700 7px 'TeX Gyre Termes'" transform="translate(185.665146 55.859589)">supersaturation</text>
+   </g>
+   <g id="text_13">
+    <!-- $S$ -->
+    <g style="fill: #3b6fb6" transform="translate(207.138037 77.191348)">
+     <text>
+      <tspan style="font: italic 9px 'TeX Gyre Termes'" x="0" y="-0.0">S</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_14">
+    <text style="fill: #6a6d72; font: 6.5px 'TeX Gyre Termes'; text-anchor: middle" x="209.388037" y="118.323865" transform="rotate(-0 209.388037 118.323865)">modeled state</text>
+   </g>
+   <g id="text_15">
+    <text style="fill: #26272a; font: 700 7px 'TeX Gyre Termes'" transform="translate(257.697834 49.988126)">Retained</text>
+    <text style="fill: #26272a; font: 700 7px 'TeX Gyre Termes'" transform="translate(264.109943 55.823479)">solid</text>
+   </g>
+   <g id="text_16">
+    <!-- $\varepsilon_s$ -->
+    <g style="fill: #d8912b" transform="translate(267.558224 77.191348)">
+     <text>
+      <tspan style="font: italic 9px 'TeX Gyre Termes'" x="0" y="-0.046875">ε</tspan>
+      <tspan style="font: italic 6.3px 'TeX Gyre Termes'" x="4.373993" y="1.1437499999999998">s</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_17">
+    <text style="fill: #6a6d72; font: 6.5px 'TeX Gyre Termes'; text-anchor: middle" x="271.113224" y="118.323865" transform="rotate(-0 271.113224 118.323865)">modeled state</text>
+   </g>
+   <g id="text_18">
+    <text style="fill: #26272a; font: 700 7px 'TeX Gyre Termes'" transform="translate(319.590609 49.987563)">Remaining</text>
+    <text style="fill: #26272a; font: 700 7px 'TeX Gyre Termes'" transform="translate(318.035843 55.901699)">accessibility</text>
+   </g>
+   <g id="text_19">
+    <!-- $R_\theta=1-\theta_{\mathrm{cal}}$ -->
+    <g style="fill: #2a9d8f" transform="translate(321.267171 76.608926)">
+     <text>
+      <tspan style="font: italic 6.5px 'TeX Gyre Termes'" x="0 20.662158" y="-0.609375">Rθ</tspan>
+      <tspan style="font: italic 4.55px 'TeX Gyre Termes'" x="3.971497" y="0.24843749999999964">θ</tspan>
+      <tspan style="font: 6.5px 'TeX Gyre Termes'" x="7.264362 11.868961 16.057559" y="-0.609375">=1−</tspan>
+      <tspan style="font: 4.55px 'TeX Gyre Termes'" x="23.821155 25.841356 27.861557" y="0.24843749999999964">cal</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_20">
+    <text style="fill: #6a6d72; font: 6.5px 'TeX Gyre Termes'; text-anchor: middle" x="335.924671" y="118.323865" transform="rotate(-0 335.924671 118.323865)">calibrated relation</text>
+   </g>
+   <g id="text_21">
+    <text style="fill: #26272a; font: 700 7px 'TeX Gyre Termes'" transform="translate(387.153568 49.988126)">Native reaction</text>
+    <text style="fill: #26272a; font: 700 7px 'TeX Gyre Termes'" transform="translate(403.386458 55.823479)">area</text>
+   </g>
+   <g id="text_22">
+    <!-- $A_{\mathrm{bare}}/A_0=R_\theta T_{\mathrm{pore}}$ -->
+    <g style="fill: #2a9d8f" transform="translate(388.057396 76.362129)">
+     <text>
+      <tspan style="font: italic 6.5px 'TeX Gyre Termes'" x="0 13.752002 25.684665 32.010428" y="-0.609375">AART</tspan>
+      <tspan style="font: 4.55px 'TeX Gyre Termes'" x="3.971497 6.246497 8.266698 9.781841 17.723499 35.624426 37.899426 40.174426 41.689569" y="0.24843749999999964">bare0pore</tspan>
+      <tspan style="font: 6.5px 'TeX Gyre Termes'" x="11.94501 21.080066" y="-0.609375">/=</tspan>
+      <tspan style="font: italic 4.55px 'TeX Gyre Termes'" x="29.656161" y="0.24843749999999964">θ</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_23">
+    <text style="fill: #6a6d72; font: 6.5px 'TeX Gyre Termes'; text-anchor: middle" x="409.994896" y="118.323865" transform="rotate(-0 409.994896 118.323865)">solved area factor</text>
+   </g>
+   <g id="text_24">
+    <text style="fill: #26272a; font: 700 7px 'TeX Gyre Termes'" transform="translate(469.509252 49.984845)">Voltage</text>
+    <text style="fill: #26272a; font: 700 7px 'TeX Gyre Termes'" transform="translate(467.951205 55.82676)">response</text>
+   </g>
+   <g id="text_25">
+    <!-- $V$ -->
+    <g style="fill: #4d4d4d" transform="translate(478.188862 77.191348)">
+     <text>
+      <tspan style="font: italic 9px 'TeX Gyre Termes'" x="0" y="-0.125">V</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_26">
+    <text style="fill: #6a6d72; font: 6.5px 'TeX Gyre Termes'; text-anchor: middle" x="480.978862" y="118.323865" transform="rotate(-0 480.978862 118.323865)">model output</text>
+   </g>
+   <g id="text_27">
+    <g id="patch_13">
+     <path d="M 233.311373 94.171034 
+L 247.189888 94.171034 
+L 247.189888 87.801034 
+L 233.311373 87.801034 
+z
+" style="fill: #ffffff"/>
+    </g>
+    <text style="fill: #6a6d72; font: 6.5px 'TeX Gyre Termes'; text-anchor: middle" x="240.25063" y="92.494237" transform="rotate(-0 240.25063 92.494237)">gates</text>
+   </g>
+   <g id="text_28">
+    <g id="patch_14">
+     <path d="M 296.397893 94.171034 
+L 310.640002 94.171034 
+L 310.640002 87.801034 
+L 296.397893 87.801034 
+z
+" style="fill: #ffffff"/>
+    </g>
+    <text style="fill: #6a6d72; font: 6.5px 'TeX Gyre Termes'; text-anchor: middle" x="303.518948" y="92.500331" transform="rotate(-0 303.518948 92.500331)">maps</text>
+   </g>
+   <g id="text_29">
+    <g id="patch_15">
+     <path d="M 364.542284 94.333534 
+L 381.377284 94.333534 
+L 381.377284 87.638534 
+L 364.542284 87.638534 
+z
+" style="fill: #ffffff"/>
+    </g>
+    <!-- $\times\,T_{\mathrm{pore}}$ -->
+    <g style="fill: #6a6d72" transform="translate(364.802284 92.188534)">
+     <text>
+      <tspan style="font: 6.5px 'TeX Gyre Termes'" x="0" y="-0.75">×</tspan>
+      <tspan style="font: italic 6.5px 'TeX Gyre Termes'" x="4.448182" y="-0.75">T</tspan>
+      <tspan style="font: 4.55px 'TeX Gyre Termes'" x="8.06218 10.33718 12.61218 14.127323" y="0.10781249999999964">pore</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_30">
+    <g id="patch_16">
+     <path d="M 431.865824 94.171034 
+L 459.107933 94.171034 
+L 459.107933 87.801034 
+L 431.865824 87.801034 
+z
+" style="fill: #ffffff"/>
+    </g>
+    <text style="fill: #6a6d72; font: 6.5px 'TeX Gyre Termes'; text-anchor: middle" x="445.486879" y="92.500331" transform="rotate(-0 445.486879 92.500331)">modulates</text>
+   </g>
+   <g id="text_31">
+    <text style="fill: #d65345; font: 700 6.5px 'TeX Gyre Termes'; text-anchor: middle" x="372.959784" y="23.686833" transform="rotate(-0 372.959784 23.686833)">voltage calibration</text>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="patch_17">
+    <path d="M 56.389118 191.182691 
+Q 268.688541 191.182691 479.925831 191.182691 
+" clip-path="url(#pa91931b7b8)" style="fill: none; stroke: #26272a; stroke-width: 0.95; stroke-linecap: round"/>
+    <path d="M 476.725831 189.582691 
+L 479.925831 191.182691 
+L 476.725831 192.782691 
+z
+" clip-path="url(#pa91931b7b8)" style="fill: #26272a; stroke: #26272a; stroke-width: 0.95; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_11">
+    <path d="M 350.838425 196.704281 
+L 350.838425 179.219246 
+" clip-path="url(#pa91931b7b8)" style="fill: none; stroke: #d8912b; stroke-width: 1.35; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_12">
+    <path d="M 410.127874 196.704281 
+L 410.127874 179.219246 
+" clip-path="url(#pa91931b7b8)" style="fill: none; stroke-dasharray: 4.05,2.7; stroke-dashoffset: 0; stroke: #d65345; stroke-width: 1.35"/>
+   </g>
+   <g id="line2d_13">
+    <path d="M 179.297008 197.624546 
+L 179.297008 208.667726 
+" clip-path="url(#pa91931b7b8)" style="fill: none; stroke: #b9bdc2; stroke-width: 0.7; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_14">
+    <path d="M 147.458268 222.931833 
+L 211.135748 222.931833 
+" clip-path="url(#pa91931b7b8)" style="fill: none; stroke: #3b6fb6; stroke-width: 1.7"/>
+   </g>
+   <g id="line2d_15">
+    <path d="M 371.666268 197.624546 
+L 371.666268 208.667726 
+" clip-path="url(#pa91931b7b8)" style="fill: none; stroke: #b9bdc2; stroke-width: 0.7; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_16">
+    <path d="M 347.174929 222.931833 
+L 396.157606 222.931833 
+" clip-path="url(#pa91931b7b8)" style="fill: none; stroke: #d8912b; stroke-width: 1.7"/>
+   </g>
+   <g id="line2d_17">
+    <path d="M 448.701732 197.624546 
+L 448.701732 208.667726 
+" clip-path="url(#pa91931b7b8)" style="fill: none; stroke: #b9bdc2; stroke-width: 0.7; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_18">
+    <path d="M 407.066457 222.931833 
+L 490.337008 222.931833 
+" clip-path="url(#pa91931b7b8)" style="fill: none; stroke: #2a9d8f; stroke-width: 1.7"/>
+   </g>
+   <g id="text_32">
+    <text style="fill: #26272a; font: 700 8.5px 'TeX Gyre Termes'; text-anchor: start" x="12.755906" y="157.356765" transform="rotate(-0 12.755906 157.356765)">c</text>
+   </g>
+   <g id="text_33">
+    <text style="fill: #26272a; font: 700 7.7px 'TeX Gyre Termes'; text-anchor: start" x="44.594646" y="157.207594" transform="rotate(-0 44.594646 157.207594)">Capacity markers and modeled states</text>
+   </g>
+   <g id="text_34">
+    <text style="fill: #6a6d72; font: 6.5px 'TeX Gyre Termes'; text-anchor: middle" x="54.391181" y="202.063843" transform="rotate(-0 54.391181 202.063843)">0</text>
+   </g>
+   <g id="text_35">
+    <text style="fill: #6a6d72; font: 6.5px 'TeX Gyre Termes'; text-anchor: end" x="481.520126" y="202.063843" transform="rotate(-0 481.520126 202.063843)">120</text>
+   </g>
+   <g id="text_36">
+    <!-- $Q$ (mAh cm$^{-2}$) -->
+    <g style="fill: #26272a" transform="translate(444.704606 182.87)">
+     <text>
+      <tspan style="font: italic 6.5px 'TeX Gyre Termes'" x="0" y="-0.9250000000000007">Q</tspan>
+      <tspan style="font: 6.5px 'TeX Gyre Termes'" x="4.692993 6.317993 8.482483 13.539474 18.232468 21.482468 23.107468 25.993469 36.084669" y="-0.9250000000000007"> (mAh cm)</tspan>
+      <tspan style="font: 4.55px 'TeX Gyre Termes'" x="31.1005 33.6667" y="-2.9265625000000006">−2</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_37">
+    <!-- $Q_s=83.0$ -->
+    <g style="fill: #d8912b" transform="translate(319.620504 169.824347)">
+     <text>
+      <tspan style="font: italic 7px 'TeX Gyre Termes'" x="0" y="-0.265625">Q</tspan>
+      <tspan style="font: italic 4.9px 'TeX Gyre Termes'" x="5.053986" y="0.6624999999999996">s</tspan>
+      <tspan style="font: 7px 'TeX Gyre Termes'" x="8.125565 13.08436 16.58436 20.08436 21.83436" y="-0.265625">=83.0</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_38">
+    <!-- $Q_{f,\mathrm{cal}}=99.6$ -->
+    <g style="fill: #d65345" transform="translate(416.005795 169.611066)">
+     <text>
+      <tspan style="font: italic 7px 'TeX Gyre Termes'" x="0" y="-0.21875">Q</tspan>
+      <tspan style="font: italic 4.9px 'TeX Gyre Termes'" x="5.053986" y="0.7093749999999996">f</tspan>
+      <tspan style="font: 4.9px 'TeX Gyre Termes'" x="6.416185 8.348743 10.524333 12.699924" y="0.7093749999999996">,cal</tspan>
+      <tspan style="font: 7px 'TeX Gyre Termes'" x="15.227608 20.186403 23.686403 27.186403 28.936403" y="-0.21875">=99.6</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_39">
+    <!-- mean $S&lt;1$ -->
+    <g style="fill: #3b6fb6" transform="translate(162.869008 217.312182)">
+     <text>
+      <tspan style="font: 700 7.4px 'TeX Gyre Termes'" x="0 6.156372 9.437805 13.133102 17.242279" y="-0.0">mean </tspan>
+      <tspan style="font: italic 7.4px 'TeX Gyre Termes'" x="19.08992" y="-0.0">S</tspan>
+      <tspan style="font: 7.4px 'TeX Gyre Termes'" x="23.85242 29.087927" y="-0.0">&lt;1</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_40">
+    <!-- before $Q_s$ -->
+    <g style="fill: #6a6d72" transform="translate(166.849508 235.48931)">
+     <text>
+      <tspan style="font: 6.5px 'TeX Gyre Termes'" x="0 3.25 6.136002 8.300491 11.550491 13.714981 16.600983" y="-0.5625">before </tspan>
+      <tspan style="font: italic 6.5px 'TeX Gyre Termes'" x="18.225983" y="-0.5625">Q</tspan>
+      <tspan style="font: italic 4.55px 'TeX Gyre Termes'" x="22.918976" y="0.29531249999999964">s</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_41">
+    <!-- $\varepsilon_s$ increases -->
+    <g style="fill: #d8912b" transform="translate(354.938268 217.170901)">
+     <text>
+      <tspan style="font: italic 6.8px 'TeX Gyre Termes'" x="0" y="-0.328125">ε</tspan>
+      <tspan style="font: italic 4.76px 'TeX Gyre Termes'" x="3.303268" y="0.5718750000000004">s</tspan>
+      <tspan style="font: 700 6.8px 'TeX Gyre Termes'" x="5.304056 7.003259 8.892786 12.671838 15.689645 18.707452 21.725259 25.123682 27.767664 30.785471" y="-0.328125"> increases</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_42">
+    <text style="fill: #6a6d72; font: 6.5px 'TeX Gyre Termes'; text-anchor: middle" x="371.666268" y="235.48931" transform="rotate(-0 371.666268 235.48931)">between markers</text>
+   </g>
+   <g id="text_43">
+    <!-- mean $R_\theta&lt;0.5$ -->
+    <g style="fill: #2a9d8f" transform="translate(430.306732 217.10026)">
+     <text>
+      <tspan style="font: 700 6.5px 'TeX Gyre Termes'" x="0 5.414505 8.300507 11.550507 15.164505" y="-0.53125">mean </tspan>
+      <tspan style="font: italic 6.5px 'TeX Gyre Termes'" x="16.789505" y="-0.53125">R</tspan>
+      <tspan style="font: italic 4.55px 'TeX Gyre Termes'" x="20.761002" y="0.32656249999999964">θ</tspan>
+      <tspan style="font: 6.5px 'TeX Gyre Termes'" x="24.053867 28.658466 31.908466 33.533466" y="-0.53125">&lt;0.5</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_44">
+    <!-- after $Q_{f,\mathrm{cal}}$ -->
+    <g style="fill: #6a6d72" transform="translate(435.311732 235.307513)">
+     <text>
+      <tspan style="font: 6.5px 'TeX Gyre Termes'" x="0 2.886002 5.050491 6.857483 9.743484 11.907974" y="-0.5625">after </tspan>
+      <tspan style="font: italic 6.5px 'TeX Gyre Termes'" x="13.532974" y="-0.5625">Q</tspan>
+      <tspan style="font: italic 4.55px 'TeX Gyre Termes'" x="18.225967" y="0.29531249999999964">f</tspan>
+      <tspan style="font: 4.55px 'TeX Gyre Termes'" x="19.490862 21.285381 23.305582 25.325783" y="0.29531249999999964">,cal</tspan>
+     </text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p1e37829e96">
+   <rect x="12.755906" y="10.204724" width="158.989119" height="132.428377"/>
+  </clipPath>
+  <clipPath id="pe84875e15c">
+   <rect x="193.95674" y="10.204724" width="308.625937" height="132.428377"/>
+  </clipPath>
+  <clipPath id="pa91931b7b8">
+   <rect x="12.755906" y="151.611296" width="489.826772" height="92.026499"/>
+  </clipPath>
+ </defs>
+ <defs>
+  <pattern id="ha3c6cd4887" patternUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
+   <rect x="0" y="0" width="73" height="73" fill="#c4d6da"/>
+   <path d="M -36 36 
+L 36 -36 
+M -33 39 
+L 39 -33 
+M -30 42 
+L 42 -30 
+M -27 45 
+L 45 -27 
+M -24 48 
+L 48 -24 
+M -21 51 
+L 51 -21 
+M -18 54 
+L 54 -18 
+M -15 57 
+L 57 -15 
+M -12 60 
+L 60 -12 
+M -9 63 
+L 63 -9 
+M -6 66 
+L 66 -6 
+M -3 69 
+L 69 -3 
+M 0 72 
+L 72 0 
+M 3 75 
+L 75 3 
+M 6 78 
+L 78 6 
+M 9 81 
+L 81 9 
+M 12 84 
+L 84 12 
+M 15 87 
+L 87 15 
+M 18 90 
+L 90 18 
+M 21 93 
+L 93 21 
+M 24 96 
+L 96 24 
+M 27 99 
+L 99 27 
+M 30 102 
+L 102 30 
+M 33 105 
+L 105 33 
+M 36 108 
+L 108 36 
+" style="fill: #26272a; stroke: #26272a; stroke-width: 1.0; stroke-linecap: butt; stroke-linejoin: miter"/>
+  </pattern>
+ </defs>
+</svg>

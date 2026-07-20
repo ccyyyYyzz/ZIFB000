@@ -1,0 +1,283 @@
+{
+  "Pillow": "12.2.0",
+  "backend": "Python/matplotlib only",
+  "base_font_pt": 7.2,
+  "figures": [
+    "S7",
+    "S8",
+    "S9"
+  ],
+  "fixed_metadata_date": "2026-07-20T12:00:00Z",
+  "font_family": "TeX Gyre Termes",
+  "font_files": {
+    "texgyretermes-bold.otf": "2FB3E952065FA153C7E4E64E04B98B9D79225739B6025AA3F0F0782D299FF61E",
+    "texgyretermes-bolditalic.otf": "1BF6AF99CB0E26C12951317032D79B96AE009551E59CCF02A5B24F325ECFEC87",
+    "texgyretermes-italic.otf": "6DD103A1672E50568CD2F8A706CCD48443D44D7D073A59D2286F4E6F746575D6",
+    "texgyretermes-regular.otf": "CC3FE7C707B81428D23D54DF3EADD9228A2BF6A4D43125D94DF56F5F63134659"
+  },
+  "generative_artwork": false,
+  "input_manifest": {
+    "path": "manuscript/source_data/R582_SI_molecular_bounds/R582_SI_molecular_input_manifest.csv",
+    "rows": 20,
+    "sha256": "40DC7954BC71DCC1D820D3CE09296477AB525C54B70CF96CCC3F74F436928BC9"
+  },
+  "math_parent_pt": 9.4,
+  "matplotlib": "3.7.2",
+  "minimum_font_pt": 6.5,
+  "minimum_math_script_pt": 6.58,
+  "numpy": "1.24.4",
+  "pandas": "1.5.3",
+  "panel_label_pt": 8.0,
+  "pdf_fonttype": 42,
+  "preview_dpi": 150,
+  "ps_fonttype": 42,
+  "python": "3.11.5",
+  "raster_dpi": 600,
+  "release": "R582",
+  "render_details": {
+    "S7": {
+      "extra": {
+        "geometry_projection": "orthographic; XYZ coordinates unchanged; cropped for display",
+        "relative_energies_eV": {
+          "C-OH": -0.5951218941418805,
+          "C=O": -0.4456350366497152,
+          "basal": 0.0,
+          "vacancy": 0.0841340567635545
+        },
+        "single_I2_CDD": "excluded because raw cubes are absent",
+        "site_order": [
+          "C-OH",
+          "C=O",
+          "basal",
+          "vacancy"
+        ]
+      },
+      "height_mm": 120.0,
+      "outputs": {
+        "Fig_R582_SI07_single_I2_ordering_180mm_grayscale_preview": {
+          "bytes": 106648,
+          "path": "manuscript/figures_R582/Fig_R582_SI07_single_I2_ordering_180mm_grayscale_preview.png",
+          "sha256": "F1E3CA3BE113489FEEFBC76F3CD8997EA88ED136F431241A29B7FDB3F5440B63"
+        },
+        "Fig_R582_SI07_single_I2_ordering_180mm_preview": {
+          "bytes": 108413,
+          "path": "manuscript/figures_R582/Fig_R582_SI07_single_I2_ordering_180mm_preview.png",
+          "sha256": "5471447328CD710CBBCDE02FE39B459A56B8813682E46506ED5E5808EF6958E8"
+        },
+        "pdf": {
+          "bytes": 49636,
+          "path": "manuscript/figures_R582/Fig_R582_SI07_single_I2_ordering.pdf",
+          "sha256": "FE1D6FCCB1FCF062D39FA60404E3944366BD4791C104C2E0A1B5C662C8A6AD8D"
+        },
+        "png": {
+          "bytes": 420627,
+          "path": "manuscript/figures_R582/Fig_R582_SI07_single_I2_ordering.png",
+          "sha256": "66BF0105786DE1D63D198FD08E9988FA73836500B444169CE3E6263743B766A0"
+        },
+        "svg": {
+          "bytes": 148757,
+          "path": "manuscript/figures_R582/Fig_R582_SI07_single_I2_ordering.svg",
+          "sha256": "37C788FED7C0E35A6555F830F372DBD8285D1E4240A10A74D0EC57FF0A41096B"
+        },
+        "tiff": {
+          "bytes": 583606,
+          "path": "manuscript/figures_R582/Fig_R582_SI07_single_I2_ordering.tiff",
+          "sha256": "44BCB4673B5D4EDE928CD8531C90CA6DC0F923AA4286AA11764A121612DFB0A3"
+        }
+      },
+      "source_tables": [
+        {
+          "bytes": 1089,
+          "path": "manuscript/source_data/R582_SI_molecular_bounds/R582_SI07_single_I2_energy_ordering.csv",
+          "sha256": "13B75E3C53E155B209415D05270B4D762113ED7B34BA52EB1247A429E22597F8"
+        },
+        {
+          "bytes": 7179,
+          "path": "manuscript/source_data/R582_SI_molecular_bounds/R582_SI07_geometry_atoms_displayed.csv",
+          "sha256": "23E1687CF91B3BB0D2FD31FCCB9A7F1630C03C40C6F01057F95513091E74FDAC"
+        },
+        {
+          "bytes": 733,
+          "path": "manuscript/source_data/R582_SI_molecular_bounds/R582_SI07_geometry_metrics.csv",
+          "sha256": "4E491E655D87CBC50A845BF8D8D1861114B996EB855D4F8A3EF1CAC9402F41B4"
+        }
+      ],
+      "stem": "Fig_R582_SI07_single_I2_ordering",
+      "width_mm": 180.0
+    },
+    "S8": {
+      "extra": {
+        "CDD_array_max": 0.013607943430542946,
+        "CDD_array_min": -0.00955879781395197,
+        "CDD_array_shape": [
+          60,
+          96,
+          90
+        ],
+        "CDD_definition": "rho(compact complex) - rho(C-OH surface) - rho(2I2)",
+        "CDD_display_counts": {
+          "accumulation": 428,
+          "depletion": 78
+        },
+        "CDD_raw_counts": {
+          "accumulation": 428,
+          "depletion": 78
+        },
+        "CDD_threshold_e_A-3": 0.002,
+        "cell_vectors_A": [
+          [
+            14.75707288,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            25.56,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            24.0
+          ]
+        ],
+        "compact_minus_separated_eV": -0.6892909363332037,
+        "pathway_cartoon": "excluded"
+      },
+      "height_mm": 112.0,
+      "outputs": {
+        "Fig_R582_SI08_two_I2_diagnostic_180mm_grayscale_preview": {
+          "bytes": 123027,
+          "path": "manuscript/figures_R582/Fig_R582_SI08_two_I2_diagnostic_180mm_grayscale_preview.png",
+          "sha256": "48950E223A34C425E43FF485FEA105FB851B72B150815889ACF26592E836BD5B"
+        },
+        "Fig_R582_SI08_two_I2_diagnostic_180mm_preview": {
+          "bytes": 130091,
+          "path": "manuscript/figures_R582/Fig_R582_SI08_two_I2_diagnostic_180mm_preview.png",
+          "sha256": "32718CC6E555811CB667B4CBA3EE90E4C79A7FB5578319296D3F210171D4A1B2"
+        },
+        "pdf": {
+          "bytes": 52096,
+          "path": "manuscript/figures_R582/Fig_R582_SI08_two_I2_diagnostic.pdf",
+          "sha256": "AA1D6A287A3D80533E0D118562401A2348045171FC4066AAA59DAA32DC879372"
+        },
+        "png": {
+          "bytes": 568165,
+          "path": "manuscript/figures_R582/Fig_R582_SI08_two_I2_diagnostic.png",
+          "sha256": "9FE519F5037DF2826D14C9C1BC09A79CEAE6C2F5FF3FC8A506A6DC6F520483A3"
+        },
+        "svg": {
+          "bytes": 262962,
+          "path": "manuscript/figures_R582/Fig_R582_SI08_two_I2_diagnostic.svg",
+          "sha256": "87478CC5C8EBC06BAAFA15BDF3C07B851A8FDFF43FDDC5E6CC8EA7B7B7B9AAEC"
+        },
+        "tiff": {
+          "bytes": 711886,
+          "path": "manuscript/figures_R582/Fig_R582_SI08_two_I2_diagnostic.tiff",
+          "sha256": "4DB170351858FE2CC4A36BB1DE860A9DCEAD93A011D7FB1809255985417A9998"
+        }
+      },
+      "source_tables": [
+        {
+          "bytes": 532,
+          "path": "manuscript/source_data/R582_SI_molecular_bounds/R582_SI08_two_I2_energy_comparison.csv",
+          "sha256": "31204FFCD5F001D1C193C799A8EB2D5DD2578D812FCD09D18A8E9C9F523EDED2"
+        },
+        {
+          "bytes": 6714,
+          "path": "manuscript/source_data/R582_SI_molecular_bounds/R582_SI08_geometry_atoms_displayed.csv",
+          "sha256": "D0C7E464B45F01E6401A992CE166F5CE4E5967699A9F9A64FE3D88C62E01BD8D"
+        },
+        {
+          "bytes": 471,
+          "path": "manuscript/source_data/R582_SI_molecular_bounds/R582_SI08_geometry_metrics.csv",
+          "sha256": "5A835144B46583098A4171FFE3D1943B80E538E9F21CD6A48FF812C1A80F0879"
+        },
+        {
+          "bytes": 38301,
+          "path": "manuscript/source_data/R582_SI_molecular_bounds/R582_SI08_cdd_threshold_points.csv",
+          "sha256": "89AA5025876A2A03C7F23A807D9DBE6B2D19DE5EBD8A3F45F48704BAF161F582"
+        },
+        {
+          "bytes": 317,
+          "path": "manuscript/source_data/R582_SI_molecular_bounds/R582_SI08_cdd_threshold_summary.csv",
+          "sha256": "623A2F154C6C3F936720A6A054187D6782ABB5DF15D4805831EBBE23B466BE88"
+        }
+      ],
+      "stem": "Fig_R582_SI08_two_I2_diagnostic",
+      "width_mm": 180.0
+    },
+    "S9": {
+      "extra": {
+        "SOC_points": [
+          0.1,
+          0.3,
+          0.5,
+          0.7,
+          1.0
+        ],
+        "condition": "1 M ZnI2 + 4 M NH4Br, 298.15 K",
+        "iodine_carrier_means_1e-9_m2_s": {
+          "q0p8_ecc": {
+            "I-": 1.2223523845499489,
+            "I2": 1.0650359883970268,
+            "I2Br-": 0.7242936573925908,
+            "I3-": 0.7521535451934256
+          },
+          "q1p0": {
+            "I-": 0.7084014624176654,
+            "I2": 0.584603035357675,
+            "I2Br-": 0.517692077148757,
+            "I3-": 0.5333310625846798
+          }
+        },
+        "production_length_ns": 20.0,
+        "trajectories": "one trajectory per composition and charge parameterization",
+        "uncertainty_boundary": "D_sem is propagated within-trajectory four-block stability; not replica uncertainty"
+      },
+      "height_mm": 96.0,
+      "outputs": {
+        "Fig_R582_SI09_md_carrier_ladder_180mm_grayscale_preview": {
+          "bytes": 69471,
+          "path": "manuscript/figures_R582/Fig_R582_SI09_md_carrier_ladder_180mm_grayscale_preview.png",
+          "sha256": "ACA5553496714F5526BBADEC0795152FBAFD8D0196D023D2FF1390D39FDA47DD"
+        },
+        "Fig_R582_SI09_md_carrier_ladder_180mm_preview": {
+          "bytes": 71136,
+          "path": "manuscript/figures_R582/Fig_R582_SI09_md_carrier_ladder_180mm_preview.png",
+          "sha256": "0BE463CC64E5A0FBE20614CC3E5AA4766D7A043B19B918DC464B83570EE007DF"
+        },
+        "pdf": {
+          "bytes": 24508,
+          "path": "manuscript/figures_R582/Fig_R582_SI09_md_carrier_ladder.pdf",
+          "sha256": "C5E9E6E7F0BF2B3E47F8B74074B89E8DC7259B0DB0C7EAAF83C52AF85CC0E7C5"
+        },
+        "png": {
+          "bytes": 188803,
+          "path": "manuscript/figures_R582/Fig_R582_SI09_md_carrier_ladder.png",
+          "sha256": "4933C8CE4EC67466C1A50C51B9C180A5DC5FC4B6F4AD43ADB1DE535355246200"
+        },
+        "svg": {
+          "bytes": 38643,
+          "path": "manuscript/figures_R582/Fig_R582_SI09_md_carrier_ladder.svg",
+          "sha256": "1C0D8DDEBCBB60E6C2F3E88BE5CE3D818737A72355CF22CA4FA465F9E8D14A09"
+        },
+        "tiff": {
+          "bytes": 415926,
+          "path": "manuscript/figures_R582/Fig_R582_SI09_md_carrier_ladder.tiff",
+          "sha256": "92BB1E53DE8CD1DDFEA6E380541255A5EA7E12CFC453AE1A886A72D832AF7420"
+        }
+      },
+      "source_tables": [
+        {
+          "bytes": 3706,
+          "path": "manuscript/source_data/R582_SI_molecular_bounds/R582_SI09_md_carrier_ladder.csv",
+          "sha256": "CFD2C7D8C0B09D45DCE2575494A7EC84BB06C1185C935BC7ACB5443ED2E98BA5"
+        }
+      ],
+      "stem": "Fig_R582_SI09_md_carrier_ladder",
+      "width_mm": 180.0
+    }
+  },
+  "svg_fonttype": "none"
+}

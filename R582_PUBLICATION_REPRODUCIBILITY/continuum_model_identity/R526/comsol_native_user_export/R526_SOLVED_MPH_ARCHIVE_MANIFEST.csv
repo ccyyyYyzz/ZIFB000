@@ -1,0 +1,24 @@
+case_id,family,knob,target_Q_mAh_cm2,i_app_A_m2,solved_mph_archive,status
+baseline_J40_Q120,baseline,J40 Q120,120.0,400.0,C:/Users/CYZ的computer/.comsol/v63/applications/files/user/R526_COMSOL_NATIVE_KNOB_EXPORT/solved_mph_local/baseline_J40_Q120/R526_baseline_J40_Q120_solved.mph,SAVED
+rate_J20_Q40,current_density_fixed_Q,J20 Q40,40.0,200.0,C:/Users/CYZ的computer/.comsol/v63/applications/files/user/R526_COMSOL_NATIVE_KNOB_EXPORT/solved_mph_local/rate_J20_Q40/R526_rate_J20_Q40_solved.mph,SAVED
+rate_J40_Q40,current_density_fixed_Q,J40 Q40,40.0,400.0,C:/Users/CYZ的computer/.comsol/v63/applications/files/user/R526_COMSOL_NATIVE_KNOB_EXPORT/solved_mph_local/rate_J40_Q40/R526_rate_J40_Q40_solved.mph,SAVED
+rate_J80_Q40,current_density_fixed_Q,J80 Q40,40.0,800.0,C:/Users/CYZ的computer/.comsol/v63/applications/files/user/R526_COMSOL_NATIVE_KNOB_EXPORT/solved_mph_local/rate_J80_Q40/R526_rate_J80_Q40_solved.mph,SAVED
+rate_J120_Q40,current_density_fixed_Q,J120 Q40,40.0,1200.0,C:/Users/CYZ的computer/.comsol/v63/applications/files/user/R526_COMSOL_NATIVE_KNOB_EXPORT/solved_mph_local/rate_J120_Q40/R526_rate_J120_Q40_solved.mph,SAVED
+comp_L15_Q120,compression_true_branch,L=1.5mm eps=0.800,120.0,400.0,C:/Users/CYZ的computer/.comsol/v63/applications/files/user/R526_COMSOL_NATIVE_KNOB_EXPORT/solved_mph_local/comp_L15_Q120/R526_comp_L15_Q120_solved.mph,SAVED
+comp_L25_Q120,compression_true_branch,L=2.5mm eps=0.880,120.0,400.0,C:/Users/CYZ的computer/.comsol/v63/applications/files/user/R526_COMSOL_NATIVE_KNOB_EXPORT/solved_mph_local/comp_L25_Q120/R526_comp_L25_Q120_solved.mph,SAVED
+comp_L30_Q120,compression_true_branch,L=3.0mm eps=0.900,120.0,400.0,C:/Users/CYZ的computer/.comsol/v63/applications/files/user/R526_COMSOL_NATIVE_KNOB_EXPORT/solved_mph_local/comp_L30_Q120/R526_comp_L30_Q120_solved.mph,SAVED
+br_2M_Q120,Br_support_isolated,cBr=2M,120.0,400.0,C:/Users/CYZ的computer/.comsol/v63/applications/files/user/R526_COMSOL_NATIVE_KNOB_EXPORT/solved_mph_local/br_2M_Q120/R526_br_2M_Q120_solved.mph,SAVED
+br_3M_Q120,Br_support_isolated,cBr=3M,120.0,400.0,C:/Users/CYZ的computer/.comsol/v63/applications/files/user/R526_COMSOL_NATIVE_KNOB_EXPORT/solved_mph_local/br_3M_Q120/R526_br_3M_Q120_solved.mph,SAVED
+br_5M_Q120,Br_support_isolated,cBr=5M,120.0,400.0,C:/Users/CYZ的computer/.comsol/v63/applications/files/user/R526_COMSOL_NATIVE_KNOB_EXPORT/solved_mph_local/br_5M_Q120/R526_br_5M_Q120_solved.mph,SAVED
+activity_gamma2_Q120,activity_saltout,gamma=2,120.0,400.0,C:/Users/CYZ的computer/.comsol/v63/applications/files/user/R526_COMSOL_NATIVE_KNOB_EXPORT/solved_mph_local/activity_gamma2_Q120/R526_activity_gamma2_Q120_solved.mph,SAVED
+activity_gamma4_Q120,activity_saltout,gamma=4,120.0,400.0,C:/Users/CYZ的computer/.comsol/v63/applications/files/user/R526_COMSOL_NATIVE_KNOB_EXPORT/solved_mph_local/activity_gamma4_Q120/R526_activity_gamma4_Q120_solved.mph,SAVED
+flow_25_Q120,flow_rate,Q_flow=25 ml/min,120.0,400.0,C:/Users/CYZ的computer/.comsol/v63/applications/files/user/R526_COMSOL_NATIVE_KNOB_EXPORT/solved_mph_local/flow_25_Q120/R526_flow_25_Q120_solved.mph,SAVED
+flow_100_Q120,flow_rate,Q_flow=100 ml/min,120.0,400.0,C:/Users/CYZ的computer/.comsol/v63/applications/files/user/R526_COMSOL_NATIVE_KNOB_EXPORT/solved_mph_local/flow_100_Q120/R526_flow_100_Q120_solved.mph,SAVED
+sigmal_10_Q120,liquid_conductivity,sigmal=10 S/m,120.0,400.0,C:/Users/CYZ的computer/.comsol/v63/applications/files/user/R526_COMSOL_NATIVE_KNOB_EXPORT/solved_mph_local/sigmal_10_Q120/R526_sigmal_10_Q120_solved.mph,SAVED
+sigmal_40_Q120,liquid_conductivity,sigmal=40 S/m,120.0,400.0,C:/Users/CYZ的computer/.comsol/v63/applications/files/user/R526_COMSOL_NATIVE_KNOB_EXPORT/solved_mph_local/sigmal_40_Q120/R526_sigmal_40_Q120_solved.mph,SAVED
+D_half_Q120,diffusion_prior,D species 0.5x,120.0,400.0,C:/Users/CYZ的computer/.comsol/v63/applications/files/user/R526_COMSOL_NATIVE_KNOB_EXPORT/solved_mph_local/D_half_Q120/R526_D_half_Q120_solved.mph,SAVED
+D_double_Q120,diffusion_prior,D species 2x,120.0,400.0,C:/Users/CYZ的computer/.comsol/v63/applications/files/user/R526_COMSOL_NATIVE_KNOB_EXPORT/solved_mph_local/D_double_Q120/R526_D_double_Q120_solved.mph,SAVED
+Av_half_Q120,wet_area_Av,Av 0.5x,120.0,400.0,C:/Users/CYZ的computer/.comsol/v63/applications/files/user/R526_COMSOL_NATIVE_KNOB_EXPORT/solved_mph_local/Av_half_Q120/R526_Av_half_Q120_solved.mph,SAVED
+Av_double_Q120,wet_area_Av,Av 2x,120.0,400.0,NOT_SAVED,solve_failed
+sigmas_80_Q120,solid_conductivity,sigmas=80 S/m,120.0,400.0,C:/Users/CYZ的computer/.comsol/v63/applications/files/user/R526_COMSOL_NATIVE_KNOB_EXPORT/solved_mph_local/sigmas_80_Q120/R526_sigmas_80_Q120_solved.mph,SAVED
+sigmas_320_Q120,solid_conductivity,sigmas=320 S/m,120.0,400.0,C:/Users/CYZ的computer/.comsol/v63/applications/files/user/R526_COMSOL_NATIVE_KNOB_EXPORT/solved_mph_local/sigmas_320_Q120/R526_sigmas_320_Q120_solved.mph,SAVED

@@ -1,0 +1,12 @@
+record,value
+MODEL_TAGS,"studies,std1|stdR522"
+MODEL_TAGS,"solutions_before,sol1|sol2|sol3|sol4|sol5|sol6"
+MODEL_TAGS,"datasets_before,dset1|dset2|dset3|dset4|cln1|avh2|avh3|avh4|avh5|avh6|dset5|dset6"
+STUDY_FEATURE,"stat,tlist="
+STUDY_FEATURE,"time,tlist=range(0;10;10800)"
+CLOSURE_BEFORE,"cov_theta_surf,1-exp(-k_geo*N_i2_pos^(1/3)*eps_s_reg^(2/3))"
+CLOSURE_BEFORE,"theta_eff_R520,cov_theta_surf"
+CLOSURE_AFTER,"cov_theta_surf,1-exp(-35.4*eps_s_reg^0.6222)"
+CLOSURE_AFTER,"theta_eff_R520,1-exp(-35.4*eps_s_reg^0.6222)"
+MODEL_TAGS,"solutions_after,sol1|sol2|sol3|sol4|sol5|sol6"
+DATASET_MAPPING,"dsetR581Phys,sol5"

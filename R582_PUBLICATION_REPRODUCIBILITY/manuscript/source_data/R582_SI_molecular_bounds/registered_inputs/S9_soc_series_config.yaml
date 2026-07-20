@@ -1,0 +1,66 @@
+system:
+  label: zifb_posolyte_soc_series
+  temperature_K: 298.15
+  pressure_bar: 1.0
+  box_nm: 3.40
+  water_count: 1112
+  base_counts:
+    ZN: 24
+    I: 48
+    BR: 95
+    NH4: 95
+  full_charge_i2_equiv_count: 24
+  soc_points: [0.1, 0.3, 0.5, 0.7, 1.0]
+
+speciation:
+  source: "R195 readable exports use beta_I2 ~= 1487; v1c qualitatively supports I3 more than I2Br but does not set K directly."
+  beta_eff_anchor: 1487.0
+  split_basis: "I3:I2Br split uses mesoscale fallback weights K_I2_I*cI : K_I2_Br*cBr at 1 M ZnI2 + 4 M NH4Br, with free I2 forced to one molecule for finite-box D diagnostics."
+  K_I2_I_m3_mol: 0.001
+  K_I2_Br_m3_mol: 0.0002
+  cI_m_mol_m3: 2027.9329133000368
+  cBr_support_mol_m3: 4013.617224239656
+  min_free_i2_count: 1
+  finite_box_note: "True beta_eff free-I2 fraction is below one molecule in this 3.4 nm box; one free I2 molecule is retained to estimate neutral-I2 mobility and is excluded from over-interpretation."
+
+force_field:
+  base_gromacs_forcefield: amber19sb.ff
+  water_model: SPC/E
+  ion_parameters: "Reuses md_transport_local Stage A ion/NH4/I2 setup; Zn2+ is the documented SPC/E 12-6 approximation, not full Li-Merz 12-6-4 C4."
+  polyhalide_note: "I3-/I2Br- use rebuilt linear geometries and xTB ALPB-water charges from md_transport_local Stage B; LJ terms are iodine/bromide analogues, so absolute values are low-confidence."
+  i3_bond_A: 2.93
+  i2br_i_i_bond_A: 2.89
+  i2br_i_br_bond_A: 2.75
+  i3_charges_e: [-0.42046963, -0.15906074, -0.42046963]
+  i2br_atoms: ["BR", "I1", "I2"]
+  i2br_charges_e: [-0.55038516, -0.12910576, -0.32050908]
+
+variants:
+  q1p0:
+    charge_scale: 1.0
+  q0p8_ecc:
+    charge_scale: 0.8
+
+md:
+  timestep_ps: 0.002
+  nvt_ps_smoke: 2.0
+  npt_ps_smoke: 2.0
+  prod_ps_smoke: 5.0
+  nvt_ps_long: 100.0
+  npt_ps_long: 500.0
+  prod_ps_long: 20000.0
+  temperature_coupling_tau_ps: 0.5
+  pressure_coupling_tau_ps: 5.0
+  energy_stride_steps_smoke: 5
+  energy_stride_steps_long: 50
+  trajectory_stride_steps_smoke: 10
+  trajectory_stride_steps_long: 2500
+  viscosity_replica_ps: 20000.0
+
+run_policy:
+  long_parallel_jobs: 2
+  ntomp: 8
+  viscosity_priority_socs: [0.1, 0.5, 1.0]
+  viscosity_replicas_per_priority_soc: 3
+  completion_requires_long_all_socs: true
+  claim_boundary: "Use ratios/trends plus literature anchoring; do not replace COMSOL constants or edit .mph."

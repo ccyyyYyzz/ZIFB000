@@ -1,0 +1,17 @@
+{
+  "S_direct": "aveop1(cI2_surf_free/cI2_sat)",
+  "S_reconstructed": "aveop1(gamma_I2_saltout*cI2_surf_tot/(beta_I2_surf_dyn*cI2_sat0))",
+  "analysis_id": "R581_CANONICAL_CLOSURE_REBUILD",
+  "control_acceptance": {
+    "max_abs_Qs_mAh_cm2": 0.5,
+    "max_abs_Qtheta_mAh_cm2": 0.5,
+    "max_abs_endpoint_theta": 0.005,
+    "max_abs_voltage_V": 0.001,
+    "max_rel_endpoint_eps_s": 0.01
+  },
+  "crossing_estimator": "first upward level crossing; linear interpolation on common 10 s/Q grid; no extrapolation",
+  "identity_tolerance": 1e-06,
+  "numpy": "1.24.4",
+  "pandas": "1.5.3",
+  "python": "3.11.5"
+}

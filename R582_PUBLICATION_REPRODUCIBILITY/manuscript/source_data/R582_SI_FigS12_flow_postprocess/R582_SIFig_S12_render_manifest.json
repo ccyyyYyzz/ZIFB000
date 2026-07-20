@@ -1,0 +1,245 @@
+{
+  "figure": "SIFig_R582_S12_flow_postprocess",
+  "single_dominant_claim": "Under the declared Sherwood relation, thinning the sub-grid diffusion layer delays the postprocessed average-saturation point.",
+  "evidence_class": "E-POST",
+  "frozen_date": "2026-07-20",
+  "final_size_mm": {
+    "width": 180.0,
+    "height": 68.0
+  },
+  "font": {
+    "family": "TeX Gyre Termes",
+    "minimum_pt": 6.5,
+    "registered_faces": [
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-regular.otf",
+        "sha256": "CC3FE7C707B81428D23D54DF3EADD9228A2BF6A4D43125D94DF56F5F63134659"
+      },
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-bold.otf",
+        "sha256": "2FB3E952065FA153C7E4E64E04B98B9D79225739B6025AA3F0F0782D299FF61E"
+      },
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-italic.otf",
+        "sha256": "6DD103A1672E50568CD2F8A706CCD48443D44D7D073A59D2286F4E6F746575D6"
+      },
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-bolditalic.otf",
+        "sha256": "1BF6AF99CB0E26C12951317032D79B96AE009551E59CCF02A5B24F325ECFEC87"
+      }
+    ]
+  },
+  "claim_boundary": "The curves rescale only the declared sub-grid generation contribution. They are not a full flow-dependent boundary-layer solve, a measured transfer law, or an additional experiment.",
+  "data_audit": {
+    "baseline_rows": 1081,
+    "sweep_rows": 120,
+    "m_exponents": [
+      0.4,
+      0.5,
+      0.6
+    ],
+    "registered_baseline_Qs_mAh_cm2": 83.0201994718443,
+    "declared_primary_flow_range_mL_min": [
+      25.0,
+      100.0
+    ],
+    "registered_display_flow_range_mL_min": [
+      10.0,
+      200.0
+    ],
+    "exact_primary_range_results": {
+      "0.4": {
+        "Q_s_at_25": 76.82368991873854,
+        "Q_s_at_100": 87.74086923966787,
+        "span": 10.917179320929336
+      },
+      "0.5": {
+        "Q_s_at_25": 74.99152250287874,
+        "Q_s_at_100": 88.73290265682242,
+        "span": 13.74138015394368
+      },
+      "0.6": {
+        "Q_s_at_25": 73.03034277417945,
+        "Q_s_at_100": 89.65962439845347,
+        "span": 16.62928162427403
+      }
+    },
+    "registered_sweep_reconstruction_pass": true,
+    "evidence_class": "E-POST"
+  },
+  "qa": {
+    "build": {
+      "width_mm": 180.0,
+      "height_mm": 68.0,
+      "font_audit": {
+        "minimum_text_pt": 6.5,
+        "resolved_font_families": [
+          "TeX Gyre Termes"
+        ],
+        "text_items": 29
+      }
+    },
+    "deterministic_second_render": {
+      "pass": true,
+      "sha256": {
+        "svg": "01124651F4704C2F6B93A4C827066E750DC9F0CF73697091D53AD4CDAE33C989",
+        "pdf": "9DD4C93227FCB2081E7FBEA790968773466A2EA497F6A28D43DAA2D951307822",
+        "png": "A7F83AC58835375F8D8018EE517562241A09802CCF1400CDDF89FE758061F045",
+        "tiff": "FD32B15AD59598947008A9AD552088C85BB669E2AF6ED3DF658B5AB208957895",
+        "preview": "54899FB64F60D13518100FA360CC6BF4B134D3AC491A440B0AD3DF2370146FC3",
+        "grayscale": "DDBFB2DB9F1AD7ACD82C4548126D5A5638216BCC1FF5053EF11243C68554BCE2"
+      }
+    },
+    "pdf_fonts": {
+      "font_names": [
+        "CCVYUO+TeXGyreTermes-Bold",
+        "CCVYUO+TeXGyreTermes-Italic",
+        "CCVYUO+TeXGyreTermes-Regular"
+      ],
+      "required_family": "TeX Gyre Termes",
+      "forbidden_families": [],
+      "type3_present": false,
+      "pass": true
+    },
+    "pdf_size": {
+      "expected_mm": [
+        180.0,
+        68.0
+      ],
+      "observed_mm": [
+        179.9999222222222,
+        68.00003333333332
+      ],
+      "pass": true
+    },
+    "raster": {
+      "expected_600dpi_pixels": [
+        4252,
+        1606
+      ],
+      "png_pixels": [
+        4252,
+        1606
+      ],
+      "tiff_pixels": [
+        4252,
+        1606
+      ],
+      "expected_300dpi_preview_pixels": [
+        2126,
+        803
+      ],
+      "preview_pixels": [
+        2126,
+        803
+      ],
+      "grayscale_pixels": [
+        2126,
+        803
+      ],
+      "grayscale_mode": "L",
+      "grayscale_extrema": [
+        0,
+        255
+      ],
+      "pass": true
+    },
+    "svg": {
+      "editable_text": true,
+      "required_family_present": true,
+      "forbidden": [],
+      "pass": true
+    }
+  },
+  "inputs": [
+    {
+      "path": "manuscript/source_data/R582_SI_FigS12_flow_postprocess/inputs/R577_baseline_input.csv",
+      "size_bytes": 91263,
+      "sha256": "3490EBDB2C5244AF9044D3422BC29FED96B57AF54F9C48AAC46BD3B1717C0335"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS12_flow_postprocess/inputs/R577_flow_delta_sweep.csv",
+      "size_bytes": 13789,
+      "sha256": "CCC7C618B33B9489C03CA3DD5C5F1ECAF5E9AFF114A0935015FEE0F2C8CAF6DB"
+    }
+  ],
+  "figure_outputs": [
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S12_flow_postprocess.svg",
+      "size_bytes": 17403,
+      "sha256": "01124651F4704C2F6B93A4C827066E750DC9F0CF73697091D53AD4CDAE33C989"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S12_flow_postprocess.pdf",
+      "size_bytes": 22214,
+      "sha256": "9DD4C93227FCB2081E7FBEA790968773466A2EA497F6A28D43DAA2D951307822"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S12_flow_postprocess.png",
+      "size_bytes": 260653,
+      "sha256": "A7F83AC58835375F8D8018EE517562241A09802CCF1400CDDF89FE758061F045"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S12_flow_postprocess.tiff",
+      "size_bytes": 456958,
+      "sha256": "FD32B15AD59598947008A9AD552088C85BB669E2AF6ED3DF658B5AB208957895"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S12_flow_postprocess_180mm_preview.png",
+      "size_bytes": 180812,
+      "sha256": "54899FB64F60D13518100FA360CC6BF4B134D3AC491A440B0AD3DF2370146FC3"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S12_flow_postprocess_180mm_preview_grayscale.png",
+      "size_bytes": 73905,
+      "sha256": "DDBFB2DB9F1AD7ACD82C4548126D5A5638216BCC1FF5053EF11243C68554BCE2"
+    }
+  ],
+  "source_bundle_files": [
+    {
+      "path": "manuscript/source_data/R582_SI_FigS12_flow_postprocess/R582_SIFig_S12_input_manifest.csv",
+      "size_bytes": 687,
+      "sha256": "C5A7F06034808D2924262652AD26CF61B9326418C7459AA6C2243047109CDCE2"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS12_flow_postprocess/R582_SIFig_S12_flow_scenario.csv",
+      "size_bytes": 12112,
+      "sha256": "B85EBDB6B4137F0B18B2407F48BB41007648E7EF9D69334521DC3DF8AB3C9C82"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS12_flow_postprocess/R582_SIFig_S12_scenario_summary.csv",
+      "size_bytes": 951,
+      "sha256": "F451E81F31DA34A816937F194BB36089AD9B31777B0C3D8E1365223633C20A49"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS12_flow_postprocess/r582_si_figure_tools.py",
+      "size_bytes": 11725,
+      "sha256": "83BF5D051CBC5CE86C4515D3AA29DD11DB9C9067ECD5331106CF48FCE176A0EB"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS12_flow_postprocess/make_sifig_r582_s12_flow_postprocess.py",
+      "size_bytes": 13985,
+      "sha256": "35A3C108AAB1C8223FCDCC3F4A7DB36FC4581D786D5C71FC5166E949B6A2F6CF"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS12_flow_postprocess/FIGURE_CONTRACT.md",
+      "size_bytes": 1474,
+      "sha256": "3DF0E492083ED4CBB7083747B821D0958179DE143438193EAD4E69FFB7EA6815"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS12_flow_postprocess/CAPTION_DRAFT.md",
+      "size_bytes": 765,
+      "sha256": "57AF0844D01F5EAB56C50A3D5E922CB90AF4CC43CFE902803E0700354600559B"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS12_flow_postprocess/README.md",
+      "size_bytes": 649,
+      "sha256": "3E5716F520DEB7B8A6361BFF83E90D39E3CBDFC44F2C6121EAE30B0C518FB011"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS12_flow_postprocess/QA_NOTES.md",
+      "size_bytes": 1620,
+      "sha256": "43B2D0DCEBBBD8EBCED893DAD2D7B41D1E81562720A6906F2801513456CDF9BA"
+    }
+  ]
+}

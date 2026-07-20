@@ -1,0 +1,150 @@
+{
+  "figure": "SIFig_R582_S3_compression",
+  "single_dominant_claim": "Existing thickness cells provide descriptive protocol brackets whose ordering persists across the prespecified CE thresholds; the 2.0 mm cross-batch proxy is not part of that connected series.",
+  "evidence_class": "E-EXP",
+  "frozen_date": "2026-07-20",
+  "final_size_mm": {
+    "width": 180.0,
+    "height": 96.0
+  },
+  "font": {
+    "family": "TeX Gyre Termes",
+    "base_pt": 7.2,
+    "minimum_pt": 6.5,
+    "panel_label_pt": 8.0,
+    "registered_faces": [
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-regular.otf",
+        "sha256": "CC3FE7C707B81428D23D54DF3EADD9228A2BF6A4D43125D94DF56F5F63134659"
+      },
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-bold.otf",
+        "sha256": "2FB3E952065FA153C7E4E64E04B98B9D79225739B6025AA3F0F0782D299FF61E"
+      },
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-italic.otf",
+        "sha256": "6DD103A1672E50568CD2F8A706CCD48443D44D7D073A59D2286F4E6F746575D6"
+      },
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-bolditalic.otf",
+        "sha256": "1BF6AF99CB0E26C12951317032D79B96AE009551E59CCF02A5B24F325ECFEC87"
+      }
+    ],
+    "minimum_text_pt": 6.5,
+    "resolved_font_families": [
+      "TeX Gyre Termes"
+    ],
+    "text_items": 60
+  },
+  "statistical_boundary": "Each thickness is one physical cell. The brackets are observed program intervals, not confidence intervals, and no population scaling law is inferred.",
+  "metadata_normalization": "Derived labels use NH4Br under EXP-META-001; immutable raw bytes are untouched.",
+  "data_audit": {
+    "physical_cells": 4,
+    "n_cell_per_thickness": 1,
+    "explicit_March_2025_thicknesses_mm": [
+      1.5,
+      2.5,
+      3.0
+    ],
+    "cross_batch_proxy_thickness_mm": 2.0,
+    "thresholds_pct": [
+      80,
+      85,
+      90
+    ],
+    "primary_threshold_pct": 85,
+    "proxy_connected_to_explicit_series": false,
+    "population_interval_drawn": false
+  },
+  "inputs": [
+    {
+      "path": "manuscript/source_data/Fig_R581_experimental_evidence/R581_experimental_evidence_panel_c_compression.csv",
+      "size_bytes": 2474,
+      "sha256": "18CAAF72F8087C44AFCDF85F3B6476DE8EC06E72D9FA0776B6BCDC4E3C7E0D89"
+    },
+    {
+      "path": "battery_experiment/02_processed_data/R581_COMPRESSION_EVIDENCE_REBUILD/endpoint_sensitivity.csv",
+      "size_bytes": 4062,
+      "sha256": "30A9D0B7E4CE2416ACA886DCB1E52B1550DF01EF4699E8AE93D3BDA49DE77BBE"
+    }
+  ],
+  "figure_outputs": [
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S3_compression.svg",
+      "size_bytes": 26049,
+      "sha256": "FE9BC2EE8DDFFEF99AA0702D7F144EBDB618413B949EED9B46B40CD294228318"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S3_compression.pdf",
+      "size_bytes": 22473,
+      "sha256": "8E95EC46234438B93816F7F93C4B9CDE44D90AEF095E1CBCE0AB47F4D3C594DC"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S3_compression.png",
+      "size_bytes": 420762,
+      "sha256": "FA9B0D0832BA0FD2A57FC998BCAE71524B4AEBD220D76996DCA3EEA57052FA04"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S3_compression.tiff",
+      "size_bytes": 554000,
+      "sha256": "0EF5C93C80AFEF4128212A5F3B8A312847A37171599A5AD33854277AEE6BCD5B"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S3_compression_180mm_preview.png",
+      "size_bytes": 303479,
+      "sha256": "BC10E73A4FBE60557EBBA4BA6BB93EB369A8F7CEE88A3C165C6296E52EC8BAFD"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S3_compression_180mm_preview_grayscale.png",
+      "size_bytes": 126010,
+      "sha256": "BDA1419F060ACF8D6BE1CE6496F8D1637191428E8F12E2CA09A8B0E35802262F"
+    }
+  ],
+  "source_bundle_files": [
+    {
+      "path": "manuscript/source_data/R582_SI_FigS3_compression/CAPTION_DRAFT.md",
+      "size_bytes": 1391,
+      "sha256": "8AB091677BFDB63D219E3855FA86F4E772F7917F509C35B752BF8813503CE2BF"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS3_compression/DETERMINISM_QA.json",
+      "size_bytes": 1115,
+      "sha256": "37854583FBB8A7A9FB6FE7FE4E1FA3FCBC476A31BAAB23122E7353423A6DC8C1"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS3_compression/FIGURE_CONTRACT.md",
+      "size_bytes": 1485,
+      "sha256": "4A38590C30528189C0A6D722BEB7FA2B62A4C53B2B5F3DD7C51490C96F5CD202"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS3_compression/make_sifig_r582_s3_compression.py",
+      "size_bytes": 18793,
+      "sha256": "36A06C9C7CC69FF208324E2F15C2DB56B9B38370E8DFB476F3B87BA7446DE91B"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS3_compression/QA_NOTES.md",
+      "size_bytes": 1524,
+      "sha256": "624CF40B0B64130CF7DF47094C020AE03DCF04A13F987DA7FF1510A3F05FF5D6"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS3_compression/R582_SIFig_S3_input_manifest.csv",
+      "size_bytes": 592,
+      "sha256": "F29123FFA2847C47C2ECE987A9B103A145D5EB553521A93A548C869898625BD3"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS3_compression/R582_SIFig_S3_plot_primary_85pct.csv",
+      "size_bytes": 1732,
+      "sha256": "8BDB46DCE374DBB854A4D799E5723D5F39BC187B2EB28EA81A4771FD8E599C20"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS3_compression/R582_SIFig_S3_plot_threshold_sensitivity.csv",
+      "size_bytes": 4293,
+      "sha256": "AF6B1F1BB91A76EB8F15F79BAC0F9E886F792BEF71B759AF6ABA903304D01D63"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS3_compression/README.md",
+      "size_bytes": 647,
+      "sha256": "297EA88A330F6D9119C90F32EE0B287BF400F6AF975FB11F7F90DC8A1201DF80"
+    }
+  ]
+}

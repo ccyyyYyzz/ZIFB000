@@ -1,0 +1,18 @@
+[ moleculetype ]
+; molname nrexcl
+I2B 2
+
+[ atoms ]
+; id type resnr residue atom cgnr charge mass
+1 Br-_spce 1 I2B BR 1 -0.55038516 79.904
+2 I        1 I2B I1 1 -0.12910576 126.90447
+3 I        1 I2B I2 1 -0.32050908 126.90447
+
+[ bonds ]
+; ai aj funct b0 kb
+1 2 1 0.2750 200000
+2 3 1 0.2890 200000
+
+[ angles ]
+; ai aj ak funct theta k
+1 2 3 1 180.0 1000.0

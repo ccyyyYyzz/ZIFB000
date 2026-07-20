@@ -1,0 +1,244 @@
+{
+  "analysis_date": "2026-07-11",
+  "analysis_id": "R581_CONVERGENCE_GATE",
+  "canonical": {
+    "control": {
+      "Q_s_mAh_cm2": 83.02019740060638,
+      "Q_theta_0p5_mAh_cm2": 99.5895751239597,
+      "Q_theta_0p9_mAh_cm2": 111.19726398792058,
+      "S_identity_max_abs": 0.0,
+      "endpoint": {
+        "A_bare_avg": 0.0104280473275,
+        "K_perm_rel_avg": 0.95622894131,
+        "S_direct": 1.75898600768,
+        "eps_s_avg": 0.00322420776207,
+        "q_mAh_cm2": 120.0,
+        "theta_avg": 0.98951331201,
+        "voltage_V": 1.72894038699
+      },
+      "rows": 1081
+    },
+    "endpoint_deltaV_physical_minus_control_mV": -289.53551652,
+    "max_abs_deltaV_mV": 289.53551652,
+    "physical": {
+      "Q_s_mAh_cm2": 83.02048145046658,
+      "Q_theta_0p5_mAh_cm2": null,
+      "Q_theta_0p9_mAh_cm2": null,
+      "S_identity_max_abs": 0.0,
+      "endpoint": {
+        "A_bare_avg": 0.688816401225,
+        "K_perm_rel_avg": 0.989099113911,
+        "S_direct": 1.79834495821,
+        "eps_s_avg": 0.000651170486234,
+        "q_mAh_cm2": 120.0,
+        "theta_avg": 0.307414707341,
+        "voltage_V": 1.43940487047
+      },
+      "rows": 1081
+    }
+  },
+  "errors": {},
+  "gates": {
+    "max_S_identity_abs": 1e-08,
+    "max_abs_Qs_change_mAh_cm2": 0.25,
+    "max_abs_control_Qtheta0p5_change_mAh_cm2": 0.5,
+    "max_abs_deltaV_endpoint_change_mV": 2.0,
+    "max_abs_endpoint_theta_change": 0.01,
+    "max_rel_endpoint_eps_change": 0.1
+  },
+  "mesh_gate": {
+    "checks": {
+      "S_identity": true,
+      "control_Qs": true,
+      "control_Qtheta0p5": true,
+      "control_eps_endpoint": true,
+      "control_theta_endpoint": true,
+      "deltaV": true,
+      "physical_Qs": true,
+      "physical_eps_endpoint": true,
+      "physical_theta_endpoint": true
+    },
+    "comparator": "7776-element mesh vs 1944-element mesh at rtol=3e-4",
+    "pass": true,
+    "values": {
+      "control_Qs_change_mAh_cm2": 0.012606894184941098,
+      "control_Qtheta0p5_change_mAh_cm2": 0.016029161575488615,
+      "control_endpoint_eps_rel_change": 0.03309781330039972,
+      "control_endpoint_theta_change": 0.00012676698200009273,
+      "endpoint_deltaV_change_mV": 0.09382492999998249,
+      "physical_Qs_change_mAh_cm2": 0.14305330098969193,
+      "physical_endpoint_eps_rel_change": 0.012714259182850648,
+      "physical_endpoint_theta_change": 0.0018700520259999909
+    }
+  },
+  "pending": [],
+  "provenance": {
+    "mesh_control": {
+      "mesh_elements": 7776,
+      "rtol": 0.0003,
+      "solved_mph": {
+        "bytes": 3164321331,
+        "path": "E:\\zifb_final_9129_luck\\battery_comsol\\02_outputs_core\\R581_CANONICAL_CLOSURE_REBUILD\\outputs\\R581_true_mesh_control_SOLVED.mph",
+        "sha256": "5238DE67C29187421FE88307371CB2F811469BF4B568CACD4A2E6328BDC37F13"
+      },
+      "stdout": {
+        "path": "E:\\zifb_final_9129_luck\\battery_comsol\\02_outputs_core\\R581_CANONICAL_CLOSURE_REBUILD\\logs\\R581_true_mesh_control_stdout.txt",
+        "sha256": "5B39E1BEB0100FF407D570A96EEE326DE6C4C8D0A697E5EA221AA387A24882E5"
+      },
+      "timeseries": {
+        "path": "E:\\zifb_final_9129_luck\\battery_comsol\\02_outputs_core\\R581_CANONICAL_CLOSURE_REBUILD\\outputs\\R581_true_mesh_control_timeseries.csv",
+        "sha256": "B6C0EAB603D17E9477CADAB04F6F0093D0C98261925561E510C82B9203704569"
+      }
+    },
+    "mesh_physical": {
+      "mesh_elements": 7776,
+      "rtol": 0.0003,
+      "solved_mph": {
+        "bytes": 3164315684,
+        "path": "E:\\zifb_final_9129_luck\\battery_comsol\\02_outputs_core\\R581_CANONICAL_CLOSURE_REBUILD\\outputs\\R581_true_mesh_physical_dense_SOLVED.mph",
+        "sha256": "37ABFE340F497EB35E4B5429C3C29FA3CD0A3C2773C8B8E2894CA5ACB0587104"
+      },
+      "stdout": {
+        "path": "E:\\zifb_final_9129_luck\\battery_comsol\\02_outputs_core\\R581_CANONICAL_CLOSURE_REBUILD\\logs\\R581_true_mesh_physical_stdout.txt",
+        "sha256": "BE07C283EB9B8FCE059393628AC790BFD7BEC58A6E4F43CFB7E20AA53FF9FB4B"
+      },
+      "timeseries": {
+        "path": "E:\\zifb_final_9129_luck\\battery_comsol\\02_outputs_core\\R581_CANONICAL_CLOSURE_REBUILD\\outputs\\R581_true_mesh_physical_timeseries.csv",
+        "sha256": "22B8AE22303A850BAEA710E293992103C5783AB158B63F7E7ACD757561014AF8"
+      }
+    },
+    "tolerance_control": {
+      "mesh_elements": 1944,
+      "rtol": 0.0003,
+      "solved_mph": {
+        "bytes": 889194557,
+        "path": "E:\\zifb_final_9129_luck\\battery_comsol\\02_outputs_core\\R581_CANONICAL_CLOSURE_REBUILD\\outputs\\R581_matched_control_REFINED_SOLVED.mph",
+        "sha256": "ABC47F54E6A7BF4CB612634D8BA7D74EB36BDC80F0E99C78C0A84702DD24BF0A"
+      },
+      "stdout": {
+        "path": "E:\\zifb_final_9129_luck\\battery_comsol\\02_outputs_core\\R581_CANONICAL_CLOSURE_REBUILD\\logs\\R581_refined_control_stdout.txt",
+        "sha256": "6754A00226D5A83BF6F2BE62A782EDEA0B2161C100E21F209D7BD0B2DC7E0065"
+      },
+      "timeseries": {
+        "path": "E:\\zifb_final_9129_luck\\battery_comsol\\02_outputs_core\\R581_CANONICAL_CLOSURE_REBUILD\\outputs\\R581_tolerance_control_timeseries.csv",
+        "sha256": "390EED41C8D39F090E8171C87CC5E962E22F8C7BC482F070EFC0F2882E8A475F"
+      }
+    },
+    "tolerance_physical": {
+      "mesh_elements": 1944,
+      "rtol": 0.0003,
+      "solved_mph": {
+        "bytes": 889191352,
+        "path": "E:\\zifb_final_9129_luck\\battery_comsol\\02_outputs_core\\R581_CANONICAL_CLOSURE_REBUILD\\outputs\\R581_matched_physical_dense_REFINED_SOLVED.mph",
+        "sha256": "14AAE0613E89636DDA73361165CCD7C23B44DD3CDF5ED516950CCA21D5C8F898"
+      },
+      "stdout": {
+        "path": "E:\\zifb_final_9129_luck\\battery_comsol\\02_outputs_core\\R581_CANONICAL_CLOSURE_REBUILD\\logs\\R581_refined_physical_stdout.txt",
+        "sha256": "1B9D2135C984EE5CE4D2A516E628F19C6C5586A1065075806AD1D873FCB264FB"
+      },
+      "timeseries": {
+        "path": "E:\\zifb_final_9129_luck\\battery_comsol\\02_outputs_core\\R581_CANONICAL_CLOSURE_REBUILD\\outputs\\R581_tolerance_physical_timeseries.csv",
+        "sha256": "16D7D353BB85993932EA64D8CF07231F90B95EED1C6533EF5034AA51A9CE18BC"
+      }
+    }
+  },
+  "release_pass": true,
+  "tighter_tolerance": {
+    "control": {
+      "Q_s_mAh_cm2": 82.90290121000463,
+      "Q_theta_0p5_mAh_cm2": 99.47973758954309,
+      "Q_theta_0p9_mAh_cm2": 111.08887776476952,
+      "S_identity_max_abs": 0.0,
+      "endpoint": {
+        "A_bare_avg": 0.0100874437801,
+        "K_perm_rel_avg": 0.958105247783,
+        "S_direct": 1.7649472869,
+        "eps_s_avg": 0.00305136320981,
+        "q_mAh_cm2": 120.0,
+        "theta_avg": 0.989855442618,
+        "voltage_V": 1.72763897118
+      },
+      "rows": 1081
+    },
+    "endpoint_deltaV_physical_minus_control_mV": -288.25008209000003,
+    "max_abs_deltaV_mV": 288.25008209000003,
+    "physical": {
+      "Q_s_mAh_cm2": 83.03541239294832,
+      "Q_theta_0p5_mAh_cm2": null,
+      "Q_theta_0p9_mAh_cm2": null,
+      "S_identity_max_abs": 0.0,
+      "endpoint": {
+        "A_bare_avg": 0.689024214506,
+        "K_perm_rel_avg": 0.989113305921,
+        "S_direct": 1.79799947817,
+        "eps_s_avg": 0.000650315998053,
+        "q_mAh_cm2": 120.0,
+        "theta_avg": 0.307210623347,
+        "voltage_V": 1.43938888909
+      },
+      "rows": 1081
+    }
+  },
+  "tolerance_gate": {
+    "checks": {
+      "S_identity": true,
+      "control_Qs": true,
+      "control_Qtheta0p5": true,
+      "control_eps_endpoint": true,
+      "control_theta_endpoint": true,
+      "deltaV": true,
+      "physical_Qs": true,
+      "physical_eps_endpoint": true,
+      "physical_theta_endpoint": true
+    },
+    "comparator": "tighter tolerance vs canonical",
+    "pass": true,
+    "values": {
+      "control_Qs_change_mAh_cm2": 0.11729619060174912,
+      "control_Qtheta0p5_change_mAh_cm2": 0.10983753441661293,
+      "control_endpoint_eps_rel_change": 0.05360837917871355,
+      "control_endpoint_theta_change": 0.00034213060799992423,
+      "endpoint_deltaV_change_mV": 1.2854344299999525,
+      "physical_Qs_change_mAh_cm2": 0.014930942481740317,
+      "physical_endpoint_eps_rel_change": 0.00131223419836154,
+      "physical_endpoint_theta_change": 0.00020408399400001498
+    }
+  },
+  "true_mesh": {
+    "control": {
+      "Q_s_mAh_cm2": 82.89029431581969,
+      "Q_theta_0p5_mAh_cm2": 99.4637084279676,
+      "Q_theta_0p9_mAh_cm2": 111.05079403170872,
+      "S_identity_max_abs": 0.0,
+      "endpoint": {
+        "A_bare_avg": 0.00996124760294,
+        "K_perm_rel_avg": 0.957035205166,
+        "S_direct": 1.76507771293,
+        "eps_s_avg": 0.00315235665964,
+        "q_mAh_cm2": 120.0,
+        "theta_avg": 0.9899822096,
+        "voltage_V": 1.72836440104
+      },
+      "rows": 1081
+    },
+    "endpoint_deltaV_physical_minus_control_mV": -288.15625716000005,
+    "max_abs_deltaV_mV": 288.15625716000005,
+    "physical": {
+      "Q_s_mAh_cm2": 82.89235909195862,
+      "Q_theta_0p5_mAh_cm2": null,
+      "Q_theta_0p9_mAh_cm2": null,
+      "S_identity_max_abs": 0.0,
+      "endpoint": {
+        "A_bare_avg": 0.687119888264,
+        "K_perm_rel_avg": 0.988976327058,
+        "S_direct": 1.80303721837,
+        "eps_s_avg": 0.000658584284203,
+        "q_mAh_cm2": 120.0,
+        "theta_avg": 0.309080675373,
+        "voltage_V": 1.44020814388
+      },
+      "rows": 1081
+    }
+  },
+  "true_mesh_element_ratio": 4.0
+}

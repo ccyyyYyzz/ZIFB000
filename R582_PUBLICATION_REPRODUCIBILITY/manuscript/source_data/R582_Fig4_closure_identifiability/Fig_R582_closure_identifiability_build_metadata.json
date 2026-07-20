@@ -1,0 +1,66 @@
+{
+  "figure_id": "Fig_R582_closure_identifiability",
+  "status": "PROTOTYPE_QA_PASS",
+  "core_conclusion": "Changing only the accessibility relation barely changes average saturation but strongly changes later calibration-controlled accessibility, retained-solid inventory, and voltage; the voltage observation layer is non-identifying for morphology.",
+  "production_authority": {
+    "branch_id": "PB-R526-J40-Q120-DSET5-v1",
+    "input_mph_sha256": "4813B306F39330CCEAF819C4AB8815C55A3DF8A04726741F33ACB801B8806B9B",
+    "study": "stdR522",
+    "solution": "sol5",
+    "dataset": "dset5"
+  },
+  "matched_true_mesh": {
+    "control_case_id": "matched_control_true_mesh",
+    "control_dataset": "dsetR581CtrlMesh",
+    "physical_case_id": "matched_physical_dense_true_mesh",
+    "physical_dataset": "dsetR581PhysMesh",
+    "study": "stdR522",
+    "solution": "sol5",
+    "mesh_elements": 7776,
+    "rtol": 0.0003,
+    "only_model_expression_change": {
+      "cov_theta_surf": "1-exp(-35.4*eps_s_reg^0.6222)",
+      "theta_eff_R520": "1-exp(-35.4*eps_s_reg^0.6222)"
+    },
+    "parameter_inventory_identical": true,
+    "raw_or_original_mph_modified": false
+  },
+  "headline_values": {
+    "Q_s_baseline_mAh_cm2": 82.89029431581969,
+    "Q_s_coupled_island_mAh_cm2": 82.89235909195862,
+    "delta_Q_s_mAh_cm2": 0.0020647761389369634,
+    "endpoint_deltaV_island_minus_baseline_mV": -288.15625716000005,
+    "baseline_endpoint_eps_s": 0.00315235665964,
+    "coupled_island_endpoint_eps_s": 0.000658584284203
+  },
+  "font": {
+    "family": "TeX Gyre Termes",
+    "font_paths": {
+      "regular": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-regular.otf",
+      "bold": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-bold.otf",
+      "italic": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-italic.otf",
+      "bolditalic": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-bolditalic.otf"
+    },
+    "font_sha256": {
+      "regular": "CC3FE7C707B81428D23D54DF3EADD9228A2BF6A4D43125D94DF56F5F63134659",
+      "bold": "2FB3E952065FA153C7E4E64E04B98B9D79225739B6025AA3F0F0782D299FF61E",
+      "italic": "6DD103A1672E50568CD2F8A706CCD48443D44D7D073A59D2286F4E6F746575D6",
+      "bolditalic": "1BF6AF99CB0E26C12951317032D79B96AE009551E59CCF02A5B24F325ECFEC87"
+    },
+    "fallback_note": null
+  },
+  "export": {
+    "width_mm": 180.0,
+    "height_mm": 118.0,
+    "raster_dpi": 600,
+    "preview_dpi": 300
+  },
+  "determinism": {
+    "svg": true,
+    "pdf": true,
+    "png": true,
+    "tiff": true,
+    "preview": true,
+    "grayscale": true
+  }
+}

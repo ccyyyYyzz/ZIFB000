@@ -1,0 +1,244 @@
+{
+  "figure": "SIFig_R582_S6_voltage_degeneracy",
+  "single_dominant_claim": "The selected voltage contribution can be reproduced by multiple reduced accessibility-factor/coefficient pairs, so voltage does not uniquely identify native remaining area.",
+  "evidence_class": "E-POST on E-EXP/E-SIM inputs",
+  "frozen_date": "2026-07-20",
+  "final_size_mm": {
+    "width": 180.0,
+    "height": 92.0
+  },
+  "font": {
+    "family": "TeX Gyre Termes",
+    "minimum_pt": 6.5,
+    "registered_faces": [
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-regular.otf",
+        "sha256": "CC3FE7C707B81428D23D54DF3EADD9228A2BF6A4D43125D94DF56F5F63134659"
+      },
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-bold.otf",
+        "sha256": "2FB3E952065FA153C7E4E64E04B98B9D79225739B6025AA3F0F0782D299FF61E"
+      },
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-italic.otf",
+        "sha256": "6DD103A1672E50568CD2F8A706CCD48443D44D7D073A59D2286F4E6F746575D6"
+      },
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-bolditalic.otf",
+        "sha256": "1BF6AF99CB0E26C12951317032D79B96AE009551E59CCF02A5B24F325ECFEC87"
+      }
+    ]
+  },
+  "claim_boundary": "R_theta,end = 1 - theta_end is the reduced calibration-controlled accessibility factor, not native A_bare/A0; the native relation is A_bare/A0 = R_theta*T_pore. This reduced observation-layer result is neither an independent validation nor a deposit-morphology inference.",
+  "data_audit": {
+    "selected_trace_points": 90,
+    "physical_files": 1,
+    "selected_cycle": 20,
+    "fit_points": 72,
+    "fit_Q_observed_mAh_cm2": [
+      2.6723333333333423,
+      97.5400520833334
+    ],
+    "peak_Q_mAh_cm2": 97.5400520833334,
+    "peak_voltage_V": 1.4862,
+    "RMSE_mV": 7.243144049346482,
+    "fixed_accessibility_voltage_contribution_mV": 70.81252822683118,
+    "registered_point_identity_pass": true,
+    "evidence_class": "E-POST on E-EXP/E-SIM inputs"
+  },
+  "qa": {
+    "build": {
+      "width_mm": 180.0,
+      "height_mm": 92.0,
+      "font_audit": {
+        "minimum_text_pt": 6.5,
+        "resolved_font_families": [
+          "TeX Gyre Termes"
+        ],
+        "text_items": 64
+      }
+    },
+    "deterministic_second_render": {
+      "pass": true,
+      "sha256": {
+        "svg": "0B3E5EB818674593025BE26DD91F99147AA0B305692F5009D36163026FCAB60B",
+        "pdf": "50C51FE9352F332CE5EC7994A31F7E1ABE279358B412A9F9DEBFB5FFF6CC752D",
+        "png": "D37F71230C7E9C7C9AF982EFCBF2DA2B963023E031CB814D770FB6483DC4ADF0",
+        "tiff": "B113CDD5C020BEC6BC4B6EFE05E3B0292A168BE01E8B54F8A4B80FFF18479A5E",
+        "preview": "852B54825CAABB05D5D3F9969593C514729340EBB81B2EC308DABE2683FAB8B5",
+        "grayscale": "E070165ACF3F67388E49E8D447EF1731CA2F2A3A0AD4BCF5B3C6BB828452BF3B"
+      }
+    },
+    "pdf_fonts": {
+      "font_names": [
+        "CCVYUO+TeXGyreTermes-Bold",
+        "CCVYUO+TeXGyreTermes-Italic",
+        "CCVYUO+TeXGyreTermes-Regular"
+      ],
+      "required_family": "TeX Gyre Termes",
+      "forbidden_families": [],
+      "type3_present": false,
+      "pass": true
+    },
+    "pdf_size": {
+      "expected_mm": [
+        180.0,
+        92.0
+      ],
+      "observed_mm": [
+        179.9999222222222,
+        91.99985833333332
+      ],
+      "pass": true
+    },
+    "raster": {
+      "expected_600dpi_pixels": [
+        4252,
+        2173
+      ],
+      "png_pixels": [
+        4252,
+        2173
+      ],
+      "tiff_pixels": [
+        4252,
+        2173
+      ],
+      "expected_300dpi_preview_pixels": [
+        2126,
+        1087
+      ],
+      "preview_pixels": [
+        2126,
+        1087
+      ],
+      "grayscale_pixels": [
+        2126,
+        1087
+      ],
+      "grayscale_mode": "L",
+      "grayscale_extrema": [
+        0,
+        255
+      ],
+      "pass": true
+    },
+    "svg": {
+      "editable_text": true,
+      "required_family_present": true,
+      "forbidden": [],
+      "pass": true
+    }
+  },
+  "inputs": [
+    {
+      "path": "manuscript/source_data/R582_SI_FigS6_voltage_degeneracy/inputs/representative_vq_profiles_for_article.csv",
+      "size_bytes": 252387,
+      "sha256": "150AFD09C0AE8FEE58A8DFE1CCC412378CB1F7893075F54BDFFD8DE0AED3D1F1"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS6_voltage_degeneracy/inputs/R532_voltage_closure.csv",
+      "size_bytes": 149303,
+      "sha256": "26BC169951755169F4AF198E3CBD0CFEAB8F2E81542AE0658519F833A2D5F5B1"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS6_voltage_degeneracy/inputs/R538_coverage_tafel_degeneracy.csv",
+      "size_bytes": 502,
+      "sha256": "023A2EDD74DF449D5F30CA808A97C92A45A721A50B24AE51BF7A78733563C605"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS6_voltage_degeneracy/inputs/R538_reanchor_summary.csv",
+      "size_bytes": 334,
+      "sha256": "DD783E5B5FE7CC6A8B795904610BC5BA320041F16066C827ED6D9C325DA513B7"
+    }
+  ],
+  "figure_outputs": [
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S6_voltage_degeneracy.svg",
+      "size_bytes": 29676,
+      "sha256": "0B3E5EB818674593025BE26DD91F99147AA0B305692F5009D36163026FCAB60B"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S6_voltage_degeneracy.pdf",
+      "size_bytes": 25870,
+      "sha256": "50C51FE9352F332CE5EC7994A31F7E1ABE279358B412A9F9DEBFB5FFF6CC752D"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S6_voltage_degeneracy.png",
+      "size_bytes": 409573,
+      "sha256": "D37F71230C7E9C7C9AF982EFCBF2DA2B963023E031CB814D770FB6483DC4ADF0"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S6_voltage_degeneracy.tiff",
+      "size_bytes": 613516,
+      "sha256": "B113CDD5C020BEC6BC4B6EFE05E3B0292A168BE01E8B54F8A4B80FFF18479A5E"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S6_voltage_degeneracy_180mm_preview.png",
+      "size_bytes": 276730,
+      "sha256": "852B54825CAABB05D5D3F9969593C514729340EBB81B2EC308DABE2683FAB8B5"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S6_voltage_degeneracy_180mm_preview_grayscale.png",
+      "size_bytes": 115950,
+      "sha256": "E070165ACF3F67388E49E8D447EF1731CA2F2A3A0AD4BCF5B3C6BB828452BF3B"
+    }
+  ],
+  "source_bundle_files": [
+    {
+      "path": "manuscript/source_data/R582_SI_FigS6_voltage_degeneracy/R582_SIFig_S6_input_manifest.csv",
+      "size_bytes": 1444,
+      "sha256": "B47187DA05EF6D6E890E55B3D0D18E06880B7BD03C644FD8CA8942D59A55ACB0"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS6_voltage_degeneracy/R582_SIFig_S6_voltage_fit.csv",
+      "size_bytes": 4510,
+      "sha256": "0C8650866F38341C3929B2D5F84982E32B17D6D4E0491B5BF352E8A8BE75955B"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS6_voltage_degeneracy/R582_SIFig_S6_degeneracy_curve.csv",
+      "size_bytes": 24358,
+      "sha256": "BD8A2076E29543AE07B6938083EC2A903ECA3AEC108D7B50B28292A1E0277F5A"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS6_voltage_degeneracy/R582_SIFig_S6_degeneracy_points.csv",
+      "size_bytes": 542,
+      "sha256": "1966BB79735C6020B8F77759BA392CE4F028DB4133A1FA73F647B0E98B5B157A"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS6_voltage_degeneracy/R582_SIFig_S6_parameter_table.csv",
+      "size_bytes": 600,
+      "sha256": "2783CAD310C4AD8ADAE81CC2F9470DF340EF0CB7950F37F50DB3D343C102AA24"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS6_voltage_degeneracy/r582_si_figure_tools.py",
+      "size_bytes": 11725,
+      "sha256": "83BF5D051CBC5CE86C4515D3AA29DD11DB9C9067ECD5331106CF48FCE176A0EB"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS6_voltage_degeneracy/make_sifig_r582_s6_voltage_degeneracy.py",
+      "size_bytes": 19984,
+      "sha256": "2014254BB2C8DC4BE56637FC1F575B40B6511DC110B1D2D00952DF44573ED32B"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS6_voltage_degeneracy/FIGURE_CONTRACT.md",
+      "size_bytes": 2170,
+      "sha256": "94010CC10A984A2125A0D88AB62847B04C969E66D2347C569F0ED8B7E3CD1E23"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS6_voltage_degeneracy/CAPTION_DRAFT.md",
+      "size_bytes": 1118,
+      "sha256": "06E811C8FC978355ED5F086CCEF74A1E2A76BF667FDB4E3517A2CFEB5CBC8CAB"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS6_voltage_degeneracy/README.md",
+      "size_bytes": 984,
+      "sha256": "572B37CFF27858CE7016B34303A920568C7B95AAA8CEE6349B56F32845AF49C1"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS6_voltage_degeneracy/QA_NOTES.md",
+      "size_bytes": 1722,
+      "sha256": "D211381999677A364138200E3779C4EECF3827601854EB6B2B29C97B329BB24D"
+    }
+  ]
+}

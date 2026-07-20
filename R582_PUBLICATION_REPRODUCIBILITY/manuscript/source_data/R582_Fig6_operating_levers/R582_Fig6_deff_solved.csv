@@ -1,0 +1,8 @@
+D_eff_over_D0,Q_s_mAh_cm2,case_id,evidence_class,solve_status,source_id,threshold_method
+0.5,45.034336757836,D_05_Q120,full_solve,PASS,R525_all_timeseries,linear interpolation across first S_avg=1 crossing
+0.6,57.360415738333,D_06_Q120,full_solve,PASS,R567_deff_grid_timeseries,linear interpolation across first S_avg=1 crossing
+0.8,73.1314713891251,D_08_Q120,full_solve,PASS,R567_deff_grid_timeseries,linear interpolation across first S_avg=1 crossing
+1.0,83.0201994718443,baseline_J40_Q120,full_solve,PASS,R525_all_timeseries,linear interpolation across first S_avg=1 crossing
+1.2,89.9718414111178,D_12_Q120,full_solve,PASS,R567_deff_grid_timeseries,linear interpolation across first S_avg=1 crossing
+1.5,97.4900138275692,D_15_Q120,full_solve,PASS,R567_deff_grid_timeseries,linear interpolation across first S_avg=1 crossing
+2.0,106.204860777606,D_20_Q120,full_solve,PASS,R525_all_timeseries,linear interpolation across first S_avg=1 crossing

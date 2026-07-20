@@ -1,0 +1,5 @@
+site,E_ads_D3_plus_PBE_BSSE_eV,relative_to_basal_eV,confidence,evidence,paper_use,source
+C-OH,-0.997723869306,-0.595121894142,high,"Parse-only check: I-I 2.835 A, nearest I-O 3.532 A, closed shell MULTIPLICITY=1 in geo/SP/BSSE inputs; no I-O bond signature.",Use as molecular strong-site/halogen-bond trap.,prior EC2 result plus local parse
+C=O,-0.848237011813,-0.44563503665,high,"Five orientation geo_opt scan all PASS; selected end-on O vertical; I-I 2.756 A, nearest I-O 2.840 A; new E_ads overturns old near-zero geometry.",Use revised value; old +0.005 eV should be retired as poor initial geometry.,sanity EC2 rerun
+basal,-0.402601975164,0,high,Reused prior PASS optimized-coordinate SP+PBE-BSSE baseline; not rerun in sanity pass.,Use as baseline.,prior EC2 ingest
+vacancy,-0.3184679184,0.0841340567636,high,"Robust open-shell rerun PASS with MULTIPLICITY=3, LSD, Fermi smearing, ADDED_MOS=80, Broyden mixing; I-I 2.767 A, I2 center 0.577 A from vacancy xy and 3.686 A above sheet.",Use as robust weak/moderate vacancy result; still weaker than basal by 0.084 eV.,sanity EC2 rerun

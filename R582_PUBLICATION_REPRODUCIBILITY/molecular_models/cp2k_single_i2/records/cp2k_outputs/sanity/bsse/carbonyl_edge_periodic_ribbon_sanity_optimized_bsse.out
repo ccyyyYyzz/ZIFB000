@@ -1,0 +1,2579 @@
+ DBCSR| CPU Multiplication driver                                           BLAS (U)
+ DBCSR| Multrec recursion limit                                              512 (U)
+ DBCSR| Multiplication stack size                                           1000 (D)
+ DBCSR| Maximum elements for images                                    UNLIMITED (U)
+ DBCSR| Multiplicative factor virtual images                                   1 (U)
+ DBCSR| Use multiplication densification                                       T (D)
+ DBCSR| Multiplication size stacks                                             3 (U)
+ DBCSR| Use memory pool for CPU allocation                                     F (U)
+ DBCSR| Number of 3D layers                                               SINGLE (U)
+ DBCSR| Use MPI memory allocation                                              F (U)
+ DBCSR| Use RMA algorithm                                                      F (U)
+ DBCSR| Use Communication thread                                               T (U)
+ DBCSR| Communication thread load                                             83 (D)
+ DBCSR| MPI: My process id                                                     0
+ DBCSR| MPI: Number of processes                                              16
+ DBCSR| OMP: Current number of threads                                         2
+ DBCSR| OMP: Max number of threads                                             2
+ DBCSR| Split modifier for TAS multiplication algorithm                  1.0E+00 (U)
+
+
+  **** **** ******  **  PROGRAM STARTED AT               2026-06-19 19:54:09.989
+ ***** ** ***  *** **   PROGRAM STARTED ON         ip-172-31-89-158.ec2.internal
+ **    ****   ******    PROGRAM STARTED BY                             <unknown>
+ ***** **    ** ** **   PROGRAM PROCESS ID                                 10717
+  **** **  *******  **  PROGRAM STARTED IN /opt/cp2k_sanity/cp2k_adsorption_hete
+                                           rogeneity
+
+ CP2K| version string:                                       CP2K version 2026.1
+ CP2K| source code revision number:                                      aceff1c
+ CP2K| cp2kflags: omp libint fftw3 libxc parallel scalapack mpi_f08 cosma xsmm p
+ CP2K|            lumed2 spglib sirius libtorch hdf5 trexio
+ CP2K| is freely available from                            https://www.cp2k.org/
+ CP2K| Program compiled at                                   2026-06-16 16:35:48
+ CP2K| Program compiled on                                                      
+ CP2K| Program compiled for                                               x86_64
+ CP2K| Data directory path                  /opt/cp2k_sanity/env/share/cp2k/data
+ CP2K| Input file name        cp2k_inputs/sanity/bsse/carbonyl_edge_periodic_rib
+
+ GLOBAL| Force Environment number                                              1
+ GLOBAL| Basis set file name            /opt/cp2k_sanity/env/share/cp2k/data/BAS
+ GLOBAL| Potential file name            /opt/cp2k_sanity/env/share/cp2k/data/GTH
+ GLOBAL| MM Potential file name                                     MM_POTENTIAL
+ GLOBAL| Coordinate file name                                      __STD_INPUT__
+ GLOBAL| Method name                                                        CP2K
+ GLOBAL| Project name                   carbonyl_edge_periodic_ribbon_sanity_opt
+ GLOBAL| Run type                                                           BSSE
+ GLOBAL| FFT library                                                       FFTW3
+ GLOBAL| Diagonalization library                                       ScaLAPACK
+ GLOBAL| Cholesky decomposition library                                ScaLAPACK
+ GLOBAL| DGEMM library                                                      BLAS
+ GLOBAL| Orthonormality check for eigenvectors                          DISABLED
+ GLOBAL| Matrix multiplication library                                     COSMA
+ GLOBAL| All-to-all communication in single precision                          F
+ GLOBAL| FFTs using library dependent lengths                                  F
+ GLOBAL| Grid backend                                                       AUTO
+ GLOBAL| Global print level                                                  LOW
+ GLOBAL| MPI I/O enabled                                                       T
+ GLOBAL| Total number of message passing processes                            16
+ GLOBAL| Number of distributed systems (nodes)                                 1
+ GLOBAL| Number of threads for this process                                    2
+ GLOBAL| This output is from process                                           0
+ GLOBAL| OpenMP stack size per thread (OMP_STACKSIZE)                    default
+ GLOBAL| CPU model name                                            AMD EPYC 9R14
+ GLOBAL| CPUID                                                              1003
+ GLOBAL| Compiled for CPUID                                                 1002
+
+ *** HINT in environment.F:960 :: The compiler target flags (x86_avx2)     ***
+ *** used to build this binary cannot exploit all extensions of this CPU   ***
+ *** model (x86_avx512). Consider compiler target flags as part of FCFLAGS ***
+ *** and CFLAGS (ARCH file).                                               ***
+
+
+ MEMORY| system memory details [Kb]
+ MEMORY|                        rank 0           min           max       average
+ MEMORY| MemTotal             64430560      64430560      64430560      64430560
+ MEMORY| MemFree              56365596      56365596      56365596      56365596
+ MEMORY| Buffers                  3172          3172          3172          3172
+ MEMORY| Cached                4582116       4582116       4582116       4582116
+ MEMORY| Slab                   307744        307744        307744        307744
+ MEMORY| SReclaimable           120492        120492        120492        120492
+ MEMORY| MemLikelyFree        61071376      61071376      61071376      61071376
+
+
+ GENERATE|  Preliminary Number of Bonds generated:                             0
+ GENERATE|  Achieved consistency in connectivity generation.
+
+ *******************************************************************************
+ *******************************************************************************
+ **                                                                           **
+ **     #####                         ##              ##                      **
+ **    ##   ##            ##          ##              ##                      **
+ **   ##     ##                       ##            ######                    **
+ **   ##     ##  ##   ##  ##   #####  ##  ##   ####   ##    #####    #####    **
+ **   ##     ##  ##   ##  ##  ##      ## ##   ##      ##   ##   ##  ##   ##   **
+ **   ##  ## ##  ##   ##  ##  ##      ####     ###    ##   ######   ######    **
+ **    ##  ###   ##   ##  ##  ##      ## ##      ##   ##   ##       ##        **
+ **     #######   #####   ##   #####  ##  ##  ####    ##    #####   ##        **
+ **           ##                                                    ##        **
+ **                                                                           **
+ **                                                ... make the atoms dance   **
+ **                                                                           **
+ **            Copyright (C) by CP2K developers group (2000-2026)             **
+ **                      J. Chem. Phys. 152, 194103 (2020)                    **
+ **                                                                           **
+ *******************************************************************************
+
+
+ TOTAL NUMBERS AND MAXIMUM NUMBERS
+
+  Total number of            - Atomic kinds:                                   4
+                             - Atoms:                                        146
+                             - Shell sets:                                   146
+                             - Shells:                                       700
+                             - Primitive Cartesian functions:                730
+                             - Cartesian basis functions:                   1909
+                             - Spherical basis functions:                   1778
+
+  Maximum angular momentum of- Orbital basis functions:                        2
+                             - Local part of the GTH pseudopotential:          2
+                             - Non-local part of the GTH pseudopotential:      4
+
+
+ SCF PARAMETERS         Density guess:                                    ATOMIC
+                        --------------------------------------------------------
+                        max_scf:                                             260
+                        max_scf_history:                                       0
+                        max_diis:                                              4
+                        --------------------------------------------------------
+                        eps_scf:                                        1.00E-05
+                        eps_scf_history:                                0.00E+00
+                        eps_diis:                                       0.00E+00
+                        eps_eigval:                                     1.00E-05
+                        --------------------------------------------------------
+                        level_shift [a.u.]:                             0.000000
+                        --------------------------------------------------------
+                        Outer loop SCF in use 
+                        No variables optimised in outer loop
+                        eps_scf                                         1.00E-05
+                        max_scf                                               10
+                        No outer loop optimization
+                        step_size                                       5.00E-01
+
+ -------------------------------------------------------------------------------
+ -                                                                             -
+ -  BSSE CALCULATION         FRAGMENT CONF: 10        FRAGMENT SUBCONF: 10     -
+ -                           CHARGE =     0           MULTIPLICITY =     0     -
+ -                                                                             -
+ -                 ATOM INDEX                              ATOM NAME           -
+ -                 ----------                              ---------           -
+ -                      1                                   C                  -
+ -                      2                                   C                  -
+ -                      3                                   C                  -
+ -                      4                                   C                  -
+ -                      5                                   C                  -
+ -                      6                                   C                  -
+ -                      7                                   C                  -
+ -                      8                                   C                  -
+ -                      9                                   C                  -
+ -                     10                                   C                  -
+ -                     11                                   C                  -
+ -                     12                                   C                  -
+ -                     13                                   C                  -
+ -                     14                                   C                  -
+ -                     15                                   C                  -
+ -                     16                                   C                  -
+ -                     17                                   C                  -
+ -                     18                                   C                  -
+ -                     19                                   C                  -
+ -                     20                                   C                  -
+ -                     21                                   C                  -
+ -                     22                                   C                  -
+ -                     23                                   C                  -
+ -                     24                                   C                  -
+ -                     25                                   C                  -
+ -                     26                                   C                  -
+ -                     27                                   C                  -
+ -                     28                                   C                  -
+ -                     29                                   C                  -
+ -                     30                                   C                  -
+ -                     31                                   C                  -
+ -                     32                                   C                  -
+ -                     33                                   C                  -
+ -                     34                                   C                  -
+ -                     35                                   C                  -
+ -                     36                                   C                  -
+ -                     37                                   C                  -
+ -                     38                                   C                  -
+ -                     39                                   C                  -
+ -                     40                                   C                  -
+ -                     41                                   C                  -
+ -                     42                                   C                  -
+ -                     43                                   C                  -
+ -                     44                                   C                  -
+ -                     45                                   C                  -
+ -                     46                                   C                  -
+ -                     47                                   C                  -
+ -                     48                                   C                  -
+ -                     49                                   C                  -
+ -                     50                                   C                  -
+ -                     51                                   C                  -
+ -                     52                                   C                  -
+ -                     53                                   C                  -
+ -                     54                                   C                  -
+ -                     55                                   C                  -
+ -                     56                                   C                  -
+ -                     57                                   C                  -
+ -                     58                                   C                  -
+ -                     59                                   C                  -
+ -                     60                                   C                  -
+ -                     61                                   C                  -
+ -                     62                                   C                  -
+ -                     63                                   C                  -
+ -                     64                                   C                  -
+ -                     65                                   C                  -
+ -                     66                                   C                  -
+ -                     67                                   C                  -
+ -                     68                                   C                  -
+ -                     69                                   C                  -
+ -                     70                                   C                  -
+ -                     71                                   C                  -
+ -                     72                                   C                  -
+ -                     73                                   C                  -
+ -                     74                                   C                  -
+ -                     75                                   C                  -
+ -                     76                                   C                  -
+ -                     77                                   C                  -
+ -                     78                                   C                  -
+ -                     79                                   C                  -
+ -                     80                                   C                  -
+ -                     81                                   C                  -
+ -                     82                                   C                  -
+ -                     83                                   C                  -
+ -                     84                                   C                  -
+ -                     85                                   C                  -
+ -                     86                                   C                  -
+ -                     87                                   C                  -
+ -                     88                                   C                  -
+ -                     89                                   C                  -
+ -                     90                                   C                  -
+ -                     91                                   C                  -
+ -                     92                                   C                  -
+ -                     93                                   C                  -
+ -                     94                                   C                  -
+ -                     95                                   C                  -
+ -                     96                                   C                  -
+ -                     97                                   C                  -
+ -                     98                                   C                  -
+ -                     99                                   C                  -
+ -                    100                                   C                  -
+ -                    101                                   C                  -
+ -                    102                                   C                  -
+ -                    103                                   C                  -
+ -                    104                                   C                  -
+ -                    105                                   C                  -
+ -                    106                                   C                  -
+ -                    107                                   C                  -
+ -                    108                                   C                  -
+ -                    109                                   C                  -
+ -                    110                                   C                  -
+ -                    111                                   C                  -
+ -                    112                                   C                  -
+ -                    113                                   C                  -
+ -                    114                                   C                  -
+ -                    115                                   C                  -
+ -                    116                                   C                  -
+ -                    117                                   C                  -
+ -                    118                                   C                  -
+ -                    119                                   C                  -
+ -                    120                                   C                  -
+ -                    121                                   C                  -
+ -                    122                                   C                  -
+ -                    123                                   C                  -
+ -                    124                                   C                  -
+ -                    125                                   C                  -
+ -                    126                                   C                  -
+ -                    127                                   C                  -
+ -                    128                                   C                  -
+ -                    129                                   H                  -
+ -                    130                                   H                  -
+ -                    131                                   H                  -
+ -                    132                                   H                  -
+ -                    133                                   H                  -
+ -                    134                                   H                  -
+ -                    135                                   H                  -
+ -                    136                                   H                  -
+ -                    137                                   H                  -
+ -                    138                                   H                  -
+ -                    139                                   H                  -
+ -                    140                                   H                  -
+ -                    141                                   H                  -
+ -                    142                                   H                  -
+ -                    143                                   H                  -
+ -                    144                                   O                  -
+ -------------------------------------------------------------------------------
+
+ *******************************************************************************
+ *******************************************************************************
+ **                                                                           **
+ **     #####                         ##              ##                      **
+ **    ##   ##            ##          ##              ##                      **
+ **   ##     ##                       ##            ######                    **
+ **   ##     ##  ##   ##  ##   #####  ##  ##   ####   ##    #####    #####    **
+ **   ##     ##  ##   ##  ##  ##      ## ##   ##      ##   ##   ##  ##   ##   **
+ **   ##  ## ##  ##   ##  ##  ##      ####     ###    ##   ######   ######    **
+ **    ##  ###   ##   ##  ##  ##      ## ##      ##   ##   ##       ##        **
+ **     #######   #####   ##   #####  ##  ##  ####    ##    #####   ##        **
+ **           ##                                                    ##        **
+ **                                                                           **
+ **                                                ... make the atoms dance   **
+ **                                                                           **
+ **            Copyright (C) by CP2K developers group (2000-2026)             **
+ **                      J. Chem. Phys. 152, 194103 (2020)                    **
+ **                                                                           **
+ *******************************************************************************
+
+
+ TOTAL NUMBERS AND MAXIMUM NUMBERS
+
+  Total number of            - Atomic kinds:                                   3
+                             - Atoms:                                        144
+                             - Shell sets:                                   144
+                             - Shells:                                       690
+                             - Primitive Cartesian functions:                720
+                             - Cartesian basis functions:                   1881
+                             - Spherical basis functions:                   1752
+
+  Maximum angular momentum of- Orbital basis functions:                        2
+                             - Local part of the GTH pseudopotential:          2
+                             - Non-local part of the GTH pseudopotential:      0
+
+
+ SCF PARAMETERS         Density guess:                                    ATOMIC
+                        --------------------------------------------------------
+                        max_scf:                                             260
+                        max_scf_history:                                       0
+                        max_diis:                                              4
+                        --------------------------------------------------------
+                        eps_scf:                                        1.00E-05
+                        eps_scf_history:                                0.00E+00
+                        eps_diis:                                       0.00E+00
+                        eps_eigval:                                     1.00E-05
+                        --------------------------------------------------------
+                        level_shift [a.u.]:                             0.000000
+                        --------------------------------------------------------
+                        Outer loop SCF in use 
+                        No variables optimised in outer loop
+                        eps_scf                                         1.00E-05
+                        max_scf                                               10
+                        No outer loop optimization
+                        step_size                                       5.00E-01
+
+ Extrapolation method: initial_guess
+
+ Spin 1
+
+ Number of electrons:                                                        267
+ Number of occupied orbitals:                                                267
+ Number of molecular orbitals:                                               267
+
+ Spin 2
+
+ Number of electrons:                                                        266
+ Number of occupied orbitals:                                                266
+ Number of molecular orbitals:                                               266
+
+ Number of orbital functions:                                               1752
+ Number of independent orbital functions:                                   1752
+
+
+ SCF WAVEFUNCTION OPTIMIZATION
+
+  ----------------------------------- OT ---------------------------------------
+  Minimizer      : DIIS                : direct inversion
+                                         in the iterative subspace
+                                         using   7 DIIS vectors
+                                         safer DIIS on
+  Preconditioner : FULL_SINGLE_INVERSE : inversion of 
+                                         H + eS - 2*(Sc)(c^T*H*c+const)(Sc)^T
+  Precond_solver : DEFAULT
+  stepsize       :    0.08000000                  energy_gap     :    0.08000000
+  eps_taylor     :   0.10000E-15                  max_taylor     :             4
+  ----------------------------------- OT ---------------------------------------
+
+  Step     Update method      Time    Convergence         Total energy    Change
+  ------------------------------------------------------------------------------
+     1 OT DIIS     0.80E-01    1.2     0.01429475      -702.5799813964 -7.03E+02
+     2 OT DIIS     0.80E-01    0.9     0.01272481      -714.0012476113 -1.14E+01
+     3 OT DIIS     0.80E-01    0.9     0.01072665      -720.1499689851 -6.15E+00
+     4 OT DIIS     0.80E-01    0.9     0.00881219      -731.1285273914 -1.10E+01
+     5 OT DIIS     0.80E-01    0.9     0.00547370      -743.3216238175 -1.22E+01
+     6 OT DIIS     0.80E-01    0.9     0.00438853      -746.0583627295 -2.74E+00
+     7 OT DIIS     0.80E-01    0.9     0.00261329      -749.8963830023 -3.84E+00
+     8 OT DIIS     0.80E-01    0.9     0.00215098      -750.6683951295 -7.72E-01
+     9 OT DIIS     0.80E-01    0.9     0.00147420      -751.8129304621 -1.14E+00
+    10 OT DIIS     0.80E-01    0.9     0.00119237      -752.1950643774 -3.82E-01
+    11 OT DIIS     0.80E-01    0.9     0.00097496      -752.5557159163 -3.61E-01
+    12 OT DIIS     0.80E-01    0.9     0.00077389      -752.8142000750 -2.58E-01
+    13 OT DIIS     0.80E-01    0.9     0.00065953      -752.9969704050 -1.83E-01
+    14 OT DIIS     0.80E-01    0.9     0.00050973      -753.1591827731 -1.62E-01
+    15 OT DIIS     0.80E-01    0.9     0.00046763      -753.2251661375 -6.60E-02
+    16 OT DIIS     0.80E-01    0.9     0.00039038      -753.2971800508 -7.20E-02
+    17 OT DIIS     0.80E-01    0.9     0.00036045      -753.3462887852 -4.91E-02
+    18 OT DIIS     0.80E-01    0.9     0.00030093      -753.3946255167 -4.83E-02
+    19 OT DIIS     0.80E-01    0.9     0.00027112      -753.4275206935 -3.29E-02
+    20 OT DIIS     0.80E-01    0.9     0.00023349      -753.4659956540 -3.85E-02
+    21 OT DIIS     0.80E-01    0.9     0.00020920      -753.4973765846 -3.14E-02
+    22 OT DIIS     0.80E-01    0.9     0.00018938      -753.5118353626 -1.45E-02
+    23 OT DIIS     0.80E-01    0.9     0.00018542      -753.5308106257 -1.90E-02
+    24 OT DIIS     0.80E-01    0.9     0.00017065      -753.5373447281 -6.53E-03
+    25 OT DIIS     0.80E-01    0.9     0.00016038      -753.5441475784 -6.80E-03
+    26 OT DIIS     0.80E-01    0.9     0.00013038      -753.5707074130 -2.66E-02
+    27 OT DIIS     0.80E-01    0.9     0.00012474      -753.5740145136 -3.31E-03
+    28 OT DIIS     0.80E-01    0.9     0.00010693      -753.5867671300 -1.28E-02
+    29 OT DIIS     0.80E-01    0.9     0.00009413      -753.5973976705 -1.06E-02
+    30 OT DIIS     0.80E-01    0.9     0.00008642      -753.6018266895 -4.43E-03
+    31 OT DIIS     0.80E-01    0.9     0.00007701      -753.6091820066 -7.36E-03
+    32 OT DIIS     0.80E-01    0.9     0.00007324      -753.6109432154 -1.76E-03
+    33 OT DIIS     0.80E-01    0.9     0.00007018      -753.6152760149 -4.33E-03
+    34 OT DIIS     0.80E-01    0.9     0.00006540      -753.6161843453 -9.08E-04
+    35 OT DIIS     0.80E-01    0.9     0.00005919      -753.6194264503 -3.24E-03
+    36 OT DIIS     0.80E-01    0.9     0.00005297      -753.6235231987 -4.10E-03
+    37 OT DIIS     0.80E-01    0.9     0.00005342      -753.6246629568 -1.14E-03
+    38 OT DIIS     0.80E-01    1.0     0.00004513      -753.6281409804 -3.48E-03
+    39 OT DIIS     0.80E-01    1.0     0.00004563      -753.6288710063 -7.30E-04
+    40 OT DIIS     0.80E-01    1.0     0.00003931      -753.6312069126 -2.34E-03
+    41 OT DIIS     0.80E-01    1.0     0.00003707      -753.6326320863 -1.43E-03
+    42 OT DIIS     0.80E-01    1.0     0.00003329      -753.6343241082 -1.69E-03
+    43 OT DIIS     0.80E-01    1.0     0.00003242      -753.6353022137 -9.78E-04
+    44 OT DIIS     0.80E-01    1.0     0.00003010      -753.6359521785 -6.50E-04
+    45 OT DIIS     0.80E-01    1.0     0.00003054      -753.6368606084 -9.08E-04
+    46 OT DIIS     0.80E-01    1.0     0.00002677      -753.6375383470 -6.78E-04
+    47 OT DIIS     0.80E-01    1.0     0.00002504      -753.6386073343 -1.07E-03
+    48 OT DIIS     0.80E-01    1.0     0.00002426      -753.6390210560 -4.14E-04
+    49 OT DIIS     0.80E-01    1.0     0.00002299      -753.6398287638 -8.08E-04
+    50 OT DIIS     0.80E-01    1.0     0.00002229      -753.6401648156 -3.36E-04
+    51 OT DIIS     0.80E-01    1.0     0.00002128      -753.6409130852 -7.48E-04
+    52 OT DIIS     0.80E-01    1.0     0.00002058      -753.6411919708 -2.79E-04
+    53 OT DIIS     0.80E-01    1.0     0.00001985      -753.6417271223 -5.35E-04
+    54 OT DIIS     0.80E-01    1.0     0.00001930      -753.6420312370 -3.04E-04
+    55 OT DIIS     0.80E-01    1.0     0.00001782      -753.6429707758 -9.40E-04
+    56 OT DIIS     0.80E-01    1.0     0.00001737      -753.6434594335 -4.89E-04
+    57 OT DIIS     0.80E-01    1.0     0.00001773      -753.6435930225 -1.34E-04
+    58 OT DIIS     0.80E-01    1.0     0.00001589      -753.6441693618 -5.76E-04
+    59 OT DIIS     0.80E-01    1.0     0.00001654      -753.6444311866 -2.62E-04
+    60 OT DIIS     0.80E-01    1.0     0.00001458      -753.6448959077 -4.65E-04
+    61 OT DIIS     0.80E-01    1.0     0.00001475      -753.6450357440 -1.40E-04
+    62 OT DIIS     0.80E-01    1.0     0.00001399      -753.6451878939 -1.52E-04
+    63 OT DIIS     0.80E-01    1.0     0.00001446      -753.6455576977 -3.70E-04
+    64 OT DIIS     0.80E-01    1.0     0.00001281      -753.6457452857 -1.88E-04
+    65 OT DIIS     0.80E-01    1.0     0.00001308      -753.6458341663 -8.89E-05
+    66 OT DIIS     0.80E-01    1.0     0.00001255      -753.6459041999 -7.00E-05
+    67 OT DIIS     0.80E-01    1.0     0.00001194      -753.6462027192 -2.99E-04
+    68 OT DIIS     0.80E-01    1.0     0.00001129      -753.6465298724 -3.27E-04
+    69 OT DIIS     0.80E-01    1.0     0.00001093      -753.6466714394 -1.42E-04
+    70 OT DIIS     0.80E-01    1.0     0.00001185      -753.6469737836 -3.02E-04
+    71 OT DIIS     0.80E-01    1.0     0.00001076      -753.6470724219 -9.86E-05
+    72 OT DIIS     0.80E-01    1.0     0.00000997      -753.6472317357 -1.59E-04
+
+  *** SCF run converged in    72 steps ***
+
+
+  Electronic density on regular grids:       -532.9999014594        0.0000985406
+  Core density on regular grids:              533.0001996305        0.0001996305
+  Total charge density on r-space grids:        0.0002981712
+  Total charge density g-space grids:           0.0002981712
+
+  Overlap energy of the core charge distribution:               0.00002768478463
+  Self energy of the core charge distribution:              -1769.56433108798660
+  Core Hamiltonian energy:                                    555.15855514765315
+  Hartree energy:                                             693.54178006214306
+  Exchange-correlation energy:                               -232.78326354225396
+
+  Total energy:                                              -753.64723173565994
+
+  outer SCF iter =    1 RMS gradient =   0.10E-04 energy =       -753.6472317357
+  outer SCF loop converged in   1 iterations or   72 steps
+
+
+  Integrated spin density:                                          1.0000004873
+  Integrated absolute spin density:                                 2.2792842877
+  Ideal and single determinant S**2 :                    0.750000       0.909680
+
+ -------------------------------------------------------------------------------
+ -                                                                             -
+ -  BSSE CALCULATION         FRAGMENT CONF: 01        FRAGMENT SUBCONF: 01     -
+ -                           CHARGE =     0           MULTIPLICITY =     0     -
+ -                                                                             -
+ -                 ATOM INDEX                              ATOM NAME           -
+ -                 ----------                              ---------           -
+ -                    145                                   I                  -
+ -                    146                                   I                  -
+ -------------------------------------------------------------------------------
+
+ *******************************************************************************
+ *******************************************************************************
+ **                                                                           **
+ **     #####                         ##              ##                      **
+ **    ##   ##            ##          ##              ##                      **
+ **   ##     ##                       ##            ######                    **
+ **   ##     ##  ##   ##  ##   #####  ##  ##   ####   ##    #####    #####    **
+ **   ##     ##  ##   ##  ##  ##      ## ##   ##      ##   ##   ##  ##   ##   **
+ **   ##  ## ##  ##   ##  ##  ##      ####     ###    ##   ######   ######    **
+ **    ##  ###   ##   ##  ##  ##      ## ##      ##   ##   ##       ##        **
+ **     #######   #####   ##   #####  ##  ##  ####    ##    #####   ##        **
+ **           ##                                                    ##        **
+ **                                                                           **
+ **                                                ... make the atoms dance   **
+ **                                                                           **
+ **            Copyright (C) by CP2K developers group (2000-2026)             **
+ **                      J. Chem. Phys. 152, 194103 (2020)                    **
+ **                                                                           **
+ *******************************************************************************
+
+
+ TOTAL NUMBERS AND MAXIMUM NUMBERS
+
+  Total number of            - Atomic kinds:                                   1
+                             - Atoms:                                          2
+                             - Shell sets:                                     2
+                             - Shells:                                        10
+                             - Primitive Cartesian functions:                 10
+                             - Cartesian basis functions:                     28
+                             - Spherical basis functions:                     26
+
+  Maximum angular momentum of- Orbital basis functions:                        2
+                             - Local part of the GTH pseudopotential:          0
+                             - Non-local part of the GTH pseudopotential:      4
+
+
+ SCF PARAMETERS         Density guess:                                    ATOMIC
+                        --------------------------------------------------------
+                        max_scf:                                             260
+                        max_scf_history:                                       0
+                        max_diis:                                              4
+                        --------------------------------------------------------
+                        eps_scf:                                        1.00E-05
+                        eps_scf_history:                                0.00E+00
+                        eps_diis:                                       0.00E+00
+                        eps_eigval:                                     1.00E-05
+                        --------------------------------------------------------
+                        level_shift [a.u.]:                             0.000000
+                        --------------------------------------------------------
+                        Outer loop SCF in use 
+                        No variables optimised in outer loop
+                        eps_scf                                         1.00E-05
+                        max_scf                                               10
+                        No outer loop optimization
+                        step_size                                       5.00E-01
+
+ Extrapolation method: initial_guess
+
+ Spin 1
+
+ Number of electrons:                                                          7
+ Number of occupied orbitals:                                                  7
+ Number of molecular orbitals:                                                 7
+
+ Spin 2
+
+ Number of electrons:                                                          7
+ Number of occupied orbitals:                                                  7
+ Number of molecular orbitals:                                                 7
+
+ Number of orbital functions:                                                 26
+ Number of independent orbital functions:                                     26
+
+
+ SCF WAVEFUNCTION OPTIMIZATION
+
+  ----------------------------------- OT ---------------------------------------
+  Minimizer      : DIIS                : direct inversion
+                                         in the iterative subspace
+                                         using   7 DIIS vectors
+                                         safer DIIS on
+  Preconditioner : FULL_SINGLE_INVERSE : inversion of 
+                                         H + eS - 2*(Sc)(c^T*H*c+const)(Sc)^T
+  Precond_solver : DEFAULT
+  stepsize       :    0.08000000                  energy_gap     :    0.08000000
+  eps_taylor     :   0.10000E-15                  max_taylor     :             4
+  ----------------------------------- OT ---------------------------------------
+
+  Step     Update method      Time    Convergence         Total energy    Change
+  ------------------------------------------------------------------------------
+     1 OT DIIS     0.80E-01    0.5     0.11069496       -22.2987154662 -2.23E+01
+     2 OT DIIS     0.80E-01    0.6     0.06731407       -22.6019842528 -3.03E-01
+     3 OT DIIS     0.80E-01    0.6     0.05648567       -22.6536548541 -5.17E-02
+     4 OT DIIS     0.80E-01    0.6     0.02040853       -22.7056958130 -5.20E-02
+     5 OT DIIS     0.80E-01    0.6     0.03344558       -22.7294261920 -2.37E-02
+     6 OT DIIS     0.80E-01    0.6     0.02123383       -22.7449067419 -1.55E-02
+     7 OT DIIS     0.80E-01    0.6     0.01191144       -22.7555873023 -1.07E-02
+     8 OT SD       0.80E-01    0.6     0.01170836       -22.7576488387 -2.06E-03
+     9 OT SD       0.80E-01    0.6     0.01118365       -22.7615071129 -3.86E-03
+    10 OT SD       0.80E-01    0.6     0.01121441       -22.7651429667 -3.64E-03
+    11 OT SD       0.80E-01    0.6     0.01141061       -22.7688316568 -3.69E-03
+    12 OT DIIS     0.80E-01    0.6     0.01169605       -22.7726667210 -3.84E-03
+    13 OT SD       0.80E-01    0.6     0.02421067       -22.7659740681  6.69E-03
+    14 OT SD       0.80E-01    0.6     0.01543648       -22.7788396798 -1.29E-02
+    15 OT SD       0.80E-01    0.6     0.01500299       -22.7855955450 -6.76E-03
+    16 OT SD       0.80E-01    0.6     0.01516172       -22.7921747311 -6.58E-03
+    17 OT SD       0.80E-01    0.6     0.01535889       -22.7989099042 -6.74E-03
+    18 OT DIIS     0.80E-01    0.6     0.01552234       -22.8058154271 -6.91E-03
+    19 OT DIIS     0.80E-01    0.6     0.03372847       -22.7882668278  1.75E-02
+    20 OT SD       0.80E-01    0.6     0.03311992       -22.8542593272 -6.60E-02
+    21 OT SD       0.80E-01    0.6     0.01687233       -22.8770469864 -2.28E-02
+    22 OT DIIS     0.80E-01    0.6     0.01340624       -22.8843105153 -7.26E-03
+    23 OT DIIS     0.80E-01    0.6     0.01638001       -22.8917375251 -7.43E-03
+    24 OT SD       0.80E-01    0.6     0.00798629       -22.9093970020 -1.77E-02
+    25 OT DIIS     0.80E-01    0.6     0.00601838       -22.9109890486 -1.59E-03
+    26 OT DIIS     0.80E-01    0.6     0.00408685       -22.9149570579 -3.97E-03
+    27 OT DIIS     0.80E-01    0.6     0.00166811       -22.9159061499 -9.49E-04
+    28 OT DIIS     0.80E-01    0.6     0.00126249       -22.9160724426 -1.66E-04
+    29 OT DIIS     0.80E-01    0.6     0.00088546       -22.9162160371 -1.44E-04
+    30 OT DIIS     0.80E-01    0.6     0.00060701       -22.9162562050 -4.02E-05
+    31 OT DIIS     0.80E-01    0.6     0.00098767       -22.9163008290 -4.46E-05
+    32 OT DIIS     0.80E-01    0.6     0.00032301       -22.9163212666 -2.04E-05
+    33 OT DIIS     0.80E-01    0.6     0.00019311       -22.9163302135 -8.95E-06
+    34 OT DIIS     0.80E-01    0.6     0.00018118       -22.9163346786 -4.47E-06
+    35 OT DIIS     0.80E-01    0.6     0.00007654       -22.9163365513 -1.87E-06
+    36 OT DIIS     0.80E-01    0.6     0.00005323       -22.9163372559 -7.05E-07
+    37 OT DIIS     0.80E-01    0.6     0.00004213       -22.9163375042 -2.48E-07
+    38 OT DIIS     0.80E-01    0.6     0.00002472       -22.9163377755 -2.71E-07
+    39 OT DIIS     0.80E-01    0.6     0.00001951       -22.9163378134 -3.80E-08
+    40 OT DIIS     0.80E-01    0.6     0.00001131       -22.9163378634 -5.00E-08
+    41 OT DIIS     0.80E-01    0.6     0.00000636       -22.9163378828 -1.94E-08
+
+  *** SCF run converged in    41 steps ***
+
+
+  Electronic density on regular grids:        -14.0000000000        0.0000000000
+  Core density on regular grids:               13.9999999969       -0.0000000031
+  Total charge density on r-space grids:       -0.0000000031
+  Total charge density g-space grids:          -0.0000000031
+
+  Overlap energy of the core charge distribution:               0.00000000045393
+  Self energy of the core charge distribution:                -49.36658856042867
+  Core Hamiltonian energy:                                      9.82476845696133
+  Hartree energy:                                              21.08879414826302
+  Exchange-correlation energy:                                 -4.46331192805506
+
+  Total energy:                                               -22.91633788280546
+
+  outer SCF iter =    1 RMS gradient =   0.64E-05 energy =        -22.9163378828
+  outer SCF loop converged in   1 iterations or   41 steps
+
+
+  Integrated spin density:                                         -0.0000000000
+  Integrated absolute spin density:                                 0.0000000000
+  Ideal and single determinant S**2 :                    0.000000       0.000000
+
+ -------------------------------------------------------------------------------
+ -                                                                             -
+ -  BSSE CALCULATION         FRAGMENT CONF: 11        FRAGMENT SUBCONF: 10     -
+ -                           CHARGE =     0           MULTIPLICITY =     0     -
+ -                                                                             -
+ -                 ATOM INDEX                              ATOM NAME           -
+ -                 ----------                              ---------           -
+ -                      1                                   C                  -
+ -                      2                                   C                  -
+ -                      3                                   C                  -
+ -                      4                                   C                  -
+ -                      5                                   C                  -
+ -                      6                                   C                  -
+ -                      7                                   C                  -
+ -                      8                                   C                  -
+ -                      9                                   C                  -
+ -                     10                                   C                  -
+ -                     11                                   C                  -
+ -                     12                                   C                  -
+ -                     13                                   C                  -
+ -                     14                                   C                  -
+ -                     15                                   C                  -
+ -                     16                                   C                  -
+ -                     17                                   C                  -
+ -                     18                                   C                  -
+ -                     19                                   C                  -
+ -                     20                                   C                  -
+ -                     21                                   C                  -
+ -                     22                                   C                  -
+ -                     23                                   C                  -
+ -                     24                                   C                  -
+ -                     25                                   C                  -
+ -                     26                                   C                  -
+ -                     27                                   C                  -
+ -                     28                                   C                  -
+ -                     29                                   C                  -
+ -                     30                                   C                  -
+ -                     31                                   C                  -
+ -                     32                                   C                  -
+ -                     33                                   C                  -
+ -                     34                                   C                  -
+ -                     35                                   C                  -
+ -                     36                                   C                  -
+ -                     37                                   C                  -
+ -                     38                                   C                  -
+ -                     39                                   C                  -
+ -                     40                                   C                  -
+ -                     41                                   C                  -
+ -                     42                                   C                  -
+ -                     43                                   C                  -
+ -                     44                                   C                  -
+ -                     45                                   C                  -
+ -                     46                                   C                  -
+ -                     47                                   C                  -
+ -                     48                                   C                  -
+ -                     49                                   C                  -
+ -                     50                                   C                  -
+ -                     51                                   C                  -
+ -                     52                                   C                  -
+ -                     53                                   C                  -
+ -                     54                                   C                  -
+ -                     55                                   C                  -
+ -                     56                                   C                  -
+ -                     57                                   C                  -
+ -                     58                                   C                  -
+ -                     59                                   C                  -
+ -                     60                                   C                  -
+ -                     61                                   C                  -
+ -                     62                                   C                  -
+ -                     63                                   C                  -
+ -                     64                                   C                  -
+ -                     65                                   C                  -
+ -                     66                                   C                  -
+ -                     67                                   C                  -
+ -                     68                                   C                  -
+ -                     69                                   C                  -
+ -                     70                                   C                  -
+ -                     71                                   C                  -
+ -                     72                                   C                  -
+ -                     73                                   C                  -
+ -                     74                                   C                  -
+ -                     75                                   C                  -
+ -                     76                                   C                  -
+ -                     77                                   C                  -
+ -                     78                                   C                  -
+ -                     79                                   C                  -
+ -                     80                                   C                  -
+ -                     81                                   C                  -
+ -                     82                                   C                  -
+ -                     83                                   C                  -
+ -                     84                                   C                  -
+ -                     85                                   C                  -
+ -                     86                                   C                  -
+ -                     87                                   C                  -
+ -                     88                                   C                  -
+ -                     89                                   C                  -
+ -                     90                                   C                  -
+ -                     91                                   C                  -
+ -                     92                                   C                  -
+ -                     93                                   C                  -
+ -                     94                                   C                  -
+ -                     95                                   C                  -
+ -                     96                                   C                  -
+ -                     97                                   C                  -
+ -                     98                                   C                  -
+ -                     99                                   C                  -
+ -                    100                                   C                  -
+ -                    101                                   C                  -
+ -                    102                                   C                  -
+ -                    103                                   C                  -
+ -                    104                                   C                  -
+ -                    105                                   C                  -
+ -                    106                                   C                  -
+ -                    107                                   C                  -
+ -                    108                                   C                  -
+ -                    109                                   C                  -
+ -                    110                                   C                  -
+ -                    111                                   C                  -
+ -                    112                                   C                  -
+ -                    113                                   C                  -
+ -                    114                                   C                  -
+ -                    115                                   C                  -
+ -                    116                                   C                  -
+ -                    117                                   C                  -
+ -                    118                                   C                  -
+ -                    119                                   C                  -
+ -                    120                                   C                  -
+ -                    121                                   C                  -
+ -                    122                                   C                  -
+ -                    123                                   C                  -
+ -                    124                                   C                  -
+ -                    125                                   C                  -
+ -                    126                                   C                  -
+ -                    127                                   C                  -
+ -                    128                                   C                  -
+ -                    129                                   H                  -
+ -                    130                                   H                  -
+ -                    131                                   H                  -
+ -                    132                                   H                  -
+ -                    133                                   H                  -
+ -                    134                                   H                  -
+ -                    135                                   H                  -
+ -                    136                                   H                  -
+ -                    137                                   H                  -
+ -                    138                                   H                  -
+ -                    139                                   H                  -
+ -                    140                                   H                  -
+ -                    141                                   H                  -
+ -                    142                                   H                  -
+ -                    143                                   H                  -
+ -                    144                                   O                  -
+ -                    145                                   I_ghost            -
+ -                    146                                   I_ghost            -
+ -------------------------------------------------------------------------------
+
+ *******************************************************************************
+ *******************************************************************************
+ **                                                                           **
+ **     #####                         ##              ##                      **
+ **    ##   ##            ##          ##              ##                      **
+ **   ##     ##                       ##            ######                    **
+ **   ##     ##  ##   ##  ##   #####  ##  ##   ####   ##    #####    #####    **
+ **   ##     ##  ##   ##  ##  ##      ## ##   ##      ##   ##   ##  ##   ##   **
+ **   ##  ## ##  ##   ##  ##  ##      ####     ###    ##   ######   ######    **
+ **    ##  ###   ##   ##  ##  ##      ## ##      ##   ##   ##       ##        **
+ **     #######   #####   ##   #####  ##  ##  ####    ##    #####   ##        **
+ **           ##                                                    ##        **
+ **                                                                           **
+ **                                                ... make the atoms dance   **
+ **                                                                           **
+ **            Copyright (C) by CP2K developers group (2000-2026)             **
+ **                      J. Chem. Phys. 152, 194103 (2020)                    **
+ **                                                                           **
+ *******************************************************************************
+
+
+ TOTAL NUMBERS AND MAXIMUM NUMBERS
+
+  Total number of            - Atomic kinds:                                   4
+                             - Atoms:                                        146
+                             - Shell sets:                                   146
+                             - Shells:                                       700
+                             - Primitive Cartesian functions:                730
+                             - Cartesian basis functions:                   1909
+                             - Spherical basis functions:                   1778
+
+  Maximum angular momentum of- Orbital basis functions:                        2
+                             - Local part of the GTH pseudopotential:          2
+                             - Non-local part of the GTH pseudopotential:      0
+
+
+ SCF PARAMETERS         Density guess:                                    ATOMIC
+                        --------------------------------------------------------
+                        max_scf:                                             260
+                        max_scf_history:                                       0
+                        max_diis:                                              4
+                        --------------------------------------------------------
+                        eps_scf:                                        1.00E-05
+                        eps_scf_history:                                0.00E+00
+                        eps_diis:                                       0.00E+00
+                        eps_eigval:                                     1.00E-05
+                        --------------------------------------------------------
+                        level_shift [a.u.]:                             0.000000
+                        --------------------------------------------------------
+                        Outer loop SCF in use 
+                        No variables optimised in outer loop
+                        eps_scf                                         1.00E-05
+                        max_scf                                               10
+                        No outer loop optimization
+                        step_size                                       5.00E-01
+
+ Extrapolation method: initial_guess
+
+ Spin 1
+
+ Number of electrons:                                                        267
+ Number of occupied orbitals:                                                267
+ Number of molecular orbitals:                                               267
+
+ Spin 2
+
+ Number of electrons:                                                        266
+ Number of occupied orbitals:                                                266
+ Number of molecular orbitals:                                               266
+
+ Number of orbital functions:                                               1778
+ Number of independent orbital functions:                                   1778
+
+
+ SCF WAVEFUNCTION OPTIMIZATION
+
+  ----------------------------------- OT ---------------------------------------
+  Minimizer      : DIIS                : direct inversion
+                                         in the iterative subspace
+                                         using   7 DIIS vectors
+                                         safer DIIS on
+  Preconditioner : FULL_SINGLE_INVERSE : inversion of 
+                                         H + eS - 2*(Sc)(c^T*H*c+const)(Sc)^T
+  Precond_solver : DEFAULT
+  stepsize       :    0.08000000                  energy_gap     :    0.08000000
+  eps_taylor     :   0.10000E-15                  max_taylor     :             4
+  ----------------------------------- OT ---------------------------------------
+
+  Step     Update method      Time    Convergence         Total energy    Change
+  ------------------------------------------------------------------------------
+     1 OT DIIS     0.80E-01    1.2     0.01417650      -702.5776996804 -7.03E+02
+     2 OT DIIS     0.80E-01    1.0     0.01262814      -714.0071446998 -1.14E+01
+     3 OT DIIS     0.80E-01    1.0     0.01066140      -720.1596693205 -6.15E+00
+     4 OT DIIS     0.80E-01    1.0     0.00875875      -731.1362057536 -1.10E+01
+     5 OT DIIS     0.80E-01    1.0     0.00545201      -743.3007387792 -1.22E+01
+     6 OT DIIS     0.80E-01    1.0     0.00438079      -746.0476513914 -2.75E+00
+     7 OT DIIS     0.80E-01    1.0     0.00259214      -749.9188810090 -3.87E+00
+     8 OT DIIS     0.80E-01    1.0     0.00213592      -750.6778588040 -7.59E-01
+     9 OT DIIS     0.80E-01    1.0     0.00145613      -751.8311840646 -1.15E+00
+    10 OT DIIS     0.80E-01    1.0     0.00117530      -752.2118900437 -3.81E-01
+    11 OT DIIS     0.80E-01    1.0     0.00096860      -752.5594980493 -3.48E-01
+    12 OT DIIS     0.80E-01    1.0     0.00077178      -752.8135020684 -2.54E-01
+    13 OT DIIS     0.80E-01    1.0     0.00065622      -752.9945989459 -1.81E-01
+    14 OT DIIS     0.80E-01    1.0     0.00051104      -753.1547939360 -1.60E-01
+    15 OT DIIS     0.80E-01    1.0     0.00046642      -753.2229473186 -6.82E-02
+    16 OT DIIS     0.80E-01    1.0     0.00039304      -753.2917334974 -6.88E-02
+    17 OT DIIS     0.80E-01    1.0     0.00035719      -753.3460830463 -5.43E-02
+    18 OT DIIS     0.80E-01    1.0     0.00030460      -753.3938200637 -4.77E-02
+    19 OT DIIS     0.80E-01    1.0     0.00026956      -753.4292998123 -3.55E-02
+    20 OT DIIS     0.80E-01    1.0     0.00023083      -753.4687087449 -3.94E-02
+    21 OT DIIS     0.80E-01    1.0     0.00020451      -753.4992245630 -3.05E-02
+    22 OT DIIS     0.80E-01    1.0     0.00018883      -753.5114275564 -1.22E-02
+    23 OT DIIS     0.80E-01    1.0     0.00017478      -753.5373875975 -2.60E-02
+    24 OT DIIS     0.80E-01    1.0     0.00014942      -753.5507404581 -1.34E-02
+    25 OT DIIS     0.80E-01    1.0     0.00014012      -753.5626092368 -1.19E-02
+    26 OT DIIS     0.80E-01    1.0     0.00013136      -753.5690935239 -6.48E-03
+    27 OT DIIS     0.80E-01    1.0     0.00011737      -753.5824473127 -1.34E-02
+    28 OT DIIS     0.80E-01    1.0     0.00010612      -753.5886957665 -6.25E-03
+    29 OT DIIS     0.80E-01    1.0     0.00009330      -753.5967020902 -8.01E-03
+    30 OT DIIS     0.80E-01    1.0     0.00008393      -753.6028949798 -6.19E-03
+    31 OT DIIS     0.80E-01    1.0     0.00008561      -753.6049089115 -2.01E-03
+    32 OT DIIS     0.80E-01    1.0     0.00006901      -753.6112185862 -6.31E-03
+    33 OT DIIS     0.80E-01    1.0     0.00006776      -753.6149098799 -3.69E-03
+    34 OT DIIS     0.80E-01    1.0     0.00006215      -753.6161608751 -1.25E-03
+    35 OT DIIS     0.80E-01    1.0     0.00006366      -753.6163820327 -2.21E-04
+    36 OT DIIS     0.80E-01    1.0     0.00006167      -753.6164182914 -3.63E-05
+    37 OT DIIS     0.80E-01    1.0     0.00005935      -753.6171940659 -7.76E-04
+    38 OT DIIS     0.80E-01    1.0     0.00005610      -753.6195500668 -2.36E-03
+    39 OT DIIS     0.80E-01    1.0     0.00004903      -753.6236177684 -4.07E-03
+    40 OT DIIS     0.80E-01    1.0     0.00004595      -753.6246475115 -1.03E-03
+    41 OT DIIS     0.80E-01    1.0     0.00004289      -753.6260758450 -1.43E-03
+    42 OT DIIS     0.80E-01    1.0     0.00003935      -753.6282645332 -2.19E-03
+    43 OT DIIS     0.80E-01    1.0     0.00003716      -753.6297965155 -1.53E-03
+    44 OT DIIS     0.80E-01    1.0     0.00003538      -753.6304018922 -6.05E-04
+    45 OT DIIS     0.80E-01    1.0     0.00003453      -753.6321327878 -1.73E-03
+    46 OT DIIS     0.80E-01    1.0     0.00003142      -753.6328090403 -6.76E-04
+    47 OT DIIS     0.80E-01    1.0     0.00003043      -753.6336384652 -8.29E-04
+    48 OT DIIS     0.80E-01    1.0     0.00003168      -753.6343368096 -6.98E-04
+    49 OT DIIS     0.80E-01    1.0     0.00003015      -753.6346410632 -3.04E-04
+    50 OT DIIS     0.80E-01    1.0     0.00002948      -753.6351754327 -5.34E-04
+    51 OT DIIS     0.80E-01    1.0     0.00002620      -753.6359259843 -7.51E-04
+    52 OT DIIS     0.80E-01    1.0     0.00002508      -753.6368695411 -9.44E-04
+    53 OT DIIS     0.80E-01    1.0     0.00002435      -753.6372310300 -3.61E-04
+    54 OT DIIS     0.80E-01    1.0     0.00002304      -753.6382613580 -1.03E-03
+    55 OT DIIS     0.80E-01    1.0     0.00002261      -753.6385934143 -3.32E-04
+    56 OT DIIS     0.80E-01    1.0     0.00002264      -753.6391040018 -5.11E-04
+    57 OT DIIS     0.80E-01    1.0     0.00002158      -753.6394119203 -3.08E-04
+    58 OT DIIS     0.80E-01    1.0     0.00002110      -753.6399349571 -5.23E-04
+    59 OT DIIS     0.80E-01    1.0     0.00002073      -753.6405455657 -6.11E-04
+    60 OT DIIS     0.80E-01    1.0     0.00001999      -753.6412429528 -6.97E-04
+    61 OT DIIS     0.80E-01    1.0     0.00001955      -753.6417277907 -4.85E-04
+    62 OT SD       0.80E-01    1.0     0.00001926      -753.6425681658 -8.40E-04
+    63 OT DIIS     0.80E-01    1.0     0.00001881      -753.6425959080 -2.77E-05
+    64 OT DIIS     0.80E-01    1.0     0.00001789      -753.6432080358 -6.12E-04
+    65 OT DIIS     0.80E-01    1.0     0.00001747      -753.6436218017 -4.14E-04
+    66 OT DIIS     0.80E-01    1.0     0.00001754      -753.6441208172 -4.99E-04
+    67 OT DIIS     0.80E-01    1.0     0.00001669      -753.6443622206 -2.41E-04
+    68 OT DIIS     0.80E-01    1.0     0.00001644      -753.6445216373 -1.59E-04
+    69 OT DIIS     0.80E-01    1.0     0.00001547      -753.6451381339 -6.16E-04
+    70 OT DIIS     0.80E-01    1.0     0.00001513      -753.6454819668 -3.44E-04
+    71 OT DIIS     0.80E-01    1.0     0.00001474      -753.6457712720 -2.89E-04
+    72 OT DIIS     0.80E-01    1.0     0.00001423      -753.6458713797 -1.00E-04
+    73 OT DIIS     0.80E-01    1.0     0.00001366      -753.6461116389 -2.40E-04
+    74 OT SD       0.80E-01    1.0     0.00001681      -753.6468356865 -7.24E-04
+    75 OT SD       0.80E-01    1.0     0.00001468      -753.6468555216 -1.98E-05
+    76 OT DIIS     0.80E-01    1.0     0.00001370      -753.6468712439 -1.57E-05
+    77 OT DIIS     0.80E-01    1.0     0.00001198      -753.6471989083 -3.28E-04
+    78 OT DIIS     0.80E-01    1.0     0.00001143      -753.6474843576 -2.85E-04
+    79 OT DIIS     0.80E-01    1.0     0.00001094      -753.6477172821 -2.33E-04
+    80 OT DIIS     0.80E-01    1.0     0.00001072      -753.6479828504 -2.66E-04
+    81 OT DIIS     0.80E-01    1.0     0.00001008      -753.6481420098 -1.59E-04
+    82 OT DIIS     0.80E-01    1.0     0.00000982      -753.6482630561 -1.21E-04
+
+  *** SCF run converged in    82 steps ***
+
+
+  Electronic density on regular grids:       -532.9999015891        0.0000984109
+  Core density on regular grids:              533.0001996305        0.0001996305
+  Total charge density on r-space grids:        0.0002980414
+  Total charge density g-space grids:           0.0002980414
+
+  Overlap energy of the core charge distribution:               0.00002768478463
+  Self energy of the core charge distribution:              -1769.56433108798660
+  Core Hamiltonian energy:                                    555.15762794472153
+  Hartree energy:                                             693.54193330505950
+  Exchange-correlation energy:                               -232.78352090263414
+
+  Total energy:                                              -753.64826305605516
+
+  outer SCF iter =    1 RMS gradient =   0.98E-05 energy =       -753.6482630561
+  outer SCF loop converged in   1 iterations or   82 steps
+
+
+  Integrated spin density:                                          1.0000007189
+  Integrated absolute spin density:                                 2.6063762407
+  Ideal and single determinant S**2 :                    0.750000       1.035465
+
+ -------------------------------------------------------------------------------
+ -                                                                             -
+ -  BSSE CALCULATION         FRAGMENT CONF: 11        FRAGMENT SUBCONF: 01     -
+ -                           CHARGE =     0           MULTIPLICITY =     0     -
+ -                                                                             -
+ -                 ATOM INDEX                              ATOM NAME           -
+ -                 ----------                              ---------           -
+ -                      1                                   C_ghost            -
+ -                      2                                   C_ghost            -
+ -                      3                                   C_ghost            -
+ -                      4                                   C_ghost            -
+ -                      5                                   C_ghost            -
+ -                      6                                   C_ghost            -
+ -                      7                                   C_ghost            -
+ -                      8                                   C_ghost            -
+ -                      9                                   C_ghost            -
+ -                     10                                   C_ghost            -
+ -                     11                                   C_ghost            -
+ -                     12                                   C_ghost            -
+ -                     13                                   C_ghost            -
+ -                     14                                   C_ghost            -
+ -                     15                                   C_ghost            -
+ -                     16                                   C_ghost            -
+ -                     17                                   C_ghost            -
+ -                     18                                   C_ghost            -
+ -                     19                                   C_ghost            -
+ -                     20                                   C_ghost            -
+ -                     21                                   C_ghost            -
+ -                     22                                   C_ghost            -
+ -                     23                                   C_ghost            -
+ -                     24                                   C_ghost            -
+ -                     25                                   C_ghost            -
+ -                     26                                   C_ghost            -
+ -                     27                                   C_ghost            -
+ -                     28                                   C_ghost            -
+ -                     29                                   C_ghost            -
+ -                     30                                   C_ghost            -
+ -                     31                                   C_ghost            -
+ -                     32                                   C_ghost            -
+ -                     33                                   C_ghost            -
+ -                     34                                   C_ghost            -
+ -                     35                                   C_ghost            -
+ -                     36                                   C_ghost            -
+ -                     37                                   C_ghost            -
+ -                     38                                   C_ghost            -
+ -                     39                                   C_ghost            -
+ -                     40                                   C_ghost            -
+ -                     41                                   C_ghost            -
+ -                     42                                   C_ghost            -
+ -                     43                                   C_ghost            -
+ -                     44                                   C_ghost            -
+ -                     45                                   C_ghost            -
+ -                     46                                   C_ghost            -
+ -                     47                                   C_ghost            -
+ -                     48                                   C_ghost            -
+ -                     49                                   C_ghost            -
+ -                     50                                   C_ghost            -
+ -                     51                                   C_ghost            -
+ -                     52                                   C_ghost            -
+ -                     53                                   C_ghost            -
+ -                     54                                   C_ghost            -
+ -                     55                                   C_ghost            -
+ -                     56                                   C_ghost            -
+ -                     57                                   C_ghost            -
+ -                     58                                   C_ghost            -
+ -                     59                                   C_ghost            -
+ -                     60                                   C_ghost            -
+ -                     61                                   C_ghost            -
+ -                     62                                   C_ghost            -
+ -                     63                                   C_ghost            -
+ -                     64                                   C_ghost            -
+ -                     65                                   C_ghost            -
+ -                     66                                   C_ghost            -
+ -                     67                                   C_ghost            -
+ -                     68                                   C_ghost            -
+ -                     69                                   C_ghost            -
+ -                     70                                   C_ghost            -
+ -                     71                                   C_ghost            -
+ -                     72                                   C_ghost            -
+ -                     73                                   C_ghost            -
+ -                     74                                   C_ghost            -
+ -                     75                                   C_ghost            -
+ -                     76                                   C_ghost            -
+ -                     77                                   C_ghost            -
+ -                     78                                   C_ghost            -
+ -                     79                                   C_ghost            -
+ -                     80                                   C_ghost            -
+ -                     81                                   C_ghost            -
+ -                     82                                   C_ghost            -
+ -                     83                                   C_ghost            -
+ -                     84                                   C_ghost            -
+ -                     85                                   C_ghost            -
+ -                     86                                   C_ghost            -
+ -                     87                                   C_ghost            -
+ -                     88                                   C_ghost            -
+ -                     89                                   C_ghost            -
+ -                     90                                   C_ghost            -
+ -                     91                                   C_ghost            -
+ -                     92                                   C_ghost            -
+ -                     93                                   C_ghost            -
+ -                     94                                   C_ghost            -
+ -                     95                                   C_ghost            -
+ -                     96                                   C_ghost            -
+ -                     97                                   C_ghost            -
+ -                     98                                   C_ghost            -
+ -                     99                                   C_ghost            -
+ -                    100                                   C_ghost            -
+ -                    101                                   C_ghost            -
+ -                    102                                   C_ghost            -
+ -                    103                                   C_ghost            -
+ -                    104                                   C_ghost            -
+ -                    105                                   C_ghost            -
+ -                    106                                   C_ghost            -
+ -                    107                                   C_ghost            -
+ -                    108                                   C_ghost            -
+ -                    109                                   C_ghost            -
+ -                    110                                   C_ghost            -
+ -                    111                                   C_ghost            -
+ -                    112                                   C_ghost            -
+ -                    113                                   C_ghost            -
+ -                    114                                   C_ghost            -
+ -                    115                                   C_ghost            -
+ -                    116                                   C_ghost            -
+ -                    117                                   C_ghost            -
+ -                    118                                   C_ghost            -
+ -                    119                                   C_ghost            -
+ -                    120                                   C_ghost            -
+ -                    121                                   C_ghost            -
+ -                    122                                   C_ghost            -
+ -                    123                                   C_ghost            -
+ -                    124                                   C_ghost            -
+ -                    125                                   C_ghost            -
+ -                    126                                   C_ghost            -
+ -                    127                                   C_ghost            -
+ -                    128                                   C_ghost            -
+ -                    129                                   H_ghost            -
+ -                    130                                   H_ghost            -
+ -                    131                                   H_ghost            -
+ -                    132                                   H_ghost            -
+ -                    133                                   H_ghost            -
+ -                    134                                   H_ghost            -
+ -                    135                                   H_ghost            -
+ -                    136                                   H_ghost            -
+ -                    137                                   H_ghost            -
+ -                    138                                   H_ghost            -
+ -                    139                                   H_ghost            -
+ -                    140                                   H_ghost            -
+ -                    141                                   H_ghost            -
+ -                    142                                   H_ghost            -
+ -                    143                                   H_ghost            -
+ -                    144                                   O_ghost            -
+ -                    145                                   I                  -
+ -                    146                                   I                  -
+ -------------------------------------------------------------------------------
+
+ *******************************************************************************
+ *******************************************************************************
+ **                                                                           **
+ **     #####                         ##              ##                      **
+ **    ##   ##            ##          ##              ##                      **
+ **   ##     ##                       ##            ######                    **
+ **   ##     ##  ##   ##  ##   #####  ##  ##   ####   ##    #####    #####    **
+ **   ##     ##  ##   ##  ##  ##      ## ##   ##      ##   ##   ##  ##   ##   **
+ **   ##  ## ##  ##   ##  ##  ##      ####     ###    ##   ######   ######    **
+ **    ##  ###   ##   ##  ##  ##      ## ##      ##   ##   ##       ##        **
+ **     #######   #####   ##   #####  ##  ##  ####    ##    #####   ##        **
+ **           ##                                                    ##        **
+ **                                                                           **
+ **                                                ... make the atoms dance   **
+ **                                                                           **
+ **            Copyright (C) by CP2K developers group (2000-2026)             **
+ **                      J. Chem. Phys. 152, 194103 (2020)                    **
+ **                                                                           **
+ *******************************************************************************
+
+
+ TOTAL NUMBERS AND MAXIMUM NUMBERS
+
+  Total number of            - Atomic kinds:                                   4
+                             - Atoms:                                        146
+                             - Shell sets:                                   146
+                             - Shells:                                       700
+                             - Primitive Cartesian functions:                730
+                             - Cartesian basis functions:                   1909
+                             - Spherical basis functions:                   1778
+
+  Maximum angular momentum of- Orbital basis functions:                        2
+                             - Local part of the GTH pseudopotential:          0
+                             - Non-local part of the GTH pseudopotential:      4
+
+
+ SCF PARAMETERS         Density guess:                                    ATOMIC
+                        --------------------------------------------------------
+                        max_scf:                                             260
+                        max_scf_history:                                       0
+                        max_diis:                                              4
+                        --------------------------------------------------------
+                        eps_scf:                                        1.00E-05
+                        eps_scf_history:                                0.00E+00
+                        eps_diis:                                       0.00E+00
+                        eps_eigval:                                     1.00E-05
+                        --------------------------------------------------------
+                        level_shift [a.u.]:                             0.000000
+                        --------------------------------------------------------
+                        Outer loop SCF in use 
+                        No variables optimised in outer loop
+                        eps_scf                                         1.00E-05
+                        max_scf                                               10
+                        No outer loop optimization
+                        step_size                                       5.00E-01
+
+ Extrapolation method: initial_guess
+
+ Spin 1
+
+ Number of electrons:                                                          7
+ Number of occupied orbitals:                                                  7
+ Number of molecular orbitals:                                                 7
+
+ Spin 2
+
+ Number of electrons:                                                          7
+ Number of occupied orbitals:                                                  7
+ Number of molecular orbitals:                                                 7
+
+ Number of orbital functions:                                               1778
+ Number of independent orbital functions:                                   1778
+
+
+ SCF WAVEFUNCTION OPTIMIZATION
+
+  ----------------------------------- OT ---------------------------------------
+  Minimizer      : DIIS                : direct inversion
+                                         in the iterative subspace
+                                         using   7 DIIS vectors
+                                         safer DIIS on
+  Preconditioner : FULL_SINGLE_INVERSE : inversion of 
+                                         H + eS - 2*(Sc)(c^T*H*c+const)(Sc)^T
+  Precond_solver : DEFAULT
+  stepsize       :    0.08000000                  energy_gap     :    0.08000000
+  eps_taylor     :   0.10000E-15                  max_taylor     :             4
+  ----------------------------------- OT ---------------------------------------
+
+  Step     Update method      Time    Convergence         Total energy    Change
+  ------------------------------------------------------------------------------
+     1 OT DIIS     0.80E-01    0.9     0.00902482       -22.5564422190 -2.26E+01
+     2 OT DIIS     0.80E-01    0.9     0.00660576       -22.6991220796 -1.43E-01
+     3 OT DIIS     0.80E-01    0.9     0.00542186       -22.7748250009 -7.57E-02
+     4 OT SD       0.80E-01    0.9     0.00430496       -22.7843686269 -9.54E-03
+     5 OT DIIS     0.80E-01    0.9     0.00324202       -22.8147461403 -3.04E-02
+     6 OT DIIS     0.80E-01    0.9     0.00367945       -22.8697801726 -5.50E-02
+     7 OT DIIS     0.80E-01    0.9     0.00301502       -22.8903205886 -2.05E-02
+     8 OT DIIS     0.80E-01    0.9     0.00102568       -22.9106530795 -2.03E-02
+     9 OT DIIS     0.80E-01    0.9     0.00141160       -22.9113236006 -6.71E-04
+    10 OT DIIS     0.80E-01    0.9     0.00215047       -22.9058801122  5.44E-03
+    11 OT DIIS     0.80E-01    0.9     0.00025757       -22.9159334444 -1.01E-02
+    12 OT DIIS     0.80E-01    0.9     0.00020979       -22.9161715338 -2.38E-04
+    13 OT DIIS     0.80E-01    0.9     0.00018175       -22.9164730803 -3.02E-04
+    14 OT DIIS     0.80E-01    0.9     0.00006563       -22.9165683475 -9.53E-05
+    15 OT DIIS     0.80E-01    0.9     0.00004710       -22.9165863781 -1.80E-05
+    16 OT DIIS     0.80E-01    0.9     0.00002681       -22.9166046428 -1.83E-05
+    17 OT DIIS     0.80E-01    0.9     0.00001631       -22.9166069613 -2.32E-06
+    18 OT DIIS     0.80E-01    0.9     0.00001157       -22.9166082668 -1.31E-06
+    19 OT DIIS     0.80E-01    0.9     0.00000673       -22.9166092162 -9.49E-07
+
+  *** SCF run converged in    19 steps ***
+
+
+  Electronic density on regular grids:        -14.0000000000        0.0000000000
+  Core density on regular grids:               13.9999999969       -0.0000000031
+  Total charge density on r-space grids:       -0.0000000030
+  Total charge density g-space grids:          -0.0000000030
+
+  Overlap energy of the core charge distribution:               0.00000000045393
+  Self energy of the core charge distribution:                -49.36658856042867
+  Core Hamiltonian energy:                                      9.82301676913457
+  Hartree energy:                                              21.08935997629504
+  Exchange-correlation energy:                                 -4.46239740163430
+
+  Total energy:                                               -22.91660921617943
+
+  outer SCF iter =    1 RMS gradient =   0.67E-05 energy =        -22.9166092162
+  outer SCF loop converged in   1 iterations or   19 steps
+
+
+  Integrated spin density:                                          0.0000000000
+  Integrated absolute spin density:                                 0.0000000000
+  Ideal and single determinant S**2 :                    0.000000       0.000000
+
+ -------------------------------------------------------------------------------
+ -                                                                             -
+ -  BSSE CALCULATION         FRAGMENT CONF: 11        FRAGMENT SUBCONF: 11     -
+ -                           CHARGE =     0           MULTIPLICITY =     0     -
+ -                                                                             -
+ -                 ATOM INDEX                              ATOM NAME           -
+ -                 ----------                              ---------           -
+ -                      1                                   C                  -
+ -                      2                                   C                  -
+ -                      3                                   C                  -
+ -                      4                                   C                  -
+ -                      5                                   C                  -
+ -                      6                                   C                  -
+ -                      7                                   C                  -
+ -                      8                                   C                  -
+ -                      9                                   C                  -
+ -                     10                                   C                  -
+ -                     11                                   C                  -
+ -                     12                                   C                  -
+ -                     13                                   C                  -
+ -                     14                                   C                  -
+ -                     15                                   C                  -
+ -                     16                                   C                  -
+ -                     17                                   C                  -
+ -                     18                                   C                  -
+ -                     19                                   C                  -
+ -                     20                                   C                  -
+ -                     21                                   C                  -
+ -                     22                                   C                  -
+ -                     23                                   C                  -
+ -                     24                                   C                  -
+ -                     25                                   C                  -
+ -                     26                                   C                  -
+ -                     27                                   C                  -
+ -                     28                                   C                  -
+ -                     29                                   C                  -
+ -                     30                                   C                  -
+ -                     31                                   C                  -
+ -                     32                                   C                  -
+ -                     33                                   C                  -
+ -                     34                                   C                  -
+ -                     35                                   C                  -
+ -                     36                                   C                  -
+ -                     37                                   C                  -
+ -                     38                                   C                  -
+ -                     39                                   C                  -
+ -                     40                                   C                  -
+ -                     41                                   C                  -
+ -                     42                                   C                  -
+ -                     43                                   C                  -
+ -                     44                                   C                  -
+ -                     45                                   C                  -
+ -                     46                                   C                  -
+ -                     47                                   C                  -
+ -                     48                                   C                  -
+ -                     49                                   C                  -
+ -                     50                                   C                  -
+ -                     51                                   C                  -
+ -                     52                                   C                  -
+ -                     53                                   C                  -
+ -                     54                                   C                  -
+ -                     55                                   C                  -
+ -                     56                                   C                  -
+ -                     57                                   C                  -
+ -                     58                                   C                  -
+ -                     59                                   C                  -
+ -                     60                                   C                  -
+ -                     61                                   C                  -
+ -                     62                                   C                  -
+ -                     63                                   C                  -
+ -                     64                                   C                  -
+ -                     65                                   C                  -
+ -                     66                                   C                  -
+ -                     67                                   C                  -
+ -                     68                                   C                  -
+ -                     69                                   C                  -
+ -                     70                                   C                  -
+ -                     71                                   C                  -
+ -                     72                                   C                  -
+ -                     73                                   C                  -
+ -                     74                                   C                  -
+ -                     75                                   C                  -
+ -                     76                                   C                  -
+ -                     77                                   C                  -
+ -                     78                                   C                  -
+ -                     79                                   C                  -
+ -                     80                                   C                  -
+ -                     81                                   C                  -
+ -                     82                                   C                  -
+ -                     83                                   C                  -
+ -                     84                                   C                  -
+ -                     85                                   C                  -
+ -                     86                                   C                  -
+ -                     87                                   C                  -
+ -                     88                                   C                  -
+ -                     89                                   C                  -
+ -                     90                                   C                  -
+ -                     91                                   C                  -
+ -                     92                                   C                  -
+ -                     93                                   C                  -
+ -                     94                                   C                  -
+ -                     95                                   C                  -
+ -                     96                                   C                  -
+ -                     97                                   C                  -
+ -                     98                                   C                  -
+ -                     99                                   C                  -
+ -                    100                                   C                  -
+ -                    101                                   C                  -
+ -                    102                                   C                  -
+ -                    103                                   C                  -
+ -                    104                                   C                  -
+ -                    105                                   C                  -
+ -                    106                                   C                  -
+ -                    107                                   C                  -
+ -                    108                                   C                  -
+ -                    109                                   C                  -
+ -                    110                                   C                  -
+ -                    111                                   C                  -
+ -                    112                                   C                  -
+ -                    113                                   C                  -
+ -                    114                                   C                  -
+ -                    115                                   C                  -
+ -                    116                                   C                  -
+ -                    117                                   C                  -
+ -                    118                                   C                  -
+ -                    119                                   C                  -
+ -                    120                                   C                  -
+ -                    121                                   C                  -
+ -                    122                                   C                  -
+ -                    123                                   C                  -
+ -                    124                                   C                  -
+ -                    125                                   C                  -
+ -                    126                                   C                  -
+ -                    127                                   C                  -
+ -                    128                                   C                  -
+ -                    129                                   H                  -
+ -                    130                                   H                  -
+ -                    131                                   H                  -
+ -                    132                                   H                  -
+ -                    133                                   H                  -
+ -                    134                                   H                  -
+ -                    135                                   H                  -
+ -                    136                                   H                  -
+ -                    137                                   H                  -
+ -                    138                                   H                  -
+ -                    139                                   H                  -
+ -                    140                                   H                  -
+ -                    141                                   H                  -
+ -                    142                                   H                  -
+ -                    143                                   H                  -
+ -                    144                                   O                  -
+ -                    145                                   I                  -
+ -                    146                                   I                  -
+ -------------------------------------------------------------------------------
+
+ *******************************************************************************
+ *******************************************************************************
+ **                                                                           **
+ **     #####                         ##              ##                      **
+ **    ##   ##            ##          ##              ##                      **
+ **   ##     ##                       ##            ######                    **
+ **   ##     ##  ##   ##  ##   #####  ##  ##   ####   ##    #####    #####    **
+ **   ##     ##  ##   ##  ##  ##      ## ##   ##      ##   ##   ##  ##   ##   **
+ **   ##  ## ##  ##   ##  ##  ##      ####     ###    ##   ######   ######    **
+ **    ##  ###   ##   ##  ##  ##      ## ##      ##   ##   ##       ##        **
+ **     #######   #####   ##   #####  ##  ##  ####    ##    #####   ##        **
+ **           ##                                                    ##        **
+ **                                                                           **
+ **                                                ... make the atoms dance   **
+ **                                                                           **
+ **            Copyright (C) by CP2K developers group (2000-2026)             **
+ **                      J. Chem. Phys. 152, 194103 (2020)                    **
+ **                                                                           **
+ *******************************************************************************
+
+
+ TOTAL NUMBERS AND MAXIMUM NUMBERS
+
+  Total number of            - Atomic kinds:                                   4
+                             - Atoms:                                        146
+                             - Shell sets:                                   146
+                             - Shells:                                       700
+                             - Primitive Cartesian functions:                730
+                             - Cartesian basis functions:                   1909
+                             - Spherical basis functions:                   1778
+
+  Maximum angular momentum of- Orbital basis functions:                        2
+                             - Local part of the GTH pseudopotential:          2
+                             - Non-local part of the GTH pseudopotential:      4
+
+
+ SCF PARAMETERS         Density guess:                                    ATOMIC
+                        --------------------------------------------------------
+                        max_scf:                                             260
+                        max_scf_history:                                       0
+                        max_diis:                                              4
+                        --------------------------------------------------------
+                        eps_scf:                                        1.00E-05
+                        eps_scf_history:                                0.00E+00
+                        eps_diis:                                       0.00E+00
+                        eps_eigval:                                     1.00E-05
+                        --------------------------------------------------------
+                        level_shift [a.u.]:                             0.000000
+                        --------------------------------------------------------
+                        Outer loop SCF in use 
+                        No variables optimised in outer loop
+                        eps_scf                                         1.00E-05
+                        max_scf                                               10
+                        No outer loop optimization
+                        step_size                                       5.00E-01
+
+ Extrapolation method: initial_guess
+
+ Spin 1
+
+ Number of electrons:                                                        274
+ Number of occupied orbitals:                                                274
+ Number of molecular orbitals:                                               274
+
+ Spin 2
+
+ Number of electrons:                                                        273
+ Number of occupied orbitals:                                                273
+ Number of molecular orbitals:                                               273
+
+ Number of orbital functions:                                               1778
+ Number of independent orbital functions:                                   1778
+
+
+ SCF WAVEFUNCTION OPTIMIZATION
+
+  ----------------------------------- OT ---------------------------------------
+  Minimizer      : DIIS                : direct inversion
+                                         in the iterative subspace
+                                         using   7 DIIS vectors
+                                         safer DIIS on
+  Preconditioner : FULL_SINGLE_INVERSE : inversion of 
+                                         H + eS - 2*(Sc)(c^T*H*c+const)(Sc)^T
+  Precond_solver : DEFAULT
+  stepsize       :    0.08000000                  energy_gap     :    0.08000000
+  eps_taylor     :   0.10000E-15                  max_taylor     :             4
+  ----------------------------------- OT ---------------------------------------
+
+  Step     Update method      Time    Convergence         Total energy    Change
+  ------------------------------------------------------------------------------
+     1 OT DIIS     0.80E-01    1.2     0.01412436      -725.0543145764 -7.25E+02
+     2 OT DIIS     0.80E-01    1.0     0.01258167      -736.5787960585 -1.15E+01
+     3 OT DIIS     0.80E-01    1.0     0.01054721      -742.7489219766 -6.17E+00
+     4 OT DIIS     0.80E-01    1.0     0.00870861      -753.6053168615 -1.09E+01
+     5 OT DIIS     0.80E-01    1.0     0.00547087      -765.6620767442 -1.21E+01
+     6 OT DIIS     0.80E-01    1.0     0.00430519      -768.7507591664 -3.09E+00
+     7 OT DIIS     0.80E-01    1.0     0.00262347      -772.5274391935 -3.78E+00
+     8 OT DIIS     0.80E-01    1.0     0.00212519      -773.4394146845 -9.12E-01
+     9 OT DIIS     0.80E-01    1.0     0.00148830      -774.5766982924 -1.14E+00
+    10 OT DIIS     0.80E-01    1.0     0.00125452      -774.9513567301 -3.75E-01
+    11 OT DIIS     0.80E-01    1.0     0.00097583      -775.4096656635 -4.58E-01
+    12 OT DIIS     0.80E-01    1.0     0.00081742      -775.6285063396 -2.19E-01
+    13 OT DIIS     0.80E-01    1.0     0.00066196      -775.8581021937 -2.30E-01
+    14 OT DIIS     0.80E-01    1.0     0.00055118      -775.9836721648 -1.26E-01
+    15 OT DIIS     0.80E-01    1.0     0.00045403      -776.1151976479 -1.32E-01
+    16 OT DIIS     0.80E-01    1.0     0.00037917      -776.1903486872 -7.52E-02
+    17 OT DIIS     0.80E-01    1.0     0.00033485      -776.2477075124 -5.74E-02
+    18 OT DIIS     0.80E-01    1.0     0.00029175      -776.2916094501 -4.39E-02
+    19 OT DIIS     0.80E-01    1.0     0.00026843      -776.3272138201 -3.56E-02
+    20 OT DIIS     0.80E-01    1.0     0.00023342      -776.3513905220 -2.42E-02
+    21 OT DIIS     0.80E-01    1.0     0.00020035      -776.3887642982 -3.74E-02
+    22 OT DIIS     0.80E-01    1.0     0.00018519      -776.4047694745 -1.60E-02
+    23 OT DIIS     0.80E-01    1.0     0.00016389      -776.4334667986 -2.87E-02
+    24 OT DIIS     0.80E-01    1.0     0.00015260      -776.4408236080 -7.36E-03
+    25 OT DIIS     0.80E-01    1.0     0.00013487      -776.4638764668 -2.31E-02
+    26 OT DIIS     0.80E-01    1.0     0.00013230      -776.4657403710 -1.86E-03
+    27 OT DIIS     0.80E-01    1.0     0.00012533      -776.4701231019 -4.38E-03
+    28 OT DIIS     0.80E-01    1.0     0.00010796      -776.4861871604 -1.61E-02
+    29 OT DIIS     0.80E-01    1.0     0.00009764      -776.4947274976 -8.54E-03
+    30 OT DIIS     0.80E-01    1.0     0.00010767      -776.4987148728 -3.99E-03
+    31 OT DIIS     0.80E-01    1.0     0.00008175      -776.5070816341 -8.37E-03
+    32 OT DIIS     0.80E-01    1.0     0.00007770      -776.5108807044 -3.80E-03
+    33 OT DIIS     0.80E-01    1.0     0.00006802      -776.5157410433 -4.86E-03
+    34 OT DIIS     0.80E-01    1.0     0.00007345      -776.5174716721 -1.73E-03
+    35 OT DIIS     0.80E-01    1.0     0.00007012      -776.5183190212 -8.47E-04
+    36 OT SD       0.80E-01    1.0     0.00006391      -776.5196479809 -1.33E-03
+    37 OT DIIS     0.80E-01    1.0     0.00006155      -776.5199591604 -3.11E-04
+    38 OT DIIS     0.80E-01    1.0     0.00005490      -776.5240408383 -4.08E-03
+    39 OT DIIS     0.80E-01    1.0     0.00005098      -776.5270945388 -3.05E-03
+    40 OT DIIS     0.80E-01    1.0     0.00004713      -776.5297874647 -2.69E-03
+    41 OT DIIS     0.80E-01    1.0     0.00004339      -776.5316154033 -1.83E-03
+    42 OT SD       0.80E-01    1.0     0.00004287      -776.5339592026 -2.34E-03
+    43 OT DIIS     0.80E-01    1.0     0.00004126      -776.5340992363 -1.40E-04
+    44 OT DIIS     0.80E-01    1.0     0.00003553      -776.5363269424 -2.23E-03
+    45 OT DIIS     0.80E-01    1.0     0.00003288      -776.5378466654 -1.52E-03
+    46 OT DIIS     0.80E-01    1.0     0.00003094      -776.5387441188 -8.97E-04
+    47 OT DIIS     0.80E-01    1.0     0.00002900      -776.5396386304 -8.95E-04
+    48 OT DIIS     0.80E-01    1.0     0.00002915      -776.5405737087 -9.35E-04
+    49 OT DIIS     0.80E-01    1.0     0.00002621      -776.5410658173 -4.92E-04
+    50 OT DIIS     0.80E-01    1.0     0.00002518      -776.5415983921 -5.33E-04
+    51 OT DIIS     0.80E-01    1.0     0.00002297      -776.5427390910 -1.14E-03
+    52 OT DIIS     0.80E-01    1.0     0.00002176      -776.5432708131 -5.32E-04
+    53 OT DIIS     0.80E-01    1.0     0.00002058      -776.5439660930 -6.95E-04
+    54 OT DIIS     0.80E-01    1.0     0.00002042      -776.5442232866 -2.57E-04
+    55 OT DIIS     0.80E-01    1.0     0.00001899      -776.5446549468 -4.32E-04
+    56 OT DIIS     0.80E-01    1.0     0.00001804      -776.5449169360 -2.62E-04
+    57 OT DIIS     0.80E-01    1.0     0.00001753      -776.5450973911 -1.80E-04
+    58 OT DIIS     0.80E-01    1.0     0.00001658      -776.5456044556 -5.07E-04
+    59 OT DIIS     0.80E-01    1.0     0.00001620      -776.5458091165 -2.05E-04
+    60 OT DIIS     0.80E-01    1.0     0.00001541      -776.5463217750 -5.13E-04
+    61 OT DIIS     0.80E-01    1.0     0.00001520      -776.5463772440 -5.55E-05
+    62 OT DIIS     0.80E-01    1.0     0.00001471      -776.5465923195 -2.15E-04
+    63 OT DIIS     0.80E-01    1.0     0.00001425      -776.5469639471 -3.72E-04
+    64 OT DIIS     0.80E-01    1.0     0.00001404      -776.5470933510 -1.29E-04
+    65 OT DIIS     0.80E-01    1.0     0.00001382      -776.5473533431 -2.60E-04
+    66 OT DIIS     0.80E-01    1.0     0.00001363      -776.5475491555 -1.96E-04
+    67 OT DIIS     0.80E-01    1.0     0.00001355      -776.5476208364 -7.17E-05
+    68 OT DIIS     0.80E-01    1.0     0.00001330      -776.5478743595 -2.54E-04
+    69 OT DIIS     0.80E-01    1.0     0.00001318      -776.5479705532 -9.62E-05
+    70 OT DIIS     0.80E-01    1.0     0.00001304      -776.5481863031 -2.16E-04
+    71 OT DIIS     0.80E-01    1.0     0.00001298      -776.5482786258 -9.23E-05
+    72 OT DIIS     0.80E-01    1.0     0.00001293      -776.5484537967 -1.75E-04
+    73 OT DIIS     0.80E-01    1.0     0.00001291      -776.5484595749 -5.78E-06
+    74 OT DIIS     0.80E-01    1.0     0.00001289      -776.5485116289 -5.21E-05
+    75 OT DIIS     0.80E-01    1.0     0.00001289      -776.5485537493 -4.21E-05
+    76 OT DIIS     0.80E-01    1.0     0.00001289      -776.5485643423 -1.06E-05
+    77 OT SD       0.80E-01    1.0     0.00001289      -776.5486107438 -4.64E-05
+    78 OT SD       0.80E-01    1.0     0.00001289      -776.5486236697 -1.29E-05
+    79 OT SD       0.80E-01    1.0     0.00001289      -776.5486365991 -1.29E-05
+    80 OT SD       0.80E-01    1.0     0.00001289      -776.5486495329 -1.29E-05
+    81 OT SD       0.80E-01    1.0     0.00001290      -776.5486624716 -1.29E-05
+    82 OT SD       0.80E-01    1.0     0.00001290      -776.5486754157 -1.29E-05
+    83 OT SD       0.80E-01    1.0     0.00001290      -776.5486883658 -1.30E-05
+    84 OT SD       0.80E-01    1.0     0.00001291      -776.5487013221 -1.30E-05
+    85 OT SD       0.80E-01    1.0     0.00001291      -776.5487142851 -1.30E-05
+    86 OT SD       0.80E-01    1.0     0.00001291      -776.5487272550 -1.30E-05
+    87 OT SD       0.80E-01    1.0     0.00001292      -776.5487402323 -1.30E-05
+    88 OT SD       0.80E-01    1.0     0.00001292      -776.5487532172 -1.30E-05
+    89 OT SD       0.80E-01    1.0     0.00001293      -776.5487662101 -1.30E-05
+    90 OT SD       0.80E-01    1.0     0.00001293      -776.5487792111 -1.30E-05
+    91 OT SD       0.80E-01    1.0     0.00001293      -776.5487922207 -1.30E-05
+    92 OT SD       0.80E-01    1.0     0.00001294      -776.5488052390 -1.30E-05
+    93 OT SD       0.80E-01    1.0     0.00001294      -776.5488182664 -1.30E-05
+    94 OT SD       0.80E-01    1.0     0.00001295      -776.5488313032 -1.30E-05
+    95 OT SD       0.80E-01    1.0     0.00001295      -776.5488443496 -1.30E-05
+    96 OT SD       0.80E-01    1.0     0.00001296      -776.5488574058 -1.31E-05
+    97 OT SD       0.80E-01    1.0     0.00001296      -776.5488704722 -1.31E-05
+    98 OT SD       0.80E-01    1.0     0.00001297      -776.5488835490 -1.31E-05
+    99 OT SD       0.80E-01    1.0     0.00001297      -776.5488966365 -1.31E-05
+   100 OT SD       0.80E-01    1.0     0.00001298      -776.5489097349 -1.31E-05
+   101 OT SD       0.80E-01    1.0     0.00001298      -776.5489228444 -1.31E-05
+   102 OT SD       0.80E-01    1.0     0.00001299      -776.5489359654 -1.31E-05
+   103 OT SD       0.80E-01    1.0     0.00001300      -776.5489490980 -1.31E-05
+   104 OT SD       0.80E-01    1.0     0.00001300      -776.5489622426 -1.31E-05
+   105 OT SD       0.80E-01    1.0     0.00001301      -776.5489753993 -1.32E-05
+   106 OT SD       0.80E-01    1.0     0.00001301      -776.5489885684 -1.32E-05
+   107 OT SD       0.80E-01    1.0     0.00001302      -776.5490017502 -1.32E-05
+   108 OT SD       0.80E-01    1.0     0.00001303      -776.5490149449 -1.32E-05
+   109 OT SD       0.80E-01    1.0     0.00001303      -776.5490281527 -1.32E-05
+   110 OT SD       0.80E-01    1.0     0.00001304      -776.5490413738 -1.32E-05
+   111 OT SD       0.80E-01    1.0     0.00001305      -776.5490546086 -1.32E-05
+   112 OT SD       0.80E-01    1.0     0.00001305      -776.5490678572 -1.32E-05
+   113 OT SD       0.80E-01    1.0     0.00001306      -776.5490811199 -1.33E-05
+   114 OT SD       0.80E-01    1.0     0.00001307      -776.5490943969 -1.33E-05
+   115 OT SD       0.80E-01    1.0     0.00001308      -776.5491076885 -1.33E-05
+   116 OT SD       0.80E-01    1.0     0.00001308      -776.5491209948 -1.33E-05
+   117 OT SD       0.80E-01    1.0     0.00001309      -776.5491343162 -1.33E-05
+   118 OT SD       0.80E-01    1.0     0.00001310      -776.5491476528 -1.33E-05
+   119 OT SD       0.80E-01    1.0     0.00001311      -776.5491610048 -1.34E-05
+   120 OT SD       0.80E-01    1.0     0.00001311      -776.5491743726 -1.34E-05
+   121 OT SD       0.80E-01    1.0     0.00001312      -776.5491877564 -1.34E-05
+   122 OT SD       0.80E-01    1.0     0.00001313      -776.5492011563 -1.34E-05
+   123 OT SD       0.80E-01    1.0     0.00001314      -776.5492145726 -1.34E-05
+   124 OT SD       0.80E-01    1.0     0.00001315      -776.5492280055 -1.34E-05
+   125 OT SD       0.80E-01    1.0     0.00001315      -776.5492414553 -1.34E-05
+   126 OT SD       0.80E-01    1.0     0.00001316      -776.5492549222 -1.35E-05
+   127 OT SD       0.80E-01    1.0     0.00001317      -776.5492684064 -1.35E-05
+   128 OT SD       0.80E-01    1.0     0.00001318      -776.5492819082 -1.35E-05
+   129 OT SD       0.80E-01    1.0     0.00001319      -776.5492954277 -1.35E-05
+   130 OT SD       0.80E-01    1.0     0.00001320      -776.5493089652 -1.35E-05
+   131 OT SD       0.80E-01    1.0     0.00001321      -776.5493225209 -1.36E-05
+   132 OT SD       0.80E-01    1.0     0.00001322      -776.5493360951 -1.36E-05
+   133 OT SD       0.80E-01    1.0     0.00001322      -776.5493496879 -1.36E-05
+   134 OT SD       0.80E-01    1.0     0.00001323      -776.5493632997 -1.36E-05
+   135 OT SD       0.80E-01    1.0     0.00001324      -776.5493769305 -1.36E-05
+   136 OT SD       0.80E-01    1.0     0.00001325      -776.5493905808 -1.37E-05
+   137 OT SD       0.80E-01    1.0     0.00001326      -776.5494042506 -1.37E-05
+   138 OT SD       0.80E-01    1.0     0.00001327      -776.5494179402 -1.37E-05
+   139 OT SD       0.80E-01    1.0     0.00001328      -776.5494316498 -1.37E-05
+   140 OT SD       0.80E-01    1.0     0.00001329      -776.5494453797 -1.37E-05
+   141 OT SD       0.80E-01    1.0     0.00001330      -776.5494591301 -1.38E-05
+   142 OT SD       0.80E-01    1.0     0.00001331      -776.5494729011 -1.38E-05
+   143 OT SD       0.80E-01    1.0     0.00001332      -776.5494866931 -1.38E-05
+   144 OT SD       0.80E-01    1.0     0.00001333      -776.5495005063 -1.38E-05
+   145 OT SD       0.80E-01    1.0     0.00001334      -776.5495143408 -1.38E-05
+   146 OT SD       0.80E-01    1.0     0.00001335      -776.5495281969 -1.39E-05
+   147 OT SD       0.80E-01    1.0     0.00001336      -776.5495420748 -1.39E-05
+   148 OT SD       0.80E-01    1.0     0.00001337      -776.5495559748 -1.39E-05
+   149 OT SD       0.80E-01    1.0     0.00001338      -776.5495698970 -1.39E-05
+   150 OT SD       0.80E-01    1.0     0.00001340      -776.5495838417 -1.39E-05
+   151 OT SD       0.80E-01    1.0     0.00001341      -776.5495978092 -1.40E-05
+   152 OT SD       0.80E-01    1.0     0.00001342      -776.5496117996 -1.40E-05
+   153 OT SD       0.80E-01    1.0     0.00001343      -776.5496258131 -1.40E-05
+   154 OT SD       0.80E-01    1.0     0.00001344      -776.5496398501 -1.40E-05
+   155 OT SD       0.80E-01    1.0     0.00001345      -776.5496539106 -1.41E-05
+   156 OT SD       0.80E-01    1.0     0.00001346      -776.5496679950 -1.41E-05
+   157 OT SD       0.80E-01    1.0     0.00001347      -776.5496821034 -1.41E-05
+   158 OT SD       0.80E-01    1.0     0.00001349      -776.5496962361 -1.41E-05
+   159 OT SD       0.80E-01    1.0     0.00001350      -776.5497103933 -1.42E-05
+   160 OT SD       0.80E-01    1.0     0.00001351      -776.5497245753 -1.42E-05
+   161 OT SD       0.80E-01    1.0     0.00001352      -776.5497387822 -1.42E-05
+   162 OT SD       0.80E-01    1.0     0.00001353      -776.5497530142 -1.42E-05
+   163 OT SD       0.80E-01    1.0     0.00001355      -776.5497672717 -1.43E-05
+   164 OT SD       0.80E-01    1.0     0.00001356      -776.5497815548 -1.43E-05
+   165 OT SD       0.80E-01    1.0     0.00001357      -776.5497958637 -1.43E-05
+   166 OT SD       0.80E-01    1.0     0.00001358      -776.5498101986 -1.43E-05
+   167 OT SD       0.80E-01    1.0     0.00001360      -776.5498245599 -1.44E-05
+   168 OT SD       0.80E-01    1.0     0.00001361      -776.5498389477 -1.44E-05
+   169 OT SD       0.80E-01    1.0     0.00001362      -776.5498533622 -1.44E-05
+   170 OT SD       0.80E-01    1.0     0.00001363      -776.5498678036 -1.44E-05
+   171 OT SD       0.80E-01    1.0     0.00001365      -776.5498822723 -1.45E-05
+   172 OT SD       0.80E-01    1.0     0.00001366      -776.5498967683 -1.45E-05
+   173 OT SD       0.80E-01    1.0     0.00001367      -776.5499112920 -1.45E-05
+   174 OT SD       0.80E-01    1.0     0.00001369      -776.5499258435 -1.46E-05
+   175 OT SD       0.80E-01    1.0     0.00001370      -776.5499404230 -1.46E-05
+   176 OT SD       0.80E-01    1.0     0.00001371      -776.5499550309 -1.46E-05
+   177 OT SD       0.80E-01    1.0     0.00001373      -776.5499696673 -1.46E-05
+   178 OT SD       0.80E-01    1.0     0.00001374      -776.5499843324 -1.47E-05
+   179 OT SD       0.80E-01    1.0     0.00001375      -776.5499990265 -1.47E-05
+   180 OT SD       0.80E-01    1.0     0.00001377      -776.5500137497 -1.47E-05
+   181 OT SD       0.80E-01    1.0     0.00001378      -776.5500285023 -1.48E-05
+   182 OT SD       0.80E-01    1.0     0.00001379      -776.5500432846 -1.48E-05
+   183 OT SD       0.80E-01    1.0     0.00001381      -776.5500580967 -1.48E-05
+   184 OT SD       0.80E-01    1.0     0.00001382      -776.5500729389 -1.48E-05
+   185 OT SD       0.80E-01    1.0     0.00001384      -776.5500878114 -1.49E-05
+   186 OT SD       0.80E-01    1.0     0.00001385      -776.5501027144 -1.49E-05
+   187 OT SD       0.80E-01    1.0     0.00001386      -776.5501176481 -1.49E-05
+   188 OT SD       0.80E-01    1.0     0.00001388      -776.5501326128 -1.50E-05
+   189 OT SD       0.80E-01    1.0     0.00001389      -776.5501476087 -1.50E-05
+   190 OT SD       0.80E-01    1.0     0.00001391      -776.5501626359 -1.50E-05
+   191 OT SD       0.80E-01    1.0     0.00001392      -776.5501776948 -1.51E-05
+   192 OT SD       0.80E-01    1.0     0.00001394      -776.5501927855 -1.51E-05
+   193 OT SD       0.80E-01    1.0     0.00001395      -776.5502079083 -1.51E-05
+   194 OT SD       0.80E-01    1.0     0.00001397      -776.5502230634 -1.52E-05
+   195 OT SD       0.80E-01    1.0     0.00001398      -776.5502382510 -1.52E-05
+   196 OT SD       0.80E-01    1.0     0.00001400      -776.5502534713 -1.52E-05
+   197 OT SD       0.80E-01    1.0     0.00001401      -776.5502687246 -1.53E-05
+   198 OT SD       0.80E-01    1.0     0.00001403      -776.5502840110 -1.53E-05
+   199 OT SD       0.80E-01    1.0     0.00001404      -776.5502993308 -1.53E-05
+   200 OT SD       0.80E-01    1.0     0.00001406      -776.5503146843 -1.54E-05
+   201 OT SD       0.80E-01    1.0     0.00001407      -776.5503300715 -1.54E-05
+   202 OT SD       0.80E-01    1.0     0.00001409      -776.5503454928 -1.54E-05
+   203 OT SD       0.80E-01    1.0     0.00001411      -776.5503609484 -1.55E-05
+   204 OT SD       0.80E-01    1.0     0.00001412      -776.5503764385 -1.55E-05
+   205 OT SD       0.80E-01    1.0     0.00001414      -776.5503919633 -1.55E-05
+   206 OT SD       0.80E-01    1.0     0.00001415      -776.5504075230 -1.56E-05
+   207 OT SD       0.80E-01    1.0     0.00001417      -776.5504231179 -1.56E-05
+   208 OT SD       0.80E-01    1.0     0.00001419      -776.5504387481 -1.56E-05
+   209 OT SD       0.80E-01    1.0     0.00001420      -776.5504544139 -1.57E-05
+   210 OT SD       0.80E-01    1.0     0.00001422      -776.5504701156 -1.57E-05
+   211 OT SD       0.80E-01    1.0     0.00001423      -776.5504858532 -1.57E-05
+   212 OT SD       0.80E-01    1.0     0.00001425      -776.5505016271 -1.58E-05
+   213 OT SD       0.80E-01    1.0     0.00001427      -776.5505174375 -1.58E-05
+   214 OT SD       0.80E-01    1.0     0.00001428      -776.5505332846 -1.58E-05
+   215 OT SD       0.80E-01    1.0     0.00001430      -776.5505491685 -1.59E-05
+   216 OT SD       0.80E-01    1.0     0.00001432      -776.5505650896 -1.59E-05
+   217 OT SD       0.80E-01    1.0     0.00001433      -776.5505810479 -1.60E-05
+   218 OT SD       0.80E-01    1.0     0.00001435      -776.5505970439 -1.60E-05
+   219 OT SD       0.80E-01    1.0     0.00001437      -776.5506130776 -1.60E-05
+   220 OT SD       0.80E-01    1.0     0.00001439      -776.5506291493 -1.61E-05
+   221 OT SD       0.80E-01    1.0     0.00001440      -776.5506452591 -1.61E-05
+   222 OT SD       0.80E-01    1.0     0.00001442      -776.5506614074 -1.61E-05
+   223 OT SD       0.80E-01    1.0     0.00001444      -776.5506775944 -1.62E-05
+   224 OT SD       0.80E-01    1.0     0.00001445      -776.5506938201 -1.62E-05
+   225 OT SD       0.80E-01    1.0     0.00001447      -776.5507100850 -1.63E-05
+   226 OT SD       0.80E-01    1.0     0.00001449      -776.5507263890 -1.63E-05
+   227 OT SD       0.80E-01    1.0     0.00001451      -776.5507427326 -1.63E-05
+   228 OT SD       0.80E-01    1.0     0.00001452      -776.5507591159 -1.64E-05
+   229 OT SD       0.80E-01    1.0     0.00001454      -776.5507755391 -1.64E-05
+   230 OT SD       0.80E-01    1.0     0.00001456      -776.5507920024 -1.65E-05
+   231 OT SD       0.80E-01    1.0     0.00001458      -776.5508085061 -1.65E-05
+   232 OT SD       0.80E-01    1.0     0.00001460      -776.5508250503 -1.65E-05
+   233 OT SD       0.80E-01    1.0     0.00001461      -776.5508416352 -1.66E-05
+   234 OT SD       0.80E-01    1.0     0.00001463      -776.5508582612 -1.66E-05
+   235 OT SD       0.80E-01    1.0     0.00001465      -776.5508749283 -1.67E-05
+   236 OT SD       0.80E-01    1.0     0.00001467      -776.5508916368 -1.67E-05
+   237 OT SD       0.80E-01    1.0     0.00001469      -776.5509083869 -1.68E-05
+   238 OT SD       0.80E-01    1.0     0.00001470      -776.5509251788 -1.68E-05
+   239 OT SD       0.80E-01    1.0     0.00001472      -776.5509420128 -1.68E-05
+   240 OT SD       0.80E-01    1.0     0.00001474      -776.5509588889 -1.69E-05
+   241 OT SD       0.80E-01    1.0     0.00001476      -776.5509758075 -1.69E-05
+   242 OT SD       0.80E-01    1.0     0.00001478      -776.5509927688 -1.70E-05
+   243 OT SD       0.80E-01    1.0     0.00001480      -776.5510097729 -1.70E-05
+   244 OT SD       0.80E-01    1.0     0.00001482      -776.5510268200 -1.70E-05
+   245 OT SD       0.80E-01    1.0     0.00001483      -776.5510439104 -1.71E-05
+   246 OT SD       0.80E-01    1.0     0.00001485      -776.5510610443 -1.71E-05
+   247 OT SD       0.80E-01    1.0     0.00001487      -776.5510782219 -1.72E-05
+   248 OT SD       0.80E-01    1.0     0.00001489      -776.5510954433 -1.72E-05
+   249 OT SD       0.80E-01    1.0     0.00001491      -776.5511127088 -1.73E-05
+   250 OT SD       0.80E-01    1.0     0.00001493      -776.5511300186 -1.73E-05
+   251 OT SD       0.80E-01    1.0     0.00001495      -776.5511473729 -1.74E-05
+   252 OT SD       0.80E-01    1.0     0.00001497      -776.5511647719 -1.74E-05
+   253 OT SD       0.80E-01    1.0     0.00001499      -776.5511822157 -1.74E-05
+   254 OT SD       0.80E-01    1.0     0.00001501      -776.5511997047 -1.75E-05
+   255 OT SD       0.80E-01    1.0     0.00001503      -776.5512172389 -1.75E-05
+   256 OT SD       0.80E-01    1.0     0.00001505      -776.5512348187 -1.76E-05
+   257 OT DIIS     0.80E-01    1.0     0.00001507      -776.5512524441 -1.76E-05
+   258 OT DIIS     0.80E-01    1.0     0.00016751      -776.5463297898  4.92E-03
+   259 OT SD       0.80E-01    1.0     0.00004303      -776.5487902207 -2.46E-03
+   260 OT SD       0.80E-01    1.0     0.00003090      -776.5489124968 -1.22E-04
+
+  Leaving inner SCF loop after reaching   260 steps.
+
+
+  Electronic density on regular grids:       -546.9999010112        0.0000989888
+  Core density on regular grids:              547.0001996275        0.0001996275
+  Total charge density on r-space grids:        0.0002986162
+  Total charge density g-space grids:           0.0002986162
+
+  Overlap energy of the core charge distribution:               0.00002768523856
+  Self energy of the core charge distribution:              -1818.93091964841528
+  Core Hamiltonian energy:                                    565.01223003886957
+  Hartree energy:                                             714.61897912720849
+  Exchange-correlation energy:                               -237.24922969968935
+
+  Total energy:                                              -776.54891249678803
+
+  outer SCF iter =    1 RMS gradient =   0.31E-04 energy =       -776.5489124968
+
+  ----------------------------------- OT ---------------------------------------
+  Minimizer      : DIIS                : direct inversion
+                                         in the iterative subspace
+                                         using   7 DIIS vectors
+                                         safer DIIS on
+  Preconditioner : FULL_SINGLE_INVERSE : inversion of 
+                                         H + eS - 2*(Sc)(c^T*H*c+const)(Sc)^T
+  Precond_solver : DEFAULT
+  stepsize       :    0.08000000                  energy_gap     :    0.08000000
+  eps_taylor     :   0.10000E-15                  max_taylor     :             4
+  ----------------------------------- OT ---------------------------------------
+
+  Step     Update method      Time    Convergence         Total energy    Change
+  ------------------------------------------------------------------------------
+     1 OT DIIS     0.80E-01    2.3     0.00012380      -776.5489784142 -6.59E-05
+     2 OT DIIS     0.80E-01    0.9     0.00009411      -776.5500150389 -1.04E-03
+     3 OT DIIS     0.80E-01    0.9     0.00005787      -776.5513535781 -1.34E-03
+     4 OT DIIS     0.80E-01    0.9     0.00005123      -776.5518212239 -4.68E-04
+     5 OT DIIS     0.80E-01    0.9     0.00004936      -776.5521896286 -3.68E-04
+     6 OT SD       0.80E-01    0.9     0.00004953      -776.5524512998 -2.62E-04
+     7 OT SD       0.80E-01    0.9     0.00005026      -776.5526434387 -1.92E-04
+     8 OT SD       0.80E-01    0.9     0.00005120      -776.5528417144 -1.98E-04
+     9 OT SD       0.80E-01    0.9     0.00005230      -776.5530477955 -2.06E-04
+    10 OT SD       0.80E-01    0.9     0.00005355      -776.5532631300 -2.15E-04
+    11 OT SD       0.80E-01    1.0     0.00005492      -776.5534890644 -2.26E-04
+    12 OT SD       0.80E-01    1.0     0.00005641      -776.5537268987 -2.38E-04
+    13 OT SD       0.80E-01    1.0     0.00005800      -776.5539779172 -2.51E-04
+    14 OT SD       0.80E-01    1.0     0.00005968      -776.5542434061 -2.65E-04
+    15 OT SD       0.80E-01    1.0     0.00006146      -776.5545246629 -2.81E-04
+    16 OT SD       0.80E-01    1.0     0.00006332      -776.5548230014 -2.98E-04
+    17 OT SD       0.80E-01    1.0     0.00006526      -776.5551397511 -3.17E-04
+    18 OT SD       0.80E-01    1.0     0.00006728      -776.5554762532 -3.37E-04
+    19 OT SD       0.80E-01    1.0     0.00006936      -776.5558338525 -3.58E-04
+    20 OT SD       0.80E-01    1.0     0.00007149      -776.5562138861 -3.80E-04
+    21 OT SD       0.80E-01    1.0     0.00007368      -776.5566176696 -4.04E-04
+    22 OT SD       0.80E-01    1.0     0.00007591      -776.5570464780 -4.29E-04
+    23 OT SD       0.80E-01    1.0     0.00007817      -776.5575015223 -4.55E-04
+    24 OT SD       0.80E-01    1.0     0.00008045      -776.5579839224 -4.82E-04
+    25 OT SD       0.80E-01    1.0     0.00008274      -776.5584946775 -5.11E-04
+    26 OT SD       0.80E-01    1.0     0.00008501      -776.5590346372 -5.40E-04
+    27 OT SD       0.80E-01    1.0     0.00008727      -776.5596044667 -5.70E-04
+    28 OT SD       0.80E-01    1.0     0.00008949      -776.5602046098 -6.00E-04
+    29 OT SD       0.80E-01    1.0     0.00009165      -776.5608352506 -6.31E-04
+    30 OT SD       0.80E-01    1.0     0.00009374      -776.5614962775 -6.61E-04
+    31 OT SD       0.80E-01    1.0     0.00009573      -776.5621872515 -6.91E-04
+    32 OT SD       0.80E-01    1.0     0.00009761      -776.5629073769 -7.20E-04
+    33 OT SD       0.80E-01    1.0     0.00009937      -776.5636554895 -7.48E-04
+    34 OT SD       0.80E-01    1.0     0.00010097      -776.5644300307 -7.75E-04
+    35 OT SD       0.80E-01    1.0     0.00010241      -776.5652290484 -7.99E-04
+    36 OT SD       0.80E-01    1.0     0.00010367      -776.5660502137 -8.21E-04
+    37 OT SD       0.80E-01    1.0     0.00010473      -776.5668908324 -8.41E-04
+    38 OT SD       0.80E-01    1.0     0.00010559      -776.5677478764 -8.57E-04
+    39 OT SD       0.80E-01    1.0     0.00010622      -776.5686180175 -8.70E-04
+    40 OT SD       0.80E-01    1.0     0.00010663      -776.5694976883 -8.80E-04
+    41 OT SD       0.80E-01    1.0     0.00010680      -776.5703831509 -8.85E-04
+    42 OT SD       0.80E-01    1.0     0.00010674      -776.5712705359 -8.87E-04
+    43 OT SD       0.80E-01    1.0     0.00010645      -776.5721559406 -8.85E-04
+    44 OT DIIS     0.80E-01    1.0     0.00010592      -776.5730355062 -8.80E-04
+    45 OT SD       0.80E-01    1.0     0.00013507      -776.5746000332 -1.56E-03
+    46 OT SD       0.80E-01    1.0     0.00011174      -776.5758441751 -1.24E-03
+    47 OT SD       0.80E-01    1.0     0.00010804      -776.5767960667 -9.52E-04
+    48 OT DIIS     0.80E-01    1.0     0.00010563      -776.5776938343 -8.98E-04
+    49 OT DIIS     0.80E-01    1.0     0.00011888      -776.5808585742 -3.16E-03
+    50 OT DIIS     0.80E-01    1.0     0.00062644      -776.5291393299  5.17E-02
+    51 OT DIIS     0.80E-01    1.0     0.00038184      -776.5658936069 -3.68E-02
+    52 OT DIIS     0.80E-01    1.0     0.00008018      -776.5855274558 -1.96E-02
+    53 OT DIIS     0.80E-01    1.0     0.00003575      -776.5894614328 -3.93E-03
+    54 OT DIIS     0.80E-01    1.0     0.00003183      -776.5896413244 -1.80E-04
+    55 OT DIIS     0.80E-01    1.0     0.00001769      -776.5900117662 -3.70E-04
+    56 OT DIIS     0.80E-01    1.0     0.00001523      -776.5900561284 -4.44E-05
+    57 OT DIIS     0.80E-01    1.0     0.00001404      -776.5900763124 -2.02E-05
+    58 OT DIIS     0.80E-01    1.0     0.00001324      -776.5901583496 -8.20E-05
+    59 OT DIIS     0.80E-01    1.0     0.00000958      -776.5901766922 -1.83E-05
+
+  *** SCF run converged in    59 steps ***
+
+
+  Electronic density on regular grids:       -546.9999009391        0.0000990609
+  Core density on regular grids:              547.0001996275        0.0001996275
+  Total charge density on r-space grids:        0.0002986884
+  Total charge density g-space grids:           0.0002986884
+
+  Overlap energy of the core charge distribution:               0.00002768523856
+  Self energy of the core charge distribution:              -1818.93091964841528
+  Core Hamiltonian energy:                                    565.07975360043713
+  Hartree energy:                                             714.56743646669827
+  Exchange-correlation energy:                               -237.30647479615408
+
+  Total energy:                                              -776.59017669219543
+
+  outer SCF iter =    2 RMS gradient =   0.96E-05 energy =       -776.5901766922
+  outer SCF loop converged in   2 iterations or  319 steps
+
+
+  Integrated spin density:                                          0.9999979234
+  Integrated absolute spin density:                                 8.9924932884
+  Ideal and single determinant S**2 :                    0.750000       2.740122
+
+ -------------------------------------------------------------------------------
+ -                                                                             -
+ -                                 BSSE RESULTS                                -
+ -                                                                             -
+ -                 CP-corrected Total energy:     -776.588874                  -
+ -                                                                             -
+ -                       1-body contribution:     -753.647232                  -
+ -                       1-body contribution:      -22.916338                  -
+ -                                                                             -
+ -                       2-body contribution:       -0.025304                  -
+ -                 BSSE-free interaction energy:       -0.025304               -
+ -------------------------------------------------------------------------------
+
+ -------------------------------------------------------------------------------
+ -                                                                             -
+ -                                DBCSR STATISTICS                             -
+ -                                                                             -
+ -------------------------------------------------------------------------------
+ COUNTER                                    TOTAL       BLAS       SMM       ACC
+ flops     5 x     7 x     7                14700     100.0%      0.0%      0.0%     
+ flops     5 x    10 x    10                60000     100.0%      0.0%      0.0%     
+ flops     5 x    11 x    11                72600     100.0%      0.0%      0.0%     
+ flops    10 x    10 x   439                87800     100.0%      0.0%      0.0%     
+ flops    10 x    10 x   441                88200     100.0%      0.0%      0.0%     
+ flops    10 x    10 x   446                89200     100.0%      0.0%      0.0%     
+ flops    11 x    11 x   439               106238     100.0%      0.0%      0.0%     
+ flops    11 x    11 x   441               106722     100.0%      0.0%      0.0%     
+ flops    11 x    11 x   446               107932     100.0%      0.0%      0.0%     
+ flops     5 x    17 x    17               173400     100.0%      0.0%      0.0%     
+ flops    10 x    10 x   436               174400     100.0%      0.0%      0.0%     
+ flops     5 x    18 x    18               194400     100.0%      0.0%      0.0%     
+ flops    11 x    11 x   436               211024     100.0%      0.0%      0.0%     
+ flops    10 x    10 x   444               266400     100.0%      0.0%      0.0%     
+ flops    11 x    11 x   444               322344     100.0%      0.0%      0.0%     
+ flops    17 x    17 x   446               515576     100.0%      0.0%      0.0%     
+ flops    18 x    18 x   446               578016     100.0%      0.0%      0.0%     
+ flops     7 x     7 x     7               724416     100.0%      0.0%      0.0%     
+ flops     5 x    32 x    10               768000     100.0%      0.0%      0.0%     
+ flops     5 x    10 x    32               768000     100.0%      0.0%      0.0%     
+ flops     7 x     7 x    13               835744     100.0%      0.0%      0.0%     
+ flops     5 x    32 x    11               844800     100.0%      0.0%      0.0%     
+ flops     5 x    11 x    32               844800     100.0%      0.0%      0.0%     
+ flops     5 x     5 x     7               980000     100.0%      0.0%      0.0%     
+ flops    32 x    10 x   439              1123840     100.0%      0.0%      0.0%     
+ flops    10 x    32 x   439              1123840     100.0%      0.0%      0.0%     
+ flops    32 x    10 x   441              1128960     100.0%      0.0%      0.0%     
+ flops    10 x    32 x   441              1128960     100.0%      0.0%      0.0%     
+ flops    32 x    10 x   446              1141760     100.0%      0.0%      0.0%     
+ flops    10 x    32 x   446              1141760     100.0%      0.0%      0.0%     
+ flops    32 x    11 x   439              1236224     100.0%      0.0%      0.0%     
+ flops    11 x    32 x   439              1236224     100.0%      0.0%      0.0%     
+ flops    32 x    11 x   441              1241856     100.0%      0.0%      0.0%     
+ flops    11 x    32 x   441              1241856     100.0%      0.0%      0.0%     
+ flops    32 x    11 x   446              1255936     100.0%      0.0%      0.0%     
+ flops    11 x    32 x   446              1255936     100.0%      0.0%      0.0%     
+ flops     5 x    32 x    17              1305600     100.0%      0.0%      0.0%     
+ flops     5 x    17 x    32              1305600     100.0%      0.0%      0.0%     
+ flops    13 x    10 x    10              1352000     100.0%      0.0%      0.0%     
+ flops    13 x     7 x     7              1378468     100.0%      0.0%      0.0%     
+ flops     5 x    32 x    18              1382400     100.0%      0.0%      0.0%     
+ flops     5 x    18 x    32              1382400     100.0%      0.0%      0.0%     
+ flops    17 x    17 x   444              1539792     100.0%      0.0%      0.0%     
+ flops    13 x    11 x    11              1635920     100.0%      0.0%      0.0%     
+ flops    18 x    18 x   444              1726272     100.0%      0.0%      0.0%     
+ flops    32 x    10 x   436              2232320     100.0%      0.0%      0.0%     
+ flops    10 x    32 x   436              2232320     100.0%      0.0%      0.0%     
+ flops    32 x    11 x   436              2455552     100.0%      0.0%      0.0%     
+ flops    11 x    32 x   436              2455552     100.0%      0.0%      0.0%     
+ flops    32 x    10 x   444              3409920     100.0%      0.0%      0.0%     
+ flops    10 x    32 x   444              3409920     100.0%      0.0%      0.0%     
+ flops     5 x     7 x     5              3599050     100.0%      0.0%      0.0%     
+ flops   197 x     7 x     7              3629528     100.0%      0.0%      0.0%     
+ flops    32 x    11 x   444              3750912     100.0%      0.0%      0.0%     
+ flops    11 x    32 x   444              3750912     100.0%      0.0%      0.0%     
+ flops    32 x    17 x   446              3881984     100.0%      0.0%      0.0%     
+ flops    17 x    32 x   446              3881984     100.0%      0.0%      0.0%     
+ flops    13 x    17 x    17              3937336     100.0%      0.0%      0.0%     
+ flops    32 x    18 x   446              4110336     100.0%      0.0%      0.0%     
+ flops    18 x    32 x   446              4110336     100.0%      0.0%      0.0%     
+ flops    13 x    18 x    18              4414176     100.0%      0.0%      0.0%     
+ flops   249 x     7 x     7              4587576     100.0%      0.0%      0.0%     
+ flops     7 x     7 x   446              6643616     100.0%      0.0%      0.0%     
+ flops   200 x     7 x     7             11054400     100.0%      0.0%      0.0%     
+ flops    32 x    17 x   444             11593728     100.0%      0.0%      0.0%     
+ flops    17 x    32 x   444             11593728     100.0%      0.0%      0.0%     
+ flops    32 x    18 x   444             12275712     100.0%      0.0%      0.0%     
+ flops    18 x    32 x   444             12275712     100.0%      0.0%      0.0%     
+ flops   244 x     7 x     7             13486368     100.0%      0.0%      0.0%     
+ flops    13 x    32 x    10             17305600     100.0%      0.0%      0.0%     
+ flops    13 x    10 x    32             17305600     100.0%      0.0%      0.0%     
+ flops     5 x    10 x     5             18701500     100.0%      0.0%      0.0%     
+ flops    13 x    32 x    11             19036160     100.0%      0.0%      0.0%     
+ flops    13 x    11 x    32             19036160     100.0%      0.0%      0.0%     
+ flops     7 x     7 x   444             19841472     100.0%      0.0%      0.0%     
+ flops     5 x    11 x     5             20447350     100.0%      0.0%      0.0%     
+ flops     5 x    13 x     7             21734440     100.0%      0.0%      0.0%     
+ flops    13 x     5 x     7             21918260     100.0%      0.0%      0.0%     
+ flops    13 x    32 x    17             29645824     100.0%      0.0%      0.0%     
+ flops    13 x    17 x    32             29645824     100.0%      0.0%      0.0%     
+ flops    13 x    32 x    18             31389696     100.0%      0.0%      0.0%     
+ flops    13 x    18 x    32             31389696     100.0%      0.0%      0.0%     
+ flops     5 x     5 x    74             37828800     100.0%      0.0%      0.0%     
+ flops     5 x     5 x    75             38340000     100.0%      0.0%      0.0%     
+ flops   197 x     7 x   446             49202720     100.0%      0.0%      0.0%     
+ flops   249 x     7 x   446             62190240     100.0%      0.0%      0.0%     
+ flops     5 x    17 x     5             63873250     100.0%      0.0%      0.0%     
+ flops    32 x    32 x   439             64733184     100.0%      0.0%      0.0%     
+ flops    32 x    32 x   441             65028096     100.0%      0.0%      0.0%     
+ flops     5 x    18 x     5             67528800     100.0%      0.0%      0.0%     
+ flops     5 x     5 x    81             83916000     100.0%      0.0%      0.0%     
+ flops     5 x     5 x    82             84952000     100.0%      0.0%      0.0%     
+ flops     5 x    32 x    32             88473600     100.0%      0.0%      0.0%     
+ flops     5 x     7 x    13             91173810     100.0%      0.0%      0.0%     
+ flops    13 x     7 x     5             91173810     100.0%      0.0%      0.0%     
+ flops    32 x    32 x   436            128581632     100.0%      0.0%      0.0%     
+ flops   197 x     7 x   444            146946240     100.0%      0.0%      0.0%     
+ flops   200 x     7 x   446            149856000     100.0%      0.0%      0.0%     
+ flops   244 x     7 x   446            182824320     100.0%      0.0%      0.0%     
+ flops   249 x     7 x   444            185734080     100.0%      0.0%      0.0%     
+ flops    32 x    32 x   446            197296128     100.0%      0.0%      0.0%     
+ flops   200 x     7 x   444            447552000     100.0%      0.0%      0.0%     
+ flops     5 x    10 x    13            470939300     100.0%      0.0%      0.0%     
+ flops    13 x    10 x     5            470939300     100.0%      0.0%      0.0%     
+ flops     5 x    11 x    13            514904390     100.0%      0.0%      0.0%     
+ flops    13 x    11 x     5            514904390     100.0%      0.0%      0.0%     
+ flops   244 x     7 x   444            546013440     100.0%      0.0%      0.0%     
+ flops    32 x    32 x   444            589234176     100.0%      0.0%      0.0%     
+ flops     5 x     5 x    64            594124800     100.0%      0.0%      0.0%     
+ flops    13 x    13 x     7            667472260     100.0%      0.0%      0.0%     
+ flops   195 x    74 x    74            764559120     100.0%      0.0%      0.0%     
+ flops   195 x    75 x    75            785362500     100.0%      0.0%      0.0%     
+ flops   205 x    74 x    74            803767280     100.0%      0.0%      0.0%     
+ flops   205 x    75 x    75            825637500     100.0%      0.0%      0.0%     
+ flops     5 x    13 x    74            836228120     100.0%      0.0%      0.0%     
+ flops    13 x     5 x    74            843750960     100.0%      0.0%      0.0%     
+ flops     5 x    13 x    75            847528500     100.0%      0.0%      0.0%     
+ flops    13 x     5 x    75            855153000     100.0%      0.0%      0.0%     
+ flops   197 x    74 x    74            880277952     100.0%      0.0%      0.0%     
+ flops   197 x    75 x    75            904230000     100.0%      0.0%      0.0%     
+ flops   231 x    74 x    74            905708496     100.0%      0.0%      0.0%     
+ flops   195 x    74 x   439            924876420     100.0%      0.0%      0.0%     
+ flops   195 x    74 x   441            929089980     100.0%      0.0%      0.0%     
+ flops   231 x    75 x    75            930352500     100.0%      0.0%      0.0%     
+ flops   195 x    75 x   439            937374750     100.0%      0.0%      0.0%     
+ flops   195 x    75 x   441            941645250     100.0%      0.0%      0.0%     
+ flops   205 x    74 x   439            972305980     100.0%      0.0%      0.0%     
+ flops   205 x    74 x   441            976735620     100.0%      0.0%      0.0%     
+ flops   205 x    75 x   439            985445250     100.0%      0.0%      0.0%     
+ flops   205 x    75 x   441            989934750     100.0%      0.0%      0.0%     
+ flops   197 x    74 x   446           1079296808     100.0%      0.0%      0.0%     
+ flops   197 x    75 x   446           1093881900     100.0%      0.0%      0.0%     
+ flops   231 x    74 x   439           1095622836     100.0%      0.0%      0.0%     
+ flops   231 x    74 x   441           1100614284     100.0%      0.0%      0.0%     
+ flops   231 x    75 x   439           1110428550     100.0%      0.0%      0.0%     
+ flops    74 x    74 x    74           1113555552     100.0%      0.0%      0.0%     
+ flops   231 x    75 x   441           1115487450     100.0%      0.0%      0.0%     
+ flops    75 x    75 x    75           1159312500     100.0%      0.0%      0.0%     
+ flops   249 x    74 x   439           1180996044     100.0%      0.0%      0.0%     
+ flops   249 x    74 x   441           1186376436     100.0%      0.0%      0.0%     
+ flops   249 x    75 x   439           1196955450     100.0%      0.0%      0.0%     
+ flops   249 x    75 x   441           1202408550     100.0%      0.0%      0.0%     
+ flops   249 x    74 x   446           1364187336     100.0%      0.0%      0.0%     
+ flops    74 x    74 x   439           1379875336     100.0%      0.0%      0.0%     
+ flops   249 x    75 x   446           1382622300     100.0%      0.0%      0.0%     
+ flops    74 x    74 x   441           1386161784     100.0%      0.0%      0.0%     
+ flops    75 x    75 x   439           1417421250     100.0%      0.0%      0.0%     
+ flops    75 x    75 x   441           1423878750     100.0%      0.0%      0.0%     
+ flops   192 x    74 x    74           1505593344     100.0%      0.0%      0.0%     
+ flops   192 x    75 x    75           1546560000     100.0%      0.0%      0.0%     
+ flops    74 x    74 x   446           1597261584     100.0%      0.0%      0.0%     
+ flops     5 x    17 x    13           1618084650     100.0%      0.0%      0.0%     
+ flops    13 x    17 x     5           1618084650     100.0%      0.0%      0.0%     
+ flops    75 x    75 x   446           1640722500     100.0%      0.0%      0.0%     
+ flops     5 x    18 x    13           1710689760     100.0%      0.0%      0.0%     
+ flops    13 x    18 x     5           1710689760     100.0%      0.0%      0.0%     
+ flops   192 x    74 x   439           1821295104     100.0%      0.0%      0.0%     
+ flops   192 x    74 x   441           1829592576     100.0%      0.0%      0.0%     
+ flops   195 x    74 x   436           1837112160     100.0%      0.0%      0.0%     
+ flops   192 x    75 x   439           1845907200     100.0%      0.0%      0.0%     
+ flops   192 x    75 x   441           1854316800     100.0%      0.0%      0.0%     
+ flops   195 x    75 x   436           1861938000     100.0%      0.0%      0.0%     
+ flops     5 x    13 x    81           1867221720     100.0%      0.0%      0.0%     
+ flops    13 x     5 x    81           1884090780     100.0%      0.0%      0.0%     
+ flops     5 x    13 x    82           1890273840     100.0%      0.0%      0.0%     
+ flops    13 x     5 x    82           1907351160     100.0%      0.0%      0.0%     
+ flops   205 x    74 x   436           1931323040     100.0%      0.0%      0.0%     
+ flops   205 x    75 x   436           1957422000     100.0%      0.0%      0.0%     
+ flops   195 x    64 x    74           1983720960     100.0%      0.0%      0.0%     
+ flops   195 x    74 x    64           1983720960     100.0%      0.0%      0.0%     
+ flops    13 x    32 x    32           2001272832     100.0%      0.0%      0.0%     
+ flops   195 x    64 x    75           2010528000     100.0%      0.0%      0.0%     
+ flops   195 x    75 x    64           2010528000     100.0%      0.0%      0.0%     
+ flops   205 x    64 x    74           2085450240     100.0%      0.0%      0.0%     
+ flops   205 x    74 x    64           2085450240     100.0%      0.0%      0.0%     
+ flops   249 x    74 x    74           2088918768     100.0%      0.0%      0.0%     
+ flops   205 x    64 x    75           2113632000     100.0%      0.0%      0.0%     
+ flops   205 x    75 x    64           2113632000     100.0%      0.0%      0.0%     
+ flops   249 x    75 x    75           2145757500     100.0%      0.0%      0.0%     
+ flops   231 x    74 x   436           2176271328     100.0%      0.0%      0.0%     
+ flops   231 x    75 x   436           2205680400     100.0%      0.0%      0.0%     
+ flops   197 x    74 x    64           2283964416     100.0%      0.0%      0.0%     
+ flops   197 x    64 x    74           2283964416     100.0%      0.0%      0.0%     
+ flops   244 x    74 x   439           2314562528     100.0%      0.0%      0.0%     
+ flops   197 x    75 x    64           2314828800     100.0%      0.0%      0.0%     
+ flops   197 x    64 x    75           2314828800     100.0%      0.0%      0.0%     
+ flops   244 x    74 x   441           2325107232     100.0%      0.0%      0.0%     
+ flops   244 x    75 x   439           2345840400     100.0%      0.0%      0.0%     
+ flops   249 x    74 x   436           2345850912     100.0%      0.0%      0.0%     
+ flops   231 x    64 x    74           2349946368     100.0%      0.0%      0.0%     
+ flops   231 x    74 x    64           2349946368     100.0%      0.0%      0.0%     
+ flops   244 x    75 x   441           2356527600     100.0%      0.0%      0.0%     
+ flops   249 x    75 x   436           2377551600     100.0%      0.0%      0.0%     
+ flops   231 x    64 x    75           2381702400     100.0%      0.0%      0.0%     
+ flops   231 x    75 x    64           2381702400     100.0%      0.0%      0.0%     
+ flops   200 x    74 x    74           2681049600     100.0%      0.0%      0.0%     
+ flops    74 x    74 x   436           2740891328     100.0%      0.0%      0.0%     
+ flops   200 x    75 x    75           2754000000     100.0%      0.0%      0.0%     
+ flops    75 x    75 x   436           2815470000     100.0%      0.0%      0.0%     
+ flops    13 x     7 x    13           2822389570     100.0%      0.0%      0.0%     
+ flops     5 x    32 x     5           2876889600     100.0%      0.0%      0.0%     
+ flops    74 x    74 x    64           2889225216     100.0%      0.0%      0.0%     
+ flops    32 x    74 x    74           2889225216     100.0%      0.0%      0.0%     
+ flops    74 x    64 x    74           2889225216     100.0%      0.0%      0.0%     
+ flops    75 x    75 x    64           2967840000     100.0%      0.0%      0.0%     
+ flops    32 x    75 x    75           2967840000     100.0%      0.0%      0.0%     
+ flops    75 x    64 x    75           2967840000     100.0%      0.0%      0.0%     
+ flops    81 x    81 x    81           3060037278     100.0%      0.0%      0.0%     
+ flops    82 x    82 x    82           3141694864     100.0%      0.0%      0.0%     
+ flops   197 x    74 x   444           3223370736     100.0%      0.0%      0.0%     
+ flops   197 x    75 x   444           3266929800     100.0%      0.0%      0.0%     
+ flops   200 x    74 x   446           3287198400     100.0%      0.0%      0.0%     
+ flops   200 x    75 x   446           3331620000     100.0%      0.0%      0.0%     
+ flops    32 x    74 x   439           3580217088     100.0%      0.0%      0.0%     
+ flops    74 x    64 x   439           3580217088     100.0%      0.0%      0.0%     
+ flops    32 x    74 x   441           3596527872     100.0%      0.0%      0.0%     
+ flops    74 x    64 x   441           3596527872     100.0%      0.0%      0.0%     
+ flops   192 x    74 x   436           3617697792     100.0%      0.0%      0.0%     
+ flops    32 x    75 x   439           3628598400     100.0%      0.0%      0.0%     
+ flops    75 x    64 x   439           3628598400     100.0%      0.0%      0.0%     
+ flops    32 x    75 x   441           3645129600     100.0%      0.0%      0.0%     
+ flops    75 x    64 x   441           3645129600     100.0%      0.0%      0.0%     
+ flops   192 x    75 x   436           3666585600     100.0%      0.0%      0.0%     
+ flops   192 x    74 x    64           3906404352     100.0%      0.0%      0.0%     
+ flops   192 x    64 x    74           3906404352     100.0%      0.0%      0.0%     
+ flops   192 x    75 x    64           3959193600     100.0%      0.0%      0.0%     
+ flops   192 x    64 x    75           3959193600     100.0%      0.0%      0.0%     
+ flops   244 x    74 x   446           4010382048     100.0%      0.0%      0.0%     
+ flops   244 x    75 x   446           4064576400     100.0%      0.0%      0.0%     
+ flops   249 x    74 x   444           4074209712     100.0%      0.0%      0.0%     
+ flops   197 x    81 x    81           4112789094     100.0%      0.0%      0.0%     
+ flops   249 x    75 x   444           4129266600     100.0%      0.0%      0.0%     
+ flops    32 x    74 x   446           4144246272     100.0%      0.0%      0.0%     
+ flops    74 x    64 x   446           4144246272     100.0%      0.0%      0.0%     
+ flops    32 x    75 x   446           4200249600     100.0%      0.0%      0.0%     
+ flops    75 x    64 x   446           4200249600     100.0%      0.0%      0.0%     
+ flops   197 x    82 x    82           4214966296     100.0%      0.0%      0.0%     
+ flops   197 x    81 x   446           4568999724     100.0%      0.0%      0.0%     
+ flops   244 x    74 x   436           4597490944     100.0%      0.0%      0.0%     
+ flops   197 x    82 x   446           4625407128     100.0%      0.0%      0.0%     
+ flops   244 x    75 x   436           4659619200     100.0%      0.0%      0.0%     
+ flops    74 x    74 x   444           4770296928     100.0%      0.0%      0.0%     
+ flops   195 x    64 x   439           4799358720     100.0%      0.0%      0.0%     
+ flops   195 x    64 x   441           4821223680     100.0%      0.0%      0.0%     
+ flops    75 x    75 x   444           4900095000     100.0%      0.0%      0.0%     
+ flops   205 x    64 x   439           5045479680     100.0%      0.0%      0.0%     
+ flops   205 x    64 x   441           5068465920     100.0%      0.0%      0.0%     
+ flops   244 x    74 x    74           5184238720     100.0%      0.0%      0.0%     
+ flops   249 x    81 x    81           5198398398     100.0%      0.0%      0.0%     
+ flops   244 x    75 x    75           5325300000     100.0%      0.0%      0.0%     
+ flops   249 x    82 x    82           5327546232     100.0%      0.0%      0.0%     
+ flops   249 x    74 x    64           5419897344     100.0%      0.0%      0.0%     
+ flops   249 x    64 x    74           5419897344     100.0%      0.0%      0.0%     
+ flops   249 x    75 x    64           5493139200     100.0%      0.0%      0.0%     
+ flops   249 x    64 x    75           5493139200     100.0%      0.0%      0.0%     
+ flops   231 x    64 x   439           5685394176     100.0%      0.0%      0.0%     
+ flops   231 x    64 x   441           5711295744     100.0%      0.0%      0.0%     
+ flops   249 x    81 x   446           5775030108     100.0%      0.0%      0.0%     
+ flops   249 x    82 x   446           5846326776     100.0%      0.0%      0.0%     
+ flops   249 x    64 x   439           6128411904     100.0%      0.0%      0.0%     
+ flops   249 x    64 x   441           6156331776     100.0%      0.0%      0.0%     
+ flops   200 x    64 x    74           6956236800     100.0%      0.0%      0.0%     
+ flops   200 x    74 x    64           6956236800     100.0%      0.0%      0.0%     
+ flops   200 x    64 x    75           7050240000     100.0%      0.0%      0.0%     
+ flops   200 x    75 x    64           7050240000     100.0%      0.0%      0.0%     
+ flops    32 x    74 x   436           7111501824     100.0%      0.0%      0.0%     
+ flops    74 x    64 x   436           7111501824     100.0%      0.0%      0.0%     
+ flops    32 x    75 x   436           7207603200     100.0%      0.0%      0.0%     
+ flops    75 x    64 x   436           7207603200     100.0%      0.0%      0.0%     
+ flops    81 x    81 x    64           7253421696     100.0%      0.0%      0.0%     
+ flops    32 x    81 x    81           7253421696     100.0%      0.0%      0.0%     
+ flops    81 x    64 x    81           7253421696     100.0%      0.0%      0.0%     
+ flops    82 x    82 x    64           7356163584     100.0%      0.0%      0.0%     
+ flops    32 x    82 x    82           7356163584     100.0%      0.0%      0.0%     
+ flops    82 x    64 x    82           7356163584     100.0%      0.0%      0.0%     
+ flops    81 x    81 x   446           7455972888     100.0%      0.0%      0.0%     
+ flops    32 x    64 x    74           7496368128     100.0%      0.0%      0.0%     
+ flops    32 x    74 x    64           7496368128     100.0%      0.0%      0.0%     
+ flops    74 x    64 x    64           7496368128     100.0%      0.0%      0.0%     
+ flops    32 x    64 x    75           7597670400     100.0%      0.0%      0.0%     
+ flops    32 x    75 x    64           7597670400     100.0%      0.0%      0.0%     
+ flops    75 x    64 x    64           7597670400     100.0%      0.0%      0.0%     
+ flops    82 x    82 x   446           7641207392     100.0%      0.0%      0.0%     
+ flops   192 x    64 x   439           9451044864     100.0%      0.0%      0.0%     
+ flops   192 x    64 x   441           9494102016     100.0%      0.0%      0.0%     
+ flops   195 x    64 x   436           9533122560     100.0%      0.0%      0.0%     
+ flops   197 x    81 x    64           9748833408     100.0%      0.0%      0.0%     
+ flops   197 x    64 x    81           9748833408     100.0%      0.0%      0.0%     
+ flops   200 x    74 x   444           9817372800     100.0%      0.0%      0.0%     
+ flops   197 x    82 x    64           9869189376     100.0%      0.0%      0.0%     
+ flops   197 x    64 x    82           9869189376     100.0%      0.0%      0.0%     
+ flops   200 x    75 x   444           9950040000     100.0%      0.0%      0.0%     
+ flops   205 x    64 x   436          10022000640     100.0%      0.0%      0.0%     
+ flops   195 x    64 x    64          10293903360     100.0%      0.0%      0.0%     
+ flops   205 x    64 x    64          10821795840     100.0%      0.0%      0.0%     
+ flops   231 x    64 x   436          11293083648     100.0%      0.0%      0.0%     
+ flops   244 x    74 x   444          11977194816     100.0%      0.0%      0.0%     
+ flops   244 x    64 x   439          12010702848     100.0%      0.0%      0.0%     
+ flops   244 x    64 x   441          12065421312     100.0%      0.0%      0.0%     
+ flops   244 x    75 x   444          12139048800     100.0%      0.0%      0.0%     
+ flops   249 x    64 x   436          12173064192     100.0%      0.0%      0.0%     
+ flops   231 x    64 x    64          12194316288     100.0%      0.0%      0.0%     
+ flops   249 x    81 x    64          12322129536     100.0%      0.0%      0.0%     
+ flops   249 x    64 x    81          12322129536     100.0%      0.0%      0.0%     
+ flops    32 x    74 x   444          12376986624     100.0%      0.0%      0.0%     
+ flops    74 x    64 x   444          12376986624     100.0%      0.0%      0.0%     
+ flops   249 x    82 x    64          12474254592     100.0%      0.0%      0.0%     
+ flops   249 x    64 x    82          12474254592     100.0%      0.0%      0.0%     
+ flops   200 x    81 x    81          12526261200     100.0%      0.0%      0.0%     
+ flops    32 x    75 x   444          12544243200     100.0%      0.0%      0.0%     
+ flops    75 x    64 x   444          12544243200     100.0%      0.0%      0.0%     
+ flops   200 x    82 x    82          12837460800     100.0%      0.0%      0.0%     
+ flops     5 x    13 x    64          13191360000     100.0%      0.0%      0.0%     
+ flops    13 x     5 x    64          13310369280     100.0%      0.0%      0.0%     
+ flops   244 x    64 x    74          13450997760     100.0%      0.0%      0.0%     
+ flops   244 x    74 x    64          13450997760     100.0%      0.0%      0.0%     
+ flops   244 x    64 x    75          13632768000     100.0%      0.0%      0.0%     
+ flops   244 x    75 x    64          13632768000     100.0%      0.0%      0.0%     
+ flops   197 x    81 x   444          13645532808     100.0%      0.0%      0.0%     
+ flops   197 x    82 x   444          13813996176     100.0%      0.0%      0.0%     
+ flops   200 x    81 x   446          13915735200     100.0%      0.0%      0.0%     
+ flops   200 x    82 x   446          14087534400     100.0%      0.0%      0.0%     
+ flops    13 x    10 x    13          14514352060     100.0%      0.0%      0.0%     
+ flops   244 x    81 x    81          15282038664     100.0%      0.0%      0.0%     
+ flops   244 x    82 x    82          15661702176     100.0%      0.0%      0.0%     
+ flops    13 x    11 x    13          15869379526     100.0%      0.0%      0.0%     
+ flops   244 x    81 x   446          16977196944     100.0%      0.0%      0.0%     
+ flops   244 x    82 x   446          17186791968     100.0%      0.0%      0.0%     
+ flops    32 x    64 x    81          17193295872     100.0%      0.0%      0.0%     
+ flops    32 x    81 x    64          17193295872     100.0%      0.0%      0.0%     
+ flops    81 x    64 x    64          17193295872     100.0%      0.0%      0.0%     
+ flops    32 x    64 x    82          17224187904     100.0%      0.0%      0.0%     
+ flops    32 x    82 x    64          17224187904     100.0%      0.0%      0.0%     
+ flops    82 x    64 x    64          17224187904     100.0%      0.0%      0.0%     
+ flops   249 x    81 x   444          17247399336     100.0%      0.0%      0.0%     
+ flops   249 x    82 x   444          17460330192     100.0%      0.0%      0.0%     
+ flops    32 x    81 x   446          17673417216     100.0%      0.0%      0.0%     
+ flops    81 x    64 x   446          17673417216     100.0%      0.0%      0.0%     
+ flops    32 x    82 x   446          17891607552     100.0%      0.0%      0.0%     
+ flops    82 x    64 x   446          17891607552     100.0%      0.0%      0.0%     
+ flops    32 x    64 x   439          18578423808     100.0%      0.0%      0.0%     
+ flops    32 x    64 x   441          18663063552     100.0%      0.0%      0.0%     
+ flops   192 x    64 x   436          18772918272     100.0%      0.0%      0.0%     
+ flops   192 x    64 x    64          20271071232     100.0%      0.0%      0.0%     
+ flops    81 x    81 x   444          22267614096     100.0%      0.0%      0.0%     
+ flops    82 x    82 x   444          22820825664     100.0%      0.0%      0.0%     
+ flops   244 x    64 x   436          23857250304     100.0%      0.0%      0.0%     
+ flops    13 x    13 x    74          25990119272     100.0%      0.0%      0.0%     
+ flops    13 x    13 x    75          26341337100     100.0%      0.0%      0.0%     
+ flops   197 x    64 x   446          27261118464     100.0%      0.0%      0.0%     
+ flops   200 x    64 x    81          29691878400     100.0%      0.0%      0.0%     
+ flops   200 x    81 x    64          29691878400     100.0%      0.0%      0.0%     
+ flops   200 x    64 x    82          30058444800     100.0%      0.0%      0.0%     
+ flops   200 x    82 x    64          30058444800     100.0%      0.0%      0.0%     
+ flops   249 x    64 x   446          34456946688     100.0%      0.0%      0.0%     
+ flops   244 x    64 x    81          36224091648     100.0%      0.0%      0.0%     
+ flops   244 x    81 x    64          36224091648     100.0%      0.0%      0.0%     
+ flops   244 x    64 x    82          36671302656     100.0%      0.0%      0.0%     
+ flops   244 x    82 x    64          36671302656     100.0%      0.0%      0.0%     
+ flops    32 x    64 x   436          36902928384     100.0%      0.0%      0.0%     
+ flops   200 x    81 x   444          41559998400     100.0%      0.0%      0.0%     
+ flops   200 x    82 x   444          42073084800     100.0%      0.0%      0.0%     
+ flops    13 x    17 x    13          50044815730     100.0%      0.0%      0.0%     
+ flops   244 x    81 x   444          50703198048     100.0%      0.0%      0.0%     
+ flops   244 x    82 x   444          51329163456     100.0%      0.0%      0.0%     
+ flops    32 x    81 x   444          52782492672     100.0%      0.0%      0.0%     
+ flops    81 x    64 x   444          52782492672     100.0%      0.0%      0.0%     
+ flops    13 x    18 x    13          52908946272     100.0%      0.0%      0.0%     
+ flops    32 x    82 x   444          53434128384     100.0%      0.0%      0.0%     
+ flops    82 x    64 x   444          53434128384     100.0%      0.0%      0.0%     
+ flops   197 x    64 x    64          58068615168     100.0%      0.0%      0.0%     
+ flops    13 x    13 x    81          58418409816     100.0%      0.0%      0.0%     
+ flops    13 x    13 x    82          59139624752     100.0%      0.0%      0.0%     
+ flops     5 x    32 x    13          72735536640     100.0%      0.0%      0.0%     
+ flops    13 x    32 x     5          72735536640     100.0%      0.0%      0.0%     
+ flops   197 x    64 x   444          81416613888     100.0%      0.0%      0.0%     
+ flops   200 x    64 x   446          83028787200     100.0%      0.0%      0.0%     
+ flops   249 x    64 x    64          86540894208     100.0%      0.0%      0.0%     
+ flops   244 x    64 x   446         101295120384     100.0%      0.0%      0.0%     
+ flops   249 x    64 x   444         102907293696     100.0%      0.0%      0.0%     
+ flops    32 x    64 x   446         105290366976     100.0%      0.0%      0.0%     
+ flops    32 x    64 x    64         119984357376     100.0%      0.0%      0.0%     
+ flops   200 x    64 x    64         176858726400     100.0%      0.0%      0.0%     
+ flops   244 x    64 x    64         241528799232     100.0%      0.0%      0.0%     
+ flops   200 x    64 x   444         247969382400     100.0%      0.0%      0.0%     
+ flops   244 x    64 x   444         302522646528     100.0%      0.0%      0.0%     
+ flops    32 x    64 x   444         314454638592     100.0%      0.0%      0.0%     
+ flops    13 x    13 x    64         411814181376     100.0%      0.0%      0.0%     
+ flops    13 x    32 x    13        2246989994496     100.0%      0.0%      0.0%     
+ flops inhomo. stacks                           0       0.0%      0.0%      0.0%
+ flops total                         7.350040E+12     100.0%      0.0%      0.0%
+ flops max/rank                    550.579096E+09     100.0%      0.0%      0.0%
+ matmuls inhomo. stacks                         0       0.0%      0.0%      0.0%
+ matmuls total                          308902392     100.0%      0.0%      0.0%
+ number of processed stacks               3810235     100.0%      0.0%      0.0%
+ average stack size                                    81.1       0.0       0.0
+ marketing flops                   835.324698E-12
+ -------------------------------------------------------------------------------
+ # multiplications                          23567
+ max memory usage/rank               2.461549E+09
+ # max total images/rank                        1
+ # max 3D layers                                1
+ # MPI messages exchanged                 2262432
+ MPI messages size (bytes):
+  total size                       -11.887126E+36
+  min size                           0.000000E+00
+  max size                           1.591328E+06
+  average size                      -5.254136E+30
+ MPI breakdown and total messages size (bytes):
+             size <=      128              221826                        0
+       128 < size <=     8192               20370                 14094960
+      8192 < size <=    32768              593802              19389162096
+     32768 < size <=   131072              455154              19096360296
+    131072 < size <=  4194304              971280             390699348144
+   4194304 < size <= 16777216                   0                        0
+  16777216 < size                               0                        0
+ -------------------------------------------------------------------------------
+ -                                                                             -
+ -                      DBCSR MESSAGE PASSING PERFORMANCE                      -
+ -                                                                             -
+ -------------------------------------------------------------------------------
+ ROUTINE             CALLS      AVE VOLUME [Bytes]
+ MP_Bcast              390                     12.
+ MP_Allreduce       114070                      8.
+ MP_Alltoall         78353                  14351.
+ MP_ISend           377024                  77160.
+ MP_IRecv           377024                  75452.
+ -------------------------------------------------------------------------------
+
+ -------------------------------------------------------------------------------
+ -                                                                             -
+ -                                GRID STATISTICS                              -
+ -                                                                             -
+ -------------------------------------------------------------------------------
+ LP    KERNEL             BACKEND                              COUNT     PERCENT
+ 4     collocate ortho    CPU                               54286310      43.50%
+ 4     integrate ortho    CPU                               53849118      43.15%
+ 3     collocate ortho    CPU                                7441792       5.96%
+ 3     integrate ortho    CPU                                7381896       5.92%
+ 2     collocate ortho    CPU                                 913632       0.73%
+ 2     integrate ortho    CPU                                 906264       0.73%
+ 0     collocate general  CPU                                   7008       0.01%
+ -------------------------------------------------------------------------------
+
+ -------------------------------------------------------------------------------
+ -                                                                             -
+ -                          OFFLOAD MEMPOOL STATISTICS                         -
+ -                                                                             -
+ -------------------------------------------------------------------------------
+ Memory consumption                Number of allocations  Used [MiB]  Size [MiB]
+ Device                                               13          36          36
+ Host                                                 13          36          36
+ -------------------------------------------------------------------------------
+
+ MEMORY| Estimated peak process memory [MiB]                                 686
+
+ -------------------------------------------------------------------------------
+ -                                                                             -
+ -                         MESSAGE PASSING PERFORMANCE                         -
+ -                                                                             -
+ -------------------------------------------------------------------------------
+
+ ROUTINE             CALLS      AVE VOLUME [Bytes]
+ MP_Group               24
+ MP_Bcast            62134                   1876.
+ MP_Allreduce       175749                    449.
+ MP_Sync              1128
+ MP_Alltoall         19856               15534522.
+ MP_SendRecv         32280                  89760.
+ MP_ISendRecv        31980                  89760.
+ MP_Wait            130627
+ MP_comm_split        1104
+ MP_ISend            85780                 330592.
+ MP_IRecv            85780                 330576.
+ -------------------------------------------------------------------------------
+
+
+ -------------------------------------------------------------------------------
+ -                                                                             -
+ -                           R E F E R E N C E S                               -
+ -                                                                             -
+ -------------------------------------------------------------------------------
+ 
+ CP2K version 2026.1, the CP2K developers group (2026).
+ CP2K is freely available from https://www.cp2k.org/ .
+ 
+ T. D. Kuehne, M. Iannuzzi, M. Del Ben, V. V. Rybkin, P. Seewald, F. Stein, T. 
+ Laino, R. Z. Khaliullin, O. Schuett, F. Schiffmann, D. Golze, J. Wilhelm, S. 
+ Chulkov, M. H. Bani-Hashemian, V. Weber, U. Borstnik, M. Taillefumier, A. S. 
+ Jakobovits, A. Lazzaro, H. Pabst, T. Mueller, R. Schade, M. Guidon, S. 
+ Andermatt, N. Holmberg, G. K. Schenter, A. Hehn, A. Bussy, F. Belleflamme, G. 
+ Tabacchi, A. Gloess, M. Lass, I. Bethune, C. J. Mundy, C. Plessl, M. Watkins, 
+ J. VandeVondele, M. Krack, J. Hutter.
+ J. Chem. Phys. 152, 194103 (2020).
+ CP2K: An electronic structure and molecular dynamics software package - 
+ Quickstep: Efficient and accurate electronic structure calculations.
+ https://doi.org/10.1063/5.0007045
+
+ O. Schuett, P. Messmer, J. Hutter, J. VandeVondele.
+ Electronic Structure Calculations on Graphics Processing Units, 173-190 (2016).
+ GPU-Accelerated Sparse Matrix-Matrix Multiplication for Linear Scaling Density 
+ Functional Theory.
+ https://doi.org/10.1002/9781118670712.ch8
+
+ A. Heinecke, G. Henry, M. Hutchinson, H. Pabst.
+ Proceedings of Intl. Supercomputing Conference, 981-991 (2016).
+ LIBXSMM: Accelerating Small Matrix Multiplications by Runtime Code Generation.
+ https://doi.org/10.1109/SC.2016.83
+
+ J. Hutter, M. Iannuzzi, F. Schiffmann, J. VandeVondele.
+ WIREs Comput Mol Sci. 4, 15-25 (2014).
+ CP2K: atomistic simulations of condensed matter systems.
+ https://doi.org/10.1002/wcms.1159
+
+ U. Borstnik, J. VandeVondele, V. Weber, J. Hutter.
+ Parallel Comput. 40, 47-58 (2014).
+ Sparse matrix multiplication: The distributed block-compressed sparse row 
+ library.
+ https://doi.org/10.1016/j.parco.2014.03.012
+
+ J. VandeVondele, J. Hutter.
+ J. Chem. Phys. 127, 114105 (2007).
+ Gaussian basis sets for accurate calculations on molecular systems in gas and 
+ condensed phases.
+ https://doi.org/10.1063/1.2770708
+
+ J. VandeVondele, M. Krack, F. Mohamed, M. Parrinello, T. Chassaing, J. Hutter.
+ Comput. Phys. Commun. 167, 103-128 (2005).
+ QUICKSTEP: Fast and accurate density functional calculations using a mixed 
+ Gaussian and plane waves approach.
+ https://doi.org/10.1016/j.cpc.2004.12.014
+
+ M. Krack.
+ Theor. Chem. Acc. 114, 145-152 (2005).
+ Pseudopotentials for H to Kr optimized for gradient-corrected 
+ exchange-correlation functionals.
+ https://doi.org/10.1007/s00214-005-0655-y
+
+ M. Frigo, S. G. Johnson.
+ Proc. IEEE 93, 216-231 (2005).
+ The design and implementation of FFTW3.
+ https://doi.org/10.1109/JPROC.2004.840301
+
+ J. VandeVondele, J. Hutter.
+ J. Chem. Phys. 118, 4365-4369 (2003).
+ An efficient orbital transformation method for electronic structure 
+ calculations.
+ https://doi.org/10.1063/1.1543154
+
+ C. Hartwigsen, S. Goedecker, J. Hutter.
+ Phys. Rev. B 58, 3641-3662 (1998).
+ Relativistic separable dual-space Gaussian pseudopotentials from H to Rn.
+ https://doi.org/10.1103/PhysRevB.58.3641
+
+ G. Lippert, J. Hutter, M. Parrinello.
+ Mol. Phys. 92, 477-487 (1997).
+ A hybrid Gaussian and plane wave density functional scheme.
+ https://doi.org/10.1080/002689797170220
+
+ S. Goedecker, M. Teter, J. Hutter.
+ Phys. Rev. B 54, 1703-1710 (1996).
+ Separable dual-space Gaussian pseudopotentials.
+ https://doi.org/10.1103/PhysRevB.54.1703
+
+ J. P. Perdew, K. Burke, M. Ernzerhof.
+ Phys. Rev. Lett. 77, 3865-3868 (1996).
+ Generalized gradient approximation made simple.
+ https://doi.org/10.1103/PhysRevLett.77.3865
+
+
+ -------------------------------------------------------------------------------
+ -                                                                             -
+ -                                T I M I N G                                  -
+ -                                                                             -
+ -------------------------------------------------------------------------------
+ SUBROUTINE                       CALLS  ASD         SELF TIME        TOTAL TIME
+                                MAXIMUM       AVERAGE  MAXIMUM  AVERAGE  MAXIMUM
+ CP2K                                 1  1.0    0.027    0.035  506.712  506.713
+ qs_energies                          5  2.0    0.000    0.000  505.954  505.955
+ scf_env_do_scf                       5  3.0    0.001    0.001  504.155  504.156
+ scf_env_do_scf_inner_loop          533  4.0    0.011    0.038  498.691  498.699
+ qs_ks_update_qs_env                539  5.0    0.004    0.004  311.048  311.227
+ rebuild_ks_matrix                  533  6.0    0.001    0.001  310.721  310.901
+ qs_ks_build_kohn_sham_matrix       533  7.0    0.078    0.086  310.720  310.899
+ fft_wrap_pw1pw2                  17644 10.4    0.393    0.466  226.182  231.972
+ fft_wrap_pw1pw2_80               11218 11.8    8.930   11.511  214.174  218.909
+ fft3d_ps                         17644 12.4   89.899  105.897  164.397  192.161
+ qs_vxc_create                      533  8.0    0.014    0.020  185.932  188.372
+ xc_vxc_pw_create                   533  9.0    3.435    4.305  185.919  188.362
+ xc_pw_derive                      6396 11.0    0.104    0.147  138.157  146.272
+ qs_rho_update_rho_low              538  5.0    0.003    0.003  119.413  119.500
+ calculate_rho_elec                1076  6.0    1.446    1.542  119.410  119.497
+ mp_alltoall_z22v                 17644 14.4   48.755  112.901   48.755  112.901
+ density_rs2pw                     1076  7.0    0.045    0.051   88.366  100.561
+ xc_pw_divergence                  1066 10.0    0.042    0.073   92.477   98.276
+ sum_up_and_integrate               533  8.0    0.017    0.023   95.713   95.830
+ integrate_v_rspace                1066  9.0    0.039    0.051   94.948   95.028
+ xc_rho_set_and_dset_create         533 10.0    3.338    4.926   86.801   90.183
+ qs_scf_new_mos                     533  5.0    0.003    0.003   70.826   71.025
+ qs_scf_loop_do_ot                  533  6.0    0.003    0.004   70.823   71.022
+ yz_to_x                           8573 12.9   12.294   18.544   36.969   69.933
+ ot_scf_mini                        533  7.0    0.011    0.012   67.498   67.677
+ x_to_yz                           9071 13.8   13.032   15.621   37.111   58.359
+ grid_collocate_task_list          1076  7.0   26.631   57.583   26.631   57.583
+ transfer_rs2pw                    4309  8.0    0.041    0.049   41.632   53.267
+ dbcsr_multiply_generic           23567 10.1    0.569    0.621   51.420   52.107
+ grid_integrate_task_list          1066 10.0   19.603   52.008   19.603   52.008
+ mp_waitany                       85780 11.5   39.180   51.843   39.180   51.843
+ transfer_rs2pw_80                 1081  9.0    2.255    2.637   35.467   47.407
+ mp_alltoall_d11v                 16599 12.4   33.869   46.750   33.869   46.750
+ rs_gather_matrices                1066 10.0    0.364    0.629   33.008   45.801
+ potential_pw2rs                   1066 10.0    0.219    0.308   42.291   42.625
+ pw_gather_p                       8573 11.9   27.781   35.196   27.781   35.196
+ multiply_cannon                  23567 11.1    1.001    1.053   29.402   31.698
+ ot_mini                            533  8.0    0.003    0.004   29.962   30.164
+ qs_ot_get_p                       1078  8.0    0.006    0.007   28.211   28.456
+ multiply_cannon_loop             23567 12.1    0.359    0.411   22.974   25.649
+ qs_ot_p2m_diag                    1046  9.0    0.167    0.222   22.145   22.197
+ pw_scatter_p                      9071 12.8   16.770   21.583   16.770   21.583
+ cp_fm_syevd                       1104 10.8    0.004    0.006   20.552   20.577
+ qs_ot_get_derivative              1066  9.0    0.008    0.009   20.118   20.281
+ cp_dbcsr_syevd                    1046 10.0    0.047    0.050   20.215   20.219
+ cp_fm_redistribute_end            1104 11.8   10.163   20.109   10.183   20.126
+ cp_fm_syevd_base                  1104 11.8    9.924   19.856    9.924   19.856
+ mp_waitall_1                   1176063 14.3   13.145   19.758   13.145   19.758
+ xc_functional_eval                 533 11.0    0.010    0.012   14.664   18.044
+ pbe_lsd_eval                       533 12.0   14.654   18.033   14.654   18.033
+ multiply_cannon_multrec          94268 13.1   13.270   17.568   13.332   17.630
+ transfer_pw2rs                    4264 11.0    0.036    0.055   16.744   16.804
+ make_m2s                         47134 11.1    0.290    0.314   15.007   16.124
+ pw_derive                         7995 11.6   11.522   14.904   11.522   14.904
+ qs_ot_get_derivative_diag         1034 10.0    0.023    0.027   14.292   14.453
+ fft_wrap_pw1pw2_30                2142 10.5    0.251    0.361    8.887   13.559
+ make_images                      47134 12.1    2.280    3.818   11.640   12.809
+ pw_poisson_solve                   533  8.0    0.013    0.016   10.461   10.576
+ mp_sum_d                         48569 11.2    4.607   10.517    4.607   10.517
+ transfer_pw2rs_80                 1066 12.0    3.970    4.614    9.566   10.241
+ -------------------------------------------------------------------------------
+
+ The number of warnings for this run is : 0
+ 
+ -------------------------------------------------------------------------------
+  **** **** ******  **  PROGRAM ENDED AT                 2026-06-19 20:02:36.967
+ ***** ** ***  *** **   PROGRAM RAN ON             ip-172-31-89-158.ec2.internal
+ **    ****   ******    PROGRAM RAN BY                                 <unknown>
+ ***** **    ** ** **   PROGRAM PROCESS ID                                 10717
+  **** **  *******  **  PROGRAM STOPPED IN /opt/cp2k_sanity/cp2k_adsorption_hete
+                                           rogeneity

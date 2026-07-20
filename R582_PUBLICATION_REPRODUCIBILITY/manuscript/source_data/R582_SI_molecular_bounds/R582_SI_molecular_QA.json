@@ -1,0 +1,522 @@
+{
+  "checks": [
+    {
+      "check": "pdffonts executable is available",
+      "status": "PASS"
+    },
+    {
+      "check": "pdfinfo executable is available",
+      "status": "PASS"
+    },
+    {
+      "check": "S7 pdf exists",
+      "status": "PASS"
+    },
+    {
+      "check": "S7 svg exists",
+      "status": "PASS"
+    },
+    {
+      "check": "S7 png exists",
+      "status": "PASS"
+    },
+    {
+      "check": "S7 tiff exists",
+      "status": "PASS"
+    },
+    {
+      "check": "S7 preview exists",
+      "status": "PASS"
+    },
+    {
+      "check": "S7 gray exists",
+      "status": "PASS"
+    },
+    {
+      "check": "S7 PDF has embedded fonts",
+      "status": "PASS"
+    },
+    {
+      "check": "S7 PDF uses only TeX Gyre Termes",
+      "status": "PASS"
+    },
+    {
+      "check": "S7 PDF has no Type 3 font",
+      "status": "PASS"
+    },
+    {
+      "check": "S7 PDF has no forbidden font",
+      "status": "PASS"
+    },
+    {
+      "check": "S7 PDF page size is readable",
+      "status": "PASS"
+    },
+    {
+      "check": "S7 PDF is exactly 180 x 120 mm",
+      "status": "PASS"
+    },
+    {
+      "check": "S7 SVG retains editable text nodes",
+      "status": "PASS"
+    },
+    {
+      "check": "S7 SVG exposes font sizes",
+      "status": "PASS"
+    },
+    {
+      "check": "S7 SVG minimum text is >= 6.5 pt",
+      "status": "PASS"
+    },
+    {
+      "check": "S7 SVG has no forbidden font",
+      "status": "PASS"
+    },
+    {
+      "check": "S7 SVG font declarations are all TeX Gyre Termes",
+      "status": "PASS"
+    },
+    {
+      "check": "S7 PNG is opaque RGB",
+      "status": "PASS"
+    },
+    {
+      "check": "S7 PNG pixel dimensions match 600 dpi final size",
+      "status": "PASS"
+    },
+    {
+      "check": "S7 PNG metadata reports 600 dpi",
+      "status": "PASS"
+    },
+    {
+      "check": "S7 TIFF is opaque RGB",
+      "status": "PASS"
+    },
+    {
+      "check": "S7 TIFF pixel dimensions match 600 dpi final size",
+      "status": "PASS"
+    },
+    {
+      "check": "S7 TIFF metadata reports 600 dpi",
+      "status": "PASS"
+    },
+    {
+      "check": "S7 preview preview is RGB",
+      "status": "PASS"
+    },
+    {
+      "check": "S7 preview preview is tagged at 150 dpi",
+      "status": "PASS"
+    },
+    {
+      "check": "S7 gray preview is RGB",
+      "status": "PASS"
+    },
+    {
+      "check": "S7 gray preview is tagged at 150 dpi",
+      "status": "PASS"
+    },
+    {
+      "check": "S8 pdf exists",
+      "status": "PASS"
+    },
+    {
+      "check": "S8 svg exists",
+      "status": "PASS"
+    },
+    {
+      "check": "S8 png exists",
+      "status": "PASS"
+    },
+    {
+      "check": "S8 tiff exists",
+      "status": "PASS"
+    },
+    {
+      "check": "S8 preview exists",
+      "status": "PASS"
+    },
+    {
+      "check": "S8 gray exists",
+      "status": "PASS"
+    },
+    {
+      "check": "S8 PDF has embedded fonts",
+      "status": "PASS"
+    },
+    {
+      "check": "S8 PDF uses only TeX Gyre Termes",
+      "status": "PASS"
+    },
+    {
+      "check": "S8 PDF has no Type 3 font",
+      "status": "PASS"
+    },
+    {
+      "check": "S8 PDF has no forbidden font",
+      "status": "PASS"
+    },
+    {
+      "check": "S8 PDF page size is readable",
+      "status": "PASS"
+    },
+    {
+      "check": "S8 PDF is exactly 180 x 112 mm",
+      "status": "PASS"
+    },
+    {
+      "check": "S8 SVG retains editable text nodes",
+      "status": "PASS"
+    },
+    {
+      "check": "S8 SVG exposes font sizes",
+      "status": "PASS"
+    },
+    {
+      "check": "S8 SVG minimum text is >= 6.5 pt",
+      "status": "PASS"
+    },
+    {
+      "check": "S8 SVG has no forbidden font",
+      "status": "PASS"
+    },
+    {
+      "check": "S8 SVG font declarations are all TeX Gyre Termes",
+      "status": "PASS"
+    },
+    {
+      "check": "S8 PNG is opaque RGB",
+      "status": "PASS"
+    },
+    {
+      "check": "S8 PNG pixel dimensions match 600 dpi final size",
+      "status": "PASS"
+    },
+    {
+      "check": "S8 PNG metadata reports 600 dpi",
+      "status": "PASS"
+    },
+    {
+      "check": "S8 TIFF is opaque RGB",
+      "status": "PASS"
+    },
+    {
+      "check": "S8 TIFF pixel dimensions match 600 dpi final size",
+      "status": "PASS"
+    },
+    {
+      "check": "S8 TIFF metadata reports 600 dpi",
+      "status": "PASS"
+    },
+    {
+      "check": "S8 preview preview is RGB",
+      "status": "PASS"
+    },
+    {
+      "check": "S8 preview preview is tagged at 150 dpi",
+      "status": "PASS"
+    },
+    {
+      "check": "S8 gray preview is RGB",
+      "status": "PASS"
+    },
+    {
+      "check": "S8 gray preview is tagged at 150 dpi",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 pdf exists",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 svg exists",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 png exists",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 tiff exists",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 preview exists",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 gray exists",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 PDF has embedded fonts",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 PDF uses only TeX Gyre Termes",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 PDF has no Type 3 font",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 PDF has no forbidden font",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 PDF page size is readable",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 PDF is exactly 180 x 96 mm",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 SVG retains editable text nodes",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 SVG exposes font sizes",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 SVG minimum text is >= 6.5 pt",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 SVG has no forbidden font",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 SVG font declarations are all TeX Gyre Termes",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 PNG is opaque RGB",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 PNG pixel dimensions match 600 dpi final size",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 PNG metadata reports 600 dpi",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 TIFF is opaque RGB",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 TIFF pixel dimensions match 600 dpi final size",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 TIFF metadata reports 600 dpi",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 preview preview is RGB",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 preview preview is tagged at 150 dpi",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 gray preview is RGB",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 gray preview is tagged at 150 dpi",
+      "status": "PASS"
+    },
+    {
+      "check": "input manifest contains 16 frozen evidence files plus 4 fonts",
+      "status": "PASS"
+    },
+    {
+      "check": "all input hashes are SHA-256",
+      "status": "PASS"
+    },
+    {
+      "check": "S7 plotted ordering matches the registered energy table",
+      "status": "PASS"
+    },
+    {
+      "check": "S8 compact-minus-separated energy is preserved",
+      "status": "PASS"
+    },
+    {
+      "check": "S8 CDD retains both accumulation and depletion",
+      "status": "PASS"
+    },
+    {
+      "check": "S8 CDD values are not interpolated",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 uses all five SOC compositions",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 oxidized-iodine means are below iodide for q0p8_ecc",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 oxidized-iodine means are below iodide for q1p0",
+      "status": "PASS"
+    },
+    {
+      "check": "S9 block stability is not labelled replica uncertainty",
+      "status": "PASS"
+    }
+  ],
+  "details": {
+    "S7": {
+      "editable_svg_text_nodes": 33,
+      "fonts": [
+        "CCVYUO+TeXGyreTermes-Bold            CID Type 0C (OT)  Identity-H       yes yes yes     15  0",
+        "CCVYUO+TeXGyreTermes-Italic          CID Type 0C (OT)  Identity-H       yes yes yes     22  0",
+        "CCVYUO+TeXGyreTermes-Regular         CID Type 0C (OT)  Identity-H       yes yes yes     29  0"
+      ],
+      "page_size_pt": [
+        510.236,
+        340.157
+      ],
+      "pdffonts_warnings": [
+        "Syntax Warning: Mismatch between font type and embedded font file",
+        "Syntax Warning: Mismatch between font type and embedded font file",
+        "Syntax Warning: Mismatch between font type and embedded font file"
+      ],
+      "pdfinfo_warnings": [],
+      "raster": {
+        "png": {
+          "dpi": [
+            599.9988,
+            599.9988
+          ],
+          "mode": "RGB",
+          "pixels": [
+            4251,
+            2834
+          ]
+        },
+        "tiff": {
+          "dpi": [
+            600.0,
+            600.0
+          ],
+          "mode": "RGB",
+          "pixels": [
+            4251,
+            2834
+          ]
+        }
+      },
+      "svg_max_font_pt": 9.4,
+      "svg_min_font_pt": 6.5
+    },
+    "S8": {
+      "editable_svg_text_nodes": 24,
+      "fonts": [
+        "CCVYUO+TeXGyreTermes-Bold            CID Type 0C (OT)  Identity-H       yes yes yes     17  0",
+        "CCVYUO+TeXGyreTermes-Regular         CID Type 0C (OT)  Identity-H       yes yes yes     24  0"
+      ],
+      "page_size_pt": [
+        510.236,
+        317.48
+      ],
+      "pdffonts_warnings": [
+        "Syntax Warning: Mismatch between font type and embedded font file",
+        "Syntax Warning: Mismatch between font type and embedded font file"
+      ],
+      "pdfinfo_warnings": [],
+      "raster": {
+        "png": {
+          "dpi": [
+            599.9988,
+            599.9988
+          ],
+          "mode": "RGB",
+          "pixels": [
+            4251,
+            2645
+          ]
+        },
+        "tiff": {
+          "dpi": [
+            600.0,
+            600.0
+          ],
+          "mode": "RGB",
+          "pixels": [
+            4251,
+            2645
+          ]
+        }
+      },
+      "svg_max_font_pt": 9.4,
+      "svg_min_font_pt": 6.5
+    },
+    "S9": {
+      "editable_svg_text_nodes": 27,
+      "fonts": [
+        "CCVYUO+TeXGyreTermes-Bold            CID Type 0C (OT)  Identity-H       yes yes yes     15  0",
+        "CCVYUO+TeXGyreTermes-Italic          CID Type 0C (OT)  Identity-H       yes yes yes     22  0",
+        "CCVYUO+TeXGyreTermes-Regular         CID Type 0C (OT)  Identity-H       yes yes yes     29  0"
+      ],
+      "page_size_pt": [
+        510.236,
+        272.126
+      ],
+      "pdffonts_warnings": [
+        "Syntax Warning: Mismatch between font type and embedded font file",
+        "Syntax Warning: Mismatch between font type and embedded font file",
+        "Syntax Warning: Mismatch between font type and embedded font file"
+      ],
+      "pdfinfo_warnings": [],
+      "raster": {
+        "png": {
+          "dpi": [
+            599.9988,
+            599.9988
+          ],
+          "mode": "RGB",
+          "pixels": [
+            4251,
+            2267
+          ]
+        },
+        "tiff": {
+          "dpi": [
+            600.0,
+            600.0
+          ],
+          "mode": "RGB",
+          "pixels": [
+            4251,
+            2267
+          ]
+        }
+      },
+      "svg_max_font_pt": 9.4,
+      "svg_min_font_pt": 6.5
+    }
+  },
+  "determinism": "PASS: 15 selected figure/data artifacts byte-identical after cold rerender",
+  "figures": [
+    "S7",
+    "S8",
+    "S9"
+  ],
+  "manual_visual_review": {
+    "actual_size_color": "PASS",
+    "actual_size_grayscale": "PASS",
+    "collision_review": "PASS",
+    "evidence_caption_agreement": "PASS"
+  },
+  "release": "R582",
+  "status": "PASS"
+}

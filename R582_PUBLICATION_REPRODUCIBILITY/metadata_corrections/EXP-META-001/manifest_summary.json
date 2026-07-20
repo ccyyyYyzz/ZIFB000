@@ -1,0 +1,12 @@
+{
+  "generated_on": "2026-07-11",
+  "confirmation_date": "2026-07-11",
+  "raw_root": "E:\\zifb_final_9129_luck\\battery_experiment\\01_raw_experiment_files",
+  "matching_project_paths": 114,
+  "unique_file_hashes": 39,
+  "canonical_curated_active_paths": 31,
+  "excluded_duplicate_or_incomplete_paths": 21,
+  "organizational_or_other_copy_paths": 62,
+  "raw_files_modified": false,
+  "correction_basis": "operator-confirmed metadata correction: all experimental labels containing NH4Cl/NH4CL refer to cells prepared with NH4Br; raw names are preserved"
+}

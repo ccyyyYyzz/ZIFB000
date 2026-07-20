@@ -1,0 +1,837 @@
+ DBCSR| CPU Multiplication driver                                           BLAS (U)
+ DBCSR| Multrec recursion limit                                              512 (U)
+ DBCSR| Multiplication stack size                                           1000 (D)
+ DBCSR| Maximum elements for images                                    UNLIMITED (U)
+ DBCSR| Multiplicative factor virtual images                                   1 (U)
+ DBCSR| Use multiplication densification                                       T (D)
+ DBCSR| Multiplication size stacks                                             3 (U)
+ DBCSR| Use memory pool for CPU allocation                                     F (U)
+ DBCSR| Number of 3D layers                                               SINGLE (U)
+ DBCSR| Use MPI memory allocation                                              F (U)
+ DBCSR| Use RMA algorithm                                                      F (U)
+ DBCSR| Use Communication thread                                               T (U)
+ DBCSR| Communication thread load                                             75 (D)
+ DBCSR| MPI: My process id                                                     0
+ DBCSR| MPI: Number of processes                                               1
+ DBCSR| OMP: Current number of threads                                         4
+ DBCSR| OMP: Max number of threads                                             4
+ DBCSR| Split modifier for TAS multiplication algorithm                  1.0E+00 (U)
+
+
+  **** **** ******  **  PROGRAM STARTED AT               2026-06-19 00:38:04.018
+ ***** ** ***  *** **   PROGRAM STARTED ON                                cyz912
+ **    ****   ******    PROGRAM STARTED BY                           cyzcomputer
+ ***** **    ** ** **   PROGRAM PROCESS ID                                 11744
+  **** **  *******  **  PROGRAM STARTED IN /home/cyzcomputer/cp2k_i2_runs/cp2k_a
+                                           dsorption_heterogeneity_check_2026061
+                                           8/basal_sp_geoopt
+
+ CP2K| version string:                                       CP2K version 2026.1
+ CP2K| source code revision number:                                      dafce1f
+ CP2K| cp2kflags: omp libint fftw3 libxc elpa parallel scalapack mpi_f08 xsmm pl
+ CP2K|            umed2 spglib sirius libtorch hdf5 trexio
+ CP2K| is freely available from                            https://www.cp2k.org/
+ CP2K| Program compiled at                                   2026-05-26 14:43:38
+ CP2K| Program compiled on                                                      
+ CP2K| Program compiled for                                               x86_64
+ CP2K| Data directory path    /home/cyzcomputer/micromamba/envs/cp2k_i2/share/cp
+ CP2K| Input file name        /home/cyzcomputer/cp2k_i2_runs/cp2k_adsorption_het
+
+ GLOBAL| Force Environment number                                              1
+ GLOBAL| Basis set file name            /home/cyzcomputer/micromamba/envs/cp2k_i
+ GLOBAL| Potential file name            /home/cyzcomputer/micromamba/envs/cp2k_i
+ GLOBAL| MM Potential file name                                     MM_POTENTIAL
+ GLOBAL| Coordinate file name                                      __STD_INPUT__
+ GLOBAL| Method name                                                        CP2K
+ GLOBAL| Project name                   basal_pristine_periodic_slab_complex_d3_
+ GLOBAL| Run type                                                         ENERGY
+ GLOBAL| FFT library                                                       FFTW3
+ GLOBAL| Diagonalization library                                            ELPA
+ GLOBAL| Cholesky decomposition library                                ScaLAPACK
+ GLOBAL| DGEMM library                                                      BLAS
+ GLOBAL| Minimum number of eigenvectors for ELPA usage                        16
+ GLOBAL| Orthonormality check for eigenvectors                          DISABLED
+ GLOBAL| Matrix multiplication library                                 ScaLAPACK
+ GLOBAL| All-to-all communication in single precision                          F
+ GLOBAL| FFTs using library dependent lengths                                  F
+ GLOBAL| Grid backend                                                       AUTO
+ GLOBAL| Global print level                                                  LOW
+ GLOBAL| MPI I/O enabled                                                       T
+ GLOBAL| Total number of message passing processes                             1
+ GLOBAL| Number of distributed systems (nodes)                                 1
+ GLOBAL| Number of threads for this process                                    4
+ GLOBAL| This output is from process                                           0
+ GLOBAL| OpenMP stack size per thread (OMP_STACKSIZE)                    default
+ GLOBAL| CPU model name                    13th Gen Intel(R) Core(TM) i9-13900HX
+ GLOBAL| CPUID                                                              1002
+
+ MEMORY| system memory details [Kb]
+ MEMORY|                        rank 0           min           max       average
+ MEMORY| MemTotal              7993344       7993344       7993344       7993344
+ MEMORY| MemFree               5545928       5545928       5545928       5545928
+ MEMORY| Buffers                203840        203840        203840        203840
+ MEMORY| Cached                1254852       1254852       1254852       1254852
+ MEMORY| Slab                   190472        190472        190472        190472
+ MEMORY| SReclaimable            74304         74304         74304         74304
+ MEMORY| MemLikelyFree         7078924       7078924       7078924       7078924
+
+
+ GENERATE|  Preliminary Number of Bonds generated:                             0
+ GENERATE|  Achieved consistency in connectivity generation.
+
+ *******************************************************************************
+ *******************************************************************************
+ **                                                                           **
+ **     #####                         ##              ##                      **
+ **    ##   ##            ##          ##              ##                      **
+ **   ##     ##                       ##            ######                    **
+ **   ##     ##  ##   ##  ##   #####  ##  ##   ####   ##    #####    #####    **
+ **   ##     ##  ##   ##  ##  ##      ## ##   ##      ##   ##   ##  ##   ##   **
+ **   ##  ## ##  ##   ##  ##  ##      ####     ###    ##   ######   ######    **
+ **    ##  ###   ##   ##  ##  ##      ## ##      ##   ##   ##       ##        **
+ **     #######   #####   ##   #####  ##  ##  ####    ##    #####   ##        **
+ **           ##                                                    ##        **
+ **                                                                           **
+ **                                                ... make the atoms dance   **
+ **                                                                           **
+ **            Copyright (C) by CP2K developers group (2000-2026)             **
+ **                      J. Chem. Phys. 152, 194103 (2020)                    **
+ **                                                                           **
+ *******************************************************************************
+
+
+ TOTAL NUMBERS AND MAXIMUM NUMBERS
+
+  Total number of            - Atomic kinds:                                   2
+                             - Atoms:                                        146
+                             - Shell sets:                                   146
+                             - Shells:                                       730
+                             - Primitive Cartesian functions:                730
+                             - Cartesian basis functions:                   2044
+                             - Spherical basis functions:                   1898
+
+  Maximum angular momentum of- Orbital basis functions:                        2
+                             - Local part of the GTH pseudopotential:          2
+                             - Non-local part of the GTH pseudopotential:      4
+
+
+ SCF PARAMETERS         Density guess:                                   RESTART
+                        --------------------------------------------------------
+                        max_scf:                                             260
+                        max_scf_history:                                       0
+                        max_diis:                                              4
+                        --------------------------------------------------------
+                        eps_scf:                                        1.00E-05
+                        eps_scf_history:                                0.00E+00
+                        eps_diis:                                       0.00E+00
+                        eps_eigval:                                     1.00E-05
+                        --------------------------------------------------------
+                        level_shift [a.u.]:                             0.000000
+                        --------------------------------------------------------
+                        Outer loop SCF in use 
+                        No variables optimised in outer loop
+                        eps_scf                                         1.00E-05
+                        max_scf                                               10
+                        No outer loop optimization
+                        step_size                                       5.00E-01
+
+ Extrapolation method: initial_guess
+
+ Number of electrons:                                                        590
+ Number of occupied orbitals:                                                295
+ Number of molecular orbitals:                                               295
+
+ Number of orbital functions:                                               1898
+ Number of independent orbital functions:                                   1898
+
+
+ SCF WAVEFUNCTION OPTIMIZATION
+
+  ----------------------------------- OT ---------------------------------------
+  Minimizer      : DIIS                : direct inversion
+                                         in the iterative subspace
+                                         using   7 DIIS vectors
+                                         safer DIIS on
+  Preconditioner : FULL_SINGLE_INVERSE : inversion of 
+                                         H + eS - 2*(Sc)(c^T*H*c+const)(Sc)^T
+  Precond_solver : DEFAULT
+  stepsize       :    0.08000000                  energy_gap     :    0.08000000
+  eps_taylor     :   0.10000E-15                  max_taylor     :             4
+  ----------------------------------- OT ---------------------------------------
+
+  Step     Update method      Time    Convergence         Total energy    Change
+  ------------------------------------------------------------------------------
+     1 OT DIIS     0.80E-01   17.6     0.00000477      -843.5468847220 -8.44E+02
+
+  *** SCF run converged in     1 steps ***
+
+
+  Electronic density on regular grids:       -589.9999832435        0.0000167565
+  Core density on regular grids:              589.9999999517       -0.0000000483
+  Total charge density on r-space grids:        0.0000167082
+  Total charge density g-space grids:           0.0000167082
+
+  Overlap energy of the core charge distribution:               0.00002667257317
+  Self energy of the core charge distribution:              -1969.60773001461916
+  Core Hamiltonian energy:                                    613.49504528752834
+  Hartree energy:                                             769.84200380664959
+  Exchange-correlation energy:                               -256.79072422978663
+  Dispersion energy:                                           -0.48550624431453
+
+  Total energy:                                              -843.54688472196938
+
+  outer SCF iter =    1 RMS gradient =   0.48E-05 energy =       -843.5468847220
+  outer SCF loop converged in   1 iterations or    1 steps
+
+
+   Calculate PDOS at iteration step                                  0
+ OT| Eigensolver reached convergence in 123 iterations
+
+   Compute           40    additional unoccupied KS orbitals
+
+              ---- PDOS: start iteration on the KS states --- 
+
+ !-----------------------------------------------------------------------------!
+                     Mulliken Population Analysis
+
+ #  Atom  Element  Kind  Atomic population                           Net charge
+       1     C        1          4.000053                             -0.000053
+       2     C        1          3.999210                              0.000790
+       3     C        1          3.999697                              0.000303
+       4     C        1          3.999791                              0.000209
+       5     C        1          3.999904                              0.000096
+       6     C        1          3.999202                              0.000798
+       7     C        1          3.999564                              0.000436
+       8     C        1          3.999598                              0.000402
+       9     C        1          4.000032                             -0.000032
+      10     C        1          3.999296                              0.000704
+      11     C        1          3.999631                              0.000369
+      12     C        1          4.000064                             -0.000064
+      13     C        1          4.000251                             -0.000251
+      14     C        1          3.999375                              0.000625
+      15     C        1          3.999729                              0.000271
+      16     C        1          3.999846                              0.000154
+      17     C        1          3.999757                              0.000243
+      18     C        1          3.999239                              0.000761
+      19     C        1          3.999543                              0.000457
+      20     C        1          3.999725                              0.000275
+      21     C        1          3.999967                              0.000033
+      22     C        1          3.999312                              0.000688
+      23     C        1          3.999561                              0.000439
+      24     C        1          3.999909                              0.000091
+      25     C        1          3.999775                              0.000225
+      26     C        1          3.999743                              0.000257
+      27     C        1          4.000071                             -0.000071
+      28     C        1          3.999306                              0.000694
+      29     C        1          3.999516                              0.000484
+      30     C        1          3.999671                              0.000329
+      31     C        1          3.999830                              0.000170
+      32     C        1          3.998978                              0.001022
+      33     C        1          3.999420                              0.000580
+      34     C        1          3.998924                              0.001076
+      35     C        1          3.999389                              0.000611
+      36     C        1          3.999734                              0.000266
+      37     C        1          4.000276                             -0.000276
+      38     C        1          3.999655                              0.000345
+      39     C        1          3.999180                              0.000820
+      40     C        1          3.998974                              0.001026
+      41     C        1          3.999397                              0.000603
+      42     C        1          3.999650                              0.000350
+      43     C        1          3.999790                              0.000210
+      44     C        1          3.999056                              0.000944
+      45     C        1          3.999763                              0.000237
+      46     C        1          3.999876                              0.000124
+      47     C        1          3.999891                              0.000109
+      48     C        1          3.999348                              0.000652
+      49     C        1          3.999698                              0.000302
+      50     C        1          3.999202                              0.000798
+      51     C        1          3.999707                              0.000293
+      52     C        1          3.999205                              0.000795
+      53     C        1          3.999478                              0.000522
+      54     C        1          3.999118                              0.000882
+      55     C        1          3.999201                              0.000799
+      56     C        1          3.998453                              0.001547
+      57     C        1          3.998403                              0.001597
+      58     C        1          3.996343                              0.003657
+      59     C        1          3.995813                              0.004187
+      60     C        1          3.998227                              0.001773
+      61     C        1          3.999484                              0.000516
+      62     C        1          3.995877                              0.004123
+      63     C        1          3.996224                              0.003776
+      64     C        1          3.997830                              0.002170
+      65     C        1          3.998679                              0.001321
+      66     C        1          3.998660                              0.001340
+      67     C        1          3.999485                              0.000515
+      68     C        1          3.999116                              0.000884
+      69     C        1          3.999571                              0.000429
+      70     C        1          3.999222                              0.000778
+      71     C        1          3.999634                              0.000366
+      72     C        1          3.999369                              0.000631
+      73     C        1          4.000052                             -0.000052
+      74     C        1          3.999211                              0.000789
+      75     C        1          3.999729                              0.000271
+      76     C        1          3.999719                              0.000281
+      77     C        1          3.999854                              0.000146
+      78     C        1          3.999056                              0.000944
+      79     C        1          3.999335                              0.000665
+      80     C        1          3.998787                              0.001213
+      81     C        1          3.998270                              0.001730
+      82     C        1          3.996381                              0.003619
+      83     C        1          3.996278                              0.003722
+      84     C        1          3.997582                              0.002418
+      85     C        1          3.998448                              0.001552
+      86     C        1          3.996372                              0.003628
+      87     C        1          3.996348                              0.003652
+      88     C        1          3.997658                              0.002342
+      89     C        1          3.998737                              0.001263
+      90     C        1          3.998906                              0.001094
+      91     C        1          3.999341                              0.000659
+      92     C        1          3.999652                              0.000348
+      93     C        1          3.999877                              0.000123
+      94     C        1          3.999349                              0.000651
+      95     C        1          3.999555                              0.000445
+      96     C        1          3.999911                              0.000089
+      97     C        1          3.999773                              0.000227
+      98     C        1          3.999728                              0.000272
+      99     C        1          4.000047                             -0.000047
+     100     C        1          3.999274                              0.000726
+     101     C        1          3.999492                              0.000508
+     102     C        1          3.999654                              0.000346
+     103     C        1          3.999829                              0.000171
+     104     C        1          3.998666                              0.001334
+     105     C        1          3.998675                              0.001325
+     106     C        1          3.999231                              0.000769
+     107     C        1          3.999624                              0.000376
+     108     C        1          3.999829                              0.000171
+     109     C        1          4.000825                             -0.000825
+     110     C        1          3.999585                              0.000415
+     111     C        1          3.999412                              0.000588
+     112     C        1          3.997960                              0.002040
+     113     C        1          3.998971                              0.001029
+     114     C        1          3.999604                              0.000396
+     115     C        1          3.999747                              0.000253
+     116     C        1          3.999013                              0.000987
+     117     C        1          3.999720                              0.000280
+     118     C        1          3.999839                              0.000161
+     119     C        1          3.999883                              0.000117
+     120     C        1          3.999345                              0.000655
+     121     C        1          3.999718                              0.000282
+     122     C        1          3.999245                              0.000755
+     123     C        1          3.999746                              0.000254
+     124     C        1          3.999257                              0.000743
+     125     C        1          3.999540                              0.000460
+     126     C        1          3.999298                              0.000702
+     127     C        1          3.999605                              0.000395
+     128     C        1          3.998999                              0.001001
+     129     C        1          3.999555                              0.000445
+     130     C        1          3.999427                              0.000573
+     131     C        1          3.999765                              0.000235
+     132     C        1          3.999729                              0.000271
+     133     C        1          4.000131                             -0.000131
+     134     C        1          3.999348                              0.000652
+     135     C        1          3.999933                              0.000067
+     136     C        1          3.999149                              0.000851
+     137     C        1          3.999349                              0.000651
+     138     C        1          3.999164                              0.000836
+     139     C        1          3.999695                              0.000305
+     140     C        1          3.999173                              0.000827
+     141     C        1          3.999632                              0.000368
+     142     C        1          3.999265                              0.000735
+     143     C        1          3.999683                              0.000317
+     144     C        1          3.999382                              0.000618
+     145     I        2          7.055516                             -0.055516
+     146     I        2          7.053099                             -0.053099
+ # Total charge                            590.000000                 -0.000000
+
+ !-----------------------------------------------------------------------------!
+
+ Hirshfeld charge iterations: Residuals ...
+   0.028   0.001
+ !-----------------------------------------------------------------------------!
+                           Hirshfeld Charges
+
+  #Atom  Element  Kind  Ref Charge     Population                    Net charge
+      1       C      1       4.000          4.000                        -0.000
+      2       C      1       3.998          3.998                         0.002
+      3       C      1       3.999          3.999                         0.001
+      4       C      1       3.999          3.999                         0.001
+      5       C      1       4.000          4.000                        -0.000
+      6       C      1       3.998          3.998                         0.002
+      7       C      1       3.999          3.999                         0.001
+      8       C      1       3.999          3.999                         0.001
+      9       C      1       4.000          4.000                        -0.000
+     10       C      1       3.998          3.998                         0.002
+     11       C      1       3.999          3.999                         0.001
+     12       C      1       4.000          4.000                         0.000
+     13       C      1       4.000          4.000                        -0.000
+     14       C      1       3.998          3.998                         0.002
+     15       C      1       3.999          3.999                         0.001
+     16       C      1       3.999          3.999                         0.001
+     17       C      1       4.000          4.000                         0.000
+     18       C      1       3.998          3.998                         0.002
+     19       C      1       3.999          3.999                         0.001
+     20       C      1       4.000          4.000                         0.000
+     21       C      1       4.000          4.000                         0.000
+     22       C      1       3.998          3.998                         0.002
+     23       C      1       3.999          3.999                         0.001
+     24       C      1       3.999          3.999                         0.001
+     25       C      1       3.999          3.999                         0.001
+     26       C      1       3.999          3.999                         0.001
+     27       C      1       4.000          4.000                        -0.000
+     28       C      1       3.998          3.998                         0.002
+     29       C      1       3.999          3.999                         0.001
+     30       C      1       3.999          3.999                         0.001
+     31       C      1       4.000          4.000                         0.000
+     32       C      1       3.998          3.998                         0.002
+     33       C      1       3.999          3.999                         0.001
+     34       C      1       3.997          3.997                         0.003
+     35       C      1       3.993          3.993                         0.007
+     36       C      1       3.996          3.996                         0.004
+     37       C      1       3.997          3.997                         0.003
+     38       C      1       3.990          3.990                         0.010
+     39       C      1       3.996          3.996                         0.004
+     40       C      1       3.998          3.998                         0.002
+     41       C      1       3.999          3.999                         0.001
+     42       C      1       3.999          3.999                         0.001
+     43       C      1       4.000          4.000                         0.000
+     44       C      1       3.998          3.998                         0.002
+     45       C      1       3.999          3.999                         0.001
+     46       C      1       4.000          4.000                         0.000
+     47       C      1       4.000          4.000                         0.000
+     48       C      1       3.998          3.998                         0.002
+     49       C      1       3.999          3.999                         0.001
+     50       C      1       3.998          3.998                         0.002
+     51       C      1       3.999          3.999                         0.001
+     52       C      1       3.998          3.998                         0.002
+     53       C      1       3.999          3.999                         0.001
+     54       C      1       3.998          3.998                         0.002
+     55       C      1       3.999          3.999                         0.001
+     56       C      1       3.997          3.997                         0.003
+     57       C      1       3.997          3.997                         0.003
+     58       C      1       3.991          3.991                         0.009
+     59       C      1       3.977          3.977                         0.023
+     60       C      1       3.970          3.970                         0.030
+     61       C      1       3.968          3.968                         0.032
+     62       C      1       3.969          3.969                         0.031
+     63       C      1       3.989          3.989                         0.011
+     64       C      1       3.994          3.994                         0.006
+     65       C      1       3.998          3.998                         0.002
+     66       C      1       3.997          3.997                         0.003
+     67       C      1       3.999          3.999                         0.001
+     68       C      1       3.998          3.998                         0.002
+     69       C      1       3.999          3.999                         0.001
+     70       C      1       3.998          3.998                         0.002
+     71       C      1       3.999          3.999                         0.001
+     72       C      1       3.998          3.998                         0.002
+     73       C      1       4.000          4.000                        -0.000
+     74       C      1       3.998          3.998                         0.002
+     75       C      1       3.999          3.999                         0.001
+     76       C      1       3.999          3.999                         0.001
+     77       C      1       4.000          4.000                        -0.000
+     78       C      1       3.998          3.998                         0.002
+     79       C      1       3.999          3.999                         0.001
+     80       C      1       3.998          3.998                         0.002
+     81       C      1       3.998          3.998                         0.002
+     82       C      1       3.991          3.991                         0.009
+     83       C      1       3.973          3.973                         0.027
+     84       C      1       3.968          3.968                         0.032
+     85       C      1       3.966          3.966                         0.034
+     86       C      1       3.968          3.968                         0.032
+     87       C      1       3.989          3.989                         0.011
+     88       C      1       3.996          3.996                         0.004
+     89       C      1       3.999          3.999                         0.001
+     90       C      1       3.998          3.998                         0.002
+     91       C      1       3.999          3.999                         0.001
+     92       C      1       4.000          4.000                         0.000
+     93       C      1       4.000          4.000                         0.000
+     94       C      1       3.998          3.998                         0.002
+     95       C      1       3.999          3.999                         0.001
+     96       C      1       4.000          4.000                         0.000
+     97       C      1       3.999          3.999                         0.001
+     98       C      1       3.999          3.999                         0.001
+     99       C      1       4.000          4.000                        -0.000
+    100       C      1       3.998          3.998                         0.002
+    101       C      1       3.999          3.999                         0.001
+    102       C      1       3.999          3.999                         0.001
+    103       C      1       4.000          4.000                         0.000
+    104       C      1       3.998          3.998                         0.002
+    105       C      1       3.997          3.997                         0.003
+    106       C      1       3.998          3.998                         0.002
+    107       C      1       3.995          3.995                         0.005
+    108       C      1       3.972          3.972                         0.028
+    109       C      1       3.971          3.971                         0.029
+    110       C      1       3.993          3.993                         0.007
+    111       C      1       3.998          3.998                         0.002
+    112       C      1       3.995          3.995                         0.005
+    113       C      1       3.999          3.999                         0.001
+    114       C      1       3.999          3.999                         0.001
+    115       C      1       4.000          4.000                         0.000
+    116       C      1       3.998          3.998                         0.002
+    117       C      1       3.999          3.999                         0.001
+    118       C      1       3.999          3.999                         0.001
+    119       C      1       4.000          4.000                         0.000
+    120       C      1       3.998          3.998                         0.002
+    121       C      1       3.999          3.999                         0.001
+    122       C      1       3.998          3.998                         0.002
+    123       C      1       3.999          3.999                         0.001
+    124       C      1       3.998          3.998                         0.002
+    125       C      1       3.999          3.999                         0.001
+    126       C      1       3.998          3.998                         0.002
+    127       C      1       3.999          3.999                         0.001
+    128       C      1       3.998          3.998                         0.002
+    129       C      1       3.999          3.999                         0.001
+    130       C      1       3.998          3.998                         0.002
+    131       C      1       3.999          3.999                         0.001
+    132       C      1       3.997          3.997                         0.003
+    133       C      1       3.998          3.998                         0.002
+    134       C      1       3.998          3.998                         0.002
+    135       C      1       4.000          4.000                         0.000
+    136       C      1       3.998          3.998                         0.002
+    137       C      1       3.999          3.999                         0.001
+    138       C      1       3.998          3.998                         0.002
+    139       C      1       3.999          3.999                         0.001
+    140       C      1       3.998          3.998                         0.002
+    141       C      1       3.999          3.999                         0.001
+    142       C      1       3.998          3.998                         0.002
+    143       C      1       3.999          3.999                         0.001
+    144       C      1       3.998          3.998                         0.002
+    145       I      2       7.222          7.222                        -0.222
+    146       I      2       7.236          7.236                        -0.236
+
+  Total Charge                                                            0.076
+ !-----------------------------------------------------------------------------!
+
+ ENERGY| Total FORCE_EVAL ( QS ) energy [hartree]           -843.546884721969377
+
+ -------------------------------------------------------------------------------
+ -                                                                             -
+ -                                DBCSR STATISTICS                             -
+ -                                                                             -
+ -------------------------------------------------------------------------------
+ COUNTER                                    TOTAL       BLAS       SMM       ACC
+ flops     7 x     7 x  1898               186004     100.0%      0.0%      0.0%     
+ flops    13 x     7 x     7               372008     100.0%      0.0%      0.0%     
+ flops    13 x     8 x     8              1943552     100.0%      0.0%      0.0%     
+ flops    32 x    40 x   295              3020800     100.0%      0.0%      0.0%     
+ flops    32 x     7 x  1898              3401216     100.0%      0.0%      0.0%     
+ flops     7 x    32 x  1898              4251520     100.0%      0.0%      0.0%     
+ flops    32 x   295 x   295              5569600     100.0%      0.0%      0.0%     
+ flops    71 x    40 x   295              6702400     100.0%      0.0%      0.0%     
+ flops    13 x    32 x     7              7652736     100.0%      0.0%      0.0%     
+ flops    13 x     7 x    32              7652736     100.0%      0.0%      0.0%     
+ flops    71 x   295 x   295             12357550     100.0%      0.0%      0.0%     
+ flops     8 x    40 x    40             14950400     100.0%      0.0%      0.0%     
+ flops    96 x    40 x   295             18124800     100.0%      0.0%      0.0%     
+ flops    96 x   295 x   295             33417600     100.0%      0.0%      0.0%     
+ flops   377 x    40 x   295             35588800     100.0%      0.0%      0.0%     
+ flops    71 x    40 x  1898             43122560     100.0%      0.0%      0.0%     
+ flops    32 x    40 x    40             59801600     100.0%      0.0%      0.0%     
+ flops    64 x    40 x   335            106342400     100.0%      0.0%      0.0%     
+ flops    79 x    40 x   335            131266400     100.0%      0.0%      0.0%     
+ flops   507 x    40 x   295            143582400     100.0%      0.0%      0.0%     
+ flops    32 x    32 x  1898            174919680     100.0%      0.0%      0.0%     
+ flops   377 x   295 x   295            196850550     100.0%      0.0%      0.0%     
+ flops    32 x   295 x  1898            250839680     100.0%      0.0%      0.0%     
+ flops     8 x    40 x  1898            290318080     100.0%      0.0%      0.0%     
+ flops    96 x    40 x   335            319027200     100.0%      0.0%      0.0%     
+ flops    64 x   335 x  1898            325544960     100.0%      0.0%      0.0%     
+ flops    13 x    32 x    32            380936192     100.0%      0.0%      0.0%     
+ flops    79 x   335 x  1898            401844560     100.0%      0.0%      0.0%     
+ flops   377 x    40 x    40            436716800     100.0%      0.0%      0.0%     
+ flops    13 x     7 x    13            467389104     100.0%      0.0%      0.0%     
+ flops    71 x   295 x  1898            556550540     100.0%      0.0%      0.0%     
+ flops    64 x    40 x  1898            602501120     100.0%      0.0%      0.0%     
+ flops   377 x    40 x   335            626423200     100.0%      0.0%      0.0%     
+ flops    79 x    40 x  1898            743712320     100.0%      0.0%      0.0%     
+ flops   507 x   295 x   295            794190150     100.0%      0.0%      0.0%     
+ flops   377 x   295 x  1898            844344280     100.0%      0.0%      0.0%     
+ flops    96 x   335 x  1898            976634880     100.0%      0.0%      0.0%     
+ flops    32 x    40 x  1898           1180707840     100.0%      0.0%      0.0%     
+ flops    96 x   295 x  1898           1505038080     100.0%      0.0%      0.0%     
+ flops   507 x    40 x    40           1761926400     100.0%      0.0%      0.0%     
+ flops    96 x    40 x  1898           1924116480     100.0%      0.0%      0.0%     
+ flops   507 x    40 x   335           2527293600     100.0%      0.0%      0.0%     
+ flops    13 x    13 x   295           2725971690     100.0%      0.0%      0.0%     
+ flops   507 x   295 x  1898           3406492440     100.0%      0.0%      0.0%     
+ flops    13 x     8 x    13          11172825248     100.0%      0.0%      0.0%     
+ flops    13 x    32 x    13          63921024128     100.0%      0.0%      0.0%     
+ flops inhomo. stacks                           0       0.0%      0.0%      0.0%
+ flops total                        99.153446E+09     100.0%      0.0%      0.0%
+ flops max/rank                     99.153446E+09     100.0%      0.0%      0.0%
+ matmuls inhomo. stacks                         0       0.0%      0.0%      0.0%
+ matmuls total                           10289108     100.0%      0.0%      0.0%
+ number of processed stacks                 15710     100.0%      0.0%      0.0%
+ average stack size                                   654.9       0.0       0.0
+ marketing flops                   125.920928E+09
+ -------------------------------------------------------------------------------
+ # multiplications                           1686
+ max memory usage/rank              30.598504E+09
+ # max total images/rank                        1
+ # max 3D layers                                1
+ # MPI messages exchanged                       0
+ -------------------------------------------------------------------------------
+ -                                                                             -
+ -                      DBCSR MESSAGE PASSING PERFORMANCE                      -
+ -                                                                             -
+ -------------------------------------------------------------------------------
+ ROUTINE             CALLS      AVE VOLUME [Bytes]
+ MP_Bcast               47                     12.
+ MP_Allreduce         8004                      8.
+ MP_Alltoall          6889                 258143.
+ MP_ISend             6716                  29859.
+ MP_IRecv             6716                  29859.
+ -------------------------------------------------------------------------------
+
+ -------------------------------------------------------------------------------
+ -                                                                             -
+ -                                GRID STATISTICS                              -
+ -                                                                             -
+ -------------------------------------------------------------------------------
+ LP    KERNEL             BACKEND                              COUNT     PERCENT
+ 4     collocate ortho    CPU                                 149564      66.45%
+ 4     integrate ortho    CPU                                  74782      33.23%
+ 0     collocate general  CPU                                    438       0.19%
+ 0     integrate general  CPU                                    292       0.13%
+ -------------------------------------------------------------------------------
+
+ -------------------------------------------------------------------------------
+ -                                                                             -
+ -                          OFFLOAD MEMPOOL STATISTICS                         -
+ -                                                                             -
+ -------------------------------------------------------------------------------
+ Memory consumption                Number of allocations  Used [MiB]  Size [MiB]
+ Device                                                6          61          61
+ Host                                                  6          61          61
+ -------------------------------------------------------------------------------
+
+ MEMORY| Estimated peak process memory [MiB]                                2081
+
+ -------------------------------------------------------------------------------
+ -                                                                             -
+ -                         MESSAGE PASSING PERFORMANCE                         -
+ -                                                                             -
+ -------------------------------------------------------------------------------
+
+ ROUTINE             CALLS      AVE VOLUME [Bytes]
+ MP_Group                4
+ MP_Bcast             5013                   2012.
+ MP_Allreduce        12609                   1143.
+ MP_Sync               118
+ MP_comm_split         111
+ -------------------------------------------------------------------------------
+
+
+ -------------------------------------------------------------------------------
+ -                                                                             -
+ -                           R E F E R E N C E S                               -
+ -                                                                             -
+ -------------------------------------------------------------------------------
+ 
+ CP2K version 2026.1, the CP2K developers group (2026).
+ CP2K is freely available from https://www.cp2k.org/ .
+ 
+ T. D. Kuehne, M. Iannuzzi, M. Del Ben, V. V. Rybkin, P. Seewald, F. Stein, T. 
+ Laino, R. Z. Khaliullin, O. Schuett, F. Schiffmann, D. Golze, J. Wilhelm, S. 
+ Chulkov, M. H. Bani-Hashemian, V. Weber, U. Borstnik, M. Taillefumier, A. S. 
+ Jakobovits, A. Lazzaro, H. Pabst, T. Mueller, R. Schade, M. Guidon, S. 
+ Andermatt, N. Holmberg, G. K. Schenter, A. Hehn, A. Bussy, F. Belleflamme, G. 
+ Tabacchi, A. Gloess, M. Lass, I. Bethune, C. J. Mundy, C. Plessl, M. Watkins, 
+ J. VandeVondele, M. Krack, J. Hutter.
+ J. Chem. Phys. 152, 194103 (2020).
+ CP2K: An electronic structure and molecular dynamics software package - 
+ Quickstep: Efficient and accurate electronic structure calculations.
+ https://doi.org/10.1063/5.0007045
+
+ L. Goerigk, A. Hansen, C. Bauer, S. Ehrlich, A. Najibi, S. Grimme.
+ Phys. Chem. Chem. Phys. 19, 32184-32215 (2017).
+ A look at the density functional theory zoo with the advanced GMTKN55 database 
+ for general main group thermochemistry, kinetics and noncovalent interactions.
+ https://doi.org/10.1039/C7CP04913G
+
+ O. Schuett, P. Messmer, J. Hutter, J. VandeVondele.
+ Electronic Structure Calculations on Graphics Processing Units, 173-190 (2016).
+ GPU-Accelerated Sparse Matrix-Matrix Multiplication for Linear Scaling Density 
+ Functional Theory.
+ https://doi.org/10.1002/9781118670712.ch8
+
+ A. Heinecke, G. Henry, M. Hutchinson, H. Pabst.
+ Proceedings of Intl. Supercomputing Conference, 981-991 (2016).
+ LIBXSMM: Accelerating Small Matrix Multiplications by Runtime Code Generation.
+ https://doi.org/10.1109/SC.2016.83
+
+ J. Hutter, M. Iannuzzi, F. Schiffmann, J. VandeVondele.
+ WIREs Comput Mol Sci. 4, 15-25 (2014).
+ CP2K: atomistic simulations of condensed matter systems.
+ https://doi.org/10.1002/wcms.1159
+
+ U. Borstnik, J. VandeVondele, V. Weber, J. Hutter.
+ Parallel Comput. 40, 47-58 (2014).
+ Sparse matrix multiplication: The distributed block-compressed sparse row 
+ library.
+ https://doi.org/10.1016/j.parco.2014.03.012
+
+ A. Marek, V. Blum, R. Johanni, V. Havu, B. Lang, T. Auckenthaler, A. Heinecke, 
+ H. Bungartz, H. Lederer.
+ J. Phys. Condens. Matter 26, 213201 (2014).
+ The ELPA library: scalable parallel eigenvalue solutions for electronic 
+ structure theory and computational science.
+ https://doi.org/10.1088/0953-8984/26/21/213201
+
+ S. Grimme, S. Ehrlich, L. Goerigk.
+ J. Comput. Chem. 32, 1456 (2011).
+ Effect of the damping function in dispersion corrected density functional 
+ theory.
+ https://doi.org/10.1002/jcc.21759
+
+ S. Grimme, J. Antony, S. Ehrlich, H. Krieg.
+ J. Chem. Phys. 132, 154104 (2010).
+ A consistent and accurate ab initio parametrization of density functional 
+ dispersion correction (DFT-D) for the 94 elements H-Pu.
+ https://doi.org/10.1063/1.3382344
+
+ J. VandeVondele, J. Hutter.
+ J. Chem. Phys. 127, 114105 (2007).
+ Gaussian basis sets for accurate calculations on molecular systems in gas and 
+ condensed phases.
+ https://doi.org/10.1063/1.2770708
+
+ J. VandeVondele, M. Krack, F. Mohamed, M. Parrinello, T. Chassaing, J. Hutter.
+ Comput. Phys. Commun. 167, 103-128 (2005).
+ QUICKSTEP: Fast and accurate density functional calculations using a mixed 
+ Gaussian and plane waves approach.
+ https://doi.org/10.1016/j.cpc.2004.12.014
+
+ M. Krack.
+ Theor. Chem. Acc. 114, 145-152 (2005).
+ Pseudopotentials for H to Kr optimized for gradient-corrected 
+ exchange-correlation functionals.
+ https://doi.org/10.1007/s00214-005-0655-y
+
+ M. Frigo, S. G. Johnson.
+ Proc. IEEE 93, 216-231 (2005).
+ The design and implementation of FFTW3.
+ https://doi.org/10.1109/JPROC.2004.840301
+
+ J. VandeVondele, J. Hutter.
+ J. Chem. Phys. 118, 4365-4369 (2003).
+ An efficient orbital transformation method for electronic structure 
+ calculations.
+ https://doi.org/10.1063/1.1543154
+
+ C. Hartwigsen, S. Goedecker, J. Hutter.
+ Phys. Rev. B 58, 3641-3662 (1998).
+ Relativistic separable dual-space Gaussian pseudopotentials from H to Rn.
+ https://doi.org/10.1103/PhysRevB.58.3641
+
+ G. Lippert, J. Hutter, M. Parrinello.
+ Mol. Phys. 92, 477-487 (1997).
+ A hybrid Gaussian and plane wave density functional scheme.
+ https://doi.org/10.1080/002689797170220
+
+ S. Goedecker, M. Teter, J. Hutter.
+ Phys. Rev. B 54, 1703-1710 (1996).
+ Separable dual-space Gaussian pseudopotentials.
+ https://doi.org/10.1103/PhysRevB.54.1703
+
+ J. P. Perdew, K. Burke, M. Ernzerhof.
+ Phys. Rev. Lett. 77, 3865-3868 (1996).
+ Generalized gradient approximation made simple.
+ https://doi.org/10.1103/PhysRevLett.77.3865
+
+
+ -------------------------------------------------------------------------------
+ -                                                                             -
+ -                                T I M I N G                                  -
+ -                                                                             -
+ -------------------------------------------------------------------------------
+ SUBROUTINE                       CALLS  ASD         SELF TIME        TOTAL TIME
+                                MAXIMUM       AVERAGE  MAXIMUM  AVERAGE  MAXIMUM
+ CP2K                                 1  1.0    0.205    0.205   74.612   74.612
+ qs_energies                          1  2.0    0.006    0.006   69.824   69.824
+ scf_post_calculation_gpw             1  3.0    0.003    0.003   41.077   41.077
+ write_available_results              1  4.0    0.000    0.000   41.073   41.073
+ write_mo_dependent_results           1  5.0    0.005    0.005   40.560   40.560
+ calculate_projected_dos              1  6.0    0.098    0.098   40.121   40.121
+ ot_eigensolver                       1  7.0    0.024    0.024   32.649   32.649
+ dbcsr_multiply_generic            1686  9.8    0.290    0.290   32.069   32.069
+ scf_env_do_scf                       1  3.0    0.002    0.002   19.807   19.807
+ make_m2s                          3372 10.8    0.118    0.118   16.759   16.759
+ init_scf_loop                        1  4.0    0.002    0.002   16.742   16.742
+ make_images                       3372 11.8    5.221    5.221   12.695   12.695
+ multiply_cannon                   1686 10.8    1.042    1.042   10.986   10.986
+ qs_ks_update_qs_env                  2  5.0    0.000    0.000    9.757    9.757
+ rebuild_ks_matrix                    1  6.0    0.000    0.000    9.724    9.724
+ qs_ks_build_kohn_sham_matrix         1  7.0    0.008    0.008    9.724    9.724
+ multiply_cannon_loop              1686 11.8    0.471    0.471    8.924    8.924
+ ot_mini                            124  8.0    0.013    0.013    8.670    8.670
+ multiply_cannon_multrec           1686 12.8    8.396    8.396    8.451    8.451
+ fft_wrap_pw1pw2                     23  9.6    0.001    0.001    8.145    8.145
+ qs_ot_get_derivative                63  9.0    0.003    0.003    8.000    8.000
+ fft_wrap_pw1pw2_80                  14 11.0    1.578    1.578    7.911    7.911
+ prepare_preconditioner               1  5.0    0.000    0.000    6.681    6.681
+ make_preconditioner                  1  6.0    0.001    0.001    6.681    6.681
+ cp_fm_power                          1  7.0    0.279    0.279    6.612    6.612
+ cp_fm_diag_elpa                    114 10.9    0.002    0.002    6.241    6.241
+ cp_fm_diag_elpa_base               114 11.9    6.113    6.113    6.184    6.184
+ make_images_data                  3372 12.8    0.119    0.119    5.950    5.950
+ hybrid_alltoall_any               3535 13.7    5.601    5.601    5.804    5.804
+ qs_rho_update_rho_low                2  5.0    0.000    0.000    5.219    5.219
+ calculate_rho_elec                   2  6.0    0.094    0.094    5.219    5.219
+ init_scf_run                         1  3.0    0.004    0.004    5.103    5.103
+ scf_env_initial_rho_setup            1  4.0    0.000    0.000    5.099    5.099
+ qs_vxc_create                        1  8.0    0.006    0.006    4.686    4.686
+ xc_vxc_pw_create                     1  9.0    0.084    0.084    4.680    4.680
+ qs_ot_get_p                        129  8.0    0.005    0.005    4.647    4.647
+ qs_init_subsys                       1  2.0    0.004    0.004    4.303    4.303
+ fft3d_s                             24 11.2    4.276    4.276    4.302    4.302
+ qs_env_setup                         1  3.0    0.000    0.000    4.092    4.092
+ qs_env_rebuild_pw_env                2  3.5    0.000    0.000    4.091    4.091
+ pw_env_rebuild                       1  5.0    0.002    0.002    4.090    4.090
+ pw_grid_setup                        4  6.0    0.000    0.000    4.079    4.079
+ pw_grid_setup_internal               4  7.0    0.045    0.045    4.079    4.079
+ dbcsr_finalize                    2764 11.4    0.147    0.147    3.803    3.803
+ qs_energies_init_hamiltonians        1  3.0    0.001    0.001    3.786    3.786
+ dbcsr_complete_redistribute        323 11.3    1.019    1.019    3.760    3.760
+ dbcsr_merge_all                   2526 12.3    1.675    1.675    3.571    3.571
+ qs_ot_get_derivative_diag           53 10.0    0.007    0.007    3.459    3.459
+ pw_grid_sort                         4  8.0    2.698    2.698    3.362    3.362
+ dbcsr_make_dense_low              4208 12.8    0.078    0.078    3.247    3.247
+ make_dense_data                   4208 13.8    1.205    1.205    3.134    3.134
+ make_full_inverse_cholesky           1  7.0    0.000    0.000    3.114    3.114
+ xc_pw_derive                         6 11.0    0.001    0.001    3.070    3.070
+ scf_env_do_scf_inner_loop            1  4.0    0.007    0.007    3.040    3.040
+ copy_dbcsr_to_fm                   163 10.3    0.008    0.008    3.037    3.037
+ sum_up_and_integrate                 1  8.0    0.001    0.001    2.893    2.893
+ integrate_v_rspace                   1  9.0    0.040    0.040    2.859    2.859
+ make_full_single_inverse             1  7.0    0.001    0.001    2.859    2.859
+ grid_collocate_task_list             2  7.0    2.855    2.855    2.855    2.855
+ xc_rho_set_and_dset_create           1 10.0    0.153    0.153    2.646    2.646
+ dbcsr_make_images_dense           2808 12.1    0.047    0.047    2.575    2.575
+ density_rs2pw                        2  7.0    0.001    0.001    2.270    2.270
+ qs_ot_get_orbitals                 128  8.0    0.003    0.003    2.246    2.246
+ qs_ot_p2m_diag                     110  9.0    0.048    0.048    2.001    2.001
+ dbcsr_iterator_start             29401 13.3    1.925    1.925    1.975    1.975
+ copy_fm_to_dbcsr                   160 10.3    0.003    0.003    1.957    1.957
+ grid_integrate_task_list             1 10.0    1.945    1.945    1.945    1.945
+ qs_env_update_s_mstruct              1  4.0    0.000    0.000    1.943    1.943
+ xc_pw_divergence                     1 10.0    0.000    0.000    1.924    1.924
+ arnoldi_generalized_ev               1  8.0    0.001    0.001    1.735    1.735
+ dbcsr_sym_matrix_vector_mult       182 10.0    0.030    0.030    1.640    1.640
+ calculate_first_density_matrix       1  5.0    0.001    0.001    1.637    1.637
+ build_core_hamiltonian_matrix        1  4.0    0.002    0.002    1.633    1.633
+ gev_build_subspace                   4  9.0    0.009    0.009    1.627    1.627
+ transfer_dbcsr_to_fm                 1  8.0    0.000    0.000    1.570    1.570
+ calculate_rho_core                   1  5.0    0.047    0.047    1.517    1.517
+ cp_dbcsr_sm_fm_multiply              4  7.5    0.000    0.000    1.506    1.506
+ -------------------------------------------------------------------------------
+
+ The number of warnings for this run is : 0
+ 
+ -------------------------------------------------------------------------------
+  **** **** ******  **  PROGRAM ENDED AT                 2026-06-19 00:39:15.632
+ ***** ** ***  *** **   PROGRAM RAN ON                                    cyz912
+ **    ****   ******    PROGRAM RAN BY                               cyzcomputer
+ ***** **    ** ** **   PROGRAM PROCESS ID                                 11744
+  **** **  *******  **  PROGRAM STOPPED IN /home/cyzcomputer/cp2k_i2_runs/cp2k_a
+                                           dsorption_heterogeneity_check_2026061
+                                           8/basal_sp_geoopt

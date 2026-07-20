@@ -1,0 +1,275 @@
+{
+  "figure": "R582 Supplementary Figure S5 hydraulic fields",
+  "backend": "Python/matplotlib only",
+  "fixed_build_date": "2026-07-20T00:00:00Z",
+  "final_size_mm": [
+    180.0,
+    112.0
+  ],
+  "font_contract": {
+    "family": "TeX Gyre Termes",
+    "registered_otf_files": [
+      "texgyretermes-regular.otf",
+      "texgyretermes-bold.otf",
+      "texgyretermes-italic.otf",
+      "texgyretermes-bolditalic.otf"
+    ],
+    "base_size_pt": 7.2,
+    "minimum_size_pt": 6.5,
+    "panel_label_size_pt": 8.0,
+    "pdf_fonttype": 42,
+    "svg_fonttype": "none"
+  },
+  "input": {
+    "workspace_relative_path": "manuscript/source_data/Fig_R545_fields/Fig3_baseline_spatial_long.csv",
+    "sha256": "E322D0D0C4B0D5C8CB84BD5CB18D1A43CBA183EB8A5F112577686993BC8FC007",
+    "immutable": true
+  },
+  "source_bundle": {
+    "script": {
+      "workspace_relative_path": "manuscript/source_data/R582_SI_FigS5_hydraulic_fields/make_fig_si_r582_s5_hydraulic_fields.py",
+      "sha256": "FF84DC8D38045B96020A27EF80E31FB75966AB90AA0FA971A06BC6E4668E7853"
+    },
+    "frozen_source_csv": {
+      "workspace_relative_path": "manuscript/source_data/R582_SI_FigS5_hydraulic_fields/Fig_SI_R582_S5_hydraulic_fields_source.csv",
+      "sha256": "E242684B8CA6940A9CB9EC04DE2CE4C8368B19BE0F4A62F6B5F73C0FC31DE6BD"
+    },
+    "input_manifest": {
+      "workspace_relative_path": "manuscript/source_data/R582_SI_FigS5_hydraulic_fields/R582_SI_FigS5_input_manifest.csv",
+      "sha256": "BD9BE95CEF8A77B143EA4D35ADC13097EA294C2E50472BDFCF24D69327A17471"
+    },
+    "pdffonts_report": {
+      "workspace_relative_path": "manuscript/source_data/R582_SI_FigS5_hydraulic_fields/pdffonts_report.txt",
+      "sha256": "AC1201DE80731618AD1C0C52002C333ED30B421D35338DEB5B6946B5DD8A2D51"
+    }
+  },
+  "checks": {
+    "upstream_sha256": "E322D0D0C4B0D5C8CB84BD5CB18D1A43CBA183EB8A5F112577686993BC8FC007",
+    "frozen_source_sha256": "E242684B8CA6940A9CB9EC04DE2CE4C8368B19BE0F4A62F6B5F73C0FC31DE6BD",
+    "rows": 35970,
+    "nodes_per_capacity": {
+      "0": 5995,
+      "80": 5995,
+      "96": 5995,
+      "100": 5995,
+      "110": 5995,
+      "120": 5995
+    },
+    "grid": {
+      "x_count": 55,
+      "y_count": 109
+    },
+    "coordinate_bounds_mm": {
+      "x": [
+        3.0,
+        5.0
+      ],
+      "y": [
+        0.0,
+        20.0
+      ]
+    },
+    "global_field_ranges": {
+      "K_perm_rel": [
+        0.410216681747,
+        1.0
+      ],
+      "u_native_mag_m_s": [
+        0.00814557623663,
+        0.0219932065029
+      ],
+      "p_native_Pa": [
+        0.0,
+        9627.89127035
+      ]
+    },
+    "capacity_field_ranges": {
+      "0": {
+        "K_perm_rel": [
+          1.0,
+          1.0
+        ],
+        "u_native_mag_m_s": [
+          0.0208333329398,
+          0.0208333336769
+        ],
+        "p_native_Pa": [
+          0.0,
+          9166.66667769
+        ]
+      },
+      "80": {
+        "K_perm_rel": [
+          0.999491376965,
+          1.0
+        ],
+        "u_native_mag_m_s": [
+          0.0208259647376,
+          0.0208344107806
+        ],
+        "p_native_Pa": [
+          0.0,
+          9166.6806583
+        ]
+      },
+      "96": {
+        "K_perm_rel": [
+          0.993414431309,
+          0.998936653339
+        ],
+        "u_native_mag_m_s": [
+          0.0207384429255,
+          0.0208371886169
+        ],
+        "p_native_Pa": [
+          0.0,
+          9177.71651074
+        ]
+      },
+      "100": {
+        "K_perm_rel": [
+          0.989887406381,
+          0.998104960363
+        ],
+        "u_native_mag_m_s": [
+          0.0206918419285,
+          0.0208390727319
+        ],
+        "p_native_Pa": [
+          0.0,
+          9186.04257559
+        ]
+      },
+      "110": {
+        "K_perm_rel": [
+          0.967401817988,
+          0.994778380121
+        ],
+        "u_native_mag_m_s": [
+          0.0203532661744,
+          0.0208535717006
+        ],
+        "p_native_Pa": [
+          0.0,
+          9222.03653659
+        ]
+      },
+      "120": {
+        "K_perm_rel": [
+          0.410216681747,
+          0.989386102005
+        ],
+        "u_native_mag_m_s": [
+          0.00814557623663,
+          0.0219932065029
+        ],
+        "p_native_Pa": [
+          0.0,
+          9627.89127035
+        ]
+      }
+    },
+    "p_out_zero_nodes_per_capacity": {
+      "0": 55,
+      "80": 55,
+      "96": 55,
+      "100": 55,
+      "110": 55,
+      "120": 55
+    },
+    "pressure_semantics": "hydraulic pressure in Pa; registered p_out = 0",
+    "round_trip_source_check": true,
+    "no_missing_nonfinite_or_duplicate_nodes": true
+  },
+  "render_semantics": {
+    "capacities_mAh_cm2": [
+      0.0,
+      80.0,
+      96.0,
+      100.0,
+      110.0,
+      120.0
+    ],
+    "interpolation": "nearest; no smoothing",
+    "pressure_field": "p_native_Pa; hydraulic pressure in Pa; p_out = 0",
+    "electrical_potential_fields_used": false,
+    "local_pore_closure_or_blockage_inference": false
+  },
+  "deterministic_second_render_byte_identical": {
+    "svg": true,
+    "pdf": true,
+    "png_600dpi": true,
+    "tiff_600dpi": true,
+    "preview_180mm": true,
+    "grayscale_180mm": true
+  },
+  "outputs": {
+    "svg": {
+      "workspace_relative_path": "manuscript/figures_R582/Fig_SI_R582_S5_hydraulic_fields.svg",
+      "sha256": "8334866A4A713D0793D1D2CD6F711D3D894A32A24A9DEC29F5EEDBC5A1A84E2F",
+      "bytes": 114490,
+      "editable_text_nodes": 59
+    },
+    "pdf": {
+      "workspace_relative_path": "manuscript/figures_R582/Fig_SI_R582_S5_hydraulic_fields.pdf",
+      "sha256": "09E409A9A671C7F01FD118154014D4E938CE62F9A34AE51E4A0AB90F0D2AE3AB",
+      "bytes": 55094
+    },
+    "png_600dpi": {
+      "workspace_relative_path": "manuscript/figures_R582/Fig_SI_R582_S5_hydraulic_fields.png",
+      "sha256": "C1B5BFD2FE221804CC6B08866227B190AC741D11156FA5762841686E473539E9",
+      "bytes": 236515,
+      "pixels": [
+        4251,
+        2645
+      ],
+      "dpi": [
+        599.9988,
+        599.9988
+      ],
+      "mode": "RGB"
+    },
+    "tiff_600dpi": {
+      "workspace_relative_path": "manuscript/figures_R582/Fig_SI_R582_S5_hydraulic_fields.tiff",
+      "sha256": "3113A68CDE482B8DD994F31AE708070CE3966468961AC48594E8F43F72948DB1",
+      "bytes": 1089472,
+      "pixels": [
+        4251,
+        2645
+      ],
+      "dpi": [
+        600.0,
+        600.0
+      ],
+      "mode": "RGB"
+    },
+    "preview_180mm": {
+      "workspace_relative_path": "manuscript/figures_R582/Fig_SI_R582_S5_hydraulic_fields_180mm_preview.png",
+      "sha256": "9BDE0E4A1BBE061D4D4C35FDF7100D7BF94C61B1EB84EC07D702FF9D66AD115F",
+      "bytes": 44074,
+      "pixels": [
+        1062,
+        661
+      ],
+      "dpi": [
+        150.01239999999999,
+        150.01239999999999
+      ],
+      "mode": "RGB"
+    },
+    "grayscale_180mm": {
+      "workspace_relative_path": "manuscript/figures_R582/Fig_SI_R582_S5_hydraulic_fields_grayscale_180mm.png",
+      "sha256": "73B0A2AE4CA00918574AED6AEDF17A1BDECDDD2389890E907DA7F5D005BC1362",
+      "bytes": 42200,
+      "pixels": [
+        1062,
+        661
+      ],
+      "dpi": [
+        150.01239999999999,
+        150.01239999999999
+      ],
+      "mode": "RGB"
+    }
+  }
+}

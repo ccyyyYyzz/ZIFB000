@@ -1,0 +1,80 @@
+{
+  "series": "md_transport_soc_series",
+  "target_soc": 1.0,
+  "actual_soc": 1.0,
+  "variant": "q1p0",
+  "charge_scale": 1.0,
+  "box_nm_initial": 3.4,
+  "counts": {
+    "SOL": 1112,
+    "ZN": 24,
+    "I": 32,
+    "BR": 88,
+    "NH4": 95,
+    "I2": 1,
+    "I3": 16,
+    "I2B": 7
+  },
+  "formal_net_charge_e": 0.0,
+  "actual_molarities_by_molecule": {
+    "SOL": 46.98044582478419,
+    "ZN": 1.0139664566500184,
+    "I": 1.351955275533358,
+    "BR": 3.7178770077167345,
+    "NH4": 4.013617224239656,
+    "I2": 0.042248602360417435,
+    "I3": 0.675977637766679,
+    "I2B": 0.29574021652292204
+  },
+  "initial_composition_density_g_ml": 1.8204700605502941,
+  "oxidized_i2_equiv_count": 24,
+  "speciation_integer_allocation": {
+    "target_soc": 1.0,
+    "actual_soc": 1.0,
+    "target_i2_equiv_count": 24,
+    "I3": 16,
+    "I2B": 7,
+    "I2": 1,
+    "i3_weight": 2.0279329133000368,
+    "i2br_weight": 0.8027234448479312,
+    "beta_eff_anchor": 1487.0,
+    "theoretical_free_i2_fraction": 0.0006724949562878278,
+    "finite_box_free_i2_fraction": 0.041666666666666664
+  },
+  "finite_box_neutrality_scheme": "I3- replaces one free I- and I2Br- replaces one free Br- while adding one I2-equivalent load; free I2 is neutral. This preserves explicit PME neutrality but is a finite-box load-series prior, not a closed-cell mass-balance model.",
+  "force_field_notes": {
+    "base_gromacs_forcefield": "amber19sb.ff",
+    "water_model": "SPC/E",
+    "ion_parameters": "Reuses md_transport_local Stage A ion/NH4/I2 setup; Zn2+ is the documented SPC/E 12-6 approximation, not full Li-Merz 12-6-4 C4.",
+    "polyhalide_note": "I3-/I2Br- use rebuilt linear geometries and xTB ALPB-water charges from md_transport_local Stage B; LJ terms are iodine/bromide analogues, so absolute values are low-confidence.",
+    "i3_bond_A": 2.93,
+    "i2br_i_i_bond_A": 2.89,
+    "i2br_i_br_bond_A": 2.75,
+    "i3_charges_e": [
+      -0.42046963,
+      -0.15906074,
+      -0.42046963
+    ],
+    "i2br_atoms": [
+      "BR",
+      "I1",
+      "I2"
+    ],
+    "i2br_charges_e": [
+      -0.55038516,
+      -0.12910576,
+      -0.32050908
+    ]
+  },
+  "speciation_notes": {
+    "source": "R195 readable exports use beta_I2 ~= 1487; v1c qualitatively supports I3 more than I2Br but does not set K directly.",
+    "beta_eff_anchor": 1487.0,
+    "split_basis": "I3:I2Br split uses mesoscale fallback weights K_I2_I*cI : K_I2_Br*cBr at 1 M ZnI2 + 4 M NH4Br, with free I2 forced to one molecule for finite-box D diagnostics.",
+    "K_I2_I_m3_mol": 0.001,
+    "K_I2_Br_m3_mol": 0.0002,
+    "cI_m_mol_m3": 2027.9329133000367,
+    "cBr_support_mol_m3": 4013.617224239656,
+    "min_free_i2_count": 1,
+    "finite_box_note": "True beta_eff free-I2 fraction is below one molecule in this 3.4 nm box; one free I2 molecule is retained to estimate neutral-I2 mobility and is excluded from over-interpretation."
+  }
+}

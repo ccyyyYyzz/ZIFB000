@@ -1,0 +1,5 @@
+figure,geometry,atoms_in_xyz,atoms_displayed_after_crop,I-I_distances_A,nearest_I-O_A,projection,bond_rule
+S7,C-OH,149,42,2.83511221495,3.5319545386906053,orthographic azimuth=-34deg elevation=21deg,minimum-distance I2 pairing; non-I adjacency from covalent-radius cutoff
+S7,C=O,146,24,2.75601947952,2.840115574334936,orthographic azimuth=-34deg elevation=21deg,minimum-distance I2 pairing; non-I adjacency from covalent-radius cutoff
+S7,basal,146,42,2.78149575605,,orthographic azimuth=-34deg elevation=21deg,minimum-distance I2 pairing; non-I adjacency from covalent-radius cutoff
+S7,vacancy,145,41,2.76744638125,,orthographic azimuth=-34deg elevation=21deg,minimum-distance I2 pairing; non-I adjacency from covalent-radius cutoff

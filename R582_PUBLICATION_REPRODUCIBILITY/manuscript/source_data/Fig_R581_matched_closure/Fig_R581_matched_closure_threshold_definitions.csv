@@ -1,0 +1,5 @@
+marker_id,display_symbol,definition,value,unit,control_Q_crossing_mAh_cm2,coupled_dense_Q_crossing_mAh_cm2,provenance
+Q_f_cal,"Q_f,cal",first production-control theta=0.5 crossing; piecewise-linear interpolation on common Q grid,99.463708428,mAh cm^-2,99.463708428,,derived directly from frozen R581 comparison CSV; checked against frozen summary
+eps_s_cal_traj,"eps_s,cal,traj*","production-control eps_s read at Q_f,cal; not a physical-island or film threshold",0.000118976482998,dimensionless,99.463708428,,piecewise-linear readout from frozen R581 comparison CSV
+eps_s_island_half,"eps_s,island,1/2",(ln 2/35.4)^(1/0.6222); half-accessibility of frozen dense-island relation,0.00179728189316,dimensionless,118.692345704,,derived from the frozen closure expression stored in R581 summary JSON
+eps_s_film_perc,"eps_s,film-perc*",geometric connected-film/percolation marker; distinct from half-accessibility,0.0022324,dimensionless,119.197309919,,"registered geometric connected-film/percolation comparator; explicit project-contract constant, not fitted or recomputed from R581"

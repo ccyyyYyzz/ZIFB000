@@ -1,0 +1,184 @@
+{
+  "analysis_date": "2026-07-11",
+  "analysis_id": "R581_TRUE_MESH_CLOSURE_RELEASE",
+  "control": {
+    "Q_s_mAh_cm2": 82.89029431581969,
+    "Q_theta_0p5_mAh_cm2": 99.4637084279676,
+    "Q_theta_0p9_mAh_cm2": 111.05079403170872,
+    "S_identity_max_abs": 0.0,
+    "endpoint": {
+      "A_bare_avg": 0.00996124760294,
+      "K_perm_rel_avg": 0.957035205166,
+      "S_direct": 1.76507771293,
+      "S_reconstructed": 1.76507771293,
+      "eps_s_avg": 0.00315235665964,
+      "q_mAh_cm2": 120.0,
+      "theta_avg": 0.9899822096,
+      "voltage_V": 1.72836440104
+    },
+    "rows": 1081
+  },
+  "control_reproduction_gate": {
+    "checks": {
+      "S_identity_le_1e-6": true,
+      "delta_Qs_le_0p5": true,
+      "delta_Qtheta_le_0p5": true,
+      "endpoint_eps_rel_le_1pct": true,
+      "endpoint_theta_abs_le_0p005": true,
+      "max_abs_voltage_le_1mV": true
+    },
+    "fresh": {
+      "Q_s_mAh_cm2": 83.02019740060638,
+      "Q_theta_0p5_mAh_cm2": 99.5895751239597,
+      "Q_theta_0p9_mAh_cm2": 111.19726398792058,
+      "S_identity_max_abs": 0.0,
+      "endpoint": {
+        "A_bare_avg": 0.0104280473275,
+        "K_perm_rel_avg": 0.95622894131,
+        "S_direct": 1.75898600768,
+        "S_reconstructed": 1.75898600768,
+        "eps_s_avg": 0.00322420776207,
+        "q_mAh_cm2": 120.0,
+        "theta_avg": 0.98951331201,
+        "voltage_V": 1.72894038699
+      },
+      "rows": 1081
+    },
+    "historical": {
+      "Q_s_mAh_cm2": 83.0201994718443,
+      "Q_theta_0p5_mAh_cm2": 99.59005532064884,
+      "endpoint": {
+        "eps_s_avg": 0.00321926062394,
+        "theta_avg": 0.989509871859,
+        "voltage_V": 1.72887516175
+      }
+    },
+    "input_files": {
+      "historical_csv": {
+        "path": "E:\\zifb_final_9129_luck\\battery_comsol\\02_outputs_core\\R526_COMSOL_NATIVE_KNOB_EXPORT\\R526_GPT_REVIEW_BUNDLE_STAGE\\data\\R525_all_timeseries.csv",
+        "sha256": "744A36AC0EB8E785E61FEAB24F2CA699484134D30F8D77E532E03DB90917E90F"
+      },
+      "solved_mph": {
+        "path": "E:\\zifb_final_9129_luck\\battery_comsol\\02_outputs_core\\R581_CANONICAL_CLOSURE_REBUILD\\outputs\\R581_matched_control_SOLVED.mph",
+        "sha256": "B26D8FA00159C7EF90B5932886C54F285BBBD8EBA899A0F7C62AAD7D8FBC6FED"
+      },
+      "stdout": {
+        "path": "E:\\zifb_final_9129_luck\\battery_comsol\\02_outputs_core\\R581_CANONICAL_CLOSURE_REBUILD\\logs\\R581_matched_control_run5_stdout.txt",
+        "sha256": "AD5DD07AEA79F4494D923DC7CD2040161D8B22667FB607067DC9217541F1C1BE"
+      }
+    },
+    "max_abs_trace_difference": {
+      "A_bare_avg": 2.2745915999933253e-05,
+      "D_rel_avg": 8.63027300002095e-06,
+      "K_perm_rel_avg": 6.737109199994595e-05,
+      "S_direct": 4.9803360000044705e-05,
+      "eps_s_avg": 4.947138129999997e-06,
+      "theta_avg": 2.2745687000003123e-05,
+      "voltage_V": 0.000285065969999998
+    },
+    "pass": true
+  },
+  "convergence_release_gate": {
+    "convergence_summary_sha256": "4F052D61A5E025DF4BFA95C6193EBEC696730E2C0462C3B39D61E3CAAAC8FD4A",
+    "mesh_gate": {
+      "checks": {
+        "S_identity": true,
+        "control_Qs": true,
+        "control_Qtheta0p5": true,
+        "control_eps_endpoint": true,
+        "control_theta_endpoint": true,
+        "deltaV": true,
+        "physical_Qs": true,
+        "physical_eps_endpoint": true,
+        "physical_theta_endpoint": true
+      },
+      "comparator": "7776-element mesh vs 1944-element mesh at rtol=3e-4",
+      "pass": true,
+      "values": {
+        "control_Qs_change_mAh_cm2": 0.012606894184941098,
+        "control_Qtheta0p5_change_mAh_cm2": 0.016029161575488615,
+        "control_endpoint_eps_rel_change": 0.03309781330039972,
+        "control_endpoint_theta_change": 0.00012676698200009273,
+        "endpoint_deltaV_change_mV": 0.09382492999998249,
+        "physical_Qs_change_mAh_cm2": 0.14305330098969193,
+        "physical_endpoint_eps_rel_change": 0.012714259182850648,
+        "physical_endpoint_theta_change": 0.0018700520259999909
+      }
+    },
+    "pass": true,
+    "tolerance_gate": {
+      "checks": {
+        "S_identity": true,
+        "control_Qs": true,
+        "control_Qtheta0p5": true,
+        "control_eps_endpoint": true,
+        "control_theta_endpoint": true,
+        "deltaV": true,
+        "physical_Qs": true,
+        "physical_eps_endpoint": true,
+        "physical_theta_endpoint": true
+      },
+      "comparator": "tighter tolerance vs canonical",
+      "pass": true,
+      "values": {
+        "control_Qs_change_mAh_cm2": 0.11729619060174912,
+        "control_Qtheta0p5_change_mAh_cm2": 0.10983753441661293,
+        "control_endpoint_eps_rel_change": 0.05360837917871355,
+        "control_endpoint_theta_change": 0.00034213060799992423,
+        "endpoint_deltaV_change_mV": 1.2854344299999525,
+        "physical_Qs_change_mAh_cm2": 0.014930942481740317,
+        "physical_endpoint_eps_rel_change": 0.00131223419836154,
+        "physical_endpoint_theta_change": 0.00020408399400001498
+      }
+    },
+    "true_mesh_element_ratio": 4.0
+  },
+  "identity_gate_pass": true,
+  "matched_difference": {
+    "endpoint_deltaV_mV": -288.15625716000005,
+    "endpoint_delta_eps_s": -0.002493772375437,
+    "endpoint_delta_theta": -0.6809015342270001,
+    "max_abs_deltaV_mV": 288.15625716000005
+  },
+  "matched_settings": {
+    "control_dataset": "dsetR581CtrlMesh",
+    "mesh_elements": 7776,
+    "mesh_min_quality": 0.198,
+    "mesh_vertices": 7957,
+    "only_model_expression_change": {
+      "cov_theta_surf": "1-exp(-35.4*eps_s_reg^0.6222)",
+      "theta_eff_R520": "1-exp(-35.4*eps_s_reg^0.6222)"
+    },
+    "physical_dataset": "dsetR581PhysMesh",
+    "rtol": 0.0003,
+    "solution": "sol5",
+    "source_copy_sha256": "4813B306F39330CCEAF819C4AB8815C55A3DF8A04726741F33ACB801B8806B9B",
+    "study": "stdR522",
+    "time_grid": "range(0,10,10800); 1081 exported points"
+  },
+  "one_way_dense_shadow": {
+    "Q_theta_0p5_mAh_cm2": 118.6927250919571,
+    "endpoint_theta": 0.6258983994217306,
+    "feedback": false
+  },
+  "parameter_inventory_identical": true,
+  "physical_dense": {
+    "Q_s_mAh_cm2": 82.89235909195862,
+    "Q_theta_0p5_mAh_cm2": null,
+    "Q_theta_0p9_mAh_cm2": null,
+    "S_identity_max_abs": 0.0,
+    "endpoint": {
+      "A_bare_avg": 0.687119888264,
+      "K_perm_rel_avg": 0.988976327058,
+      "S_direct": 1.80303721837,
+      "S_reconstructed": 1.80303721837,
+      "eps_s_avg": 0.000658584284203,
+      "q_mAh_cm2": 120.0,
+      "theta_avg": 0.309080675373,
+      "voltage_V": 1.44020814388
+    },
+    "rows": 1081
+  },
+  "raw_or_original_mph_modified": false,
+  "release_pass": true
+}

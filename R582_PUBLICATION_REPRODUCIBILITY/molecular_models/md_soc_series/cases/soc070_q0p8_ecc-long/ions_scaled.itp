@@ -1,0 +1,21 @@
+[ moleculetype ]
+; molname nrexcl
+ZN 1
+
+[ atoms ]
+; id type resnr residue atom cgnr charge mass
+1 Zn2+_spce 1 ZN ZN 1 1.600000 65.38
+
+[ moleculetype ]
+; molname nrexcl
+I 1
+
+[ atoms ]
+1 I-_spce 1 I I 1 -0.800000 126.90447
+
+[ moleculetype ]
+; molname nrexcl
+BR 1
+
+[ atoms ]
+1 Br-_spce 1 BR BR 1 -0.800000 79.904

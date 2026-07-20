@@ -1,0 +1,16 @@
+panel,title,capacity,stress_text,solid_text,access_text,stress_level,solid_level,access_level,note,evidence_class,bar_lengths_are_schematic,morphology_identified,registered_numeric_markers_only
+a,"Buffered dissolved
+pool",below marker,$S_{\mathrm{base}}<1$,$\langle\varepsilon_s\rangle\approx0$,$A_{\mathrm{cal}}=1$,0.42,0.0,1.0,"local native solid branch can
+precede the mean $S=1$ crossing",conceptual model state,True,False,"Q_s=83.0; Q_f,cal=99.6 mAh cm^-2"
+b,"Averaged saturation
+marker",$Q_s=83.0$ mAh cm$^{-2}$,$S_{\mathrm{base}}=1$,mean marker only,$A_{\mathrm{cal}}\simeq1$,0.67,0.04,0.98,"not the first local solid-
+forming branch event",closure-conditional solved marker,True,False,"Q_s=83.0; Q_f,cal=99.6 mAh cm^-2"
+c,"Retained solid
+inventory","$Q_s<Q<Q_{f,\mathrm{cal}}$",$S_{\mathrm{base}}>1$,$\varepsilon_s>0$,$0.5<A_{\mathrm{cal}}<1$,0.82,0.32,0.76,"retained solid does not
+by itself define failure",conceptual interval on production trajectory,True,False,"Q_s=83.0; Q_f,cal=99.6 mAh cm^-2"
+d,"Production
+marker","$Q_{f,\mathrm{cal}}=99.6$ mAh cm$^{-2}$",$S_{\mathrm{base}}>1$,trajectory readout,$A_{\mathrm{cal}}=0.5$,0.9,0.5,0.5,"$\langle\theta_{\mathrm{cal}}\rangle=1/2$;
+not a physical $\varepsilon_s$ threshold",voltage-calibrated production marker,True,False,"Q_s=83.0; Q_f,cal=99.6 mAh cm^-2"
+e,"Larger calibrated
+loss",later production state,$S_{\mathrm{base}}>1$,inventory continues,$A_{\mathrm{cal}}<0.5$,0.96,0.78,0.18,"downstream accessibility-
+voltage feedback",closure-conditional modeled state,True,False,"Q_s=83.0; Q_f,cal=99.6 mAh cm^-2"

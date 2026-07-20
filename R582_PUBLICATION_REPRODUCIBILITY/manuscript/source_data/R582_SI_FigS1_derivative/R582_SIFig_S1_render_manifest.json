@@ -1,0 +1,163 @@
+{
+  "figure": "SIFig_R582_S1_derivative",
+  "single_dominant_claim": "The late-charge derivative feature is distributed across sequential cycles, and its reported coordinates depend on the prespecified derivative window.",
+  "evidence_class": "E-EXP",
+  "frozen_date": "2026-07-20",
+  "final_size_mm": {
+    "width": 180.0,
+    "height": 122.0
+  },
+  "font": {
+    "family": "TeX Gyre Termes",
+    "base_pt": 7.2,
+    "minimum_pt": 6.5,
+    "panel_label_pt": 8.0,
+    "registered_faces": [
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-regular.otf",
+        "sha256": "CC3FE7C707B81428D23D54DF3EADD9228A2BF6A4D43125D94DF56F5F63134659"
+      },
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-bold.otf",
+        "sha256": "2FB3E952065FA153C7E4E64E04B98B9D79225739B6025AA3F0F0782D299FF61E"
+      },
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-italic.otf",
+        "sha256": "6DD103A1672E50568CD2F8A706CCD48443D44D7D073A59D2286F4E6F746575D6"
+      },
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-bolditalic.otf",
+        "sha256": "1BF6AF99CB0E26C12951317032D79B96AE009551E59CCF02A5B24F325ECFEC87"
+      }
+    ],
+    "minimum_text_pt": 6.5,
+    "resolved_font_families": [
+      "TeX Gyre Termes"
+    ],
+    "text_items": 100
+  },
+  "statistical_boundary": "One physical cell; cycles 20-23 are sequential repeated measures and are not independent replicates.",
+  "display_boundary": "The plotted Q range is the late-charge interval 40-120 mAh cm^-2; all curve rows remain in the plot table.",
+  "metadata_normalization": "Derived labels use NH4Br under EXP-META-001; immutable raw bytes are untouched.",
+  "data_audit": {
+    "physical_cells": 1,
+    "sequential_cycles": [
+      20,
+      21,
+      22,
+      23
+    ],
+    "prespecified_windows_mAh_cm2": [
+      5.25,
+      10.25,
+      15.25
+    ],
+    "curve_rows": 5709,
+    "landmark_rows": 12,
+    "display_Q_range_mAh_cm2": [
+      40.0,
+      120.0
+    ],
+    "shared_derivative_range_mV_per_mAh_cm2": [
+      -35.0,
+      14.0
+    ],
+    "independent_unit": "one physical cell; cycles are repeated measures"
+  },
+  "inputs": [
+    {
+      "path": "battery_experiment/02_processed_data/R581_G4_DVDQ_REBUILD/dvdq_curves_all_windows.csv",
+      "size_bytes": 842977,
+      "sha256": "AAADD2779474FE74C1F0F4BC472633B113967905CA2BCE2EF97FAF8F0CA7D2DE"
+    },
+    {
+      "path": "battery_experiment/02_processed_data/R581_G4_DVDQ_REBUILD/dvdq_metrics_by_cycle_and_window.csv",
+      "size_bytes": 4653,
+      "sha256": "7BB07D8E335B3E164C1E2BA1E42BF14FD6917E6A63CAFCBEC5F13BD0E7D5ECE3"
+    },
+    {
+      "path": "battery_experiment/02_processed_data/R581_G4_DVDQ_REBUILD/eligible_cycles.csv",
+      "size_bytes": 912,
+      "sha256": "1DFB2A1A857A27C017B360020865373DF9E018CA95B39CF596F231CBB6420D50"
+    }
+  ],
+  "figure_outputs": [
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S1_derivative.svg",
+      "size_bytes": 90717,
+      "sha256": "89824F54935C072C119930A1F4B34CB46B9DA6277ED7F489CB01C95CB1074321"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S1_derivative.pdf",
+      "size_bytes": 43290,
+      "sha256": "7C9AB6C8DF87F4E4A591B31ADFC81B022B6356B8644E88EE87663EDAD3E6F000"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S1_derivative.png",
+      "size_bytes": 733974,
+      "sha256": "E75DA6A1556343697F10A141647577108C0D59495B0E9FEA5C6798E24CADC3F5"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S1_derivative.tiff",
+      "size_bytes": 836858,
+      "sha256": "C6A9F4F83EFB00F359ADF803DA50C03F5BD6086D70E03B8D16622E4572918987"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S1_derivative_180mm_preview.png",
+      "size_bytes": 519753,
+      "sha256": "56DA4E7B98D79593EADC357305B1B3EB5A19FD39B3CC59D889B2275890F77A58"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S1_derivative_180mm_preview_grayscale.png",
+      "size_bytes": 209105,
+      "sha256": "3FB49B35D4F46CB93A9A8A6D098E041086448A5C0F536CA30557B0F501AD89EB"
+    }
+  ],
+  "source_bundle_files": [
+    {
+      "path": "manuscript/source_data/R582_SI_FigS1_derivative/CAPTION_DRAFT.md",
+      "size_bytes": 1405,
+      "sha256": "A2EC9E34D5C589417B67D231D8F0A354AC9437B6F426509A43F1F29B610BEB6A"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS1_derivative/DETERMINISM_QA.json",
+      "size_bytes": 1089,
+      "sha256": "32BCE7AB8B864D1AC5B626AB772332CC60F6059353465569771715E6BC9CE55F"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS1_derivative/FIGURE_CONTRACT.md",
+      "size_bytes": 1583,
+      "sha256": "1E9A19F46AB08AB64A49F21E0319FB72BBE1962D7EB25CB72CB19615577DCD11"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS1_derivative/make_sifig_r582_s1_derivative.py",
+      "size_bytes": 18824,
+      "sha256": "F86B8B914AA7678C46FC926D5905DACE8847329814071AC3FEDF038A5CD79546"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS1_derivative/QA_NOTES.md",
+      "size_bytes": 1339,
+      "sha256": "DA7CC8A126AC18B3C4E7763DA2D729AE6EBB17FDEC4DB71FD92E35198A237068"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS1_derivative/R582_SIFig_S1_input_manifest.csv",
+      "size_bytes": 767,
+      "sha256": "C93AD096F7858511A06F0BD954213C5B3F562F53B82EB3744227922D9708CD2F"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS1_derivative/R582_SIFig_S1_plot_curves.csv",
+      "size_bytes": 395068,
+      "sha256": "698C70F2AB015E19F174504B688209A64F0A53C1CEF9BECC38AEDFBE3C863BC3"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS1_derivative/R582_SIFig_S1_plot_landmarks.csv",
+      "size_bytes": 1188,
+      "sha256": "C9B1BF999752B02094FF6C91CC02CB1CF12F5111885221DBE4FB0D44BC63C6BC"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS1_derivative/README.md",
+      "size_bytes": 649,
+      "sha256": "79DF4CEB05FCC31FFE6DA3E2B5E480BA80D928ED41C0D530BBCF12F32D462EC4"
+    }
+  ]
+}

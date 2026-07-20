@@ -1,0 +1,236 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{tgtermes}
+\usepackage{newtxmath}
+\usepackage[version=4]{mhchem}
+\usepackage{siunitx}
+\usepackage[margin=1in]{geometry}
+\emergencystretch=2em
+\DeclareSIUnit{\Molar}{M}
+\newcommand{\epss}{\varepsilon_{\mathrm{s}}}
+\newcommand{\Rtheta}{R_{\theta}}
+\newcommand{\Tpore}{T_{\mathrm{pore}}}
+\begin{document}
+\section*{Figure captions}
+% AUTO-GENERATED FROM CURRENT SOURCES. main_R582.tex SHA-256 8AE9FF4F244E9D5AB2308D88E3B1E98BC5C9E946931F2CD7EF6A9CAA7D3E606D; SI_R582.tex SHA-256 8BDC18C71088398E0E9B1A55359FA3FDF688DE536B49C2C6C497EA34C47F6C1C.
+% Caption bodies are verbatim source extractions. Regenerate after every source-caption edit.
+\section*{Main manuscript}
+
+\noindent\textbf{Figure 1.}\begingroup\space
+% BEGIN_CAPTION source=main number=1 label=fig:experimental-problem
+\textbf{Full-cell records motivate a positive-electrode state analysis.}
+\textbf{a,} The measured cell response contains both electrodes, whereas the model and interpretation focus on the porous positive carbon felt.
+\textbf{b,} Representative cycle-20 charge at 40 mA cm$^{-2}$. The thin grey trace is the registered interpolated voltage, the dark trace is its frozen cubic Savitzky--Golay smooth, and the lower trace is $\mathrm{d}V/\mathrm{d}Q$. The shaded interval contains the voltage-rise feature. $Q_s=83.0$ and $Q_{f,\mathrm{cal}}=99.6$ mAh cm$^{-2}$ are pre-existing calibrated-model coordinates; neither was fitted to the derivative landmarks, and their overlay is not independent validation.
+\textbf{c,} Coulombic efficiency for the same-cell pristine 80--360 mA cm$^{-2}$ rate ladder. Symbols are within-cell medians, and vertical bars span the full within-cell minimum--maximum range across available sequential cycles. The separate 40 mA cm$^{-2}$ pristine cell and the 400 mA cm$^{-2}$ P350C-positive/pristine-negative proxy are deliberately unconnected.
+\textbf{d,} Primary-window rise onset and maximum for cycles 20--23 from one physical cell. Pale spans give extrema across three prespecified derivative windows and are estimator-sensitivity ranges, not confidence intervals. These records motivate, but do not independently validate, the positive-electrode state model.
+% END_CAPTION source=main number=1 label=fig:experimental-problem
+\par\endgroup\medskip
+
+\noindent\textbf{Figure 2.}\begingroup\space
+% BEGIN_CAPTION source=main number=2 label=fig:domain-state
+\textbf{A state-resolved model of the ZIFB positive electrode.}
+\textbf{a,} The two-dimensional carbon-felt domain spans $x=3$--5 mm from the current collector to the separator and $y=0$--20 mm along electrolyte flow.
+\textbf{b,} Free-\ce{I2} supersaturation, $S$, gates retained solid, $\varepsilon_s$. The calibrated relation gives $R_\theta=1-\theta_{\mathrm{cal}}$; the native reaction-area multiplier is $A_{\mathrm{bare}}/A_0=R_\theta T_{\mathrm{pore}}$, and $V$ is a model output.
+\textbf{c,} The baseline simulation reaches average saturation at $Q_s=83.0$ mAh cm$^{-2}$ and 50\% calibrated accessibility loss at $Q_{f,\mathrm{cal}}=99.6$ mAh cm$^{-2}$. The state annotations do not define local onset or microscopic deposit form.
+% END_CAPTION source=main number=2 label=fig:domain-state
+\par\endgroup\medskip
+
+\noindent\textbf{Figure 3.}\begingroup\space
+% BEGIN_CAPTION source=main number=3 label=fig:spatial-progression
+\textbf{Retained solid and native remaining area redistribute reaction within the positive electrode.}
+Continuum-model snapshots are shown at $Q=80$, 100 and 120 mAh cm$^{-2}$, respectively before the electrode-average saturation point, near the calibrated half-accessibility point and at late charge. The capacity rail distinguishes the exported snapshots from $Q_s=83.0202$ and $Q_{f,\mathrm{cal}}=99.5901$ mAh cm$^{-2}$; $Q=100$ mAh cm$^{-2}$ is close to, but not identical to, $Q_{f,\mathrm{cal}}$. The map rows show retained-solid fraction, $\varepsilon_s$, native remaining bare-area fraction, $A_{\mathrm{bare}}/A_0$, and total reaction-current density, $j_{\mathrm{total}}$, using one scale per quantity across all capacities. The lower plot gives the arithmetic mean of the native remaining-area field over the uniformly sampled flow coordinate $y$. Six negative-current nodes at $Q=100$ mAh cm$^{-2}$, spanning $-5.72\times10^{-4}$ to $-1.80\times10^{-4}$ A m$^{-2}$, are retained as a neutral mask rather than clipped or converted to magnitudes. Every map uses the same 3--5 mm through-plane and 0--20 mm flow domain. These are continuum-model fields, not micrographs or evidence for a unique deposit morphology or pore-blocking front.
+% END_CAPTION source=main number=3 label=fig:spatial-progression
+\par\endgroup\medskip
+
+\noindent\textbf{Figure 4.}\begingroup\space
+% BEGIN_CAPTION source=main number=4 label=fig:closure-identifiability
+\textbf{Accessibility relation controls the late charge response.}
+\textbf{a,} Calibration-controlled remaining-accessibility factor, $R_\theta=1-\theta$, for the calibrated baseline, a one-way island-model shadow evaluated on the baseline solid inventory, and the fully coupled island-model variant. The matched simulations give $Q_s=82.890$ and $82.892$ mAh cm$^{-2}$.
+\textbf{b,} Voltage trajectories and the island-minus-baseline difference, which reaches $-288.2$ mV at 120 mAh cm$^{-2}$.
+\textbf{c,} Each solved branch's solid-\ce{I2} fraction; horizontal lines mark the solid-fraction values at $R_\theta=0.5$ for the baseline and island relation.
+\textbf{d,} Accessibility--coefficient pairs that reproduce the same selected voltage contribution. This controlled model-form sensitivity does not identify deposit morphology.
+% END_CAPTION source=main number=4 label=fig:closure-identifiability
+\par\endgroup\medskip
+
+\noindent\textbf{Figure 5.}\begingroup\space
+% BEGIN_CAPTION source=main number=5 label=fig:multiscale-bounds
+\textbf{Independent bounds on positive-electrode model inputs.}
+\textbf{a,} Periodic CP2K BSSE-corrected adsorption energies for dry single-\ce{I2} placement, reported relative to basal carbon.
+\textbf{b,} Five-SOC bulk-MD means for \ce{I^-}, \ce{I3^-} and \ce{I2Br^-} under $q=0.8$ ECC and formal-charge parameterizations in the representative \SI{1}{M}~\ce{ZnI2}$+$\SI{4}{M}~\ce{NH4Br} supporting electrolyte; error bars report propagated within-trajectory stability. Shading denotes the formal-charge low-end carrier-proxy range ($0.425$--$0.664\times10^{-9}~\si{m^2.s^{-1}}$), and the dashed line marks the continuum baseline $D_{\mathrm{eff}}=0.50\times10^{-9}~\si{m^2.s^{-1}}$.
+\textbf{c,} Geometric remaining area $A/A_0$ for sparse ($N=10^{11}~\si{m^{-2}}$) and dense ($N=10^{14}~\si{m^{-2}}$) single-fibre placement; lines connect computed nodes, including the exact zero-solid boundary.
+\textbf{d,} Six-law permeability envelope for an idealized pore network over the baseline solid-\ce{I2} range; the inset retains the full computed range. At $\varepsilon_s=3.219\times10^{-3}$, $K/K_0=0.981$--$0.992$. These lower-scale calculations bound transport and accessibility separately. They do not determine the voltage-calibrated inventory-to-accessibility relation or identify deposit morphology or pore closure.
+% END_CAPTION source=main number=5 label=fig:multiscale-bounds
+\par\endgroup\medskip
+
+\noindent\textbf{Figure 6.}\begingroup\space
+% BEGIN_CAPTION source=main number=6 label=fig:operating-levers
+\textbf{Applied current and oxidized-carrier diffusivity shift the averaged saturation point.}
+\textbf{a,} Positive-electrode-average $S=1$ capacity, $Q_s$, versus applied current. Filled circles denote exact crossings from full continuum simulations. The line connects only the complete 20 and 40 mA cm$^{-2}$ traces. The open triangle at 80 mA cm$^{-2}$ denotes the right-censored result $Q_s>40$ mAh cm$^{-2}$; the separate 120 mA cm$^{-2}$ calculation crosses at 8.39 mAh cm$^{-2}$.
+\textbf{b,} $Q_s$ across seven full $D_{\mathrm{eff}}/D_0$ simulations; adjacent points are joined without fitting or extrapolation. Shading marks the MD-informed 0.8--1.4 $D_0$ range.
+\textbf{c,} Signed shifts from the baseline $Q_s=83.0202$ mAh cm$^{-2}$. Circles, dashed diamonds and open dotted triangles distinguish full continuum simulations, an analytical boundary-layer scenario and an MD-informed range mapped through the solved diffusivity response. The analytical flow row uses $\delta\propto v^{-0.5}$, and the felt comparison changes thickness and porosity together. The smooth-permeability replacement is reported separately through its $+1.27$ mV endpoint-voltage difference.
+% END_CAPTION source=main number=6 label=fig:operating-levers
+\par\endgroup\medskip
+
+\section*{Supplementary Information}
+
+\noindent\textbf{Supplementary Figure S1.}\begingroup\space
+% BEGIN_CAPTION source=si number=1 label=fig:si-derivative
+\textbf{Derivative-window sensitivity within one physical cell.} \textbf{a--d,} Full-cell charge-
+curve derivatives for eligible cycles 20--23 of one pristine cell. Direct labels identify the three
+prespecified physical windows; open circles mark registered rise onsets and filled triangles the registered
+maxima. Boundary fluctuations outside the maximum-search interval remain visible. All panels share one
+derivative scale. The cycles are within-cell repeated observations, not independent replicates. These
+full-cell features do not identify a positive-electrode internal state. Derived electrolyte labels follow
+\texttt{EXP-META-001}; raw records are unchanged.
+% END_CAPTION source=si number=1 label=fig:si-derivative
+\par\endgroup\medskip
+
+\noindent\textbf{Supplementary Figure S2.}\begingroup\space
+% BEGIN_CAPTION source=si number=2 label=fig:si-composition
+\textbf{Cell-level descriptive capacity envelope across the existing composition records.} Each
+filled marker is one physical cell and gives the maximum, across commanded levels, of the within-level median
+delivered capacity. Vertical segments are full sequential-cycle ranges at the selected command, and short
+black bars are condition medians. Physical-cell counts are 1/1/1/2/1 at 0/1/2/3/4~M NH4Br. The two
+acquisitions at 2~M form one conservatively stitched cell; the two 3~M records are distinct, and one 3~M
+endpoint is right-censored. The display is descriptive and does not identify an internal electrode state.
+% END_CAPTION source=si number=2 label=fig:si-composition
+\par\endgroup\medskip
+
+\noindent\textbf{Supplementary Figure S3.}\begingroup\space
+% BEGIN_CAPTION source=si number=3 label=fig:si-compression
+\textbf{Protocol-bounded capacity brackets across existing felt-thickness cells.} \textbf{a,} Primary
+85\% within-cell median-CE endpoint. The filled blue points connect only the three explicit March cells; the
+open 2.0~mm cross-batch proxy is unconnected. \textbf{b,} Prespecified 80\%, 85\% and 90\% endpoint
+sensitivity. Each bracket is program resolution, not a confidence interval. The data do not define a
+population scaling law, pore-volume law or morphology relation.
+% END_CAPTION source=si number=3 label=fig:si-compression
+\par\endgroup\medskip
+
+\noindent\textbf{Supplementary Figure S4.}\begingroup\space
+% BEGIN_CAPTION source=si number=4 label=fig:si-state-fields
+\textbf{Six-capacity inventory of modeled positive-electrode state and reaction fields.} Columns show
+$Q=0$, 80, 96, 100, 110 and \SI{120}{mAh.cm^{-2}}. \textbf{a,} Free-\ce{I2} stress $S$ on a shared scale
+centred at $S=1$. \textbf{b,} Native retained-solid fraction $\epss$ on a shared symlogarithmic percentage
+scale. \textbf{c,} Native remaining reaction-area fraction $A_{\mathrm{bare}}/A_0=\Rtheta\Tpore$ from the
+registered \texttt{A\_bare\_frac} export. \textbf{d,} Total reaction-current density. Positive values use one
+logarithmic scale; non-positive nodes are neutrally masked without taking absolute values. Their counts are
+248, 0, 33, 6, 0 and 0 in column order, and signed values remain in the source table. Each map contains 5995
+nodes and uses nearest-neighbour rendering without smoothing or clipping. These fields are model outputs, not
+microscopy, deposit morphology, a blockage front or electrical potential.
+% END_CAPTION source=si number=4 label=fig:si-state-fields
+\par\endgroup\medskip
+
+\noindent\textbf{Supplementary Figure S5.}\begingroup\space
+% BEGIN_CAPTION source=si number=5 label=fig:si-hydraulic-fields
+\textbf{Hydraulic response across the same six positive-electrode states.} \textbf{a,} Smooth
+relative permeability $K/K_0$. \textbf{b,} Native velocity magnitude in \si{m.s^{-1}}. \textbf{c,} Hydraulic
+pressure in Pa relative to $p_{\mathrm{out}}=0$. Each row has one fixed scale across all capacities, and every
+map contains the same 5995 exported nodes. The pressure field is hydraulic, not an electrical potential. The
+smooth permeability channel does not resolve local pore closure or blockage.
+% END_CAPTION source=si number=5 label=fig:si-hydraulic-fields
+\par\endgroup\medskip
+
+\noindent\textbf{Supplementary Figure S6.}\begingroup\space
+% BEGIN_CAPTION source=si number=6 label=fig:si-voltage-degeneracy
+\textbf{Full-cell voltage fit and accessibility--coefficient degeneracy.} \textbf{a,} Selected
+pristine full-cell charge trace and reduced observation-layer fit. The shaded interval contains 72 points from
+2.672 to \SI{97.540}{mAh.cm^{-2}} in
+$V=c_0+c_1Q+b_{\mathrm{eff}}\ln(1/\Rtheta)$; the lower axis shows fit minus data. The fit gives
+$c_0=\SI{1.33554}{V}$, $c_1=9.819\times10^{-4}~\si{V.(mAh.cm^{-2})^{-1}}$,
+$b_{\mathrm{eff}}=\SI{0.13622}{V}$ and RMSE \SI{7.24}{mV}. \textbf{b,} End-point $\Rtheta$--coefficient
+pairs that preserve the selected \SI{70.813}{mV} accessibility-related voltage contribution. Open circles
+are registered pairs and the line is the analytical relation. Here $\Rtheta$ is a reduced observation-layer
+factor, not native remaining reaction area. Voltage therefore does not identify the inventory-to-accessibility
+relation or deposit morphology uniquely.
+% END_CAPTION source=si number=6 label=fig:si-voltage-degeneracy
+\par\endgroup\medskip
+
+\noindent\textbf{Supplementary Figure S7.}\begingroup\space
+% BEGIN_CAPTION source=si number=7 label=fig:si-single-i2
+\textbf{Relative single-\ce{I2} BSSE-corrected adsorption-energy ordering and optimized
+geometries.} \textbf{a,} BSSE-corrected adsorption energies relative to the basal calculation.
+\textbf{b--e,} Exact optimized
+geometries in the same site order; displayed adjacency guides are distance based and do not assign bond order.
+Within the declared finite periodic calculation, the tested C--OH and C=O motifs lie below basal carbon and
+the vacancy lies slightly above it. The unavailable raw single-\ce{I2} charge-density fields are not used.
+% END_CAPTION source=si number=7 label=fig:si-single-i2
+\par\endgroup\medskip
+
+\noindent\textbf{Supplementary Figure S8.}\begingroup\space
+% BEGIN_CAPTION source=si number=8 label=fig:si-two-i2
+\textbf{Compact and separated two-\ce{I2} configurations at the tested C--OH site.} \textbf{a,}
+Registered compact-minus-separated electronic-energy comparison. \textbf{b,c,} Exact optimized compact and
+separated geometries. \textbf{d,} Recoverable two-\ce{I2} charge-density-difference field, thresholded at
+$\Delta\rho\geq+0.002$ or $\leq-0.002~e\,\text{\AA}^{-3}$ without smoothing or interpolation; 428
+accumulation and 78 depletion points are retained. One periodic translation is used only to display the
+compact cluster continuously. The compact configuration is \SI{0.689291}{eV} below the separated reference
+within this calculation. The field is a diagnostic, not a reaction coordinate, solution equilibrium or
+nucleation pathway.
+% END_CAPTION source=si number=8 label=fig:si-two-i2
+\par\endgroup\medskip
+
+\noindent\textbf{Supplementary Figure S9.}\begingroup\space
+% BEGIN_CAPTION source=si number=9 label=fig:si-md-ladder
+\textbf{Full carrier-mobility ladder under charge-scaled and formal-charge parameterizations.}
+\textbf{a,} $q=0.8$ ECC. \textbf{b,} $q=1.0$ formal charges. The condition is 1~M \ce{ZnI2} + 4~M NH4Br
+at \SI{298.15}{K}. Symbols are means across five different SOC compositions; thin spans show their min--max
+range and capped bars the propagated four-block within-trajectory stability measure. Neither is replica
+uncertainty. Oxidized-iodine carrier mobilities lie below iodide in both parameterizations, while absolute
+values remain force-field dependent.
+% END_CAPTION source=si number=9 label=fig:si-md-ladder
+\par\endgroup\medskip
+
+\noindent\textbf{Supplementary Figure S10.}\begingroup\space
+% BEGIN_CAPTION source=si number=10 label=fig:si-comparator-definitions
+\textbf{Flat definitions of the single-fibre and pore-network comparator models.} \textbf{a,}
+Orthographic views of the prescribed cylindrical unit cell
+($r_f=\SI{7.50}{\micro m}$, $r_{\mathrm{out}}=\SI{19.36}{\micro m}$,
+$L_z=\SI{150}{\micro m}$, $\varepsilon=0.85$). Normalized concentration is fixed at one at the outer radius;
+a bare wall node has $c=0$, a covered node has zero normal flux, and azimuthal/axial directions are periodic.
+\textbf{b,} Exact $z=7$ slice of the registered $15\times15\times15$ cubic network (225 nodes and 420 in-slice
+throats). Line width maps initial throat radius; opposing faces have normalized Dirichlet values one and zero.
+The \SI{60}{\micro m} lattice and displayed equations define conductance, allocation and radius update. These
+are prescribed comparator domains, not images or reconstructions of the felt. No deposit field, solved
+pressure, electrical potential, flux or blockage front is shown.
+% END_CAPTION source=si number=10 label=fig:si-comparator-definitions
+\par\endgroup\medskip
+
+\noindent\textbf{Supplementary Figure S11.}\begingroup\space
+% BEGIN_CAPTION source=si number=11 label=fig:si-accessibility-families
+\textbf{Remaining-accessibility families across the full tested placement-density range.}
+\textbf{a,} Geometric single-fibre $A/A_0$ for all four registered comparator families. Lines connect five
+computed nodes without fitting. The dashed grey curve is the separately calibrated continuum $\Rtheta$
+relation sampled at the registered inventory nodes; it is not a geometric family and not native
+$A_{\mathrm{bare}}/A_0$. \textbf{b,} Five shared inventory nodes for the two $\phi_{\mathrm{ppt}}=0.005$
+families. Increasing prescribed placement density from $10^{11}$ to $10^{13}~\si{m^{-2}}$ changes geometric
+remaining area by 0.085--0.309 over $\epss=3.39\times10^{-4}$ to $3.39\times10^{-3}$. These deterministic
+comparators are not measured coverage, felt morphology or validation of the calibrated relation.
+% END_CAPTION source=si number=11 label=fig:si-accessibility-families
+\par\endgroup\medskip
+
+\noindent\textbf{Supplementary Figure S12.}\begingroup\space
+% BEGIN_CAPTION source=si number=12 label=fig:si-flow-postprocess
+\textbf{Conditional flow dependence of the analytical boundary-layer scenario.} The registered
+baseline was postprocessed with $\delta/\delta_0=(v/v_0)^{-m}$ for $m=0.4$, 0.5 and 0.6, with
+$\delta_0=\SI{25}{\micro m}$ at \SI{50}{mL.min^{-1}}. All curves pass through
+$Q_s=\SI{83.020}{mAh.cm^{-2}}$ at nominal flow. The shaded band marks \SIrange{25}{100}{mL.min^{-1}}; the
+$m=0.5$ scenario moves $Q_s$ from 74.992 to \SI{88.733}{mAh.cm^{-2}}. These are registered analytical
+evaluations that rescale only sub-grid generation stress, not a full flow-dependent boundary-layer solve or a
+measured mass-transfer law.
+% END_CAPTION source=si number=12 label=fig:si-flow-postprocess
+\par\endgroup\medskip
+
+\noindent\textbf{Supplementary Figure S13.}\begingroup\space
+% BEGIN_CAPTION source=si number=13 label=fig:si-permeability
+\textbf{Voltage response to replacing the smooth permeability relation.} \textbf{a,} Voltage
+difference between the re-solve using the pore-network-derived smooth path and the matched Kozeny--Carman
+baseline. The maximum absolute difference is \SI{5.214}{mV} at \SI{117.444}{mAh.cm^{-2}}; the difference at
+\SI{120}{mAh.cm^{-2}} is $+\SI{1.271}{mV}$. \textbf{b,} Corresponding smooth $K/K_0$ paths; endpoint values
+are 0.98250 and 0.95629. This control addresses smooth bulk permeability only. Local pore-throat blockage is
+not resolved or excluded.
+% END_CAPTION source=si number=13 label=fig:si-permeability
+\par\endgroup\medskip
+
+\end{document}

@@ -1,0 +1,234 @@
+{
+  "figure": "SIFig_R582_S13_smooth_permeability",
+  "single_dominant_claim": "Substituting the pore-network-derived smooth permeability path changes voltage by at most 5.21 mV and by 1.271 mV at 120 mAh cm^-2 within the modeled loading window.",
+  "evidence_class": "E-SIM",
+  "frozen_date": "2026-07-20",
+  "final_size_mm": {
+    "width": 180.0,
+    "height": 70.0
+  },
+  "font": {
+    "family": "TeX Gyre Termes",
+    "minimum_pt": 6.5,
+    "registered_faces": [
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-regular.otf",
+        "sha256": "CC3FE7C707B81428D23D54DF3EADD9228A2BF6A4D43125D94DF56F5F63134659"
+      },
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-bold.otf",
+        "sha256": "2FB3E952065FA153C7E4E64E04B98B9D79225739B6025AA3F0F0782D299FF61E"
+      },
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-italic.otf",
+        "sha256": "6DD103A1672E50568CD2F8A706CCD48443D44D7D073A59D2286F4E6F746575D6"
+      },
+      {
+        "path": "D:\\Program Files\\texlive\\2024\\texmf-dist\\fonts\\opentype\\public\\tex-gyre\\texgyretermes-bolditalic.otf",
+        "sha256": "1BF6AF99CB0E26C12951317032D79B96AE009551E59CCF02A5B24F325ECFEC87"
+      }
+    ]
+  },
+  "claim_boundary": "This matched control addresses only the smooth bulk-permeability relation. It does not resolve or exclude local pore-throat blockage and makes no morphology claim.",
+  "data_audit": {
+    "rows_per_matched_path": 1081,
+    "capacity_range_mAh_cm2": [
+      0.0,
+      120.0
+    ],
+    "max_abs_DeltaV_mV": 5.214399999999841,
+    "max_abs_DeltaV_Q_mAh_cm2": 117.44444,
+    "endpoint_DeltaV_mV": 1.2710000000000221,
+    "endpoint_K_over_K0": {
+      "baseline_KC": 0.95628703,
+      "network_smooth_path": 0.98249573
+    },
+    "max_abs_eps_s_response_difference": 0.00029805809999999995,
+    "raw_to_registered_max_abs_errors": {
+      "Q": 0.0,
+      "V_baseline_KC": 0.0,
+      "V_network_cpath": 0.0,
+      "dV_mV": 8.881784197001252e-16,
+      "K_perm_rel_KC": 0.0,
+      "K_perm_rel_network": 0.0,
+      "eps_s": 7.703719777548943e-34
+    },
+    "raw_reconstruction_pass": true,
+    "evidence_class": "E-SIM"
+  },
+  "qa": {
+    "build": {
+      "width_mm": 180.0,
+      "height_mm": 70.0,
+      "font_audit": {
+        "minimum_text_pt": 6.5,
+        "resolved_font_families": [
+          "TeX Gyre Termes"
+        ],
+        "text_items": 38
+      }
+    },
+    "deterministic_second_render": {
+      "pass": true,
+      "sha256": {
+        "svg": "3EDE109C39B1635FB33AD2DF81E296B83C83067003368ADDFB3EBB7DF1113043",
+        "pdf": "AEE930E0DE59779E3BEE25599527AB62FF1DF919058776F7EDEF8DC2D070E10C",
+        "png": "F37E48730D6A83C4C06CCA582A5A048A4CB19A6F2F0F36320D24B354A894F8FA",
+        "tiff": "4BDAAB6474066E3FC014722AB4B677DB403BEE8987BF96DD34A87717E1C32550",
+        "preview": "4FB5D310B2A94587D57EFE5E8C27B30C4B1ADA680FD5580DBF630F29AB9A32CC",
+        "grayscale": "DCC0ADE9EC21E21196817DCBFFA211F6D078458B4DCA5DD8E96A059B3CDAD2B4"
+      }
+    },
+    "pdf_fonts": {
+      "font_names": [
+        "CCVYUO+TeXGyreTermes-Bold",
+        "CCVYUO+TeXGyreTermes-Italic",
+        "CCVYUO+TeXGyreTermes-Regular"
+      ],
+      "required_family": "TeX Gyre Termes",
+      "forbidden_families": [],
+      "type3_present": false,
+      "pass": true
+    },
+    "pdf_size": {
+      "expected_mm": [
+        180.0,
+        70.0
+      ],
+      "observed_mm": [
+        179.9999222222222,
+        69.99993055555555
+      ],
+      "pass": true
+    },
+    "raster": {
+      "expected_600dpi_pixels": [
+        4252,
+        1654
+      ],
+      "png_pixels": [
+        4252,
+        1654
+      ],
+      "tiff_pixels": [
+        4252,
+        1654
+      ],
+      "expected_300dpi_preview_pixels": [
+        2126,
+        827
+      ],
+      "preview_pixels": [
+        2126,
+        827
+      ],
+      "grayscale_pixels": [
+        2126,
+        827
+      ],
+      "grayscale_mode": "L",
+      "grayscale_extrema": [
+        0,
+        255
+      ],
+      "pass": true
+    },
+    "svg": {
+      "editable_text": true,
+      "required_family_present": true,
+      "forbidden": [],
+      "pass": true
+    }
+  },
+  "inputs": [
+    {
+      "path": "manuscript/source_data/R582_SI_FigS13_smooth_permeability/inputs/R537_kperm_inject_raw.txt",
+      "size_bytes": 133319,
+      "sha256": "02BB6DCF33D90F3A08DC8C687E15F87D336064C7F2A567B47319012C51D872D1"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS13_smooth_permeability/inputs/R537_kperm_injection.csv",
+      "size_bytes": 80060,
+      "sha256": "2ABD6430B0B203326FB7301D03DFE0DB7DE9CA7FFCC17EC53C96EFD0561C9E68"
+    }
+  ],
+  "figure_outputs": [
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S13_smooth_permeability.svg",
+      "size_bytes": 19751,
+      "sha256": "3EDE109C39B1635FB33AD2DF81E296B83C83067003368ADDFB3EBB7DF1113043"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S13_smooth_permeability.pdf",
+      "size_bytes": 23005,
+      "sha256": "AEE930E0DE59779E3BEE25599527AB62FF1DF919058776F7EDEF8DC2D070E10C"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S13_smooth_permeability.png",
+      "size_bytes": 246962,
+      "sha256": "F37E48730D6A83C4C06CCA582A5A048A4CB19A6F2F0F36320D24B354A894F8FA"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S13_smooth_permeability.tiff",
+      "size_bytes": 359700,
+      "sha256": "4BDAAB6474066E3FC014722AB4B677DB403BEE8987BF96DD34A87717E1C32550"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S13_smooth_permeability_180mm_preview.png",
+      "size_bytes": 164562,
+      "sha256": "4FB5D310B2A94587D57EFE5E8C27B30C4B1ADA680FD5580DBF630F29AB9A32CC"
+    },
+    {
+      "path": "manuscript/figures_R582/SIFig_R582_S13_smooth_permeability_180mm_preview_grayscale.png",
+      "size_bytes": 69733,
+      "sha256": "DCC0ADE9EC21E21196817DCBFFA211F6D078458B4DCA5DD8E96A059B3CDAD2B4"
+    }
+  ],
+  "source_bundle_files": [
+    {
+      "path": "manuscript/source_data/R582_SI_FigS13_smooth_permeability/R582_SIFig_S13_input_manifest.csv",
+      "size_bytes": 676,
+      "sha256": "20D7564E65A739E13B68C8D5AC2733575017A840407CA593343CB0253456BBF4"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS13_smooth_permeability/R582_SIFig_S13_smooth_permeability.csv",
+      "size_bytes": 92547,
+      "sha256": "3E055C50E10FBA77BAEB7CFC91400FF68ED57B360699C7F4539E33F3C7F9EF31"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS13_smooth_permeability/R582_SIFig_S13_summary.csv",
+      "size_bytes": 352,
+      "sha256": "1D07C1A6175EC974D71EBD27B869FE167CA80B3067169321BE62CEC96B9E211E"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS13_smooth_permeability/r582_si_figure_tools.py",
+      "size_bytes": 11725,
+      "sha256": "83BF5D051CBC5CE86C4515D3AA29DD11DB9C9067ECD5331106CF48FCE176A0EB"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS13_smooth_permeability/make_sifig_r582_s13_smooth_permeability.py",
+      "size_bytes": 14064,
+      "sha256": "B296C175DF43C7C3A77BFE66D6821C70F97C0AE361E4B43630FE9735553B9276"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS13_smooth_permeability/FIGURE_CONTRACT.md",
+      "size_bytes": 1539,
+      "sha256": "8B8F63AF8CDDBE54E78420449E8B7457C918ADD6669B104B2EB356C5E55DCE5C"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS13_smooth_permeability/CAPTION_DRAFT.md",
+      "size_bytes": 649,
+      "sha256": "3F5A1C59FE81198D5ADEF926CA7D4C1790CE41C84A8BE1692E1A47EBDE2BD047"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS13_smooth_permeability/README.md",
+      "size_bytes": 613,
+      "sha256": "4D1F663BB4192AACDAF4AE3DDCEBC217D1111B8B1A7FA700A321AA92308BF1F1"
+    },
+    {
+      "path": "manuscript/source_data/R582_SI_FigS13_smooth_permeability/QA_NOTES.md",
+      "size_bytes": 1648,
+      "sha256": "467A3BFA0E819581F3FF16397E8F96C182720C62F850F8B9052112FA4F1E9056"
+    }
+  ]
+}

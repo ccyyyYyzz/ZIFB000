@@ -1,0 +1,127 @@
+{
+  "figure": "Fig_R582_experimental_problem",
+  "core_conclusion": "Existing full-cell records show a voltage-rise feature and rate-dependent utilization that motivate, but do not independently validate, a positive-electrode state model.",
+  "archetype": "asymmetric mixed-modality figure",
+  "backend": "Python/matplotlib only",
+  "font_audit": {
+    "manuscript_text_family": "TeX Gyre Termes (tgtermes equivalent)",
+    "resolved_matplotlib_family": "TeX Gyre Termes",
+    "mathtext_configuration": "custom TeX Gyre Termes rm/it/bf/cal/sf; no fallback",
+    "fallback_used": false,
+    "registered_faces": [
+      {
+        "file": "texgyretermes-regular.otf",
+        "sha256": "CC3FE7C707B81428D23D54DF3EADD9228A2BF6A4D43125D94DF56F5F63134659"
+      },
+      {
+        "file": "texgyretermes-bold.otf",
+        "sha256": "2FB3E952065FA153C7E4E64E04B98B9D79225739B6025AA3F0F0782D299FF61E"
+      },
+      {
+        "file": "texgyretermes-italic.otf",
+        "sha256": "6DD103A1672E50568CD2F8A706CCD48443D44D7D073A59D2286F4E6F746575D6"
+      },
+      {
+        "file": "texgyretermes-bolditalic.otf",
+        "sha256": "1BF6AF99CB0E26C12951317032D79B96AE009551E59CCF02A5B24F325ECFEC87"
+      }
+    ]
+  },
+  "final_size_mm": {
+    "width": 180.0,
+    "height": 115.0
+  },
+  "statistical_unit": "physical cell/file; cycles are repeated measures within one cell; full cycle ranges are descriptive",
+  "derivative_method": "registered 0.25 mAh cm^-2 grid; cubic Savitzky-Golay derivative; 10.25 mAh cm^-2 primary window; 5.25 and 15.25 mAh cm^-2 sensitivity windows",
+  "interpretation_boundary": "full-cell derivative landmarks did not set Q_s or Q_f_cal; Q_f_cal belongs to a voltage-calibrated branch and the shared trace is used separately in the reduced observation-layer fit, so the overlay is not independent validation",
+  "metadata_correction": "EXP-META-001: legacy NH4Cl/NH4CL labels denote NH4Br; raw names and bytes remain unchanged",
+  "alignment_audit": {
+    "representative_pair_index": 20,
+    "registered_sparse_vq_rows": 90,
+    "frozen_derivative_rows": 475,
+    "sparse_vs_derivative_mean_abs_voltage_residual_V": 0.0031410674695831384,
+    "sparse_vs_derivative_max_abs_voltage_residual_V": 0.03787492126041703,
+    "primary_rise_onset_mAh_cm2": 52.0,
+    "primary_derivative_peak_mAh_cm2": 95.0,
+    "Q_s_model_mAh_cm2": 83.0202,
+    "Q_f_cal_model_mAh_cm2": 99.5901
+  },
+  "inputs": [
+    {
+      "path": "manuscript/source_data/Fig_R538_voltage_reanchor/representative_vq_profiles_for_article.csv",
+      "sha256": "150AFD09C0AE8FEE58A8DFE1CCC412378CB1F7893075F54BDFFD8DE0AED3D1F1"
+    },
+    {
+      "path": "manuscript/source_data/Fig_R581_experimental_evidence/R581_experimental_evidence_panel_b_rate.csv",
+      "sha256": "9A30CDCA03BB870931AA0A8C91E8C7F0AE1265EA5FA71EAE5F2A5EDDA75BB517"
+    },
+    {
+      "path": "manuscript/source_data/Fig_R581_experimental_evidence/R581_experimental_evidence_panel_d_g4.csv",
+      "sha256": "05E38C4702EFC34BF0AD2F5558D5CACC90808157C3AF8C46CED73F58F93C3AF7"
+    },
+    {
+      "path": "battery_experiment/02_processed_data/R581_G4_DVDQ_REBUILD/dvdq_curves_all_windows.csv",
+      "sha256": "AAADD2779474FE74C1F0F4BC472633B113967905CA2BCE2EF97FAF8F0CA7D2DE"
+    },
+    {
+      "path": "manuscript/source_data/Fig_R568_scale_provenance/R581_Fig_R568_scale_provenance_source_data.csv",
+      "sha256": "4CB61A67545F55B5FEF66F91B420300030BA8B771BB38400B088C75B35E8106C"
+    }
+  ],
+  "generator": {
+    "path": "manuscript/source_data/R582_Fig1_experimental_problem/R582_Fig1_experimental_problem.py",
+    "sha256": "8EEAC4E7751E8CA6128C8E40041EDFF357994707E45B1B9DB5379CA058033724"
+  },
+  "outputs": [
+    {
+      "path": "manuscript/figures_R582/Fig_R582_experimental_problem.svg",
+      "size_bytes": 82154,
+      "sha256": "B708363F4D9E6676954C958F95ABB2322CF9F7CE2052425A4D6F6606EEC608CF"
+    },
+    {
+      "path": "manuscript/figures_R582/Fig_R582_experimental_problem.pdf",
+      "size_bytes": 39282,
+      "sha256": "5C22E28071F9BC1B5FBAAB62E38FB2628F6D3D22A69162E366E752E6C86A7E16"
+    },
+    {
+      "path": "manuscript/figures_R582/Fig_R582_experimental_problem.png",
+      "size_bytes": 537493,
+      "sha256": "E5EC8B4F7D38656A5B320B592BDCB61D9A80DF6648A1E4E08151B9316A82F862"
+    },
+    {
+      "path": "manuscript/figures_R582/Fig_R582_experimental_problem.tiff",
+      "size_bytes": 1158866,
+      "sha256": "3EF4AECC79B8EB7A6BCF937E087B4AEA40196F964FA5D795A64C8F8DC5948F37"
+    },
+    {
+      "path": "manuscript/figures_R582/Fig_R582_experimental_problem_grayscale_QA.png",
+      "size_bytes": 228621,
+      "sha256": "B00FB05E100AC5ED63BD0768BD012F7CE47A9B75C84FEC322479C9C676D3673B"
+    },
+    {
+      "path": "manuscript/source_data/R582_Fig1_experimental_problem/R582_Fig1a_cell_strip.csv",
+      "size_bytes": 382,
+      "sha256": "35C481CD6D56D744DFB01AD4B473DD21987411F31B8AF3BD760CB9F139FE22BD"
+    },
+    {
+      "path": "manuscript/source_data/R582_Fig1_experimental_problem/R582_Fig1b_selected_vq_dvdq.csv",
+      "size_bytes": 106539,
+      "sha256": "D7901F2CDCB35A79AF26719D0665AD42ECBFDCA052023B2230B558B8A9A1066D"
+    },
+    {
+      "path": "manuscript/source_data/R582_Fig1_experimental_problem/R582_Fig1c_rate_ladder.csv",
+      "size_bytes": 2717,
+      "sha256": "5F5888BBB7BAF770CAEA86446D1AE5FA4D4ED6AF0538194AE88A0D097B6CAF2E"
+    },
+    {
+      "path": "manuscript/source_data/R582_Fig1_experimental_problem/R582_Fig1d_feature_timing.csv",
+      "size_bytes": 3482,
+      "sha256": "3221CBC4D5C5F03FF4DCA277B068A57FBBB4C68F7BA0A5885AD7AC377F76902A"
+    },
+    {
+      "path": "manuscript/source_data/R582_Fig1_experimental_problem/R582_Fig1_input_manifest.csv",
+      "size_bytes": 1456,
+      "sha256": "5316172F02007DD5FC622E9BD474A381C13DE21175F839D536D435FD63E85676"
+    }
+  ]
+}

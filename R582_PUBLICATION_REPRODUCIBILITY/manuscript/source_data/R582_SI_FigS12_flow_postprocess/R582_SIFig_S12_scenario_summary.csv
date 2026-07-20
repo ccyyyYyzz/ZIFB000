@@ -1,0 +1,15 @@
+quantity,value,unit,definition
+registered_baseline_Qs,83.0201994718,mAh cm^-2,solved baseline average-saturation crossing
+nominal_flow,50,mL min^-1,delta = 25 um anchor
+nominal_delta,25,um,declared sub-grid layer anchor
+normalization_slope,3.0001273807,1,S_COMSOL versus structural normalization
+normalization_intercept,2.03937277985e-05,1,S_COMSOL versus structural normalization
+Q_s_25_m0.4,76.8236899187,mAh cm^-2,analytical postprocess
+Q_s_100_m0.4,87.7408692397,mAh cm^-2,analytical postprocess
+Q_s_span_25_to_100_m0.4,10.9171793209,mAh cm^-2,analytical postprocess
+Q_s_25_m0.5,74.9915225029,mAh cm^-2,analytical postprocess
+Q_s_100_m0.5,88.7329026568,mAh cm^-2,analytical postprocess
+Q_s_span_25_to_100_m0.5,13.7413801539,mAh cm^-2,analytical postprocess
+Q_s_25_m0.6,73.0303427742,mAh cm^-2,analytical postprocess
+Q_s_100_m0.6,89.6596243985,mAh cm^-2,analytical postprocess
+Q_s_span_25_to_100_m0.6,16.6292816243,mAh cm^-2,analytical postprocess

@@ -1,51 +1,68 @@
-# ZIFB000 curated project archive
+# ZIFB positive-electrode modeling and reproducibility archive
 
-This folder is the cleaned, useful archive for the zinc-iodine flow-battery
-iodine-failure project. It separates the publishable manuscript, figures,
-mechanism evidence and reusable code from the many exploratory historical
-outputs.
+This repository supports the manuscript *A positive-electrode model separating
+iodine saturation from accessibility loss in zinc--iodine flow batteries*.
 
-## Start here
+The scientific subject is the porous **zinc--iodine flow-battery (ZIFB) positive
+electrode**. The work separates three quantities that a full-cell voltage does not
+identify independently: free-I2 saturation, retained solid-I2 inventory, and the
+remaining calibrated electrochemically accessible area.
 
-1. `01_MANUSCRIPT_SCTS_R93/` contains the current SCTS-oriented manuscript,
-   PDF proof and Supporting Information.
-2. `02_FIGURES/` contains the main figures, SI figures and 600-dpi submission
-   figure files.
-3. `03_MODEL_CODE/` contains the reusable single-fiber iodine model, closure
-   code, manuscript-build scripts and a snapshot of all project scripts.
-4. `04_MECHANISM_EVIDENCE/` contains curated evidence from molecular surface
-   calculations, single-fiber closures, COMSOL porous-electrode mechanism
-   outputs, parameter-by-parameter arguments and full-cell-fit decision records.
-5. `05_GPT_AND_COAUTHOR_REVIEW/` contains a ready-made GPT/coauthor review
-   packet.
-6. `06_RECORD_INDEX/` contains an inventory of all output directories, including
-   superseded or index-only work.
-7. `07_LEGACY_NOT_PRIMARY/` explains what should not be used as primary evidence.
-8. `08_GITHUB_RELEASE_LIGHT/` is the lightweight GitHub-facing release subset.
+NH4Br is one representative supporting electrolyte in the studied condition; it is
+not the organizing subject of the paper. Bromide enters only through the declared
+supporting/speciation treatment, while the modeled faradaic couple is I2/I-.
 
-## Current scientific position
+## Current publication package
 
-The manuscript is simulation-led and mechanism-led. The central claim is that
-local iodine-handling failure in porous positive carbon felt can convert iodine
-from soluble redox inventory into neutral-I2 supersaturation, solid iodine,
-surface-state loss, localization, clumping and hydraulic/electrochemical
-instability.
+`R582_PUBLICATION_REPRODUCIBILITY/` is the authoritative local publication-facing
+candidate. It contains:
 
-The project does **not** claim NH4Br optimization, a production design map,
-measured microscopic coverage, an exact pressure threshold, or old EIS/full-cell
-curves as direct proof of film/contact growth.
+- exact R582 manuscript and Supplementary Information sources and PDFs;
+- the six main and thirteen SI figures in vector and raster formats;
+- plotted source data, deterministic figure scripts, manifests and QA records;
+- exact MD topology/protocol/log identities for five SOC compositions under two
+  charge parameterizations;
+- exact adopted single-I2 CP2K input/output identities;
+- small positive-electrode continuum-model scripts, exports and identity records;
+- journal-facing submission files and deterministic SHA-256 verification tools.
 
-## Archive statistics
+Run the packaged verifier before using the snapshot:
 
-- Copied useful files: 954
-- Curated archive size: 139.2 MB
-- Output directories indexed: 206
-- Useful/current directories detected in inventory: 50
+```powershell
+python R582_PUBLICATION_REPRODUCIBILITY/tools/verify_release.py R582_PUBLICATION_REPRODUCIBILITY
+```
 
-## Most important files
+## Experimental metadata correction
 
-- Manuscript PDF: `01_MANUSCRIPT_SCTS_R93/pdf_proof_SCTS_ZIFB_sample_format_aligned_R93.pdf`
-- Manuscript DOCX: `01_MANUSCRIPT_SCTS_R93/SCTS_ZIFB_sample_format_aligned_R93.docx`
-- Main figures: `02_FIGURES/main_figures/`
-- Single-fiber model: `03_MODEL_CODE/models/single_fiber_i2/`
-- Record inventory: `06_RECORD_INDEX/all_outputs_inventory.csv`
+Legacy acquisition filenames and condition fields containing `NH4Cl` or `NH4CL`
+are metadata-entry errors. The project owner/experimenter confirmed that all affected
+experiments used NH4Br. Raw filenames and file hashes remain unchanged; the processed
+identity correction is registered as `EXP-META-001` in the R582 package.
+
+No raw experimental acquisition file is stored in this lightweight repository.
+
+## Evidence boundary
+
+The registered spatial exports support only the fields they explicitly contain.
+Neither deposit morphology nor microscopic coverage is inferred from those exports,
+and electrical potential is not claimed where it was not exported. Molecular and
+mesoscale calculations provide bounded priors or comparators rather than independent
+validation of internal continuum states.
+
+Original COMSOL `.mph` files are excluded. The package records their relevant byte
+sizes and SHA-256 identities, and all COMSOL work must be performed on copied files.
+The unrelated `E:/ns_mc_gan_gi_code` project is outside scope.
+
+## Repository history
+
+Directories predating R582 are retained only as historical records. They are not the
+authority for the current manuscript, claims, figure set or data-availability text.
+Use the R582 package and its manifests for publication review.
+
+## Release identity
+
+The publication package is frozen under the release-specific tag
+`r582-zifb-positive-electrode-reproducibility-v1`. At that tag, the R582 directory is
+the authoritative publication-facing snapshot. The exact tree/release URLs and
+verification procedure are documented inside
+`R582_PUBLICATION_REPRODUCIBILITY/RELEASE_PLAN.md`. No repository DOI is claimed.

@@ -1,0 +1,12 @@
+[ moleculetype ]
+; molname nrexcl
+I2 2
+
+[ atoms ]
+; id type resnr residue atom cgnr charge mass
+1 I 1 I2 I1 1 0.000000 126.90447
+2 I 1 I2 I2 1 0.000000 126.90447
+
+[ bonds ]
+; ai aj funct b0 kb
+1 2 1 0.2666 200000

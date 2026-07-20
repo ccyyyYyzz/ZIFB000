@@ -1,0 +1,78 @@
+{
+  "audit_id": "R581_TRUE_MESH_STATIC_AUDIT",
+  "control_physical_mesh_method_byte_identical": true,
+  "control_physical_mesh_method_sha256": "5FE41059C78322CF834CE3C1635B69B788777B7F1ED4C645D0B4EA2A353FEA25",
+  "expected_input_elements": 1944,
+  "inputs": [
+    {
+      "bytes": 889150140,
+      "file": "R581_true_mesh_probe_input_COPY.mph",
+      "hash_pass": true,
+      "sha256": "4813B306F39330CCEAF819C4AB8815C55A3DF8A04726741F33ACB801B8806B9B",
+      "size_pass": true
+    },
+    {
+      "bytes": 889150140,
+      "file": "R581_true_mesh_control_input_COPY.mph",
+      "hash_pass": true,
+      "sha256": "4813B306F39330CCEAF819C4AB8815C55A3DF8A04726741F33ACB801B8806B9B",
+      "size_pass": true
+    },
+    {
+      "bytes": 889150140,
+      "file": "R581_true_mesh_physical_input_COPY.mph",
+      "hash_pass": true,
+      "sha256": "4813B306F39330CCEAF819C4AB8815C55A3DF8A04726741F33ACB801B8806B9B",
+      "size_pass": true
+    }
+  ],
+  "launch_guard": "Do not compile/run the probe or either solve while another COMSOL process is active.",
+  "probe_no_study_run_static_check": true,
+  "probe_saves_new_output_only": true,
+  "required_refinement": {
+    "hgrad": 1.2,
+    "hmax_m": 0.00067,
+    "hmin_m": 3e-06,
+    "mapped_distribution_numelem": [
+      36,
+      36,
+      72
+    ],
+    "reason_for_distribution_refinement": "mesh1/map1 uses explicit Distribution features 18/18/36; default-size changes alone retained 1944 elements"
+  },
+  "runtime_probe": {
+    "after_elements": 7776,
+    "before_elements": 1944,
+    "no_study_run": true,
+    "path": "battery_comsol\\02_outputs_core\\R581_CANONICAL_CLOSURE_REBUILD\\logs\\R581_true_mesh_probe_stdout.txt",
+    "ratio": 4.0,
+    "status": "pass"
+  },
+  "sources": [
+    {
+      "brace_balance": 0,
+      "bytes": 6354,
+      "file": "R581TrueMeshBuildProbe.java",
+      "missing_literals": [],
+      "required_mesh_literals_all_present": true,
+      "sha256": "97853394ADE8B4224A9E1C7403972560E177DBD52D8D7DB3FB5826A487256DF2"
+    },
+    {
+      "brace_balance": 0,
+      "bytes": 11115,
+      "file": "R581TrueMeshControlRun.java",
+      "missing_literals": [],
+      "required_mesh_literals_all_present": true,
+      "sha256": "8CFB647D280734D74A35B1D4DEC486B545A8DA565D1419279A24EB928FB1D933"
+    },
+    {
+      "brace_balance": 0,
+      "bytes": 11841,
+      "file": "R581TrueMeshPhysicalRun.java",
+      "missing_literals": [],
+      "required_mesh_literals_all_present": true,
+      "sha256": "AD4FEED05CD6C02D77CE9B54D1144937564F0EB5FEFE70F705017B445185A09D"
+    }
+  ],
+  "static_status": "PASS"
+}

@@ -1,0 +1,27 @@
+{
+  "source_csv": "/mnt/c/Users/CYZ\u7684computer/Documents/Codex/2026-06-18/goal-md-d-eff-zifb-comsol/outputs/md_transport_soc_series/results/soc_transport_summary.csv",
+  "ranges": [
+    {
+      "variant": "q1p0",
+      "water_min": 1.2914060569264805,
+      "water_max": 1.359333250367344,
+      "iodide_min": 0.6468729808204758,
+      "iodide_max": 0.7440003904383398,
+      "carrier_proxy_min": 0.4247422118830672,
+      "carrier_proxy_max": 0.6642746646066889,
+      "free_i2_fraction_start": 0.3333333333333333,
+      "free_i2_fraction_end": 0.0416666666666666
+    },
+    {
+      "variant": "q0p8_ecc",
+      "water_min": 1.9416437114046523,
+      "water_max": 2.047272550091032,
+      "iodide_min": 1.0454780110920243,
+      "iodide_max": 1.3984272776432107,
+      "carrier_proxy_min": 0.6705642411113727,
+      "carrier_proxy_max": 1.0243239130725856,
+      "free_i2_fraction_start": 0.3333333333333333,
+      "free_i2_fraction_end": 0.0416666666666666
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+quantity,value,unit,role
+positive_domain_x_min,3,mm,schematic coordinate from COMSOL domain
+positive_domain_x_max,5,mm,schematic coordinate from COMSOL domain
+positive_domain_y_min,0,mm,schematic coordinate from COMSOL domain
+positive_domain_y_max,20,mm,schematic coordinate from COMSOL domain
+felt_thickness,2,mm,registered baseline geometry
+applied_current_density,40,mA_cm-2,registered baseline protocol
+single_fiber_radius,7.5,um,physical comparator geometry
+orange_symbols,,none,schematic continuum solid-inventory gradient; not deposit images

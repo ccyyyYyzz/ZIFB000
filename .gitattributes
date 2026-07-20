@@ -1,0 +1,3 @@
+# Preserve the publication reproducibility package byte-for-byte.
+# Its internal SHA-256 manifest covers text as well as binary artifacts.
+R582_PUBLICATION_REPRODUCIBILITY/** -text

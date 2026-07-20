@@ -1,0 +1,5 @@
+• A positive-electrode model separates iodine saturation and accessibility loss
+• At 40 mA cm-2, saturation precedes 50% calibrated accessibility loss
+• Changing the accessibility relation shifts saturation by only 0.002 mAh cm-2
+• The matched accessibility relation lowers terminal voltage by 288 mV
+• Current and oxidized-iodine diffusivity shift modeled saturation capacity

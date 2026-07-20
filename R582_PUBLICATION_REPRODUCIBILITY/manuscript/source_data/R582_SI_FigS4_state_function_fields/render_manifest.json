@@ -1,0 +1,200 @@
+{
+  "figure": "R582 Supplementary Figure S4 state and function fields",
+  "backend": "Python/matplotlib only",
+  "fixed_build_date": "2026-07-20T00:00:00Z",
+  "final_size_mm": [
+    180.0,
+    142.0
+  ],
+  "font_contract": {
+    "family": "TeX Gyre Termes",
+    "registered_otf_files": [
+      "texgyretermes-regular.otf",
+      "texgyretermes-bold.otf",
+      "texgyretermes-italic.otf",
+      "texgyretermes-bolditalic.otf"
+    ],
+    "base_size_pt": 7.2,
+    "minimum_size_pt": 6.5,
+    "panel_label_size_pt": 8.0,
+    "pdf_fonttype": 42,
+    "svg_fonttype": "none"
+  },
+  "input": {
+    "workspace_relative_path": "manuscript/source_data/Fig_R545_fields/Fig3_baseline_spatial_long.csv",
+    "sha256": "E322D0D0C4B0D5C8CB84BD5CB18D1A43CBA183EB8A5F112577686993BC8FC007",
+    "immutable": true
+  },
+  "source_bundle": {
+    "script": {
+      "workspace_relative_path": "manuscript/source_data/R582_SI_FigS4_state_function_fields/make_fig_si_r582_s4_state_function_fields.py",
+      "sha256": "AC65D9D9AB05CE53C034F73E81C7DC273E84EFA20E47C7D356295B2686421DF6"
+    },
+    "frozen_source_csv": {
+      "workspace_relative_path": "manuscript/source_data/R582_SI_FigS4_state_function_fields/Fig_SI_R582_S4_state_function_fields_source.csv",
+      "sha256": "5043E6031E3C2910B84E9B11E7F1BBA30D62A60815B9E3AE09BFB3B8F83A03F6"
+    },
+    "input_manifest": {
+      "workspace_relative_path": "manuscript/source_data/R582_SI_FigS4_state_function_fields/R582_SI_FigS4_input_manifest.csv",
+      "sha256": "AACF1FDC9074E155885680CB6A105CD183302AE3693A15ECE181B3C721E8C908"
+    },
+    "pdffonts_report": {
+      "workspace_relative_path": "manuscript/source_data/R582_SI_FigS4_state_function_fields/pdffonts_report.txt",
+      "sha256": "EFEBC8E0B9C4D2D910D974FABCD1DEA39CC8FD607EAA319BF75D7367A883EDA9"
+    }
+  },
+  "checks": {
+    "upstream_sha256": "E322D0D0C4B0D5C8CB84BD5CB18D1A43CBA183EB8A5F112577686993BC8FC007",
+    "frozen_source_sha256": "5043E6031E3C2910B84E9B11E7F1BBA30D62A60815B9E3AE09BFB3B8F83A03F6",
+    "rows": 35970,
+    "nodes_per_capacity": {
+      "0": 5995,
+      "80": 5995,
+      "96": 5995,
+      "100": 5995,
+      "110": 5995,
+      "120": 5995
+    },
+    "grid": {
+      "x_count": 55,
+      "y_count": 109
+    },
+    "coordinate_bounds_mm": {
+      "x": [
+        3.0,
+        5.0
+      ],
+      "y": [
+        0.0,
+        20.0
+      ]
+    },
+    "nonpositive_current_counts": {
+      "0": 248,
+      "80": 0,
+      "96": 33,
+      "100": 6,
+      "110": 0,
+      "120": 0
+    },
+    "nonpositive_current_ranges_A_m2": {
+      "0": [
+        -4.21706102215e-05,
+        -3.51627726587e-09
+      ],
+      "80": null,
+      "96": [
+        -0.000833769099204,
+        -2.08901114956e-06
+      ],
+      "100": [
+        -0.000571642984703,
+        -0.000180419252671
+      ],
+      "110": null,
+      "120": null
+    },
+    "positive_current_range_A_m2": [
+      4.00743698499e-09,
+      21674.7619951
+    ],
+    "native_A_bare_range": [
+      0.0,
+      0.9999999994
+    ],
+    "round_trip_source_check": true,
+    "no_missing_nonfinite_or_duplicate_nodes": true
+  },
+  "render_semantics": {
+    "capacities_mAh_cm2": [
+      0.0,
+      80.0,
+      96.0,
+      100.0,
+      110.0,
+      120.0
+    ],
+    "interpolation": "nearest; no smoothing",
+    "native_remaining_area": "A_bare_frac",
+    "current_nonpositive_handling": "neutral mask; signed values retained in source",
+    "electrical_potential_fields_used": false,
+    "morphology_or_coverage_inference": false
+  },
+  "deterministic_second_render_byte_identical": {
+    "svg": true,
+    "pdf": true,
+    "png_600dpi": true,
+    "tiff_600dpi": true,
+    "preview_180mm": true,
+    "grayscale_180mm": true
+  },
+  "outputs": {
+    "svg": {
+      "workspace_relative_path": "manuscript/figures_R582/Fig_SI_R582_S4_state_function_fields.svg",
+      "sha256": "08B70CC17C90216538CA53A46BEA99A3EE66A0F9B48DD8053BA45EA9A8DE65CF",
+      "bytes": 167070,
+      "editable_text_nodes": 72
+    },
+    "pdf": {
+      "workspace_relative_path": "manuscript/figures_R582/Fig_SI_R582_S4_state_function_fields.pdf",
+      "sha256": "3F7DDCE22475C59A7C25D5747A83C0FED75F8C73DF8CB715A501EE463A605ADB",
+      "bytes": 94753
+    },
+    "png_600dpi": {
+      "workspace_relative_path": "manuscript/figures_R582/Fig_SI_R582_S4_state_function_fields.png",
+      "sha256": "FAF440988DD5773E9E539CE310901FABEC7A0782F3F369F94C786FF8CACD8AA7",
+      "bytes": 274439,
+      "pixels": [
+        4251,
+        3354
+      ],
+      "dpi": [
+        599.9988,
+        599.9988
+      ],
+      "mode": "RGB"
+    },
+    "tiff_600dpi": {
+      "workspace_relative_path": "manuscript/figures_R582/Fig_SI_R582_S4_state_function_fields.tiff",
+      "sha256": "310A6FFD5E7BD771559189A3D95575D71B1EE28D0CE822665716D6D7C564DFB2",
+      "bytes": 3115218,
+      "pixels": [
+        4251,
+        3354
+      ],
+      "dpi": [
+        600.0,
+        600.0
+      ],
+      "mode": "RGB"
+    },
+    "preview_180mm": {
+      "workspace_relative_path": "manuscript/figures_R582/Fig_SI_R582_S4_state_function_fields_180mm_preview.png",
+      "sha256": "E19FE547A9FCE456CB55B282F42963F26940467227F12134303EAD0E647E8D49",
+      "bytes": 57945,
+      "pixels": [
+        1062,
+        838
+      ],
+      "dpi": [
+        150.01239999999999,
+        150.01239999999999
+      ],
+      "mode": "RGB"
+    },
+    "grayscale_180mm": {
+      "workspace_relative_path": "manuscript/figures_R582/Fig_SI_R582_S4_state_function_fields_grayscale_180mm.png",
+      "sha256": "802F39E7099E517117245AE5328DA002352AA2BCF13DECF69E2E560B13248969",
+      "bytes": 52143,
+      "pixels": [
+        1062,
+        838
+      ],
+      "dpi": [
+        150.01239999999999,
+        150.01239999999999
+      ],
+      "mode": "RGB"
+    }
+  }
+}

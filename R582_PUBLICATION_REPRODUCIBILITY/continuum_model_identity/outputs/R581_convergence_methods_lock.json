@@ -1,0 +1,15 @@
+{
+  "comparison_design": "canonical -> tighter tolerance; tighter tolerance -> 4x-element mesh",
+  "crossing": "first upward crossing with linear interpolation",
+  "gates": {
+    "max_S_identity_abs": 1e-08,
+    "max_abs_Qs_change_mAh_cm2": 0.25,
+    "max_abs_control_Qtheta0p5_change_mAh_cm2": 0.5,
+    "max_abs_deltaV_endpoint_change_mV": 2.0,
+    "max_abs_endpoint_theta_change": 0.01,
+    "max_rel_endpoint_eps_change": 0.1
+  },
+  "numpy": "1.24.4",
+  "pandas": "1.5.3",
+  "python": "3.11.5"
+}
