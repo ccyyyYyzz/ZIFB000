@@ -1,0 +1,156 @@
+{
+  "build_id": "R582_FIG5_MULTISCALE_BOUNDS_V2",
+  "backend": "Python 3.11 / matplotlib 3.7.2",
+  "overall_claim": "Independent bounds on positive-electrode model inputs",
+  "figure_role": "bounded priors and physical comparator families; not independent validation",
+  "revision_from_v1": {
+    "collision_fix": "panel-a +0.08 label moved above the vacancy point; a/b use a dedicated wide gutter",
+    "hierarchy_fix": "a/b reduced to a quiet upper prior strip; c/d expanded as the positive-electrode hero row",
+    "scientific_content_changed": false
+  },
+  "figure_size_mm": [
+    180.0,
+    125.0
+  ],
+  "preview_dpi": 300,
+  "preview_pixels": [
+    2125,
+    1476
+  ],
+  "font_family": "TeX Gyre Termes",
+  "font_files": [
+    "texgyretermes-regular.otf",
+    "texgyretermes-bold.otf",
+    "texgyretermes-italic.otf",
+    "texgyretermes-bolditalic.otf"
+  ],
+  "base_font_pt": 7.2,
+  "minimum_font_pt": 6.5,
+  "panel_label_pt": 8.0,
+  "input_files": [
+    {
+      "input_role": "accepted periodic CP2K single-I2 site-energy ordering",
+      "path_workspace_relative": "DFT/06_periodic_cp2k_single_i2_r514/workspace_snapshot/outputs/r514_status1_short/tables/sanity_final_four_site_spectrum.csv",
+      "sha256": "1FC77A716EC8E1460A671FB18AA201F8E0E46A6ECA0DB646DEB596B1587E9CB2",
+      "access": "read-only"
+    },
+    {
+      "input_role": "five-SOC bulk-MD carrier diffusivity means and stability bars",
+      "path_workspace_relative": "MD/carrier_diffusivity_si_figure/R197_FigS_md_carrier_diffusivity_source_summary.csv",
+      "sha256": "01DE06CA4D66719E5D614A66F3067B0916390A316C3F17C1F8A5C4E08DC832EB",
+      "access": "read-only"
+    },
+    {
+      "input_role": "formal-charge carrier-proxy range used as the low-end D_eff prior",
+      "path_workspace_relative": "MD/carrier_diffusivity_si_figure/R197_FigS_md_carrier_diffusivity_summary.json",
+      "sha256": "86243B41D8B5164817BC25C39CAA18E8D09161FF1CEDF4A2C26A13D865A2C79C",
+      "access": "read-only"
+    },
+    {
+      "input_role": "single-fibre accessibility nodes for sparse and dense placement families",
+      "path_workspace_relative": "fiber/data/R531_fiber3d_clock.csv",
+      "sha256": "91D6B8DC78E2E4C7629311B7E776B6F549A56670FFDC50306C8CD092015F21DE",
+      "access": "read-only"
+    },
+    {
+      "input_role": "six pore-network hydraulic-permeability placement laws",
+      "path_workspace_relative": "pore_system/data/R531_network3d_curves.csv",
+      "sha256": "734503DB22CF7EDBE32521D823CC7E3ECCB2E8F8137DBF65B6160230379BBB17",
+      "access": "read-only"
+    },
+    {
+      "input_role": "linearly interpolated permeability values at the baseline endpoint",
+      "path_workspace_relative": "pore_system/data/R531_network3d_thresholds.csv",
+      "sha256": "FA3B9CA51C69832C5A1DE4AF5E650B314F3D5F504CF730874C01E5ABCEFAC3DF",
+      "access": "read-only"
+    },
+    {
+      "input_role": "frozen baseline solid-I2 endpoint used to delimit the modeled range",
+      "path_workspace_relative": "manuscript/source_data/Fig_R581_matched_closure/R581_release_closure_summary.json",
+      "sha256": "A213CCDBADE269AD59FB8F2BBD74EAC9D5E28585CBBC6F7E42A1FD4939DC34AE",
+      "access": "read-only"
+    },
+    {
+      "input_role": "frozen v1 data-validation and drawing dependency",
+      "path_workspace_relative": "manuscript/source_data/R582_Fig5_multiscale_bounds/make_fig_r582_multiscale_bounds.py",
+      "sha256": "89FD0810AC2F5CDC49F54B0C78F1B91526CAA934A5EFDCA30C77E318961294CD",
+      "access": "read-only"
+    }
+  ],
+  "source_tables": [
+    {
+      "path_workspace_relative": "manuscript/source_data/R582_Fig5_multiscale_bounds/R582_Fig5_panel_a_dft_site_ordering.csv",
+      "sha256": "A38868AA3DD40B952CC4E84B589B504018ADB5C3445491A2A055416B179260AE"
+    },
+    {
+      "path_workspace_relative": "manuscript/source_data/R582_Fig5_multiscale_bounds/R582_Fig5_panel_b_md_diffusivity.csv",
+      "sha256": "4E819376E2FE7D0946584155211440114C208138F05151CE1A1748F171D7E9D2"
+    },
+    {
+      "path_workspace_relative": "manuscript/source_data/R582_Fig5_multiscale_bounds/R582_Fig5_panel_c_accessibility_families.csv",
+      "sha256": "2E47F31D75DA8EF9408DAFBADCF83B54FB014DB3AFE97509AE508792FE686D90"
+    },
+    {
+      "path_workspace_relative": "manuscript/source_data/R582_Fig5_multiscale_bounds/R582_Fig5_panel_d_permeability_raw.csv",
+      "sha256": "FE3ABD7D0D66FB1C7ADC536E5B79D256F72F10DEFA7233961BFB33AD8DB3EC64"
+    },
+    {
+      "path_workspace_relative": "manuscript/source_data/R582_Fig5_multiscale_bounds/R582_Fig5_panel_d_permeability_zoom.csv",
+      "sha256": "DA023BB0973CDBA0DFA819BEFA5468C72095898273DB6D8D47E1931F48A1B4E6"
+    },
+    {
+      "path_workspace_relative": "manuscript/source_data/R582_Fig5_multiscale_bounds/R582_Fig5_panel_d_endpoint_summary.csv",
+      "sha256": "4D1AA7E61DEB82351572E51DE4F9A0C05CD548D0730B4B7ECA44A32E03536332"
+    },
+    {
+      "path_workspace_relative": "manuscript/source_data/R582_Fig5_multiscale_bounds/R582_Fig5_input_manifest_v2.csv",
+      "sha256": "74AEA1BC97B97380B1D938F5D00620F2E67D9C4CF54D50616491F64DF7AA02CE"
+    }
+  ],
+  "output_files": [
+    {
+      "path_workspace_relative": "manuscript/figures_R582/Fig_R582_multiscale_bounds_v2.svg",
+      "sha256": "6DE1F31C29B35F7D6390992CBD28E28417E571D893C0746DF011A306F3D78F05"
+    },
+    {
+      "path_workspace_relative": "manuscript/figures_R582/Fig_R582_multiscale_bounds_v2.pdf",
+      "sha256": "3B1AC3E334E887A553F33A1F1E56C028008799F5C8D98AF00F38608F4F7EA8DC"
+    },
+    {
+      "path_workspace_relative": "manuscript/figures_R582/Fig_R582_multiscale_bounds_v2.png",
+      "sha256": "EEA9A870A79D1009F092489E39A285EA9D0E54EB5EFBDA360F3F26E9317B79D9"
+    },
+    {
+      "path_workspace_relative": "manuscript/figures_R582/Fig_R582_multiscale_bounds_v2.tiff",
+      "sha256": "98BA5BAEBEF6716363EF3F637A78617FF42A9F57033D5CF059DC0F8E901D298F"
+    },
+    {
+      "path_workspace_relative": "manuscript/figures_R582/Fig_R582_multiscale_bounds_v2_180mm_preview.png",
+      "sha256": "C95312064ECBF4E333E4EF3FEE7D5C93C6A4AC8878B243E5C7CE56394A204C3B"
+    },
+    {
+      "path_workspace_relative": "manuscript/figures_R582/Fig_R582_multiscale_bounds_v2_grayscale_180mm.png",
+      "sha256": "E7A272B850A797F7781AA5E86419D8F6B2135AC2E200747490DF79EA775C23F8"
+    }
+  ],
+  "numeric_checks": {
+    "baseline_eps_s_endpoint": 0.00321926062394,
+    "low_end_D_eff_prior_1e9_m2_s": [
+      0.4247422118830672,
+      0.6642746646066889
+    ],
+    "pore_network_K_over_K0_at_endpoint": [
+      0.9814684469568599,
+      0.9918265360078787
+    ],
+    "dft_basal_reference_eV": 0.0,
+    "accessibility_identity": "A_bare/A0 = 1 - theta_eff_transport"
+  },
+  "interpretation_boundaries": [
+    "DFT values are relative periodic electronic energies, not solution free energies or rates.",
+    "MD values are force-field-limited bulk mobility priors; stability bars are not replicate SEM.",
+    "Single-fibre curves are assumed placement-family comparators, not observed deposit morphology.",
+    "Pore-network curves are idealized permeability comparators, not measured pore closure.",
+    "No lower-scale panel supplies the voltage-calibrated continuum accessibility relation."
+  ]
+}

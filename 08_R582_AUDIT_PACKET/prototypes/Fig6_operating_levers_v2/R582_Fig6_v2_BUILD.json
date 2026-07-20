@@ -1,0 +1,42 @@
+{
+  "backend": "Python/matplotlib",
+  "base_font_pt": 7.2,
+  "build_date_fixed": "2026-07-20T00:00:00Z",
+  "canvas_mm": [
+    180.0,
+    115.0
+  ],
+  "figure": "Fig_R582_operating_levers_v2",
+  "font_family": "TeX Gyre Termes",
+  "font_files_sha256": {
+    "bold": "2FB3E952065FA153C7E4E64E04B98B9D79225739B6025AA3F0F0782D299FF61E",
+    "bolditalic": "1BF6AF99CB0E26C12951317032D79B96AE009551E59CCF02A5B24F325ECFEC87",
+    "italic": "6DD103A1672E50568CD2F8A706CCD48443D44D7D073A59D2286F4E6F746575D6",
+    "regular": "CC3FE7C707B81428D23D54DF3EADD9228A2BF6A4D43125D94DF56F5F63134659"
+  },
+  "integrity_rules": {
+    "D_eff_connection": "adjacent simulated points only; no fit or extrapolation",
+    "J80": "right-censored at Q=40; displayed only as Q_s > 40",
+    "analytical_flow": "analytical boundary-layer scenario, not a continuum simulation",
+    "current_connection": "only J=20 to J=40",
+    "v1": "read-only and preserved"
+  },
+  "matplotlib_version": "3.7.2",
+  "minimum_font_pt": 6.5,
+  "outputs_sha256": {
+    "grayscale": "C5A6239549FD6FF3A6F5B41E7FAA099EBF2C2B495F2C715A0280E032732244AE",
+    "pdf": "459C497BA4C1EE7FBD02121DE01601793618D4E79BFD7B3208B8776EDD28D256",
+    "png": "44034ADC46A66D28F44DC9F3EEF62655B74B8938D2DA27F8FC0C92F0993A5C9A",
+    "preview": "1D97940F3DE37FB4CE05A09623B6E846D9530B57570CDAB1F448F2D6CFF790B4",
+    "svg": "133092B436B3DC9E69F219B054791A512CE57337DDD7C2A3142ECB0CBDCE0467",
+    "tiff": "FC3AE09E38C4F42A92771FBD28BC78444231F6EC6B7B699349A2370642364464"
+  },
+  "read_only_dependencies_sha256": {
+    "manuscript\\source_data\\R582_Fig6_operating_levers\\R582_Fig6_current_solved.csv": "618358B5A69FC1DF4B9F1E6F0560D921AFAF0D6C49A5A805BC287C7DCD725EEB",
+    "manuscript\\source_data\\R582_Fig6_operating_levers\\R582_Fig6_decision_map.csv": "1A6A8F43A4DB3057C46AE57CF81B9FDF335C5A28D9F36113A537F907AA37F880",
+    "manuscript\\source_data\\R582_Fig6_operating_levers\\R582_Fig6_deff_solved.csv": "47DBFC5B03B9E140775E52B73EF1221835D2E63CC8A70220370815B37C95E2DE",
+    "manuscript\\source_data\\R582_Fig6_operating_levers\\R582_Fig6_input_manifest.csv": "259153BA2C6F6EDB6A6A542C431820EDC59A1EFC68317E50B0B7DF65C7190CCD",
+    "manuscript\\source_data\\R582_Fig6_operating_levers\\R582_Fig6_secondary_levers.csv": "769684E916D866D1611B2FEA7C0FD8A1C8678EEAB57FCFD9FA51E1A512BF102B",
+    "manuscript\\source_data\\R582_Fig6_operating_levers\\make_fig_r582_operating_levers.py": "D7590905E0065C4338E8C402236B7B6502E2A0B87168F969439F104C131DD33B"
+  }
+}

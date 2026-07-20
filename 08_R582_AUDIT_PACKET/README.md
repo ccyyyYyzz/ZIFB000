@@ -43,14 +43,23 @@ Review their 180 mm PNG/PDF renders, captions, contracts and QA records together
    — full-cell observations with an explicit positive-electrode focus.
 2. [`prototypes/Fig2_domain_state_v2/`](prototypes/Fig2_domain_state_v2/)
    — domain and state relation without a decorative morphology cartoon.
-3. [`prototypes/Fig3_spatial_v2/`](prototypes/Fig3_spatial_v2/)
-   — the 80/100/120 mAh cm$^{-2}$ spatial hero with shared row scales.
+3. [`prototypes/Fig3_spatial_v3/`](prototypes/Fig3_spatial_v3/)
+   — the 80/100/120 mAh cm$^{-2}$ spatial hero, now using the exported native
+   remaining-area field and a compact through-plane mean. The v2 directory is
+   retained only as superseded provenance.
 4. [`prototypes/Fig4_closure_identifiability/`](prototypes/Fig4_closure_identifiability/)
    — matched model-form sensitivity and accessibility non-identifiability.
+5. [`prototypes/Fig5_positive_electrode_bounds_v2/`](prototypes/Fig5_positive_electrode_bounds_v2/)
+   — quiet DFT/MD priors above the dominant accessibility and permeability
+   bounds for the positive electrode.
+6. [`prototypes/Fig6_operating_levers_v2/`](prototypes/Fig6_operating_levers_v2/)
+   — solved current/diffusivity responses and one full-width quantitative lever
+   comparison; the 80 mA cm$^{-2}$ case is explicitly right-censored.
 
-The remaining cross-scale-bounds and operating-lever figures are under active
-construction and will not be promoted until they pass the same font, evidence,
-grayscale, source-data and deterministic-build checks.
+The current six-figure scientific narrative is in
+[`text/R582_MAIN_TEXT_DRAFT.md`](text/R582_MAIN_TEXT_DRAFT.md). All six
+candidates have passed individual font, evidence, grayscale, source-data and
+deterministic-build checks; whole-manuscript placement remains under review.
 
 ## Current visual diagnosis
 
@@ -73,9 +82,12 @@ will move to SI.
 ## Review questions
 
 - Can a reader state the paper's one result after scanning the title, abstract
-  and figures for two minutes?
+  and six figures for two minutes?
 - Does each main figure carry one claim that is visible within 15 seconds?
-- Which mechanism graphics should be redrawn, split, moved to SI or deleted?
+- Does Figure 3 make the spatial progression legible without implying a
+  deposit morphology, and is the native-area/profile distinction explicit?
+- Do Figures 5 and 6 preserve the positive electrode as the protagonist rather
+  than promoting atomistic priors, NH4Br or workflow taxonomy?
 - Does the prose describe physical objects and observations directly, or force
   the reader to decode internal audit vocabulary?
 - Are necessary model boundaries stated once in the correct location rather

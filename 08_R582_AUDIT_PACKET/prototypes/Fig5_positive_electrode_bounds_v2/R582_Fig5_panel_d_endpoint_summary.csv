@@ -1,0 +1,7 @@
+law,eps_s_endpoint,K_hydraulic_rel,registered_link_eps_s,K_hydraulic_rel_at_registered_link,source_check
+collector_biased,0.00321926062394,0.990246135811596,0.00321999999999996,0.990243895615937,registered 0.00322 link value reproduced; plotted at exact frozen endpoint
+current_path,0.00321926062394,0.98146844695686,0.00321999999999996,0.981464190766301,registered 0.00322 link value reproduced; plotted at exact frozen endpoint
+small_throat,0.00321926062394,0.991826536007879,0.00321999999999996,0.991824658786893,registered 0.00322 link value reproduced; plotted at exact frozen endpoint
+strong_site,0.00321926062394,0.990244451449693,0.00321999999999996,0.990242210867183,registered 0.00322 link value reproduced; plotted at exact frozen endpoint
+surface_area,0.00321926062394,0.99101290767341,0.00321999999999996,0.991010843584263,registered 0.00322 link value reproduced; plotted at exact frozen endpoint
+uniform,0.00321926062394,0.990222711691364,0.00321999999999996,0.990220466115826,registered 0.00322 link value reproduced; plotted at exact frozen endpoint

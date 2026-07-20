@@ -1,0 +1,5 @@
+J_mA_cm2,Q_s_mAh_cm2,relation,case_id,evidence_class,Q_end_mAh_cm2,S_avg_peak,source_id,threshold_method,scope_note
+20,106.31983154928193,exact_crossing,J20,full_solve,120,1.21616322979,R524_true_solve_timeseries_cleaned,linear interpolation across first S_avg=1 crossing,full-capacity solve
+40,83.0201994718443,exact_crossing,baseline_R523,full_solve,120,1.75902930702,R524_true_solve_timeseries_cleaned,linear interpolation across first S_avg=1 crossing,registered baseline
+80,40,lower_bound,rate_J80_Q40,full_solve,40,0.923523703675,R525_true_solve_timeseries,S_avg remains below 1 through Q=40; plotted as Q_s>40,never treat as an exact marker
+120,8.391444702684929,exact_crossing,rate_J120_Q40,full_solve,40,1.70531361081,R525_true_solve_timeseries,linear interpolation across first S_avg=1 crossing,separate fixed-Q solve that crosses before Q=40
