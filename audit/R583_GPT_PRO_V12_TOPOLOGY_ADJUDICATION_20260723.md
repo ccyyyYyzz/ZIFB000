@@ -1,0 +1,373 @@
+# R583 V12 production-topology adjudication
+
+**Date:** 2026-07-23  
+**Review mode:** hostile scientific-computing and provenance gate  
+**Scope:** accessibility-regularization variants 17 and 24 only  
+**Explicit exclusions:** no production authorization, no COMSOL execution, no manuscript or figure edit, no model or runner mutation, no physical experiment
+
+## 1. Binding verdict
+
+# **B MUST. Candidate A is rejected.**
+
+Variants 17 and 24 must receive branch-specific, fresh-`loadCopy`, own-event provenance. The active V12 topology must be superseded from **40 execution units / 127 solver segments** to the correctly accounted **42 execution units / 129 solver segments** topology described below.
+
+Candidate A proves only that selected converged source states have the same reported values. It does not prove that the two variant equations assemble the same residual tangent, follow the same nonlinear path, select the same adaptive/native states, or produce the same native first-local event bracket.
+
+For the regularized Scenario-A expression
+
+\[
+ g_\delta(\varepsilon_s)
+ = (\varepsilon_s+\delta)^{2/3}-\delta^{2/3},
+ \qquad
+ R_A=\exp[-\kappa g_\delta],
+\]
+
+all positive values of \(\delta\) give
+
+\[
+ g_\delta(0)=0,\qquad R_A(0)=1.
+\]
+
+That equality is not an equation-identity proof. The tangent at the same state is
+
+\[
+ \left.\frac{\partial g_\delta}{\partial\varepsilon_s}\right|_{\varepsilon_s=0}
+ =\frac{2}{3}\delta^{-1/3}.
+\]
+
+Changing \(\delta\) from \(10^{-8}\) to \(10^{-9}\) changes this derivative by
+
+\[
+ 10^{1/3}\approx 2.154.
+\]
+
+The curvature changes even more strongly:
+
+\[
+ \left.\frac{\partial^2 g_\delta}{\partial\varepsilon_s^2}\right|_0
+ =-\frac{2}{9}\delta^{-4/3},
+\]
+
+whose magnitude changes by \(10^{4/3}\approx 21.54\). Variant 17 therefore has a different active Scenario-A tangent operator at \(\varepsilon_s=0\), even though its converged source-state values satisfy \(R_A=1\). That difference can change Newton increments, damping, scaling, step selection, event localization, restart state and the sequence of native solutions.
+
+For variant 24, `RA_route=0` may make the Scenario-A branch dormant in the final `RA` expression. That possibility does not rescue A. It would have to be proved for the **entire active assembled system**, including every use of `g_delta`, `RA_A`, `Av`, phase equations, initial conditions, event expressions, variable scaling and solver-dependent expressions. A state ledger showing `eps_s=0`, `q_phi=0` and `RA=1` does not establish that compiled-system identity.
+
+The proposed A check that the branch's first raw/shared \(U\) is bitwise identical to the borrowed event-after \(U\) is circular. A seed is expected to equal itself when injected. It does not prove that an independent run under the variant equations would generate the same pre-event path or the same event-after state.
+
+**Mathematical equality of reported values at selected states cannot substitute for two independent fresh runs with their own raw-\(U\), native-step and event provenance.**
+
+---
+
+## 2. Exact minimal B topology
+
+### 2.1 Binding totals
+
+The replacement active topology is:
+
+```text
+42 fresh-loadCopy execution units
+129 counted solver segments
+64 active physical rows unchanged
+22 active numerical variants unchanged
+```
+
+The physical and numerical campaign membership does not expand. The change is execution provenance only.
+
+### 2.2 Only acceptable accounting for 42 / 129
+
+The minimal coherent accounting is:
+
+```text
+38 unaffected existing execution units
++ 2 variant-17 units
+    - V17 own-event backbone unit
+    - V17 continuation unit
++ 2 variant-24 units
+    - V24 own-event backbone unit
+    - V24 continuation unit
+= 42 units
+```
+
+The existing variant continuation work remains counted. The two new own-event backbone units add exactly two counted solver segments:
+
+```text
+127 prior counted segments
++ 1 V17 own-event backbone segment
++ 1 V24 own-event backbone segment
+= 129 segments
+```
+
+The two PU11 borrowed-event dependency edges are deleted. They are not retained as inactive fallbacks, emergency paths, repair sources or undocumented aliases.
+
+Under the existing counting convention, stationary initialization remains an execution-unit setup solve and is not a counted continuation/event segment. If the worker's actual ledger counts stationary initialization, adds another continuation segment, or duplicates continuation inside both the new and old units, **42/129 is false** and the totals must be recomputed before governance review. The numbers must follow the executable DAG; the DAG must not be forced to match a preferred count.
+
+### 2.3 Variant 17 event source role
+
+```text
+event_source_role:
+  OWN_NATIVE_EVENT_SCENARIO_A_DELTA_EPS_1E_MINUS_9
+
+base physical configuration:
+  Scenario-A full
+
+regularization:
+  delta_eps = 1e-9
+
+required route readback:
+  RA_route = A
+
+permitted event seed:
+  terminal native event-after state generated by V17 own-event unit only
+
+forbidden event seed:
+  PU11 Scenario-A event-after
+  any borrowed base hash
+  any interpolated or repaired state
+```
+
+The V17 own-event unit must use a fresh solution-free `loadCopy`, apply the actual variant configuration, pass the solution-empty gate, run stationary initialization, locate its own exact native first-local crossing and terminate its event backbone at its own native event-after state.
+
+The V17 continuation unit may start only from the exact archived raw-\(U\) identity of that V17 event-after state.
+
+### 2.4 Variant 24 event source role
+
+```text
+event_source_role:
+  OWN_NATIVE_EVENT_RA_FIXED_DELTA_EPS_1E_MINUS_9
+
+base physical configuration:
+  matched R_A = 1 control
+
+regularization:
+  delta_eps = 1e-9
+
+required route readback:
+  RA_route = fixed R_A=1
+
+permitted event seed:
+  terminal native event-after state generated by V24 own-event unit only
+
+forbidden event seed:
+  PU11 Scenario-A event-after
+  variant-17 event state
+  any borrowed base hash
+  any interpolated or repaired state
+```
+
+Variant 24 is allowed to generate its numerical own-event backbone under its **real fixed-area route**. It must not borrow the Scenario-A full event merely because the two routes are expected to be equal before retained solid appears.
+
+The V24 continuation unit may start only from the exact archived raw-\(U\) identity of the V24 event-after state.
+
+### 2.5 Per-own-event unit minimum record
+
+Each new own-event unit must bind and emit at least:
+
+```text
+execution_unit_id
+numerical_variant_id
+fresh_loadcopy_id
+source_model_sha256
+staging_model_pre_sha256
+staging_model_post_sha256
+solution_empty_before
+exact_parameter_readback
+exact_expression_graph_readback_sha256
+RA_route_readback
+delta_eps_readback
+study_tag
+solver_tag
+event_definition_sha256
+event_candidate_count
+stepbefore_native_solnum
+stepafter_native_solnum
+stepbefore_Q
+stepafter_Q
+stepbefore_raw_U_sha256
+stepafter_raw_U_sha256
+event_after_is_terminal_native_state
+native_state_count
+native_Q_monotone
+solver_problem_flag
+model_removed
+```
+
+The continuation record must bind:
+
+```text
+continuation_unit_id
+own_event_source_unit_id
+required_seed_raw_U_sha256
+observed_initial_raw_U_sha256
+seed_bitwise_equal
+interpolation_used = false
+repair_used = false
+borrowed_seed_used = false
+```
+
+---
+
+## 3. What the 40/127 plan must supersede
+
+Do not edit or delete frozen artifacts. Create explicit successor records and mark the following identities superseded:
+
+1. the active V12 membership declaration that states `40 execution units / 127 solver segments`;
+2. the execution-unit manifest and expected-unit-count assertion;
+3. the solver-segment ledger and expected-segment-count assertion;
+4. the execution dependency DAG;
+5. the PU11 branch membership containing the variant-17 and variant-24 borrowed-event edges;
+6. variant 17's `REUSE_BASE_BACKBONE_EXACT_BEFORE_CROSSING` source rule;
+7. variant 17's previously blocked or unresolved `route_equation_identity_status`;
+8. variant 24's borrowed-base successor exception path;
+9. any worker schema that permits `borrowed_base_hash`, `shared_event_source`, `repair_seed` or an equivalent fallback for variants 17/24;
+10. any source-only V12 plan, release lock, command-vector hash, authorization envelope or governance report bound to 40/127;
+11. any static audit whose expected explicit unit calls or segment limits encode the old topology;
+12. any archive validator that accepts PU11 as the event source for variants 17/24.
+
+The successor package must contain an explicit table:
+
+```text
+superseded_artifact_path
+superseded_sha256
+superseded_claim
+successor_artifact_path
+successor_sha256
+reason = OWN_EVENT_PROVENANCE_REQUIRED
+```
+
+A mixture of old and new active declarations is a P0 conflict, not harmless historical documentation.
+
+---
+
+## 4. Why Candidate A is not machine-provable with its proposed fields
+
+Candidate A would need to prove much more than it proposes. At minimum it would need exact equality of the specialized active residual graph, constraint graph, complete Jacobian graph, mass/damping matrices, variable scaling, initial values, event function, consistent-initialization system, solver sequence, Jacobian-update policy and adaptive-step controls for every pre-event state.
+
+Its proposed fields prove only:
+
+```text
+expression strings were read back
+selected source states had eps_s = 0
+selected source states had q_phi = 0
+selected source states had RA = 1
+a seeded first U equalled the seed
+no interpolation or repair was applied
+```
+
+Those facts do not prove:
+
+```text
+same assembled Jacobian
+same nonlinear iteration sequence
+same damping or scaling updates
+same native step sequence
+same event bracket
+same restart history
+same independently generated raw U
+```
+
+Even a finite list of equal residual and Jacobian evaluations would not prove identical adaptive solver history unless the entire preceding state and solver-control history were also identical. Running the two small own-event units is the cheaper and more defensible proof.
+
+---
+
+## 5. P0 production refusal conditions
+
+Production remains blocked if any item below is true.
+
+### P0-1 — Topology identity conflict
+
+Any active artifact still declares 40/127, or any runtime manifest produces a count other than the frozen successor topology.
+
+### P0-2 — Borrowed event edge survives
+
+Any PU11-to-V17 or PU11-to-V24 event seed, hash alias, emergency fallback or repair source remains reachable in source, bytecode, schema or worker state machine.
+
+### P0-3 — No fresh model identity
+
+Either own-event unit does not begin from a fresh solution-free `ModelUtil.loadCopy` of the locked sanitized model.
+
+### P0-4 — Wrong active configuration
+
+Any exact readback mismatch in `delta_eps`, `RA_route`, phase route, study tag, solver tag, event expression or other frozen numerical-variant parameter.
+
+### P0-5 — Missing own native event
+
+The own-event extractor returns zero candidates, multiple candidates, a non-upward pair, a repaired pair or a pair not formed from exact adjacent native states. There is no fallback to PU11.
+
+### P0-6 — Event-after is not the unit's terminal native state
+
+The worker continues past event-after inside the event-backbone unit, discards intermediate native states, or exports a nonterminal/reconstructed state as the seed.
+
+### P0-7 — Seed identity failure
+
+The continuation's first raw \(U\) is not bitwise equal to its own branch-specific event-after raw \(U\), or its source-unit ID/hash does not match.
+
+### P0-8 — Interpolation, repair or cross-route substitution
+
+Any interpolation, field projection, nearest-state replacement, algebraic repair or cross-route state substitution is used.
+
+### P0-9 — Static worker gate failure
+
+Source or bytecode allows dynamic unit discovery, borrowed-seed fallback, hidden route switching, old topology constants, save/export mutation, reflection or an unbound model path.
+
+### P0-10 — Mutation gate failure
+
+The before/after model-tree diff contains anything outside the exact parameter and solver-run allowlist, or any original/staging `.mph` hash changes.
+
+### P0-11 — Status, recovery or archive failure
+
+Exact status parsing, return code, recovery rule, framed stream, unit/segment count, raw-\(U\) hash or archive-root verification fails.
+
+### P0-12 — Governance identity is stale
+
+The production authorization, release lock or root signature is created against the old 40/127 plan, before the B successor artifacts are frozen, or before worker/static/mutation gates pass.
+
+### P0-13 — Evidence-class leakage
+
+Variants 17/24 or their own-event units enter the 64 physical-row population, manuscript projectors, figure source data or physical-response claims. They remain numerical regularization checks.
+
+---
+
+## 6. P1 red-team requirements
+
+These do not replace a P0 gate, but they should be frozen before authorization.
+
+1. Record the exact analytical values of \(\partial g_\delta/\partial\varepsilon_s\) and \(\partial^2g_\delta/\partial\varepsilon_s^2\) at zero for the base and variant regularizations.
+2. Record nonlinear method, Jacobian-update policy, scaling, consistent-initialization and event-localization settings for the own-event units.
+3. Record the active expression dependency graph for `g_delta`, `RA_A`, `RA` and `Av` under each real route.
+4. For variant 24, record whether COMSOL's specialized active equations exclude the Scenario-A branch; treat this as a diagnostic only, not permission to collapse the topology.
+5. Compare each own-event pre-crossing trajectory with its old base trajectory after execution. Equality or near-equality is informative, but cannot retroactively validate borrowed provenance.
+6. Report event-capacity and raw-\(U\) differences without imposing an expectation that they must be zero.
+7. Verify that any observed numerical effect is larger than extraction, tolerance and native-step uncertainty before interpreting the regularization check.
+8. Preserve the numerical-only namespace through projector and archive policies.
+9. Require one branch-specific failure code for `OWN_EVENT_NOT_FOUND`, `OWN_EVENT_NONUNIQUE`, `OWN_EVENT_SEED_MISMATCH` and `BORROWED_SEED_ATTEMPT`.
+10. Verify that removal of the two PU11 edges leaves no unreachable or orphaned unit in the executable DAG.
+
+---
+
+## 7. Production authorization verdict
+
+# **PRODUCTION REMAINS NO-GO.**
+
+Selecting B is only a topology decision. It does not authorize execution.
+
+No production authorization may be created until all of the following are frozen and pass together:
+
+```text
+worker gate
+static source/bytecode gate
+model-mutation gate
+topology/count gate
+status/recovery/frame gate
+archive-integrity gate
+governance/release-lock gate
+```
+
+V11H G01 proves its own terminal condition only. It does not authorize the V12 production population and does not waive branch-specific provenance for variants 17 and 24.
+
+## Final binary ruling
+
+```text
+Candidate A: REJECTED
+Candidate B: REQUIRED
+Production authorization: NO-GO
+```
